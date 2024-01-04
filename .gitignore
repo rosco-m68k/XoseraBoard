@@ -1,0 +1,7 @@
+**/.DS_Store
+**/*.sch-bak
+**/*.kicad_pcb-bak
+**/fp-info-cache
+**/*.bak
+**/*.lck
+kicad/Xosera2/Xosera2-backups/*
