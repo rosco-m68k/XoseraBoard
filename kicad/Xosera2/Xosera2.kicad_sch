@@ -6,7 +6,7 @@
 
   (title_block
     (title "Xosera rosco_m68k daughterboard")
-    (date "2023-12-21")
+    (date "2024-02-08")
     (rev "0")
     (company "The Really Old-School Company Limited & XarkLabs")
     (comment 1 "Copyright (c)2023")
@@ -14,6 +14,29 @@
   )
 
   (lib_symbols
+    (symbol "UPduino_v3.0:Mechanical_MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "Mechanical_MountingHole" (at 0 3.175 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "Mechanical_MountingHole_0_1"
+        (circle (center 0 0) (radius 1.27)
+          (stroke (width 1.27) (type solid))
+          (fill (type none))
+        )
+      )
+    )
   )
 
 
@@ -176,6 +199,134 @@
     (at 196.215 51.435 0)
     (effects (font (size 2 2)) (justify left bottom))
     (uuid bf462054-0e1e-4c1f-9c89-2bb2cd2f644e)
+  )
+
+  (symbol (lib_id "UPduino_v3.0:Mechanical_MountingHole") (at 42.545 175.895 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 337fff4d-f882-420a-9950-4e296a8fbc1e)
+    (property "Reference" "H2" (at 45.085 174.7266 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 45.085 177.038 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via" (at 42.545 175.895 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 42.545 175.895 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "UPduino_v3.0"
+        (path "/0a0223e0-d287-426a-af6a-2d9597a86d6d"
+          (reference "H2") (unit 1)
+        )
+      )
+      (project "Xosera2"
+        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
+          (reference "H4") (unit 1)
+        )
+        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac"
+          (reference "H4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "UPduino_v3.0:Mechanical_MountingHole") (at 24.13 185.42 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 5850d0fe-9ee6-4bc3-9aad-18272474ce3d)
+    (property "Reference" "H3" (at 26.67 184.2516 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 26.67 186.563 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via" (at 24.13 185.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 24.13 185.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "UPduino_v3.0"
+        (path "/0a0223e0-d287-426a-af6a-2d9597a86d6d"
+          (reference "H3") (unit 1)
+        )
+      )
+      (project "Xosera2"
+        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
+          (reference "H2") (unit 1)
+        )
+        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac"
+          (reference "H2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "UPduino_v3.0:Mechanical_MountingHole") (at 41.91 185.42 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 65b56578-6b3f-4d21-866d-0f5752ecac99)
+    (property "Reference" "H4" (at 44.45 184.2516 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 44.45 186.563 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via" (at 41.91 185.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 41.91 185.42 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "UPduino_v3.0"
+        (path "/0a0223e0-d287-426a-af6a-2d9597a86d6d"
+          (reference "H4") (unit 1)
+        )
+      )
+      (project "Xosera2"
+        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
+          (reference "H3") (unit 1)
+        )
+        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac"
+          (reference "H3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "UPduino_v3.0:Mechanical_MountingHole") (at 24.13 176.53 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 95ef407a-09b8-4c1a-8837-634833d4b8a0)
+    (property "Reference" "H1" (at 26.67 175.3616 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 26.67 177.673 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via" (at 24.13 176.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 24.13 176.53 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "UPduino_v3.0"
+        (path "/0a0223e0-d287-426a-af6a-2d9597a86d6d"
+          (reference "H1") (unit 1)
+        )
+      )
+      (project "Xosera2"
+        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
+          (reference "H1") (unit 1)
+        )
+        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac"
+          (reference "H1") (unit 1)
+        )
+      )
+    )
   )
 
   (sheet (at 30.48 62.23) (size 30.48 73.66) (fields_autoplaced)

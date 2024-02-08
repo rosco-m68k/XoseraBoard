@@ -6,7 +6,7 @@
 
   (title_block
     (title "Xosera rosco_m68k daughterboard")
-    (date "2023-12-21")
+    (date "2024-02-08")
     (rev "0")
     (company "The Really Old-School Company Limited & XarkLabs")
     (comment 1 "Copyright (c)2023")
@@ -1291,29 +1291,6 @@
         (pin power_in line (at -7.62 -38.1 90) (length 3.81)
           (name "AGND" (effects (font (size 1.27 1.27))))
           (number "9" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "UPduino_v3.0:Mechanical_MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-      (property "Reference" "H" (at 0 5.08 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "Mechanical_MountingHole" (at 0 3.175 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "Mechanical_MountingHole_0_1"
-        (circle (center 0 0) (radius 1.27)
-          (stroke (width 1.27) (type solid))
-          (fill (type none))
         )
       )
     )
@@ -3203,7 +3180,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -3234,7 +3211,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R11") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -3265,7 +3242,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R28") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -3295,7 +3272,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR059") (unit 1)
+          (reference "#PWR037") (unit 1)
         )
       )
     )
@@ -3310,7 +3287,7 @@
     (property "Value" "AP2127K-3.3" (at 337.82 128.2446 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:SOT-23-5" (at 337.82 126.365 0)
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 337.82 126.365 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2127.pdf" (at 337.82 132.08 0)
@@ -3329,7 +3306,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U7") (unit 1)
+          (reference "IC4") (unit 1)
         )
       )
     )
@@ -3360,7 +3337,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C42") (unit 1)
+          (reference "C25") (unit 1)
         )
       )
     )
@@ -3390,7 +3367,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR033") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -3420,7 +3397,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR050") (unit 1)
         )
       )
     )
@@ -3450,7 +3427,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP18") (unit 1)
+          (reference "TP15") (unit 1)
         )
       )
     )
@@ -3481,7 +3458,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R19") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
     )
@@ -3512,7 +3489,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C28") (unit 1)
+          (reference "C13") (unit 1)
         )
       )
     )
@@ -3542,7 +3519,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR033") (unit 1)
         )
       )
     )
@@ -3572,7 +3549,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -3587,7 +3564,7 @@
     (property "Value" "FT232H" (at 114.3 186.69 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:QFN-48-1EP_8x8mm_P0.5mm_EP6.2x6.2mm" (at 105.41 222.885 90)
+    (property "Footprint" "Package_DFN_QFN:QFN-48-1EP_8x8mm_P0.5mm_EP6.2x6.2mm" (at 105.41 222.885 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Datasheet" "http://www.ftdichip.com/Products/ICs/FT232H.htm" (at 100.33 223.52 0)
@@ -3649,7 +3626,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U3") (unit 1)
+          (reference "IC3") (unit 1)
         )
       )
     )
@@ -3680,7 +3657,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C25") (unit 1)
+          (reference "C11") (unit 1)
         )
       )
     )
@@ -3695,7 +3672,7 @@
     (property "Value" "OPEN" (at 170.18 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" (at 163.322 72.39 90)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 163.322 72.39 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 165.1 72.39 0)
@@ -3741,7 +3718,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -3787,7 +3764,7 @@
     (property "Value" "SHORT" (at 270.51 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" (at 263.652 72.39 90)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" (at 263.652 72.39 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 265.43 72.39 0)
@@ -3834,7 +3811,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C13") (unit 1)
+          (reference "C2") (unit 1)
         )
       )
     )
@@ -3864,7 +3841,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR028") (unit 1)
         )
       )
     )
@@ -3894,7 +3871,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -3924,7 +3901,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR051") (unit 1)
         )
       )
     )
@@ -3955,7 +3932,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R20") (unit 1)
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -3985,7 +3962,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP17") (unit 1)
+          (reference "TP14") (unit 1)
         )
       )
     )
@@ -4015,36 +3992,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP7") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "UPduino_v3.0:Mechanical_MountingHole") (at 267.335 256.54 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 2d1a9d77-88eb-4955-877a-faf68968b00e)
-    (property "Reference" "H3" (at 269.875 255.3716 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole" (at 269.875 257.683 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "vs:MountingHole_2.5mm_M3" (at 267.335 256.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 267.335 256.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "UPduino_v3.0"
-        (path "/0a0223e0-d287-426a-af6a-2d9597a86d6d"
-          (reference "H3") (unit 1)
-        )
-      )
-      (project "Xosera2"
-        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "H2") (unit 1)
+          (reference "TP4") (unit 1)
         )
       )
     )
@@ -4074,7 +4022,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR054") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )
@@ -4104,7 +4052,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR039") (unit 1)
         )
       )
     )
@@ -4135,7 +4083,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C19") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
     )
@@ -4166,7 +4114,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C16") (unit 1)
+          (reference "C6") (unit 1)
         )
       )
     )
@@ -4197,7 +4145,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "D3") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -4228,7 +4176,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R12") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -4258,7 +4206,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
@@ -4288,7 +4236,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -4318,7 +4266,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -4348,7 +4296,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR044") (unit 1)
         )
       )
     )
@@ -4378,7 +4326,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -4408,7 +4356,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR032") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -4469,7 +4417,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR029") (unit 1)
         )
       )
     )
@@ -4499,7 +4447,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR055") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
     )
@@ -4530,7 +4478,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C15") (unit 1)
+          (reference "C5") (unit 1)
         )
       )
     )
@@ -4560,7 +4508,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR060") (unit 1)
+          (reference "#PWR038") (unit 1)
         )
       )
     )
@@ -4591,7 +4539,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C39") (unit 1)
+          (reference "C21") (unit 1)
         )
       )
     )
@@ -4621,7 +4569,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR049") (unit 1)
+          (reference "#PWR057") (unit 1)
         )
       )
     )
@@ -4651,7 +4599,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP21") (unit 1)
+          (reference "TP18") (unit 1)
         )
       )
     )
@@ -4666,7 +4614,7 @@
     (property "Value" "SHORT" (at 156.21 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" (at 149.352 72.39 90)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" (at 149.352 72.39 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 151.13 72.39 0)
@@ -4682,7 +4630,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "SJ2") (unit 1)
+          (reference "SJ4") (unit 1)
         )
       )
     )
@@ -4712,7 +4660,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -4772,7 +4720,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C44") (unit 1)
+          (reference "C32") (unit 1)
         )
       )
     )
@@ -4834,7 +4782,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R22") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -4871,7 +4819,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U4") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -4930,7 +4878,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -4960,7 +4908,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -4991,7 +4939,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R16") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -5021,7 +4969,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR062") (unit 1)
+          (reference "#PWR041") (unit 1)
         )
       )
     )
@@ -5051,36 +4999,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR012") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "UPduino_v3.0:Mechanical_MountingHole") (at 285.115 256.54 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 5d3ec7b5-0c09-46b3-b50b-07a8b8151dad)
-    (property "Reference" "H4" (at 287.655 255.3716 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole" (at 287.655 257.683 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "vs:MountingHole_2.5mm_M3" (at 285.115 256.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 285.115 256.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "UPduino_v3.0"
-        (path "/0a0223e0-d287-426a-af6a-2d9597a86d6d"
-          (reference "H4") (unit 1)
-        )
-      )
-      (project "Xosera2"
-        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "H3") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -5110,7 +5029,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP13") (unit 1)
+          (reference "TP10") (unit 1)
         )
       )
     )
@@ -5140,7 +5059,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR072") (unit 1)
+          (reference "#PWR060") (unit 1)
         )
       )
     )
@@ -5170,7 +5089,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -5200,7 +5119,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR052") (unit 1)
         )
       )
     )
@@ -5231,7 +5150,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C18") (unit 1)
+          (reference "C7") (unit 1)
         )
       )
     )
@@ -5262,7 +5181,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C22") (unit 1)
+          (reference "C4") (unit 1)
         )
       )
     )
@@ -5293,7 +5212,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C40") (unit 1)
+          (reference "C29") (unit 1)
         )
       )
     )
@@ -5324,7 +5243,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C37") (unit 1)
+          (reference "C31") (unit 1)
         )
       )
     )
@@ -5354,7 +5273,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR032") (unit 1)
         )
       )
     )
@@ -5384,7 +5303,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP11") (unit 1)
+          (reference "TP8") (unit 1)
         )
       )
     )
@@ -5414,7 +5333,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR031") (unit 1)
         )
       )
     )
@@ -5444,7 +5363,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP8") (unit 1)
+          (reference "TP5") (unit 1)
         )
       )
     )
@@ -5459,7 +5378,7 @@
     (property "Value" "93LC56BT-I/OT" (at 48.26 262.89 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:SOT-23-6" (at 39.37 255.27 0)
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-6" (at 39.37 255.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" (at 39.37 255.27 0)
@@ -5479,7 +5398,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U1") (unit 1)
+          (reference "IC1") (unit 1)
         )
       )
     )
@@ -5494,7 +5413,7 @@
     (property "Value" "OPEN" (at 278.13 213.36 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" (at 278.13 212.598 90)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 278.13 212.598 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 278.13 210.82 0)
@@ -5540,7 +5459,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP10") (unit 1)
+          (reference "TP7") (unit 1)
         )
       )
     )
@@ -5570,7 +5489,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR065") (unit 1)
+          (reference "#PWR055") (unit 1)
         )
       )
     )
@@ -5601,7 +5520,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C26") (unit 1)
+          (reference "C24") (unit 1)
         )
       )
     )
@@ -5679,7 +5598,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U2") (unit 4)
+          (reference "IC2") (unit 4)
         )
       )
     )
@@ -5694,7 +5613,7 @@
     (property "Value" "AP2127K-1.2" (at 386.08 128.2446 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:SOT-23-5" (at 386.08 126.365 0)
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 386.08 126.365 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2127.pdf" (at 386.08 132.08 0)
@@ -5713,7 +5632,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U8") (unit 1)
+          (reference "IC5") (unit 1)
         )
       )
     )
@@ -5728,7 +5647,7 @@
     (property "Value" "OPEN" (at 283.21 72.39 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" (at 276.352 72.39 90)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 276.352 72.39 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 278.13 72.39 0)
@@ -5775,7 +5694,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C20") (unit 1)
+          (reference "C9") (unit 1)
         )
       )
     )
@@ -5805,7 +5724,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -5835,7 +5754,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP9") (unit 1)
+          (reference "TP6") (unit 1)
         )
       )
     )
@@ -5865,7 +5784,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP15") (unit 1)
+          (reference "TP12") (unit 1)
         )
       )
     )
@@ -5895,7 +5814,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -5910,7 +5829,7 @@
     (property "Value" "SG-210STF 12.0000ML3" (at 328.93 37.465 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "vs:Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm" (at 326.39 45.72 0)
+    (property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm" (at 326.39 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://abracon.com/Oscillators/ASDMB.pdf" (at 334.01 34.29 0)
@@ -5928,7 +5847,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U5") (unit 1)
+          (reference "Q1") (unit 1)
         )
       )
     )
@@ -5943,7 +5862,7 @@
     (property "Value" "SHORT" (at 34.29 96.1136 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" (at 34.29 97.282 90)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" (at 34.29 97.282 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 34.29 99.06 0)
@@ -5990,7 +5909,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C24") (unit 1)
+          (reference "C8") (unit 1)
         )
       )
     )
@@ -6020,7 +5939,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -6050,7 +5969,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -6080,7 +5999,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP19") (unit 1)
+          (reference "TP16") (unit 1)
         )
       )
     )
@@ -6110,7 +6029,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -6141,7 +6060,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R14") (unit 1)
+          (reference "R6") (unit 1)
         )
       )
     )
@@ -6172,7 +6091,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C30") (unit 1)
+          (reference "C15") (unit 1)
         )
       )
     )
@@ -6203,7 +6122,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C45") (unit 1)
+          (reference "C33") (unit 1)
         )
       )
     )
@@ -6240,7 +6159,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U6") (unit 1)
+          (reference "IC10") (unit 1)
         )
       )
     )
@@ -6270,7 +6189,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR045") (unit 1)
         )
       )
     )
@@ -6300,7 +6219,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP6") (unit 1)
+          (reference "TP3") (unit 1)
         )
       )
     )
@@ -6359,7 +6278,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP14") (unit 1)
+          (reference "TP11") (unit 1)
         )
       )
     )
@@ -6389,7 +6308,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR040") (unit 1)
         )
       )
     )
@@ -6420,7 +6339,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C43") (unit 1)
+          (reference "C30") (unit 1)
         )
       )
     )
@@ -6451,7 +6370,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R18") (unit 1)
+          (reference "R9") (unit 1)
         )
       )
     )
@@ -6482,7 +6401,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C32") (unit 1)
+          (reference "C18") (unit 1)
         )
       )
     )
@@ -6513,7 +6432,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C35") (unit 1)
+          (reference "C27") (unit 1)
         )
       )
     )
@@ -6550,7 +6469,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U6") (unit 2)
+          (reference "IC10") (unit 2)
         )
       )
     )
@@ -6580,7 +6499,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR051") (unit 1)
+          (reference "#PWR059") (unit 1)
         )
       )
     )
@@ -6658,7 +6577,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U2") (unit 2)
+          (reference "IC2") (unit 2)
         )
       )
     )
@@ -6688,7 +6607,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -6719,7 +6638,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C23") (unit 1)
+          (reference "C22") (unit 1)
         )
       )
     )
@@ -6749,7 +6668,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR036") (unit 1)
         )
       )
     )
@@ -6808,7 +6727,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR011") (unit 1)
         )
       )
     )
@@ -6839,7 +6758,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C27") (unit 1)
+          (reference "C12") (unit 1)
         )
       )
     )
@@ -6869,7 +6788,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR054") (unit 1)
         )
       )
     )
@@ -6900,7 +6819,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C36") (unit 1)
+          (reference "C28") (unit 1)
         )
       )
     )
@@ -6978,7 +6897,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U2") (unit 3)
+          (reference "IC2") (unit 3)
         )
       )
     )
@@ -7009,7 +6928,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R29") (unit 1)
+          (reference "R15") (unit 1)
         )
       )
     )
@@ -7024,7 +6943,7 @@
     (property "Value" "SHORT" (at 57.15 209.55 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" (at 60.96 210.82 0)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" (at 60.96 210.82 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 60.96 210.82 0)
@@ -7040,7 +6959,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "SJ4") (unit 1)
+          (reference "SJ3") (unit 1)
         )
       )
     )
@@ -7071,7 +6990,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C34") (unit 1)
+          (reference "C26") (unit 1)
         )
       )
     )
@@ -7102,7 +7021,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C12") (unit 1)
+          (reference "C1") (unit 1)
         )
       )
     )
@@ -7132,7 +7051,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -7193,7 +7112,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR063") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -7223,7 +7142,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -7254,7 +7173,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R13") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -7285,7 +7204,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R26") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -7363,7 +7282,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "U2") (unit 1)
+          (reference "IC2") (unit 1)
         )
       )
     )
@@ -7393,7 +7312,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -7423,7 +7342,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -7457,7 +7376,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C17") (unit 1)
+          (reference "C14") (unit 1)
         )
       )
     )
@@ -7487,65 +7406,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP16") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "UPduino_v3.0:Mechanical_MountingHole") (at 285.75 247.015 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid d152dcff-60b0-415e-8d1d-5128b12e33f8)
-    (property "Reference" "H2" (at 288.29 245.8466 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole" (at 288.29 248.158 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "vs:MountingHole_2.5mm_M3" (at 285.75 247.015 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 285.75 247.015 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "UPduino_v3.0"
-        (path "/0a0223e0-d287-426a-af6a-2d9597a86d6d"
-          (reference "H2") (unit 1)
-        )
-      )
-      (project "Xosera2"
-        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "H4") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "UPduino_v3.0:Mechanical_MountingHole") (at 267.335 247.65 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid d2a33a8a-3d5d-4629-8a8c-f2a6cc0994ca)
-    (property "Reference" "H1" (at 269.875 246.4816 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MountingHole" (at 269.875 248.793 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "vs:MountingHole_2.5mm_M3" (at 267.335 247.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 267.335 247.65 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (instances
-      (project "UPduino_v3.0"
-        (path "/0a0223e0-d287-426a-af6a-2d9597a86d6d"
-          (reference "H1") (unit 1)
-        )
-      )
-      (project "Xosera2"
-        (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "H1") (unit 1)
+          (reference "TP13") (unit 1)
         )
       )
     )
@@ -7575,7 +7436,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR028") (unit 1)
+          (reference "#PWR034") (unit 1)
         )
       )
     )
@@ -7605,7 +7466,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -7664,7 +7525,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR044") (unit 1)
+          (reference "#PWR049") (unit 1)
         )
       )
     )
@@ -7694,7 +7555,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR064") (unit 1)
+          (reference "#PWR053") (unit 1)
         )
       )
     )
@@ -7709,7 +7570,7 @@
     (property "Value" "OPEN" (at 278.13 205.3336 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:SolderJumper-2_0603_Open_TrianglePad1.0x1.5mm" (at 278.13 210.058 90)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 278.13 210.058 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 278.13 208.28 0)
@@ -7755,7 +7616,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -7786,7 +7647,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C29") (unit 1)
+          (reference "C20") (unit 1)
         )
       )
     )
@@ -7817,7 +7678,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R17") (unit 1)
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -7847,7 +7708,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP12") (unit 1)
+          (reference "TP9") (unit 1)
         )
       )
     )
@@ -7878,7 +7739,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C31") (unit 1)
+          (reference "C16") (unit 1)
         )
       )
     )
@@ -7908,7 +7769,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR050") (unit 1)
+          (reference "#PWR058") (unit 1)
         )
       )
     )
@@ -7923,7 +7784,7 @@
     (property "Value" "SHORT" (at 57.15 207.01 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:ShortedJumper-2_P1.3mm_Bridged_Pad1.0x1.0mm" (at 60.96 208.28 0)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" (at 60.96 208.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 60.96 208.28 0)
@@ -7939,7 +7800,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "SJ3") (unit 1)
+          (reference "SJ2") (unit 1)
         )
       )
     )
@@ -7970,7 +7831,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R10") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -8001,7 +7862,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C14") (unit 1)
+          (reference "C3") (unit 1)
         )
       )
     )
@@ -8031,7 +7892,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP4") (unit 1)
+          (reference "TP1") (unit 1)
         )
       )
     )
@@ -8062,7 +7923,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C33") (unit 1)
+          (reference "C19") (unit 1)
         )
       )
     )
@@ -8092,7 +7953,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR030") (unit 1)
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -8151,7 +8012,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -8181,7 +8042,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -8212,7 +8073,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C21") (unit 1)
+          (reference "C10") (unit 1)
         )
       )
     )
@@ -8243,7 +8104,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "R15") (unit 1)
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -8273,7 +8134,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR056") (unit 1)
         )
       )
     )
@@ -8288,7 +8149,7 @@
     (property "Value" "47589-0001" (at 31.9278 198.7296 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "vs:USB_Micro_AB_Female_0475890001" (at 34.29 209.55 0)
+    (property "Footprint" "Connector_USB:USB_Micro-AB_Molex_47590-0001" (at 34.29 209.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 34.29 209.55 0)
@@ -8338,7 +8199,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "#PWR073") (unit 1)
+          (reference "#PWR061") (unit 1)
         )
       )
     )
@@ -8368,7 +8229,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP5") (unit 1)
+          (reference "TP2") (unit 1)
         )
       )
     )
@@ -8399,7 +8260,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "C41") (unit 1)
+          (reference "C23") (unit 1)
         )
       )
     )
@@ -8429,7 +8290,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/542e2bbe-89ea-4794-ae61-2e32ec6db8f5"
-          (reference "TP20") (unit 1)
+          (reference "TP17") (unit 1)
         )
       )
     )

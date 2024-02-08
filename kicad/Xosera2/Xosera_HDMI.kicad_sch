@@ -6,7 +6,7 @@
 
   (title_block
     (title "Xosera rosco_m68k daughterboard")
-    (date "2023-12-21")
+    (date "2024-02-08")
     (rev "0")
     (company "The Really Old-School Company Limited & XarkLabs")
     (comment 1 "Copyright (c)2023")
@@ -2241,7 +2241,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR091") (unit 1)
+          (reference "#PWR069") (unit 1)
         )
       )
     )
@@ -2271,7 +2271,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR097") (unit 1)
+          (reference "#PWR075") (unit 1)
         )
       )
     )
@@ -2301,7 +2301,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0106") (unit 1)
+          (reference "#PWR084") (unit 1)
         )
       )
     )
@@ -2316,10 +2316,10 @@
     (property "Value" "510E" (at 176.7586 51.9684 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 176.7586 53.1622 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 176.7586 53.1622 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 175.26 50.8 0)
+    (property "Datasheet" "~" (at 175.26 50.8 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "res-0402-510" (at 175.26 50.8 0)
@@ -2338,7 +2338,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R39") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -2368,7 +2368,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0108") (unit 1)
+          (reference "#PWR086") (unit 1)
         )
       )
     )
@@ -2383,7 +2383,7 @@
     (property "Value" "3v3_5v_sel" (at 261.62 57.15 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "pkl_jumpers:J_NCNO_0903_30" (at 254 54.61 0)
+    (property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_RoundedPad1.0x1.5mm" (at 254 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 254 54.61 0)
@@ -2400,7 +2400,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "J21") (unit 1)
+          (reference "J7") (unit 1)
         )
       )
     )
@@ -2430,7 +2430,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0105") (unit 1)
+          (reference "#PWR083") (unit 1)
         )
       )
     )
@@ -2445,7 +2445,7 @@
     (property "Value" "600" (at 203.2 101.6762 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "pkl_dipol:L_0402" (at 205.5622 102.8954 0)
+    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 205.5622 102.8954 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 203.2 104.14 90)
@@ -2482,7 +2482,7 @@
     (property "Value" "100n" (at 189.23 92.71 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0402" (at 190.2968 88.7222 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 190.2968 88.7222 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 187.96 86.36 0)
@@ -2504,7 +2504,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C51") (unit 1)
+          (reference "C35") (unit 1)
         )
       )
     )
@@ -2519,7 +2519,7 @@
     (property "Value" "sj" (at 95.25 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_jumpers:J_0603" (at 93.98 147.32 0)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 93.98 147.32 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (at 93.98 147.32 0)
@@ -2535,7 +2535,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "J20") (unit 1)
+          (reference "J6") (unit 1)
         )
       )
     )
@@ -2550,10 +2550,10 @@
     (property "Value" "10k" (at 105.41 104.14 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 105.6386 109.0422 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 105.6386 109.0422 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 104.14 106.68 0)
+    (property "Datasheet" "~" (at 104.14 106.68 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "res-0402-10k" (at 104.14 106.68 0)
@@ -2572,7 +2572,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R33") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
     )
@@ -2587,7 +2587,7 @@
     (property "Value" "100n" (at 194.31 138.43 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0402" (at 195.3768 134.4422 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 195.3768 134.4422 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 193.04 132.08 0)
@@ -2609,7 +2609,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C56") (unit 1)
+          (reference "C40") (unit 1)
         )
       )
     )
@@ -2639,7 +2639,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0101") (unit 1)
+          (reference "#PWR079") (unit 1)
         )
       )
     )
@@ -2654,7 +2654,7 @@
     (property "Value" "600" (at 203.2 78.8162 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "pkl_dipol:L_0402" (at 205.5622 80.0354 0)
+    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 205.5622 80.0354 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 203.2 81.28 90)
@@ -2691,7 +2691,7 @@
     (property "Value" "sj" (at 80.01 152.4 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "pkl_jumpers:J_0903" (at 78.74 146.05 0)
+    (property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 78.74 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 78.74 146.05 0)
@@ -2708,7 +2708,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "J17") (unit 1)
+          (reference "J3") (unit 1)
         )
       )
     )
@@ -2738,7 +2738,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR094") (unit 1)
+          (reference "#PWR072") (unit 1)
         )
       )
     )
@@ -2753,10 +2753,10 @@
     (property "Value" "10k" (at 107.95 104.14 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 108.1786 109.0422 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 108.1786 109.0422 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 106.68 106.68 0)
+    (property "Datasheet" "~" (at 106.68 106.68 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "res-0402-10k" (at 106.68 106.68 0)
@@ -2775,7 +2775,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R34") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -2790,7 +2790,7 @@
     (property "Value" "SII164" (at 147.32 29.5402 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "pkl_housings_qfp:TQFP-64-1EP_10x10mm_P0.5mm_EP5x5mm" (at 148.59 146.05 0)
+    (property "Footprint" "Package_QFP:TQFP-64_10x10mm_P0.5mm" (at 148.59 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tfp410.pdf" (at 148.59 146.05 0)
@@ -2875,7 +2875,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "U10") (unit 1)
+          (reference "IC6") (unit 1)
         )
       )
     )
@@ -2905,7 +2905,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0110") (unit 1)
+          (reference "#PWR088") (unit 1)
         )
       )
     )
@@ -2920,7 +2920,7 @@
     (property "Value" "600" (at 203.2 124.5362 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "pkl_dipol:L_0402" (at 205.5622 125.7554 0)
+    (property "Footprint" "Inductor_SMD:L_0603_1608Metric" (at 205.5622 125.7554 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 203.2 127 90)
@@ -2972,7 +2972,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR099") (unit 1)
+          (reference "#PWR077") (unit 1)
         )
       )
     )
@@ -3002,7 +3002,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0102") (unit 1)
+          (reference "#PWR080") (unit 1)
         )
       )
     )
@@ -3017,10 +3017,10 @@
     (property "Value" "10k" (at 100.33 104.14 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 100.5586 109.0422 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 100.5586 109.0422 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 99.06 106.68 0)
+    (property "Datasheet" "~" (at 99.06 106.68 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "res-0402-10k" (at 99.06 106.68 0)
@@ -3039,7 +3039,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R31") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -3054,10 +3054,10 @@
     (property "Value" "10k" (at 125.73 147.32 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 125.9586 152.2222 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 125.9586 152.2222 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 124.46 149.86 0)
+    (property "Datasheet" "~" (at 124.46 149.86 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "res-0402-10k" (at 124.46 149.86 0)
@@ -3076,7 +3076,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R38") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -3106,7 +3106,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR098") (unit 1)
+          (reference "#PWR076") (unit 1)
         )
       )
     )
@@ -3136,7 +3136,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0112") (unit 1)
+          (reference "#PWR090") (unit 1)
         )
       )
     )
@@ -3166,7 +3166,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR096") (unit 1)
+          (reference "#PWR074") (unit 1)
         )
       )
     )
@@ -3175,7 +3175,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 195.58 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5dd25800-40f3-4c17-8985-33ad48d2921c)
-    (property "Reference" "#FLG01" (at 195.58 79.375 0)
+    (property "Reference" "#FLG03" (at 195.58 79.375 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 195.58 76.2 0)
@@ -3191,7 +3191,7 @@
     (instances
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#FLG01") (unit 1)
+          (reference "#FLG03") (unit 1)
         )
       )
     )
@@ -3206,7 +3206,7 @@
     (property "Value" "10u" (at 199.39 138.43 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0603" (at 200.4568 134.4422 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 200.4568 134.4422 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 198.12 132.08 0)
@@ -3228,7 +3228,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C59") (unit 1)
+          (reference "C43") (unit 1)
         )
       )
     )
@@ -3258,7 +3258,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR093") (unit 1)
+          (reference "#PWR071") (unit 1)
         )
       )
     )
@@ -3288,7 +3288,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR092") (unit 1)
+          (reference "#PWR070") (unit 1)
         )
       )
     )
@@ -3303,10 +3303,10 @@
     (property "Value" "33k" (at 110.49 104.14 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 110.7186 109.0422 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 110.7186 109.0422 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 109.22 106.68 0)
+    (property "Datasheet" "~" (at 109.22 106.68 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "res-0402-33k" (at 109.22 106.68 0)
@@ -3325,7 +3325,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R35") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -3340,7 +3340,7 @@
     (property "Value" "100n" (at 194.31 92.71 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0402" (at 195.3768 88.7222 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 195.3768 88.7222 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 193.04 86.36 0)
@@ -3362,25 +3362,25 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C54") (unit 1)
+          (reference "C38") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 247.65 50.8 0) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 262.89 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 80341063-b501-4da3-977e-aed753e08c0a)
-    (property "Reference" "#PWR0128" (at 247.65 54.61 0)
+    (property "Reference" "#PWR0128" (at 262.89 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 248.031 46.3296 0)
+    (property "Value" "+3V3" (at 263.271 46.3296 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 247.65 50.8 0)
+    (property "Footprint" "" (at 262.89 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 247.65 50.8 0)
+    (property "Datasheet" "" (at 262.89 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 54bde45c-4caa-423f-9e3b-4ae26ccbd71a))
@@ -3392,7 +3392,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0111") (unit 1)
+          (reference "#PWR091") (unit 1)
         )
       )
     )
@@ -3407,10 +3407,10 @@
     (property "Value" "DNP" (at 110.49 147.32 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 110.7186 152.2222 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 110.7186 152.2222 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 109.22 149.86 0)
+    (property "Datasheet" "~" (at 109.22 149.86 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "dnp" (at 109.22 149.86 0)
@@ -3429,7 +3429,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R36") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )
@@ -3444,7 +3444,7 @@
     (property "Value" "HDMI_A_1.4" (at 266.192 88.7984 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_connectors:HDMI-10029449-111RLF" (at 255.905 87.63 0)
+    (property "Footprint" "Connector_HDMI:HDMI_A_Amphenol_10029449-x01xLF_Horizontal" (at 255.905 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://en.wikipedia.org/wiki/HDMI" (at 255.905 87.63 0)
@@ -3484,25 +3484,25 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "J22") (unit 1)
+          (reference "J8") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 262.89 50.8 0) (unit 1)
+  (symbol (lib_id "power:+5V") (at 247.65 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8456b0fb-0b7b-4fdc-b696-c4c2c5e58327)
-    (property "Reference" "#PWR064" (at 262.89 54.61 0)
+    (property "Reference" "#PWR064" (at 247.65 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+5VD" (at 263.271 46.4058 0)
+    (property "Value" "+5VD" (at 248.031 46.4058 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 262.89 50.8 0)
+    (property "Footprint" "" (at 247.65 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 262.89 50.8 0)
+    (property "Datasheet" "" (at 247.65 50.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f0890a38-c20f-4a0e-87b6-123b5b89e574))
@@ -3520,7 +3520,7 @@
           (reference "#PWR068") (unit 1)
         )
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR082") (unit 1)
+          (reference "#PWR089") (unit 1)
         )
       )
     )
@@ -3550,7 +3550,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR088") (unit 1)
+          (reference "#PWR067") (unit 1)
         )
       )
     )
@@ -3580,7 +3580,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR087") (unit 1)
+          (reference "#PWR066") (unit 1)
         )
       )
     )
@@ -3595,7 +3595,7 @@
     (property "Value" "10u" (at 199.39 115.57 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0603" (at 200.4568 111.5822 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 200.4568 111.5822 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 198.12 109.22 0)
@@ -3617,7 +3617,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C58") (unit 1)
+          (reference "C42") (unit 1)
         )
       )
     )
@@ -3632,7 +3632,7 @@
     (property "Value" "100n" (at 189.23 138.43 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0402" (at 190.2968 134.4422 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 190.2968 134.4422 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 187.96 132.08 0)
@@ -3654,7 +3654,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C53") (unit 1)
+          (reference "C37") (unit 1)
         )
       )
     )
@@ -3684,7 +3684,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0109") (unit 1)
+          (reference "#PWR087") (unit 1)
         )
       )
     )
@@ -3699,7 +3699,7 @@
     (property "Value" "100n" (at 184.15 92.71 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0402" (at 185.2168 88.7222 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 185.2168 88.7222 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 182.88 86.36 0)
@@ -3721,7 +3721,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C50") (unit 1)
+          (reference "C34") (unit 1)
         )
       )
     )
@@ -3751,7 +3751,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0107") (unit 1)
+          (reference "#PWR085") (unit 1)
         )
       )
     )
@@ -3766,7 +3766,7 @@
     (property "Value" "sj" (at 90.17 152.4 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "pkl_jumpers:J_0903" (at 88.9 146.05 0)
+    (property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 88.9 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 88.9 146.05 0)
@@ -3783,7 +3783,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "J19") (unit 1)
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -3819,7 +3819,7 @@
           (reference "#PWR068") (unit 1)
         )
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR080") (unit 1)
+          (reference "#PWR063") (unit 1)
         )
       )
     )
@@ -3849,7 +3849,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR095") (unit 1)
+          (reference "#PWR073") (unit 1)
         )
       )
     )
@@ -3879,7 +3879,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR086") (unit 1)
+          (reference "#PWR065") (unit 1)
         )
       )
     )
@@ -3894,10 +3894,10 @@
     (property "Value" "10k" (at 113.03 147.32 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 113.2586 152.2222 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 113.2586 152.2222 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 111.76 149.86 0)
+    (property "Datasheet" "~" (at 111.76 149.86 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "res-0402-10k" (at 111.76 149.86 0)
@@ -3916,7 +3916,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R37") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -3946,7 +3946,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0103") (unit 1)
+          (reference "#PWR081") (unit 1)
         )
       )
     )
@@ -3976,7 +3976,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0104") (unit 1)
+          (reference "#PWR082") (unit 1)
         )
       )
     )
@@ -4006,7 +4006,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR076") (unit 1)
+          (reference "#PWR062") (unit 1)
         )
       )
     )
@@ -4015,7 +4015,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 184.15 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d8322d9b-463b-4e4b-97b2-43f812eaee5e)
-    (property "Reference" "#FLG03" (at 184.15 125.095 0)
+    (property "Reference" "#FLG01" (at 184.15 125.095 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 184.15 121.92 0)
@@ -4031,7 +4031,7 @@
     (instances
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#FLG03") (unit 1)
+          (reference "#FLG01") (unit 1)
         )
       )
     )
@@ -4046,7 +4046,7 @@
     (property "Value" "100n" (at 194.31 115.57 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0402" (at 195.3768 111.5822 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 195.3768 111.5822 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 193.04 109.22 0)
@@ -4068,7 +4068,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C55") (unit 1)
+          (reference "C39") (unit 1)
         )
       )
     )
@@ -4083,7 +4083,7 @@
     (property "Value" "sj" (at 85.09 152.4 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "pkl_jumpers:J_0903" (at 83.82 146.05 0)
+    (property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 83.82 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 83.82 146.05 0)
@@ -4100,7 +4100,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "J18") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -4115,10 +4115,10 @@
     (property "Value" "10k" (at 102.87 104.14 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:R_0402" (at 103.0986 109.0422 0)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 103.0986 109.0422 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
-    (property "Datasheet" "" (at 101.6 106.68 0)
+    (property "Datasheet" "~" (at 101.6 106.68 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Key" "res-0402-10k" (at 101.6 106.68 0)
@@ -4137,7 +4137,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "R32") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -4167,7 +4167,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR090") (unit 1)
+          (reference "#PWR068") (unit 1)
         )
       )
     )
@@ -4197,7 +4197,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR0100") (unit 1)
+          (reference "#PWR078") (unit 1)
         )
       )
     )
@@ -4227,7 +4227,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "#PWR085") (unit 1)
+          (reference "#PWR064") (unit 1)
         )
       )
     )
@@ -4289,7 +4289,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "J14") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -4304,7 +4304,7 @@
     (property "Value" "10u" (at 199.39 92.71 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0603" (at 200.4568 88.7222 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 200.4568 88.7222 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 198.12 86.36 0)
@@ -4326,7 +4326,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C57") (unit 1)
+          (reference "C41") (unit 1)
         )
       )
     )
@@ -4341,7 +4341,7 @@
     (property "Value" "100n" (at 189.23 115.57 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "pkl_dipol:C_0402" (at 190.2968 111.5822 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 190.2968 111.5822 0)
       (effects (font (size 1.524 1.524)) (justify left) hide)
     )
     (property "Datasheet" "" (at 187.96 109.22 0)
@@ -4363,7 +4363,7 @@
       )
       (project "Xosera2"
         (path "/e3ab5ddd-7cd3-46c7-91c9-5fc78e7ae4ac/ec7d642b-fc27-4fe7-b7f5-f7bfac574621"
-          (reference "C52") (unit 1)
+          (reference "C36") (unit 1)
         )
       )
     )
