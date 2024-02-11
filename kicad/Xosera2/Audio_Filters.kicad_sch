@@ -1,0 +1,51 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 86a8bb9b-eb75-4ff5-a5cc-9af416e6681f)
+
+  (paper "A4")
+
+  (title_block
+    (title "rosco_m68k Super Board")
+    (date "2024-02-11")
+    (rev "0")
+    (company "The Really Old-School Company Limited & XarkLabs")
+    (comment 1 "Copyright (c)2023")
+    (comment 2 "CERN OHL & MIT License")
+    (comment 3 "Featuring Xosera & MarkM's IDE")
+  )
+
+  (lib_symbols
+  )
+
+
+  (wire (pts (xy 134.62 95.25) (xy 180.34 95.25))
+    (stroke (width 0) (type default))
+    (uuid 05b008de-0a77-491f-8234-a9488269a2d8)
+  )
+  (wire (pts (xy 134.62 90.17) (xy 180.34 90.17))
+    (stroke (width 0) (type default))
+    (uuid 7c6e7458-624e-4d3f-a3dc-637735694ee9)
+  )
+
+  (text "Yes, these are not implemented yet... :D" (at 137.16 100.33 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid e8a6d8dc-528a-433f-b1d0-87956d1144af)
+  )
+
+  (hierarchical_label "Audio_R_Unfilt" (shape input) (at 134.62 95.25 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 1715cebf-248e-4894-b97e-fcee77d59472)
+  )
+  (hierarchical_label "Audio_L_Filt" (shape output) (at 180.34 90.17 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 502fb1c8-5d7b-457e-9622-03bb32f2a515)
+  )
+  (hierarchical_label "Audio_L_Unfilt" (shape input) (at 134.62 90.17 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid c89d8f68-dff6-4d72-b9a4-e7155c67d5d0)
+  )
+  (hierarchical_label "Audio_R_Filt" (shape output) (at 180.34 95.25 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid eaed7a6c-923f-476e-ac1e-3e845ad27c3d)
+  )
+)

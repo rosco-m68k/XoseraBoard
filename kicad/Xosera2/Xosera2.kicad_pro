@@ -32,7 +32,11 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "power_pin_not_driven|1511300|812800|80f668dd-a344-4533-a0aa-367072b9c4b2|00000000-0000-0000-0000-000000000000|||",
+      "power_pin_not_driven|2654300|812800|dd886363-0d80-4f2c-ad6c-2eae8a20c07e|00000000-0000-0000-0000-000000000000|||",
+      "power_pin_not_driven|444500|812800|70026f5a-6d8e-48b1-8c2b-1b3662579faf|00000000-0000-0000-0000-000000000000|||"
+    ],
     "meta": {
       "version": 0
     },
@@ -346,6 +350,10 @@
     [
       "4ee056bd-bf09-4e04-a133-a9171db1e0fc",
       "IDE"
+    ],
+    [
+      "2a8d8377-95a1-4b28-9b2a-8f77cb6ebcb2",
+      "Audio_Filters"
     ]
   ],
   "text_variables": {}
