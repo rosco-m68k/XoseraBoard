@@ -1,0 +1,211 @@
+Name     xosera_glue ;
+PartNo   00 ;
+Date     10/02/2024 ;
+Revision 01 ;
+Designer Ross Bamford ;
+Company  The Really Old-School Company Limited ;
+Assembly None ;
+Location  ;
+Device   f1504ispplcc84 ;
+
+/*
+property   atmel {preassign=keep};
+property   atmel {xor_synthesis=on};
+*/
+property   atmel {logic_doubling=on};
+property   atmel {pin_keep=off};
+property   atmel {security=off};
+property   atmel {output_fast=on};
+property   atmel {cascade_logic=on};
+property   atmel {tdi_pullup=on};
+property   atmel {tms_pullup=on};
+
+/* *************** INPUT PINS *********************/
+PIN 83 = CLK;
+
+PIN 28 = A23;
+PIN 30 = A22;
+PIN 46 = A21;
+PIN 45 = A20;
+
+PIN 67 = A17;
+PIN 65 = A16;
+PIN 64 = A15;
+PIN 63 = A14;
+PIN 60 = A13;
+PIN 54 = A12;
+PIN 52 = A11;
+PIN 51 = A10;
+PIN 50 = A9;
+PIN 49 = A8;
+PIN 48 = A7;
+PIN 70 = A6;
+PIN 69 = A5;
+PIN 74 = A4;
+PIN 76 = A3;
+PIN 22 = A2;
+PIN 81 = A1;
+
+PIN 77 = FC0;
+PIN 79 = FC1;
+PIN 80 = FC2;
+
+PIN 68 = !IOSEL;
+PIN 25 = !EXPSEL;
+PIN 73 = !LDS;
+PIN  5 = !UDS;
+PIN 34 = !AS;
+PIN  6 = RnW;
+PIN 75 = !RESET;
+PIN  2 = UDIRQ;
+
+PIN 41 = RAMEN0;
+PIN 21 = RAMEN1;
+PIN 20 = RAMEN2;
+PIN 44 = RAMEN3;
+
+/* *************** OUTPUT PINS *********************/
+PIN 17 = WnR;
+
+PIN 10 = !XOSERA_CS;
+PIN  4 = !IDE_CS;
+PIN 40 = OIRQ;
+PIN 24 = !IRQRS;
+PIN 57 = DTACK;
+PIN 39 = VPA;
+PIN 11 = !IDE_LSEL;
+PIN 15 = !IDE_USEL;
+PIN  8 = !IDE_RD;
+PIN  9 = !IDE_WR;
+PIN 16 = !IDE_CS1;
+PIN 12 = !IDE_CS3;
+
+PIN 31 = !RAM0;
+PIN 33 = !RAM1;
+PIN 35 = !RAM2;
+PIN 29 = !RAM3;
+PIN 36 = !RAM4;
+PIN 27 = !RAM5;
+PIN 37 = !RAM6;
+PIN 61 = !RAM7;
+
+NODE IDEDT_EN;
+NODE Cb, Ca;
+
+FIELD sel_addr  = [A17..A5];
+FIELD ram_count = [RAMEN3..RAMEN0];
+FIELD ram_bank  = [A23..A20];
+
+WnR         = !RnW;
+
+RAM0        = EXPSEL & ram_count:[1..f] & ram_bank:1;
+RAM1        = EXPSEL & ram_count:[2..f] & ram_bank:2;
+RAM2        = EXPSEL & ram_count:[3..f] & ram_bank:3;
+RAM3        = EXPSEL & ram_count:[4..f] & ram_bank:4;
+RAM4        = EXPSEL & ram_count:[5..f] & ram_bank:5;
+RAM5        = EXPSEL & ram_count:[6..f] & ram_bank:6;
+RAM6        = EXPSEL & ram_count:[7..f] & ram_bank:7;
+RAM7        = EXPSEL & ram_count:[8..f] & ram_bank:8;
+
+
+XOSERA_CS   = IOSEL & UDS & !LDS & AS & sel_addr:'b'XXXXXX0000000000011XXXXX
+            # IOSEL & UDS & !LDS & AS & sel_addr:'b'XXXXXX0000000000100XXXXX
+            ;
+
+/* The binary quantity in the compound AND expression represents
+   the S's in the below selection string.
+   So
+   I is from IOSEL, and comes from [A23..18]
+   S...S is specified below
+   C selects CS3 vs CS1 in the IDE
+   RRR selects the IDE register
+   x is the LSB and may not be relevant e.g. for 16-bit access
+
+   IIII_IISS_SSSS_SSSS_SSSC_RRRx
+   1111_1000_0000_0010_010C_RRRx
+ 0x   F    8    0    0  4/5  F-0
+*/
+IDE_CS      = IOSEL & sel_addr:'b'XXXXXX0000000000010XXXXX;
+
+OIRQ        = !RESET & UDIRQ;
+ 
+DTACK.SP    = 'b'0;
+DTACK       = 'b'0;
+DTACK.OE    = !RESET & XOSERA_CS & AS & UDS
+            # IDEDT_EN
+            ;
+
+VPA         = 'b'0;
+VPA.OE      = !RESET & AS & RnW & FC0 & FC1 & FC2 & !A1 &  A2 & !A3
+            # (FC2 & FC1 & FC0) & (!A3 & A2 & A1)
+            ;
+
+IRQRS       =          AS & RnW & FC0 & FC1 & FC2 & !A1 &  A2 & !A3 
+            # RESET
+            ;
+
+
+IDEDT_EN.SP = 'b'0;
+Cb.sp = 'b'0;
+Ca.sp = 'b'0;
+
+DS = UDS # LDS;
+FIELD STATE = [Cb, Ca, DTACK, IDEDT_EN];
+STATE.ckmux = CLK;
+
+SEQUENCE STATE {
+    PRESENT 'b'0000
+        IF IDE_CS & DS & RnW
+            NEXT 'b'1100;
+        IF IDE_CS & DS & !RnW
+            NEXT 'b'0001;
+        DEFAULT NEXT 'b'0000;
+    /* READ Sequence */
+    PRESENT 'b'1100
+        NEXT 'b'1101;
+    PRESENT 'b'1101
+        IF !DS
+            NEXT 'b'1111;
+        DEFAULT NEXT 'b'1101;
+    PRESENT 'b'1111
+        NEXT 'b'1110;
+    PRESENT 'b'1110
+        NEXT 'b'0000;
+    /* WRITE Sequence */
+    PRESENT 'b'0001
+        IF !DS
+            NEXT 'b'0011;
+        DEFAULT NEXT 'b'0001;
+    PRESENT 'b'0011
+        NEXT 'b'0010;
+    PRESENT 'b'0010
+        NEXT 'b'0000;
+    /* These should not happen normally */
+    PRESENT 'b'0100
+        NEXT 'b'0000;
+    PRESENT 'b'0101
+        NEXT 'b'0000;
+    PRESENT 'b'0110
+        NEXT 'b'0000;
+    PRESENT 'b'0111
+        NEXT 'b'0000;
+    PRESENT 'b'1000
+        NEXT 'b'0000;
+    PRESENT 'b'1001
+        NEXT 'b'0000;
+    PRESENT 'b'1010
+        NEXT 'b'0000;
+    PRESENT 'b'1011
+        NEXT 'b'0000;
+}
+
+IDE_RD      =  RnW & IDE_CS & DS & Ca;
+IDE_WR      = !RnW & IDE_CS & DS;
+
+IDE_CS1     = IDE_CS & !A4;
+IDE_CS3     = IDE_CS & A4;
+
+IDE_USEL    = IDE_CS & UDS;
+IDE_LSEL    = IDE_CS & LDS;
+
+

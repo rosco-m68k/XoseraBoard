@@ -338,6 +338,14 @@
     [
       "0538ee98-bc97-42b9-b611-c13da646eabf",
       "Xosera_Bus"
+    ],
+    [
+      "2e766fcf-7eca-465f-9063-7b5d46038f76",
+      "Expansion_RAM"
+    ],
+    [
+      "4ee056bd-bf09-4e04-a133-a9171db1e0fc",
+      "IDE"
     ]
   ],
   "text_variables": {}

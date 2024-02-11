@@ -5,12 +5,13 @@
   (paper "A4")
 
   (title_block
-    (title "Xosera rosco_m68k daughterboard")
-    (date "2024-02-08")
+    (title "rosco_m68k Super Board")
+    (date "2024-02-11")
     (rev "0")
     (company "The Really Old-School Company Limited & XarkLabs")
     (comment 1 "Copyright (c)2023")
     (comment 2 "CERN OHL & MIT License")
+    (comment 3 "Featuring Xosera & MarkM's IDE")
   )
 
   (lib_symbols
