@@ -18,7 +18,7 @@ IDE_WR					: 9
 IDE_RD					: 8
 RnW					: 6
 UDS					: 5
-IDE_CS					: 4
+UART_CSA					: 4
 RAMEN0					: 41
 DTACK_OE					: 617
 OIRQ					: 40

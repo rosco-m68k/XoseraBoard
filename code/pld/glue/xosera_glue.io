@@ -21,7 +21,7 @@ BEGIN
     "IDE_RD"                                  : OUTPUT_PIN = 8 ;
     "RnW"                                     : INPUT_PIN = 6 ;
     "UDS"                                     : INPUT_PIN = 5 ;
-    "IDE_CS"                                  : OUTPUT_PIN = 4 ;
+    "UART_CSA"                                : OUTPUT_PIN = 4 ;
     "RAMEN0"                                  : INPUT_PIN = 41 ;
     "DTACK_OE"                                : NODE_NUM = 617 ;
     "OIRQ"                                    : OUTPUT_PIN = 40 ;

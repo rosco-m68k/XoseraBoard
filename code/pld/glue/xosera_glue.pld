@@ -68,7 +68,7 @@ PIN 44 = RAMEN3;
 PIN 17 = WnR;
 
 PIN 10 = !XOSERA_CS;
-PIN  4 = !IDE_CS;
+PIN  4 = !UART_CSA;
 PIN 40 = OIRQ;
 PIN 24 = !IRQRS;
 PIN 57 = DTACK;
@@ -91,6 +91,7 @@ PIN 61 = !RAM7;
 
 NODE IDEDT_EN;
 NODE Cb, Ca;
+NODE IDE_CS;
 
 FIELD sel_addr  = [A17..A5];
 FIELD ram_count = [RAMEN3..RAMEN0];
@@ -110,6 +111,16 @@ RAM7        = EXPSEL & ram_count:[8..f] & ram_bank:8;
 
 XOSERA_CS   = IOSEL & UDS & !LDS & AS & sel_addr:'b'XXXXXX0000000000011XXXXX
             # IOSEL & UDS & !LDS & AS & sel_addr:'b'XXXXXX0000000000100XXXXX
+            ;
+
+UART_CSA    = IOSEL & sel_addr:'b'XXXXXX0000000010000XX000
+            # IOSEL & sel_addr:'b'XXXXXX0000000010000XX001
+            # IOSEL & sel_addr:'b'XXXXXX0000000010000XX010
+            # IOSEL & sel_addr:'b'XXXXXX0000000010000XX011
+            # IOSEL & sel_addr:'b'XXXXXX0000000010000XX100
+            # IOSEL & sel_addr:'b'XXXXXX0000000010000XX101
+            # IOSEL & sel_addr:'b'XXXXXX0000000010000XX110
+            # IOSEL & sel_addr:'b'XXXXXX0000000010000XX111
             ;
 
 /* The binary quantity in the compound AND expression represents
@@ -136,8 +147,9 @@ DTACK.OE    = !RESET & XOSERA_CS & AS & UDS
             ;
 
 VPA         = 'b'0;
-VPA.OE      = !RESET & AS & RnW & FC0 & FC1 & FC2 & !A1 &  A2 & !A3
-            # (FC2 & FC1 & FC0) & (!A3 & A2 & A1)
+VPA.OE      = !RESET & AS & RnW & FC0 & FC1 & FC2 & !A1 & A2 & !A3 /* Xosera */
+            # !RESET & AS & RnW & FC2 & FC1 & FC0 & !A3 & A2 &  A1 /* IDE    */
+            # !RESET & AS & RnW & FC2 & FC1 & FC0 &  A3 & A2 & !A1 /* UART   */
             ;
 
 IRQRS       =          AS & RnW & FC0 & FC1 & FC2 & !A1 &  A2 & !A3 

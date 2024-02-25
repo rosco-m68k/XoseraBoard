@@ -1,4 +1,4 @@
-Atmel ATF1504 Fitter Version 1918 ,running Sun Feb 11 01:24:20 2024
+Atmel ATF1504 Fitter Version 1918 ,running Wed Feb 21 20:57:57 2024
 
 
 
@@ -107,7 +107,8 @@ IDE_WR is placed at pin 9 (MC 12)
 IDE_RD is placed at pin 8 (MC 13)
 RnW is placed at pin 6 (MC 14)
 UDS is placed at pin 5 (MC 15)
-IDE_CS is placed at pin 4 (MC 16)
+IDE_CS is placed at foldback expander node 315 (MC 15)
+UART_CSA is placed at pin 4 (MC 16)
 RAMEN0 is placed at pin 41 (MC 17)
 DTACK_Q.OE is placed at feedback node 617 (MC 17)
 OIRQ is placed at pin 40 (MC 18)
@@ -160,14 +161,14 @@ FC2 is placed at pin 80 (MC 63)
 A1 is placed at pin 81 (MC 64)
 
                         X                                                           
-                     I  O                                                           
-                     D  S                                                           
-                     E  E  I  I           I                                         
-                     _  R  D  D           D     U                                R  
-                     L  A  E  E           E     D                                E  
-                     S  _  _  _  G  R  U  _  V  I        C  G     F  F  V  F     S  
-                     E  C  W  R  N  n  D  C  C  R  N  N  L  N  A  C  C  C  C  A  E  
-                     L  S  R  D  D  W  S  S  C  Q  C  C  K  D  1  2  1  C  0  3  T  
+                     I  O                 U                                         
+                     D  S                 A                                         
+                     E  E  I  I           R                                         
+                     _  R  D  D           T     U                                R  
+                     L  A  E  E           _     D                                E  
+                     S  _  _  _  G  R  U  C  V  I        C  G     F  F  V  F     S  
+                     E  C  W  R  N  n  D  S  C  R  N  N  L  N  A  C  C  C  C  A  E  
+                     L  S  R  D  D  W  S  A  C  Q  C  C  K  D  1  2  1  C  0  3  T  
                  +------------------------------------------------------------------+
                  |  11 10  9  8  7  6  5  4  3  2  1 84 83 82 81 80 79 78 77 76 75  |
           IDE_CS3| 12                                                            74 |A4
@@ -213,41 +214,40 @@ NC = Unused I/O pins which must be unconnected on the board
 
 Universal-Interconnect-Multiplexer assignments
 ------------------------------------------------
-FanIn assignment for block A [25]
+FanIn assignment for block A [24]
 {
 A9,A13,AS,A10,A15,A16,A4,A14,A17,A11,A8,A5,A7,A6,A12,
 Ca,Cb,
 DTACK_Q.OE,DTACK_Q,
-IDEDT_EN,IDE_CS,IOSEL,
+IDEDT_EN,IOSEL,
 LDS,
 RnW,
 UDS,
 }
 Multiplexer assignment for block A
 Ca			(MC2	FB)  : MUX 0		Ref (A2fb)
-A9			(MC12	P)   : MUX 1		Ref (C38p)
-A13			(MC16	P)   : MUX 2		Ref (C46p)
-AS			(MC9	P)   : MUX 3		Ref (B23p)
-A10			(MC13	P)   : MUX 5		Ref (C39p)
+A9			(MC11	P)   : MUX 1		Ref (C38p)
+A13			(MC15	P)   : MUX 2		Ref (C46p)
+AS			(MC8	P)   : MUX 3		Ref (B23p)
+A10			(MC12	P)   : MUX 5		Ref (C39p)
 Cb			(MC3	FB)  : MUX 6		Ref (A3fb)
-A15			(MC18	P)   : MUX 7		Ref (D50p)
+A15			(MC17	P)   : MUX 7		Ref (D50p)
 IDEDT_EN		(MC1	FB)  : MUX 8		Ref (A1fb)
-A16			(MC19	P)   : MUX 9		Ref (D51p)
-A4			(MC25	P)   : MUX 10		Ref (D58p)
-A14			(MC17	P)   : MUX 11		Ref (D49p)
-A17			(MC20	P)   : MUX 13		Ref (D52p)
-A11			(MC14	P)   : MUX 15		Ref (C40p)
-LDS			(MC24	P)   : MUX 16		Ref (D57p)
-A8			(MC11	P)   : MUX 17		Ref (C37p)
-UDS			(MC8	P)   : MUX 20		Ref (A15p)
-A5			(MC22	P)   : MUX 21		Ref (D54p)
-A7			(MC10	P)   : MUX 23		Ref (C36p)
-DTACK_Q.OE		(MC6	FB)  : MUX 24		Ref (B17fb)
-RnW			(MC7	P)   : MUX 28		Ref (A14p)
-A6			(MC23	P)   : MUX 29		Ref (D55p)
-IDE_CS			(MC5	P)   : MUX 30		Ref (A16p)
-IOSEL			(MC21	P)   : MUX 31		Ref (D53p)
-A12			(MC15	P)   : MUX 32		Ref (C41p)
+A16			(MC18	P)   : MUX 9		Ref (D51p)
+A4			(MC24	P)   : MUX 10		Ref (D58p)
+A14			(MC16	P)   : MUX 11		Ref (D49p)
+A17			(MC19	P)   : MUX 13		Ref (D52p)
+A11			(MC13	P)   : MUX 15		Ref (C40p)
+LDS			(MC23	P)   : MUX 16		Ref (D57p)
+A8			(MC10	P)   : MUX 17		Ref (C37p)
+UDS			(MC7	P)   : MUX 20		Ref (A15p)
+A5			(MC21	P)   : MUX 21		Ref (D54p)
+A7			(MC9	P)   : MUX 23		Ref (C36p)
+DTACK_Q.OE		(MC5	FB)  : MUX 24		Ref (B17fb)
+RnW			(MC6	P)   : MUX 28		Ref (A14p)
+A6			(MC22	P)   : MUX 29		Ref (D55p)
+IOSEL			(MC20	P)   : MUX 31		Ref (D53p)
+A12			(MC14	P)   : MUX 32		Ref (C41p)
 DTACK_Q			(MC4	FB)  : MUX 38		Ref (A8fb)
 
 FanIn assignment for block B [23]
@@ -304,18 +304,18 @@ Creating JEDEC file xosera_glue.jed ...
 
 PLCC84 programmed logic:
 -----------------------------------
+Cb_P = 0;
+
 Ca_P = 0;
+
+DTACK_P = 0;
+
+DTACK = 0;
 
 DTACK_Q.D = ((!Ca.Q & !Cb.Q & IDEDT_EN.Q & DTACK_Q.Q)
 	# (!Ca.Q & !Cb.Q & IDEDT_EN.Q & LDS & UDS)
 	# (Ca.Q & Cb.Q & IDEDT_EN.Q & DTACK_Q.Q)
 	# (Ca.Q & Cb.Q & IDEDT_EN.Q & LDS & UDS));
-
-Cb_P = 0;
-
-DTACK = 0;
-
-DTACK_P = 0;
 
 IDEDT_EN_P = 0;
 
@@ -328,9 +328,58 @@ IRQRS = ((RESET & A3)
 	# (RESET & A1)
 	# (!A2 & RESET));
 
-IDE_CS = (A7
+!IDE_CS = (!A5 & A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !IOSEL);
+
+!RAM0 = ((!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN2)
+	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN1)
+	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN0)
+	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN3));
+
+OIRQ = (RESET & UDIRQ);
+
+RAM1 = (A22
+	# A23
+	# EXPSEL
+	# (!RAMEN1 & !RAMEN2 & !RAMEN3)
+	# A20
+	# A21);
+
+!RAM2 = ((!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN0 & RAMEN1)
+	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN3)
+	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN2));
+
+RAM5 = (A22
+	# A23
+	# EXPSEL
+	# (!RAMEN3 & !RAMEN1)
+	# (!RAMEN3 & !RAMEN2)
+	# A20
+	# A21);
+
+RAM3 = (A22
+	# A23
+	# EXPSEL
+	# (!RAMEN2 & !RAMEN3)
+	# A20
+	# A21);
+
+!RAM4 = ((!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN2 & RAMEN0)
+	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN1 & RAMEN2)
+	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN3));
+
+!RAM6 = ((!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN1 & RAMEN2 & RAMEN0)
+	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN3));
+
+RAM7 = (A22
+	# A23
+	# EXPSEL
+	# !RAMEN3
+	# A20
+	# A21);
+
+UART_CSA = (A7
 	# A8
-	# A9
+	# !A9
 	# A10
 	# A11
 	# A12
@@ -341,92 +390,45 @@ IDE_CS = (A7
 	# A17
 	# IOSEL
 	# A5
-	# !A6);
-
-OIRQ = (RESET & UDIRQ);
-
-!RAM0 = ((!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN2)
-	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN1)
-	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN0)
-	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN3));
-
-RAM1 = (A22
-	# A23
-	# EXPSEL
-	# (!RAMEN1 & !RAMEN2 & !RAMEN3)
-	# A20
-	# A21);
-
-!RAM4 = ((!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN2 & RAMEN0)
-	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN1 & RAMEN2)
-	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN3));
-
-!RAM2 = ((!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN0 & RAMEN1)
-	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN3)
-	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN2));
-
-RAM3 = (A22
-	# A23
-	# EXPSEL
-	# (!RAMEN2 & !RAMEN3)
-	# A20
-	# A21);
-
-RAM5 = (A22
-	# A23
-	# EXPSEL
-	# (!RAMEN3 & !RAMEN1)
-	# (!RAMEN3 & !RAMEN2)
-	# A20
-	# A21);
-
-RAM7 = (A22
-	# A23
-	# EXPSEL
-	# !RAMEN3
-	# A20
-	# A21);
-
-!RAM6 = ((!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN1 & RAMEN2 & RAMEN0)
-	# (!A20 & !A21 & !A22 & !A23 & !EXPSEL & RAMEN3));
+	# A6);
 
 VPA = 0;
+
+DTACK = DTACK_Q.Q;
 
 WnR = !RnW;
 
 !XOSERA_CS = ((A5 & A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !AS & !IOSEL & LDS & !UDS)
 	# (!A5 & !A6 & A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !AS & !IOSEL & LDS & !UDS));
 
-DTACK = DTACK_Q.Q;
+Ca.D = ((Ca.Q & Cb.Q & !DTACK_Q.Q)
+	# (!Ca.Q & !Cb.Q & !IDEDT_EN.Q & !DTACK_Q.Q & RnW & !LDS & !A5 & A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !IOSEL)
+	# (!Ca.Q & !Cb.Q & !IDEDT_EN.Q & !DTACK_Q.Q & RnW & !A5 & A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !IOSEL & !UDS)
+	# (Ca.Q & Cb.Q & IDEDT_EN.Q));
 
-Ca.D = ((Ca.Q & Cb.Q & IDEDT_EN.Q)
+IDEDT_EN.D = ((!Ca.Q & !Cb.Q & !DTACK_Q.Q & !RnW & !A5 & A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !IOSEL & !UDS)
 	# (Ca.Q & Cb.Q & !DTACK_Q.Q)
-	# (!Ca.Q & !Cb.Q & !DTACK_Q.Q & !IDEDT_EN.Q & !IDE_CS & RnW & !LDS)
-	# (!Ca.Q & !Cb.Q & !DTACK_Q.Q & !IDEDT_EN.Q & !IDE_CS & RnW & !UDS));
+	# (!Ca.Q & !Cb.Q & !DTACK_Q.Q & IDEDT_EN.Q)
+	# (!Ca.Q & !Cb.Q & !DTACK_Q.Q & !LDS & !RnW & !A5 & A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !IOSEL));
 
-IDEDT_EN.D = ((!Ca.Q & !Cb.Q & !DTACK_Q.Q & !LDS & !IDE_CS & !RnW)
-	# (!Ca.Q & !Cb.Q & !DTACK_Q.Q & !IDE_CS & !RnW & !UDS)
-	# (Ca.Q & Cb.Q & !DTACK_Q.Q)
-	# (!Ca.Q & !Cb.Q & !DTACK_Q.Q & IDEDT_EN.Q));
-
-Cb.D = ((Ca.Q & Cb.Q & IDEDT_EN.Q)
-	# (Ca.Q & Cb.Q & !DTACK_Q.Q)
-	# (!Ca.Q & !Cb.Q & !DTACK_Q.Q & !IDEDT_EN.Q & !IDE_CS & RnW & !LDS)
-	# (!Ca.Q & !Cb.Q & !DTACK_Q.Q & !IDEDT_EN.Q & !IDE_CS & RnW & !UDS));
-
-IDE_LSEL = (IDE_CS
-	# LDS);
+Cb.D = ((Ca.Q & Cb.Q & !DTACK_Q.Q)
+	# (!Ca.Q & !Cb.Q & !IDEDT_EN.Q & !DTACK_Q.Q & RnW & !LDS & !A5 & A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !IOSEL)
+	# (!Ca.Q & !Cb.Q & !IDEDT_EN.Q & !DTACK_Q.Q & RnW & !A5 & A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !A16 & !A17 & !IOSEL & !UDS)
+	# (Ca.Q & Cb.Q & IDEDT_EN.Q));
 
 IDE_CS1 = (A4
-	# IDE_CS);
-
-IDE_CS3 = (!A4
 	# IDE_CS);
 
 IDE_RD = (!RnW
 	# (UDS & LDS)
 	# !Ca.Q
 	# IDE_CS);
+
+IDE_CS3 = (!A4
+	# IDE_CS);
+
+IDE_LSEL = (IDE_CS
+	# LDS);
 
 IDE_USEL = (IDE_CS
 	# UDS);
@@ -440,8 +442,8 @@ DTACK_Q.C = CLK;
 DTACK_Q.OE = ((!AS & RESET & !UDS & !XOSERA_CS)
 	# IDEDT_EN.Q);
 
-VPA.OE = ((A2 & !A3 & FC0 & FC1 & FC2 & !AS & RESET & RnW)
-	# (A1 & A2 & !A3 & FC0 & FC1 & FC2));
+VPA.OE = ((A2 & !AS & FC0 & FC1 & FC2 & RESET & RnW & !A3)
+	# (A2 & !AS & FC0 & FC1 & FC2 & RESET & RnW & !A1));
 
 Ca.C = CLK;
 
@@ -453,7 +455,7 @@ Cb.C = CLK;
 PLCC84 Pin/Node Placement:
 ------------------------------------
 Pin 2  = UDIRQ;
-Pin 4  = IDE_CS; /* MC 16 */
+Pin 4  = UART_CSA; /* MC 16 */
 Pin 5  = UDS; /* MC 15 */
 Pin 6  = RnW; /* MC 14 */
 Pin 8  = IDE_RD; /* MC 13 */
@@ -518,6 +520,7 @@ Pin 79 = FC1; /* MC 62 */
 Pin 80 = FC2; /* MC 63 */ 
 Pin 81 = A1; /* MC 64 */ 
 Pin 83 = CLK;
+PINNODE 315 = IDE_CS; /* MC 15 Foldback */
 PINNODE 601 = IDEDT_EN; /* MC 1 Feedback */
 PINNODE 602 = Ca; /* MC 2 Feedback */
 PINNODE 603 = Cb; /* MC 3 Feedback */
@@ -564,9 +567,9 @@ MC10  11   on   IDE_LSEL   C----  --                --        --             2  
 MC11  10   on   XOSERA_CS  C----  --                --        --             2     f- 
 MC12  9    on   IDE_WR     C----  --                --        --             3     f- 
 MC13  8    on   IDE_RD     C----  --                --        --             4     f- 
-MC14  6    --   RnW        INPUT  --                NA        -> IDE_CS      5     f- 
-MC15  5    --   UDS        INPUT  --                --        -> IDE_CS      5     f- 
-MC16  4    on   IDE_CS     C----  --                NA        --             4     f- 
+MC14  6    --   RnW        INPUT  --                NA        -> UART_CSA    5     f- 
+MC15  5    --   UDS        INPUT  --                IDE_CS    -> UART_CSA    5     f- 
+MC16  4    on   UART_CSA   C----  --                NA        --             5     f- 
 MC17  41   --   RAMEN0     INPUT  DTACK_Q.OE C----  --        --             2     f- 
 MC18  40   on   OIRQ       C----  --                --        --             1     f- 
 MC19  39   PT   VPA        C----  --                --        --             1     f- 
@@ -621,7 +624,7 @@ MC0   84        --                --                --        --             0  
 MC0   83        CLK        INPUT  --                --        --             0     f- 
 
 Logic Array Block			Macro Cells	I/O Pins	Foldbacks	TotalPT	FanIN		Cascades
-A: MC1	- MC16		14/16(87%)	16/16(100%)	0/16(0%)	49/80(61%)	25/40(62%)	2
+A: MC1	- MC16		14/16(87%)	16/16(100%)	1/16(6%)	50/80(62%)	24/40(60%)	2
 B: MC17	- MC32		12/16(75%)	16/16(100%)	0/16(0%)	45/80(56%)	23/40(57%)	4
 C: MC33	- MC48		5/16(31%)	16/16(100%)	0/16(0%)	6/80(7%)	6/40(15%)	1
 D: MC49	- MC64		1/16(6%)	16/16(100%)	0/16(0%)	0/80(0%)	0/40(0%)	0
@@ -630,12 +633,12 @@ Total dedicated input used:	2/4 	(50%)
 Total I/O pins used		64/64 	(100%)
 Total Macro cells used 		39/64 	(60%)
 Total Flip-Flop used 		4/64 	(6%)
-Total Foldback logic used 	0/64 	(0%)
-Total Nodes+FB/MCells 		32/64 	(50%)
+Total Foldback logic used 	1/64 	(1%)
+Total Nodes+FB/MCells 		33/64 	(51%)
 Total cascade used 		7
 Total input pins 			40
 Total output pins 		26
-Total Pts 				100
+Total Pts 				101
 Creating pla file xosera_glue.tt3 with 0 inputs 0 outputs, 0 pins 0 nodes and 0 pterms...
 
 ----------------  End fitter, Design FITS
