@@ -1,0 +1,741 @@
+Atmel ATF1508 Fitter Version 1918 ,running Sat May 04 18:58:23 2024
+
+
+
+
+fit1508
+-i xosera_glue.tt2
+-CUPL 
+-dev P1508T100
+-JTAG ON
+
+****** Initial fitting strategy and property ******
+ Netlist_in_file = xosera_glue.tt2
+ Netlist_out_file = xosera_glue.tt3
+ Jedec_file = xosera_glue.jed
+ Vector_file = xosera_glue.tmv
+ verilog_file = xosera_glue.vt
+ Log_file = xosera_glue.fit
+ Device_name = TQFP100
+ Tech_name = ATF1508AS 
+ Package_type = TQFP
+ Preassignment = try 
+ Security_mode = OFF
+ Pin-Keeper = OFF
+ supporter = CUPL
+ optimize = ON
+ Xor_synthesis = OFF
+ Foldback_logic = OFF
+ Cascade_logic =  on
+ Output_fast = ON
+ SSTL_input = off
+ *******************************
+ Power down pin 1 = OFF
+ Power down pin 2 = OFF
+ power_reset = OFF
+ JTAG = ON
+ TDI pullup = ON
+ TMS pullup = ON
+ MC_power = OFF
+ Open_collector = OFF
+ ITD0 = ON
+ ITD1 = ON
+ ITD2 = ON
+ Fast_inlatch = off
+ Latch_synthesis = off 
+ Push_gate = on 
+ Verilog_sim = off 
+ VHDL_sim = off 
+ Out_Edif = off 
+ Logic Doubling = on 
+ ****** End of fitting strategy and property ******
+---------------------------------------------------------
+ Fitter_Pass 1, Preassign = KEEP, LOGIC_DOUBLING : ON 
+ ... 
+## ERROR : Bad user pin assignment : 101
+ ## ERROR : Bad user pin assignment 
+---------------------------------------------------------
+ Fitter_Pass 2, Preassign = KEEP, NODE ASSIGN : OFF 
+ ... 
+ ## Warning : Placement fail 
+---------------------------------------------------------
+ Fitter_Pass 1, Preassign = IGNORE, LOGIC_DOUBLING : ON 
+ ... 
+
+Performing global Output Enable pin assignments ...
+
+Performing global pin assignments ...
+--------------------------------------
+
+
+
+Final global control pins assignment (if applicable)...
+-------------------------------------------------------
+SD_CLK assigned to pin  87
+SYS_RESET assigned to pin  89
+
+
+
+Performing input pin pre-assignments ...
+------------------------------------
+SD_CLK assigned to pin  87
+SYS_RESET assigned to pin  89
+
+Attempt to place floating signals ...
+------------------------------------
+SD_A3 is placed at pin 2 (MC 1)
+SD_A2 is placed at pin 1 (MC 3)
+RQ0 is placed at feedback node 604 (MC 4)
+SD_A1 is placed at pin 100 (MC 5)
+SD_A0 is placed at pin 99 (MC 6)
+RQ1 is placed at feedback node 607 (MC 7)
+SD_A4 is placed at pin 98 (MC 8)
+SD_RAS is placed at pin 97 (MC 9)
+RQ2 is placed at feedback node 610 (MC 10)
+SD_CS is placed at pin 96 (MC 11)
+RQ3 is placed at feedback node 612 (MC 12)
+SD_CAS is placed at pin 94 (MC 13)
+SYS_DTACK is placed at pin 93 (MC 14)
+INIT0 is placed at feedback node 615 (MC 15)
+SD_WE is placed at pin 92 (MC 16)
+SD_A12 is placed at pin 14 (MC 17)
+SD_A11 is placed at pin 13 (MC 19)
+SD_A10 is placed at pin 12 (MC 21)
+SD_A9 is placed at pin 10 (MC 22)
+SD_A8 is placed at pin 9 (MC 24)
+SD_A7 is placed at pin 8 (MC 25)
+SD_A6 is placed at pin 7 (MC 27)
+RQ4 is placed at feedback node 628 (MC 28)
+SD_A5 is placed at pin 6 (MC 29)
+SD_CKE is placed at pin 5 (MC 30)
+TDI is placed at pin 4 (MC 32)
+RQ5 is placed at feedback node 632 (MC 32)
+SYS_EXPSEL is placed at pin 25 (MC 33)
+SYS_AS is placed at pin 24 (MC 35)
+SYS_RnW is placed at pin 23 (MC 37)
+SD_DQML is placed at pin 22 (MC 38)
+SD_DQMH is placed at pin 21 (MC 40)
+REFRESH_Q is placed at feedback node 640 (MC 40)
+SYS_A14 is placed at pin 20 (MC 41)
+RQ6 is placed at feedback node 642 (MC 42)
+SYS_A5 is placed at pin 19 (MC 43)
+RQ7 is placed at feedback node 644 (MC 44)
+SD_BA1 is placed at pin 17 (MC 45)
+SD_BA0 is placed at pin 16 (MC 46)
+TMS is placed at pin 15 (MC 48)
+RQ8 is placed at feedback node 648 (MC 48)
+SYS_A1 is placed at pin 37 (MC 49)
+SYS_A10 is placed at pin 36 (MC 51)
+SYS_A2 is placed at pin 35 (MC 53)
+SYS_A11 is placed at pin 33 (MC 54)
+SYS_A3 is placed at pin 32 (MC 56)
+SYS_A12 is placed at pin 31 (MC 57)
+SYS_A4 is placed at pin 30 (MC 59)
+SYS_A13 is placed at pin 29 (MC 61)
+SYS_A6 is placed at pin 28 (MC 62)
+SYS_A15 is placed at pin 27 (MC 64)
+SYS_A7 is placed at pin 40 (MC 65)
+SYS_A16 is placed at pin 41 (MC 67)
+SYS_A8 is placed at pin 42 (MC 69)
+SYS_A17 is placed at pin 44 (MC 70)
+SYS_A9 is placed at pin 45 (MC 72)
+SYS_A18 is placed at pin 46 (MC 73)
+SYS_A19 is placed at pin 47 (MC 75)
+SYS_A20 is placed at pin 48 (MC 77)
+SYS_A21 is placed at pin 49 (MC 78)
+SYS_A22 is placed at pin 50 (MC 80)
+SYS_A23 is placed at pin 52 (MC 81)
+SYS_FC2 is placed at pin 53 (MC 83)
+SYS_UDS is placed at pin 54 (MC 85)
+SYS_LDS is placed at pin 55 (MC 86)
+TCK is placed at pin 62 (MC 96)
+TDO is placed at pin 73 (MC 112)
+
+                                          S           S                                         
+                                          Y           Y                                         
+                                          S           S                                         
+                              S        S  _           _     S                                   
+                     S  S  S  D  S     D  D  S        R     D                                   
+                     D  D  D  _  D     _  T  D        E     _                                   
+                     _  _  _  R  _  G  C  A  _  V     S     C  G           V                    
+                     A  A  A  A  C  N  A  C  W  C     E     L  N           C                    
+                     1  0  4  S  S  D  S  K  E  C     T     K  D           C                    
+                 +------------------------------------------------------------------------------+
+                 | 100 99 98 97 96 95 94 93 92 91 90 89 88 87 86 85 84 83 82 81 80 79 78 77 76  |
+            SD_A2| 1                                                                         75 |   
+            SD_A3| 2                                                                         74 |GND
+              VCC| 3                                                                         73 |TDO
+              TDI| 4                                                                         72 |   
+           SD_CKE| 5                                                                         71 |   
+            SD_A5| 6                                                                         70 |   
+            SD_A6| 7                                                                         69 |   
+            SD_A7| 8                                                                         68 |   
+            SD_A8| 9                                                                         67 |   
+            SD_A9| 10                                                                        66 |VCC
+              GND| 11                                                                        65 |   
+           SD_A10| 12                                ATF1508                                 64 |   
+           SD_A11| 13                             100-Lead TQFP                              63 |   
+           SD_A12| 14                                                                        62 |TCK
+              TMS| 15                                                                        61 |   
+           SD_BA0| 16                                                                        60 |   
+           SD_BA1| 17                                                                        59 |GND
+              VCC| 18                                                                        58 |   
+           SYS_A5| 19                                                                        57 |   
+          SYS_A14| 20                                                                        56 |   
+          SD_DQMH| 21                                                                        55 |SYS_LDS
+          SD_DQML| 22                                                                        54 |SYS_UDS
+          SYS_RnW| 23                                                                        53 |SYS_FC2
+           SYS_AS| 24                                                                        52 |SYS_A23
+       SYS_EXPSEL| 25                                                                        51 |VCC
+                 |  26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50  |
+                 +------------------------------------------------------------------------------+
+                     G  S  S  S  S  S  S  S  V  S  S  S  G  V  S  S  S  G  S  S  S  S  S  S  S  
+                     N  Y  Y  Y  Y  Y  Y  Y  C  Y  Y  Y  N  C  Y  Y  Y  N  Y  Y  Y  Y  Y  Y  Y  
+                     D  S  S  S  S  S  S  S  C  S  S  S  D  C  S  S  S  D  S  S  S  S  S  S  S  
+                        _  _  _  _  _  _  _     _  _  _        _  _  _     _  _  _  _  _  _  _  
+                        A  A  A  A  A  A  A     A  A  A        A  A  A     A  A  A  A  A  A  A  
+                        1  6  1  4  1  3  1     2  1  1        7  1  8     1  9  1  1  2  2  2  
+                        5     3     2     1        0              6        7     8  9  0  1  2  
+
+
+
+
+VCC = Supply Voltage pin for the device core
+
+GND = GND pin which must be connected to ground
+
+TMS,TDI,TDO,TDI = JTAG pins reserved for JTAG interface
+
+NC = Unused I/O pins which must be unconnected on the board
+
+Universal-Interconnect-Multiplexer assignments
+------------------------------------------------
+FanIn assignment for block A [25]
+{
+INIT0,
+RQ1,RQ3,RQ0,RQ2,
+SYS_A5,SYS_A3,SYS_A14,SYS_EXPSEL,SYS_AS,SYS_DTACK,SYS_A10,SYS_RESET,SYS_A4,SYS_A12,SYS_RnW,SD_CAS,SD_CKE,SYS_A1,SD_CS,SYS_A2,SD_RAS,SYS_A11,SD_WE,SYS_A13,
+}
+Multiplexer assignment for block A
+SYS_A5			(MC17	P)   : MUX 0		Ref (C43p)
+SYS_A3			(MC22	P)   : MUX 1		Ref (D56p)
+SYS_A14			(MC16	P)   : MUX 2		Ref (C41p)
+SYS_EXPSEL		(MC12	P)   : MUX 5		Ref (C33p)
+INIT0			(MC9	FB)  : MUX 7		Ref (A15fb)
+RQ1			(MC2	FB)  : MUX 8		Ref (A7fb)
+SYS_AS			(MC13	P)   : MUX 9		Ref (C35p)
+SYS_DTACK		(MC8	P)   : MUX 12		Ref (A14p)
+SYS_A10			(MC19	P)   : MUX 13		Ref (D51p)
+SYS_RESET		(MC15	FB)  : MUX 14		Ref (GCLR)
+SYS_A4			(MC24	P)   : MUX 16		Ref (D59p)
+SYS_A12			(MC23	P)   : MUX 18		Ref (D57p)
+SYS_RnW			(MC14	P)   : MUX 19		Ref (C37p)
+SD_CAS			(MC7	P)   : MUX 20		Ref (A13p)
+SD_CKE			(MC11	P)   : MUX 22		Ref (B30p)
+SYS_A1			(MC18	P)   : MUX 23		Ref (D49p)
+SD_CS			(MC5	P)   : MUX 24		Ref (A11p)
+SYS_A2			(MC20	P)   : MUX 25		Ref (D53p)
+SD_RAS			(MC3	P)   : MUX 26		Ref (A9p)
+SYS_A11			(MC21	P)   : MUX 29		Ref (D54p)
+SD_WE			(MC10	P)   : MUX 32		Ref (A16p)
+SYS_A13			(MC25	P)   : MUX 36		Ref (D61p)
+RQ3			(MC6	FB)  : MUX 37		Ref (A12fb)
+RQ0			(MC1	FB)  : MUX 38		Ref (A4fb)
+RQ2			(MC4	FB)  : MUX 39		Ref (A10fb)
+
+FanIn assignment for block B [25]
+{
+INIT0,
+RQ3,RQ0,RQ1,RQ4,RQ2,RQ5,
+SD_CKE,SYS_A7,SYS_A16,SYS_DTACK,SYS_A17,SYS_A6,SYS_A20,SD_WE,SYS_A9,SD_CAS,SYS_A22,SYS_A8,SD_CS,SD_RAS,SYS_A21,SYS_A19,SYS_A18,SYS_A15,
+}
+Multiplexer assignment for block B
+SD_CKE			(MC12	P)   : MUX 0		Ref (B30p)
+RQ3			(MC6	FB)  : MUX 1		Ref (A12fb)
+RQ0			(MC1	FB)  : MUX 2		Ref (A4fb)
+INIT0			(MC9	FB)  : MUX 5		Ref (A15fb)
+SYS_A7			(MC16	P)   : MUX 7		Ref (E65p)
+RQ1			(MC2	FB)  : MUX 8		Ref (A7fb)
+RQ4			(MC11	FB)  : MUX 9		Ref (B28fb)
+SYS_A16			(MC17	P)   : MUX 11		Ref (E67p)
+SYS_DTACK		(MC8	P)   : MUX 12		Ref (A14p)
+SYS_A17			(MC19	P)   : MUX 13		Ref (E70p)
+SYS_A6			(MC14	P)   : MUX 14		Ref (D62p)
+SYS_A20			(MC23	P)   : MUX 16		Ref (E77p)
+SD_WE			(MC10	P)   : MUX 18		Ref (A16p)
+SYS_A9			(MC20	P)   : MUX 19		Ref (E72p)
+SD_CAS			(MC7	P)   : MUX 20		Ref (A13p)
+SYS_A22			(MC25	P)   : MUX 22		Ref (E80p)
+SYS_A8			(MC18	P)   : MUX 23		Ref (E69p)
+SD_CS			(MC5	P)   : MUX 24		Ref (A11p)
+SD_RAS			(MC3	P)   : MUX 26		Ref (A9p)
+RQ2			(MC4	FB)  : MUX 29		Ref (A10fb)
+SYS_A21			(MC24	P)   : MUX 30		Ref (E78p)
+SYS_A19			(MC22	P)   : MUX 32		Ref (E75p)
+SYS_A18			(MC21	P)   : MUX 34		Ref (E73p)
+RQ5			(MC13	FB)  : MUX 37		Ref (B32fb)
+SYS_A15			(MC15	P)   : MUX 38		Ref (D64p)
+
+FanIn assignment for block C [13]
+{
+RQ0,RQ7,RQ2,RQ8,RQ6,RQ1,RQ4,RQ5,RQ3,
+SYS_A23,SYS_FC2,SYS_UDS,SYS_LDS,
+}
+Multiplexer assignment for block C
+RQ0			(MC1	FB)  : MUX 2		Ref (A4fb)
+SYS_A23			(MC10	P)   : MUX 3		Ref (F81p)
+RQ7			(MC8	FB)  : MUX 5		Ref (C44fb)
+RQ2			(MC3	FB)  : MUX 7		Ref (A10fb)
+RQ8			(MC9	FB)  : MUX 9		Ref (C48fb)
+SYS_FC2			(MC11	P)   : MUX 13		Ref (F83p)
+RQ6			(MC7	FB)  : MUX 15		Ref (C42fb)
+RQ1			(MC2	FB)  : MUX 20		Ref (A7fb)
+SYS_UDS			(MC12	P)   : MUX 23		Ref (F85p)
+SYS_LDS			(MC13	P)   : MUX 29		Ref (F86p)
+RQ4			(MC5	FB)  : MUX 31		Ref (B28fb)
+RQ5			(MC6	FB)  : MUX 33		Ref (B32fb)
+RQ3			(MC4	FB)  : MUX 37		Ref (A12fb)
+
+Creating JEDEC file xosera_glue.jed ...
+
+TQFP100 programmed logic:
+-----------------------------------
+INIT0.D = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SYS_DTACK.Q)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SD_WE.Q & !SYS_DTACK.Q)
+	# (!INIT0.Q & !SD_CAS.Q & !SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q));
+
+REFRESH_Q.D = (RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & RQ4.Q & RQ5.Q & RQ6.Q & RQ7.Q & RQ8.Q);
+
+RQ1.D = ((RQ0.Q & !RQ1.Q)
+	# (!RQ0.Q & RQ1.Q));
+
+RQ0.D = !RQ0.Q;
+
+RQ2.D = ((RQ0.Q & RQ1.Q & !RQ2.Q)
+	# (!RQ1.Q & RQ2.Q)
+	# (!RQ0.Q & RQ2.Q));
+
+RQ3.D = ((RQ0.Q & RQ1.Q & RQ2.Q & !RQ3.Q)
+	# (!RQ1.Q & RQ3.Q)
+	# (!RQ2.Q & RQ3.Q)
+	# (!RQ0.Q & RQ3.Q));
+
+RQ4.D = ((RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & !RQ4.Q)
+	# (!RQ3.Q & RQ4.Q)
+	# (!RQ2.Q & RQ4.Q)
+	# (!RQ1.Q & RQ4.Q)
+	# (!RQ0.Q & RQ4.Q));
+
+RQ5.D = ((RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & RQ4.Q & !RQ5.Q)
+	# (!RQ4.Q & RQ5.Q)
+	# (!RQ3.Q & RQ5.Q)
+	# (!RQ2.Q & RQ5.Q)
+	# (!RQ1.Q & RQ5.Q)
+	# (!RQ0.Q & RQ5.Q));
+
+RQ6.D = ((RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & RQ4.Q & RQ5.Q & !RQ6.Q)
+	# (!RQ5.Q & RQ6.Q)
+	# (!RQ2.Q & RQ6.Q)
+	# (!RQ3.Q & RQ6.Q)
+	# (!RQ4.Q & RQ6.Q)
+	# (!RQ1.Q & RQ6.Q)
+	# (!RQ0.Q & RQ6.Q));
+
+RQ8.D = ((RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & RQ4.Q & RQ5.Q & RQ6.Q & RQ7.Q & !RQ8.Q)
+	# (!RQ7.Q & RQ8.Q)
+	# (!RQ1.Q & RQ8.Q)
+	# (!RQ5.Q & RQ8.Q)
+	# (!RQ6.Q & RQ8.Q)
+	# (!RQ4.Q & RQ8.Q)
+	# (!RQ3.Q & RQ8.Q)
+	# (!RQ2.Q & RQ8.Q)
+	# (!RQ0.Q & RQ8.Q));
+
+RQ7.D = ((RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & RQ4.Q & RQ5.Q & RQ6.Q & !RQ7.Q)
+	# (!RQ6.Q & RQ7.Q)
+	# (!RQ2.Q & RQ7.Q)
+	# (!RQ4.Q & RQ7.Q)
+	# (!RQ5.Q & RQ7.Q)
+	# (!RQ3.Q & RQ7.Q)
+	# (!RQ1.Q & RQ7.Q)
+	# (!RQ0.Q & RQ7.Q));
+
+SD_A0 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A1)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A10 & SYS_DTACK.Q));
+
+SD_A3 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A4)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A13 & SYS_DTACK.Q));
+
+SD_A1 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A2)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A11 & SYS_DTACK.Q));
+
+SD_A2 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A3)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A12 & SYS_DTACK.Q));
+
+SD_A4 = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_DTACK.Q & SYS_A14)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A5)
+	# (INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q));
+
+SD_A5 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A6)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A15 & SYS_DTACK.Q));
+
+SD_A8 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A9)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A18 & SYS_DTACK.Q));
+
+SD_A6 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A7)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A16 & SYS_DTACK.Q));
+
+SD_A7 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q & SYS_A8)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A17 & SYS_DTACK.Q));
+
+SD_A9 = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_DTACK.Q & SYS_A19)
+	# (INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q));
+
+SD_A10 = ((SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SYS_A20 & SYS_DTACK.Q));
+
+SD_A11 = (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A21 & SYS_DTACK.Q);
+
+SD_A12 = (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SD_WE.Q & SYS_A22 & SYS_DTACK.Q);
+
+SD_BA0 = SYS_A23;
+
+SD_BA1 = SYS_FC2;
+
+SD_CAS.D = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & !SYS_DTACK.Q & SD_WE.Q)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_RAS.Q & SYS_DTACK.Q & !SD_WE.Q & !SYS_EXPSEL)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q));
+
+SD_CKE.D = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SYS_DTACK.Q)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SD_WE.Q & !SYS_DTACK.Q)
+	# (!INIT0.Q & !SD_CAS.Q & !SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q));
+
+SD_CS.D = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q & SYS_EXPSEL)
+	# (!INIT0.Q & !SD_CAS.Q & !SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & !SD_WE.Q & SYS_DTACK.Q));
+
+SD_DQMH = !SYS_UDS;
+
+SD_DQML = !SYS_LDS;
+
+SD_RAS.D = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & !SYS_DTACK.Q & SD_WE.Q & !SYS_AS)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SYS_DTACK.Q & SD_WE.Q)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q));
+
+SD_WE.D = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_RAS.Q & SYS_DTACK.Q & !SD_WE.Q & !SYS_EXPSEL)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & !SYS_DTACK.Q & SD_WE.Q & !SYS_AS)
+	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_RAS.Q & SYS_DTACK.Q & SD_WE.Q & SYS_RnW)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q));
+
+!SYS_DTACK.D = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & !SYS_DTACK.Q & SD_WE.Q & !SYS_AS)
+	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_RAS.Q & SYS_DTACK.Q));
+
+INIT0.C = SD_CLK;
+
+INIT0.AR = !SYS_RESET;
+
+REFRESH_Q.C = SD_CLK;
+
+RQ1.C = SD_CLK;
+
+RQ0.C = SD_CLK;
+
+RQ2.C = SD_CLK;
+
+RQ3.C = SD_CLK;
+
+RQ4.C = SD_CLK;
+
+RQ5.C = SD_CLK;
+
+RQ6.C = SD_CLK;
+
+RQ8.C = SD_CLK;
+
+RQ7.C = SD_CLK;
+
+SD_CAS.C = SD_CLK;
+
+SD_CAS.AR = !SYS_RESET;
+
+SD_CKE.C = SD_CLK;
+
+SD_CKE.AR = !SYS_RESET;
+
+SD_CS.C = SD_CLK;
+
+SD_CS.AR = !SYS_RESET;
+
+SD_RAS.C = SD_CLK;
+
+SD_RAS.AR = !SYS_RESET;
+
+SD_WE.C = SD_CLK;
+
+SD_WE.AR = !SYS_RESET;
+
+SYS_DTACK.C = SD_CLK;
+
+SYS_DTACK.AP = !SYS_RESET;
+
+
+TQFP100 Pin/Node Placement:
+------------------------------------
+Pin 1  = SD_A2; /* MC 3 */
+Pin 2  = SD_A3; /* MC 1 */
+Pin 4  = TDI; /* MC 32 */
+Pin 5  = SD_CKE; /* MC 30 */
+Pin 6  = SD_A5; /* MC 29 */
+Pin 7  = SD_A6; /* MC 27 */
+Pin 8  = SD_A7; /* MC 25 */
+Pin 9  = SD_A8; /* MC 24 */
+Pin 10 = SD_A9; /* MC 22 */ 
+Pin 12 = SD_A10; /* MC 21 */ 
+Pin 13 = SD_A11; /* MC 19 */ 
+Pin 14 = SD_A12; /* MC 17 */ 
+Pin 15 = TMS; /* MC 48 */ 
+Pin 16 = SD_BA0; /* MC 46 */ 
+Pin 17 = SD_BA1; /* MC 45 */ 
+Pin 19 = SYS_A5; /* MC 43 */ 
+Pin 20 = SYS_A14; /* MC 41 */ 
+Pin 21 = SD_DQMH; /* MC 40 */ 
+Pin 22 = SD_DQML; /* MC 38 */ 
+Pin 23 = SYS_RnW; /* MC 37 */ 
+Pin 24 = SYS_AS; /* MC 35 */ 
+Pin 25 = SYS_EXPSEL; /* MC 33 */ 
+Pin 27 = SYS_A15; /* MC 64 */ 
+Pin 28 = SYS_A6; /* MC 62 */ 
+Pin 29 = SYS_A13; /* MC 61 */ 
+Pin 30 = SYS_A4; /* MC 59 */ 
+Pin 31 = SYS_A12; /* MC 57 */ 
+Pin 32 = SYS_A3; /* MC 56 */ 
+Pin 33 = SYS_A11; /* MC 54 */ 
+Pin 35 = SYS_A2; /* MC 53 */ 
+Pin 36 = SYS_A10; /* MC 51 */ 
+Pin 37 = SYS_A1; /* MC 49 */ 
+Pin 40 = SYS_A7; /* MC 65 */ 
+Pin 41 = SYS_A16; /* MC 67 */ 
+Pin 42 = SYS_A8; /* MC 69 */ 
+Pin 44 = SYS_A17; /* MC 70 */ 
+Pin 45 = SYS_A9; /* MC 72 */ 
+Pin 46 = SYS_A18; /* MC 73 */ 
+Pin 47 = SYS_A19; /* MC 75 */ 
+Pin 48 = SYS_A20; /* MC 77 */ 
+Pin 49 = SYS_A21; /* MC 78 */ 
+Pin 50 = SYS_A22; /* MC 80 */ 
+Pin 52 = SYS_A23; /* MC 81 */ 
+Pin 53 = SYS_FC2; /* MC 83 */ 
+Pin 54 = SYS_UDS; /* MC 85 */ 
+Pin 55 = SYS_LDS; /* MC 86 */ 
+Pin 62 = TCK; /* MC 96 */ 
+Pin 73 = TDO; /* MC 112 */ 
+Pin 87 = SD_CLK;
+Pin 89 = SYS_RESET;
+Pin 92 = SD_WE; /* MC 16 */ 
+Pin 93 = SYS_DTACK; /* MC 14 */ 
+Pin 94 = SD_CAS; /* MC 13 */ 
+Pin 96 = SD_CS; /* MC 11 */ 
+Pin 97 = SD_RAS; /* MC  9 */
+Pin 98 = SD_A4; /* MC  8 */
+Pin 99 = SD_A0; /* MC  6 */
+Pin 100 = SD_A1; /* MC  5 */
+PINNODE 604 = RQ0; /* MC 4 Feedback */
+PINNODE 607 = RQ1; /* MC 7 Feedback */
+PINNODE 610 = RQ2; /* MC 10 Feedback */
+PINNODE 612 = RQ3; /* MC 12 Feedback */
+PINNODE 615 = INIT0; /* MC 15 Feedback */
+PINNODE 628 = RQ4; /* MC 28 Feedback */
+PINNODE 632 = RQ5; /* MC 32 Feedback */
+PINNODE 640 = REFRESH_Q; /* MC 40 Feedback */
+PINNODE 642 = RQ6; /* MC 42 Feedback */
+PINNODE 644 = RQ7; /* MC 44 Feedback */
+PINNODE 648 = RQ8; /* MC 48 Feedback */
+
+** Resource Usage **
+
+
+DCERP Field = Summary of Allocations.
+|||||
+|||||_Preset [p,-]       ==  p = PT preset, - No Preset.
+||||
+||||__Reset [g,r,-]      ==  g= Global AR, r = PT reset, - No reset.
+|||
+|||___Clock Enable [e,-] ==  e = Product Term, - always enabled.
+||
+||____Clock [c,g,-],     ==  c = Product term, g = Global term, - No Clock.
+|
+|_____Type [C,D,L,T],    ==  Register type C= combin, D=dff, L=latch, T=tff.
+
+For input only = INPUT.
+
+
+SO Pin Options Field = Summary of Allocations.
+||
+||_OpenCol [o,-]      ==  o = Open Collector enabled, - CMOS drive.
+|
+|__Slew [s,f]         ==  Output Slew/Drive rate, s = slow/low, f = fast/hi drive.
+
+
+MCell Pin# Oe   PinDrive   DCERP  FBDrive   DCERP  Foldback  CascadeOut     TotPT SO
+MC1   2    on   SD_A3      C----  --               --        --             2     f- 
+MC2   0         --                --               --        --             0     f- 
+MC3   1    on   SD_A2      C----  --               --        --             2     f- 
+MC4   0         --                RQ0       Dg---  --        --             1     f- 
+MC5   100  on   SD_A1      C----  --               --        --             2     f- 
+MC6   99   on   SD_A0      C----  --               --        --             2     f- 
+MC7   0         --                RQ1       Dg---  --        --             2     f- 
+MC8   98   on   SD_A4      C----  --               --        --             3     f- 
+MC9   97   on   SD_RAS     Dg-g-  --               --        --             3     f- 
+MC10  0         --                RQ2       Dg---  --        --             3     f- 
+MC11  96   on   SD_CS      Dg-g-  --               --        --             3     f- 
+MC12  0         --                RQ3       Dg---  --        --             4     f- 
+MC13  94   on   SD_CAS     Dg-g-  --               --        --             3     f- 
+MC14  93   on   SYS_DTACK  Dg--p  --               --        --             3     f- 
+MC15  0         --                INIT0     Dg-g-  NA        --             5     f- 
+MC16  92   on   SD_WE      Dg-g-  --               --        --             4     f- 
+MC17  14   on   SD_A12     C----  --               --        --             1     f- 
+MC18  0         --                --               --        --             0     f- 
+MC19  13   on   SD_A11     C----  --               --        --             1     f- 
+MC20  0         --                --               --        --             0     f- 
+MC21  12   on   SD_A10     C----  --               --        --             2     f- 
+MC22  10   on   SD_A9      C----  --               --        --             2     f- 
+MC23  0         --                --               --        --             0     f- 
+MC24  9    on   SD_A8      C----  --               --        --             2     f- 
+MC25  8    on   SD_A7      C----  --               --        --             2     f- 
+MC26  0         --                --               --        --             0     f- 
+MC27  7    on   SD_A6      C----  --               --        --             2     f- 
+MC28  0         --                RQ4       Dg---  NA        --             5     f- 
+MC29  6    on   SD_A5      C----  --               --        --             2     f- 
+MC30  5    on   SD_CKE     Dg-g-  --               NA        --             5     f- 
+MC31  0         --                --               --        -> RQ5         5     f- 
+MC32  4    --   TDI        INPUT  RQ5       Dg---  --        --             1     f- 
+MC33  25   --   SYS_EXPSEL INPUT  --               --        --             0     f- 
+MC34  0         --                --               --        --             0     f- 
+MC35  24   --   SYS_AS     INPUT  --               --        --             0     f- 
+MC36  0         --                --               --        --             0     f- 
+MC37  23   --   SYS_RnW    INPUT  --               --        --             0     f- 
+MC38  22   on   SD_DQML    C----  --               --        --             1     f- 
+MC39  0         --                --               --        --             0     f- 
+MC40  21   on   SD_DQMH    C----  REFRESH_Q Dg---  --        --             2     f- 
+MC41  20   --   SYS_A14    INPUT  --               --        -> RQ6         5     f- 
+MC42  0         --                RQ6       Dg---  --        --             2     f- 
+MC43  19   --   SYS_A5     INPUT  --               --        -> RQ7         5     f- 
+MC44  0         --                RQ7       Dg---  --        --             3     f- 
+MC45  17   on   SD_BA1     C----  --               --        --             1     f- 
+MC46  16   on   SD_BA0     C----  --               --        --             1     f- 
+MC47  0         --                --               --        -> RQ8         5     f- 
+MC48  15   --   TMS        INPUT  RQ8       Dg---  NA        --             4     f- 
+MC49  37   --   SYS_A1     INPUT  --               --        --             0     f- 
+MC50  0         --                --               --        --             0     f- 
+MC51  36   --   SYS_A10    INPUT  --               --        --             0     f- 
+MC52  0         --                --               --        --             0     f- 
+MC53  35   --   SYS_A2     INPUT  --               --        --             0     f- 
+MC54  33   --   SYS_A11    INPUT  --               --        --             0     f- 
+MC55  0         --                --               --        --             0     f- 
+MC56  32   --   SYS_A3     INPUT  --               --        --             0     f- 
+MC57  31   --   SYS_A12    INPUT  --               --        --             0     f- 
+MC58  0         --                --               --        --             0     f- 
+MC59  30   --   SYS_A4     INPUT  --               --        --             0     f- 
+MC60  0         --                --               --        --             0     f- 
+MC61  29   --   SYS_A13    INPUT  --               --        --             0     f- 
+MC62  28   --   SYS_A6     INPUT  --               --        --             0     f- 
+MC63  0         --                --               --        --             0     f- 
+MC64  27   --   SYS_A15    INPUT  --               --        --             0     f- 
+MC65  40   --   SYS_A7     INPUT  --               --        --             0     f- 
+MC66  0         --                --               --        --             0     f- 
+MC67  41   --   SYS_A16    INPUT  --               --        --             0     f- 
+MC68  0         --                --               --        --             0     f- 
+MC69  42   --   SYS_A8     INPUT  --               --        --             0     f- 
+MC70  44   --   SYS_A17    INPUT  --               --        --             0     f- 
+MC71  0         --                --               --        --             0     f- 
+MC72  45   --   SYS_A9     INPUT  --               --        --             0     f- 
+MC73  46   --   SYS_A18    INPUT  --               --        --             0     f- 
+MC74  0         --                --               --        --             0     f- 
+MC75  47   --   SYS_A19    INPUT  --               --        --             0     f- 
+MC76  0         --                --               --        --             0     f- 
+MC77  48   --   SYS_A20    INPUT  --               --        --             0     f- 
+MC78  49   --   SYS_A21    INPUT  --               --        --             0     f- 
+MC79  0         --                --               --        --             0     f- 
+MC80  50   --   SYS_A22    INPUT  --               --        --             0     f- 
+MC81  52   --   SYS_A23    INPUT  --               --        --             0     f- 
+MC82  0         --                --               --        --             0     f- 
+MC83  53   --   SYS_FC2    INPUT  --               --        --             0     f- 
+MC84  0         --                --               --        --             0     f- 
+MC85  54   --   SYS_UDS    INPUT  --               --        --             0     f- 
+MC86  55   --   SYS_LDS    INPUT  --               --        --             0     f- 
+MC87  0         --                --               --        --             0     f- 
+MC88  56        --                --               --        --             0     f- 
+MC89  57        --                --               --        --             0     f- 
+MC90  0         --                --               --        --             0     f- 
+MC91  58        --                --               --        --             0     f- 
+MC92  0         --                --               --        --             0     f- 
+MC93  60        --                --               --        --             0     f- 
+MC94  61        --                --               --        --             0     f- 
+MC95  0         --                --               --        --             0     f- 
+MC96  62   --   TCK        INPUT  --               --        --             0     f- 
+MC97  63        --                --               --        --             0     f- 
+MC98  0         --                --               --        --             0     f- 
+MC99  64        --                --               --        --             0     f- 
+MC100 0         --                --               --        --             0     f- 
+MC101 65        --                --               --        --             0     f- 
+MC102 67        --                --               --        --             0     f- 
+MC103 0         --                --               --        --             0     f- 
+MC104 68        --                --               --        --             0     f- 
+MC105 69        --                --               --        --             0     f- 
+MC106 0         --                --               --        --             0     f- 
+MC107 70        --                --               --        --             0     f- 
+MC108 0         --                --               --        --             0     f- 
+MC109 71        --                --               --        --             0     f- 
+MC110 72        --                --               --        --             0     f- 
+MC111 0         --                --               --        --             0     f- 
+MC112 73   --   TDO        C----  --               --        --             0     f- 
+MC113 75        --                --               --        --             0     f- 
+MC114 0         --                --               --        --             0     f- 
+MC115 76        --                --               --        --             0     f- 
+MC116 0         --                --               --        --             0     f- 
+MC117 77        --                --               --        --             0     f- 
+MC118 78        --                --               --        --             0     f- 
+MC119 0         --                --               --        --             0     f- 
+MC120 79        --                --               --        --             0     f- 
+MC121 80        --                --               --        --             0     f- 
+MC122 0         --                --               --        --             0     f- 
+MC123 81        --                --               --        --             0     f- 
+MC124 0         --                --               --        --             0     f- 
+MC125 83        --                --               --        --             0     f- 
+MC126 84        --                --               --        --             0     f- 
+MC127 0         --                --               --        --             0     f- 
+MC128 85        --                --               --        --             0     f- 
+MC0   90        --                --               --        --             0     f- 
+MC0   89        SYS_RESET  INPUT  --               --        --             0     f- 
+MC0   88        --                --               --        --             0     f- 
+MC0   87        SD_CLK     INPUT  --               --        --             0     f- 
+
+Logic Array Block			Macro Cells	I/O Pins	Foldbacks	TotalPT	FanIN		Cascades
+A: MC1	- MC16		15/16(93%)	10/16(62%)	0/16(0%)	42/80(52%)	25/40(62%)	0
+B: MC17	- MC32		11/16(68%)	10/16(62%)	0/16(0%)	30/80(37%)	25/40(62%)	1
+C: MC33	- MC48		8/16(50%)	10/16(62%)	0/16(0%)	29/80(36%)	13/40(32%)	3
+D: MC49	- MC64		0/16(0%)	10/16(62%)	0/16(0%)	0/80(0%)	0/40(0%)	0
+E: MC65	- MC80		0/16(0%)	10/16(62%)	0/16(0%)	0/80(0%)	0/40(0%)	0
+F: MC81	- MC96		0/16(0%)	5/16(31%)	0/16(0%)	0/80(0%)	0/40(0%)	0
+G: MC97	- MC112		1/16(6%)	1/16(6%)	0/16(0%)	0/80(0%)	0/40(0%)	0
+H: MC113- MC128		0/16(0%)	0/16(0%)	0/16(0%)	0/80(0%)	0/40(0%)	0
+
+Total dedicated input used:	2/4 	(50%)
+Total I/O pins used		56/80 	(70%)
+Total Macro cells used 		39/128 	(30%)
+Total Flip-Flop used 		17/128 	(13%)
+Total Foldback logic used 	0/128 	(0%)
+Total Nodes+FB/MCells 		35/128 	(27%)
+Total cascade used 		4
+Total input pins 			34
+Total output pins 		24
+Total Pts 				101
+Creating pla file xosera_glue.tt3 with 0 inputs 0 outputs, 0 pins 0 nodes and 0 pterms...
+
+----------------  End fitter, Design FITS
+$Device TQFP100 fits; JTAG ON; Secure OFF
+FIT1508 completed in 0.00 seconds

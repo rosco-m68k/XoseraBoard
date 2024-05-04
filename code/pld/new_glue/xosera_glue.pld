@@ -1,0 +1,283 @@
+Name     xosera_glue ;
+PartNo   00 ;
+Date     04/05/2024 [DD/MM/YYYY];
+Revision 01 ;
+Designer Thomas Jager & Ross Bamford ;
+Company  rosco_m68k OSP ;
+Assembly None ;
+Location  ;
+Device   f1508isptqfp100 ;
+
+/*
+property   atmel {preassign=keep};
+property   atmel {xor_synthesis=on};
+*/
+property   atmel {logic_doubling=on};
+property   atmel {pin_keep=off};
+property   atmel {security=off};
+property   atmel {output_fast=on};
+property   atmel {cascade_logic=on};
+property   atmel {tdi_pullup=on};
+property   atmel {tms_pullup=on};
+
+/* *************** INPUT PINS *********************/
+PIN  40 = SYS_A1;
+PIN  41 = SYS_A2;
+PIN  42 = SYS_A3;
+PIN  44 = !SYS_VPA;
+PIN  45 = SYS_A4;
+PIN  46 = SYS_A5;
+PIN  47 = SYS_A6;
+PIN  48 = !SYS_IRQ3;
+PIN  49 = SYS_A7;
+PIN  50 = !SYS_IOSEL;
+PIN  52 = SYS_A8;
+PIN  53 = !SYS_EXPSEL;
+PIN  54 = SYS_A9;
+PIN  55 = SYS_FC0;
+PIN  56 = SYS_A10;
+PIN  57 = SYS_FC1;
+PIN  58 = SYS_A11;
+PIN  60 = SYS_FC2;
+PIN  61 = SYS_A12;
+PIN  63 = !SYS_IRQ5;
+PIN  64 = SYS_A13;
+PIN  65 = !SYS_IRQ2;
+PIN  67 = SYS_A14;
+PIN  68 = !SYS_IRQ6;
+PIN  69 = SYS_A15;
+PIN  70 = !SYS_LDS;
+PIN  71 = SYS_A16;
+PIN  72 = !SYS_UDS;
+PIN  75 = SYS_A17;
+PIN  76 = SYS_A18;
+PIN  77 = SYS_A19;
+PIN  78 = SYS_A20;
+PIN  79 = SYS_A21;
+PIN  80 = SYS_A22;
+PIN  81 = SYS_A23;
+PIN  83 = !SYS_AS;
+PIN  84 = !SYS_BERR;
+PIN  85 = !SYS_DTACK;
+PIN  87 = SYS_CLK;
+PIN  88 = SYS_RnW;
+PIN  89 = !SYS_RESET;
+PIN  90 = SD_CLK;
+
+
+/* *************** OUTPUT PINS *********************/
+PIN  92 = SD_A4;
+PIN  93 = SD_A5;
+PIN  94 = SD_A6;
+PIN  96 = SD_A7;
+PIN  97 = SD_A8;
+PIN  98 = SD_A9;
+PIN  99 = SD_A11;
+PIN 100 = SD_A12;
+PIN   1 = SD_CKE;
+PIN   2 = SD_DQMH;
+PIN   5 = SD_DQML;
+PIN   6 = SD_WE;        /* These four are active low,       */
+PIN   7 = SD_CAS;       /* but it's easier to match them    */
+PIN   8 = SD_RAS;       /* with the datasheet if they're    */
+PIN   9 = SD_CS;        /* treated as not so here...        */
+PIN  10 = SD_A3;
+PIN  12 = SD_A2;
+PIN  13 = SD_A1;
+PIN  14 = SD_A0;
+PIN  16 = SD_A10;
+PIN  17 = SD_BA1;
+PIN  19 = SD_BA0;
+/*
+PIN  20 = NC;
+PIN  21 = NC;
+PIN  22 = NC;
+PIN  23 = NC;
+PIN  24 = NC;
+PIN  25 = NC;
+*/
+PIN  27 = !XO_CS;
+PIN  28 = XO_BYTESEL;
+PIN  29 = XO_REG3;
+PIN  30 = XO_REG2;
+PIN  31 = XO_REG1;
+PIN  32 = XO_REG0;
+PIN  33 = XO_IRQ;
+/*
+PIN  35 = NC;
+*/
+PIN  36 = XO_CRESET;
+PIN  37 = XO_CDONE;
+
+NODE  INIT0;
+NODE  REFRESH_Q;
+NODE  RQ8, RQ7, RQ6, RQ5, RQ4, RQ3, RQ2, RQ1, RQ0;
+
+FIELD SYS_BANK  = [SYS_FC2, SYS_A23];   /* TODO internal bank reg instead of FC2? */
+FIELD SYS_ROW   = [SYS_A22..SYS_A10];
+FIELD SYS_COL   = [SYS_A9..SYS_A1];
+
+FIELD SD_BANK   = [SD_BA1, SD_BA0];
+FIELD SD_ADDR   = [SD_A12..SD_A0];
+FIELD SD_STATE  = [SD_CS, SD_RAS, SD_CAS, SD_WE, SYS_DTACK, INIT0, SD_CKE];
+
+FIELD RCOUNT    = [RQ8..RQ0];
+
+SD_STATE.ck     = SD_CLK;
+SD_STATE.ar     = SYS_RESET;
+
+SD_BANK         = SYS_BANK;
+SD_DQML         = SYS_LDS;
+SD_DQMH         = SYS_UDS;
+
+
+/** *********************** STATE  DEFINES ******************/
+/*                         CRCWDIC  */
+/*                         SAAETNK  */
+/*                          SS AIE  */
+/*                             CT   */
+/*                             K0   */
+$define START           'b'0000000  /* Start state      */
+$define INHIBIT         'b'1000001  /* Inhibit (no CS)  */
+$define INIT_CKE        'b'0000001  /* Initial CKE      */
+$define INIT_PC         'b'0010011  /* Initial precharge*/
+$define INIT_R0         'b'0001001  /* 1st init refr    */
+$define INIT_R1         'b'0001011  /* 2nd init refr    */
+$define LOAD_MODE       'b'0000011  /* Load mode        */
+$define ACTIVE          'b'0011001  /* ACTIVATE (row)   */
+$define READ_START      'b'0101001  /* READ (column)    */
+$define WRITE_START     'b'0100001  /* WRITE (column)   */
+$define ACK             'b'0111101  /* NOP, DTACK       */
+$define BURST_TERMINATE 'b'0110001  /* We don't use...  */
+$define PRECHARGE       'b'0010001  /* End cycle        */
+
+
+/** *********************** SDRAM ADDR BUS ******************/
+/* TODO INIT, Load mode reg opcodes                                 */
+/* TODO there has to be a better way to do this... tables maybe?    */
+/*      I can't find a nice way to conditionally assign fields...   */
+CONDITION {
+    /* SD A12 */
+    IF SD_STATE:ACTIVE      & SYS_A22       OUT SD_A12;
+
+    /* SD A11 */
+    IF SD_STATE:ACTIVE      & SYS_A21       OUT SD_A11;
+   
+    /* SD A10 */
+    IF SD_STATE:ACTIVE      & SYS_A20       OUT SD_A10;
+    IF SD_STATE:PRECHARGE                   OUT SD_A10;
+    IF SD_STATE:INIT_PC                     OUT SD_A10;
+   
+    /* SD A9 */
+    IF SD_STATE:LOAD_MODE                   OUT SD_A9;      /* Init - Single Loc Write      */
+    IF SD_STATE:ACTIVE      & SYS_A19       OUT SD_A9;
+   
+    /* SD A8 */
+    IF SD_STATE:ACTIVE      & SYS_A18       OUT SD_A8;
+    IF SD_STATE:READ_START  & SYS_A9        OUT SD_A8;
+    IF SD_STATE:WRITE_START & SYS_A9        OUT SD_A8;
+   
+    /* SD A7 */
+    IF SD_STATE:ACTIVE      & SYS_A17       OUT SD_A7;
+    IF SD_STATE:READ_START  & SYS_A8        OUT SD_A7;
+    IF SD_STATE:WRITE_START & SYS_A8        OUT SD_A7;
+   
+    /* SD A6 */
+    IF SD_STATE:ACTIVE      & SYS_A16       OUT SD_A6;
+    IF SD_STATE:READ_START  & SYS_A7        OUT SD_A6;
+    IF SD_STATE:WRITE_START & SYS_A7        OUT SD_A6;
+   
+    /* SD A5 */
+    IF SD_STATE:ACTIVE      & SYS_A15       OUT SD_A5;
+    IF SD_STATE:READ_START  & SYS_A6        OUT SD_A5;
+    IF SD_STATE:WRITE_START & SYS_A6        OUT SD_A5;
+   
+    /* SD A4 */
+    IF SD_STATE:LOAD_MODE                   OUT SD_A4;      /* Init - CAS 001 (1 cycle)     */ 
+    IF SD_STATE:ACTIVE      & SYS_A14       OUT SD_A4;
+    IF SD_STATE:READ_START  & SYS_A5        OUT SD_A4;
+    IF SD_STATE:WRITE_START & SYS_A5        OUT SD_A4;
+   
+    /* SD A3 */
+    IF SD_STATE:ACTIVE      & SYS_A13       OUT SD_A3;
+    IF SD_STATE:READ_START  & SYS_A4        OUT SD_A3;
+    IF SD_STATE:WRITE_START & SYS_A4        OUT SD_A3;
+   
+    /* SD A2 */
+    IF SD_STATE:ACTIVE      & SYS_A12       OUT SD_A2;
+    IF SD_STATE:READ_START  & SYS_A3        OUT SD_A2;
+    IF SD_STATE:WRITE_START & SYS_A3        OUT SD_A2;
+   
+    /* SD A1 */
+    IF SD_STATE:ACTIVE      & SYS_A11       OUT SD_A1;
+    IF SD_STATE:READ_START  & SYS_A2        OUT SD_A1;
+    IF SD_STATE:WRITE_START & SYS_A2        OUT SD_A1;
+   
+    /* SD A0 */
+    IF SD_STATE:ACTIVE      & SYS_A10       OUT SD_A0;
+    IF SD_STATE:READ_START  & SYS_A1        OUT SD_A0;
+    IF SD_STATE:WRITE_START & SYS_A1        OUT SD_A0;
+}
+
+
+/** ***********************  SDRAM STATES  ******************/
+
+/* TODO initialization on /RESET... */
+SEQUENCE SD_STATE {
+    PRESENT START
+/*        NEXT INIT_CKE;*/
+        NEXT INHIBIT;
+/*
+    PRESENT INIT_CKE
+        NEXT INIT_PC;
+    PRESENT INIT_PC
+        NEXT INIT_R0;
+    PRESENT INIT_R0
+        NEXT INIT_R1;
+    PRESENT INIT_R1
+        NEXT LOAD_MODE;
+    PRESENT LOAD_MODE
+        NEXT INHIBIT;
+*/
+    PRESENT INHIBIT
+        IF SYS_EXPSEL
+            NEXT ACTIVE;
+        DEFAULT NEXT INHIBIT;
+    PRESENT ACTIVE
+        IF SYS_RnW
+            NEXT READ_START;
+        IF !SYS_RnW
+            NEXT WRITE_START;
+    PRESENT READ_START
+        NEXT ACK;
+    PRESENT WRITE_START
+        NEXT ACK;
+    PRESENT ACK
+        IF !SYS_AS
+            /* TODO could keep row open here and use bursts when poss */
+            NEXT PRECHARGE;
+
+        /* waiting for AS to deassert */
+        DEFAULT NEXT ACK;
+/*
+    PRESENT BURST_TERMINATE
+        NEXT PRECHARGE;
+*/
+    PRESENT PRECHARGE
+        NEXT INHIBIT;
+}
+
+
+/** ***********************  REFRESH COUNT ******************/
+REFRESH_Q.CK    = SD_CLK;
+RCOUNT.CK       = SD_CLK;
+
+SEQUENCE RCOUNT {
+$repeat i = [0..510]
+    PRESENT 'D'{i}
+        NEXT 'D'{i+1};
+$repend
+    PRESENT 'D'511
+        NEXT 'D'0 OUT REFRESH_Q;
+}
+ 
