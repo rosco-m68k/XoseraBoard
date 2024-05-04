@@ -11,12 +11,12 @@ Device   f1508isptqfp100 ;
 /*
 property   atmel {preassign=keep};
 property   atmel {xor_synthesis=on};
+property   atmel {cascade_logic=on};
 */
 property   atmel {logic_doubling=on};
 property   atmel {pin_keep=off};
 property   atmel {security=off};
 property   atmel {output_fast=on};
-property   atmel {cascade_logic=on};
 property   atmel {tdi_pullup=on};
 property   atmel {tms_pullup=on};
 
@@ -111,7 +111,7 @@ PIN  37 = XO_CDONE;
 
 NODE  INIT0;
 NODE  REFRESH_Q;
-NODE  RQ8, RQ7, RQ6, RQ5, RQ4, RQ3, RQ2, RQ1, RQ0;
+NODE  RQ5, RQ4, RQ3, RQ2, RQ1, RQ0;
 
 FIELD SYS_BANK  = [SYS_FC2, SYS_A23];   /* TODO internal bank reg instead of FC2? */
 FIELD SYS_ROW   = [SYS_A22..SYS_A10];
@@ -120,8 +120,8 @@ FIELD SYS_COL   = [SYS_A9..SYS_A1];
 FIELD SD_BANK   = [SD_BA1, SD_BA0];
 FIELD SD_ADDR   = [SD_A12..SD_A0];
 FIELD SD_STATE  = [SD_CS, SD_RAS, SD_CAS, SD_WE, SYS_DTACK, INIT0, SD_CKE];
-
-FIELD RCOUNT    = [RQ8..RQ0];
+FIELD SYS_ADDR  = [SYS_A23..SYS_A1];
+FIELD RCOUNT    = [RQ5..RQ0];
 
 SD_STATE.ck     = SD_CLK;
 SD_STATE.ar     = SYS_RESET;
@@ -147,7 +147,7 @@ $define LOAD_MODE       'b'0000011  /* Load mode        */
 $define ACTIVE          'b'0011001  /* ACTIVATE (row)   */
 $define READ_START      'b'0101001  /* READ (column)    */
 $define WRITE_START     'b'0100001  /* WRITE (column)   */
-$define ACK             'b'0111101  /* NOP, DTACK       */
+$define ST_ACK          'b'0111101  /* NOP, DTACK       */
 $define BURST_TERMINATE 'b'0110001  /* We don't use...  */
 $define PRECHARGE       'b'0010001  /* End cycle        */
 
@@ -225,20 +225,23 @@ CONDITION {
 /* TODO initialization on /RESET... */
 SEQUENCE SD_STATE {
     PRESENT START
-/*        NEXT INIT_CKE;*/
-        NEXT INHIBIT;
-/*
+        if REFRESH_Q
+            NEXT PRECHARGE;
+        if SYS_RESET
+            NEXT START;
+        DEFAULT NEXT INIT_CKE;
     PRESENT INIT_CKE
         NEXT INIT_PC;
     PRESENT INIT_PC
         NEXT INIT_R0;
     PRESENT INIT_R0
+        IF REFRESH_Q
+            NEXT INHIBIT OUT REFRESH_Q.AR;
         NEXT INIT_R1;
     PRESENT INIT_R1
         NEXT LOAD_MODE;
     PRESENT LOAD_MODE
         NEXT INHIBIT;
-*/
     PRESENT INHIBIT
         IF SYS_EXPSEL
             NEXT ACTIVE;
@@ -249,22 +252,24 @@ SEQUENCE SD_STATE {
         IF !SYS_RnW
             NEXT WRITE_START;
     PRESENT READ_START
-        NEXT ACK;
+        NEXT ST_ACK;
     PRESENT WRITE_START
-        NEXT ACK;
-    PRESENT ACK
+        NEXT ST_ACK;
+    PRESENT ST_ACK
         IF !SYS_AS
             /* TODO could keep row open here and use bursts when poss */
             NEXT PRECHARGE;
 
         /* waiting for AS to deassert */
-        DEFAULT NEXT ACK;
+        DEFAULT NEXT ST_ACK;
 /*
     PRESENT BURST_TERMINATE
         NEXT PRECHARGE;
 */
     PRESENT PRECHARGE
-        NEXT INHIBIT;
+        IF REFRESH_Q
+            NEXT INIT_R0;
+        DEFAULT NEXT INHIBIT;
 }
 
 
@@ -273,11 +278,36 @@ REFRESH_Q.CK    = SD_CLK;
 RCOUNT.CK       = SD_CLK;
 
 SEQUENCE RCOUNT {
-$repeat i = [0..510]
+$repeat i = [0..62]
     PRESENT 'D'{i}
         NEXT 'D'{i+1};
 $repend
-    PRESENT 'D'511
-        NEXT 'D'0 OUT REFRESH_Q;
+    PRESENT 'D'63
+        NEXT 'D'0 OUT REFRESH_Q.D;
 }
+
  
+/** ***********************   XOSERA GLUE  ******************/
+XO_CS       = SYS_IOSEL & !SYS_UDS & !SYS_LDS & SYS_AS & SYS_ADDR:'b'XXXXXX0000000000011XXXX
+            # SYS_IOSEL & !SYS_UDS & !SYS_LDS & SYS_AS & SYS_ADDR:'b'XXXXXX0000000000100XXXX
+            ;
+
+SYS_DTACK.SP    = 'b'0;
+SYS_DTACK       = 'b'0;
+SYS_DTACK.OE    = !SYS_RESET & XO_CS & SYS_AS & SYS_LDS;
+
+/*
+VPA         = 'b'0;
+VPA.OE      = !RESET & AS & RnW & FC0 & FC1 & FC2 & !A1 & A2 & !A3 /* Xosera */
+/*
+            # !RESET & AS & RnW & FC2 & FC1 & FC0 & !A3 & A2 &  A1 /* IDE    */
+/*
+            # !RESET & AS & RnW & FC2 & FC1 & FC0 &  A3 & A2 & !A1 /* UART   *
+            ;
+
+/*
+IRQRS       =          AS & RnW & FC0 & FC1 & FC2 & !A1 &  A2 & !A3 
+            # RESET
+
+            ;
+*/
