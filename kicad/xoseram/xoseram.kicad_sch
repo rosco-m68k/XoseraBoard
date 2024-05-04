@@ -1,0 +1,1051 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "4865d2b9-db7b-4c14-9dee-4afc1211bdfd")
+	(paper "USLetter")
+	(title_block
+		(title "XoseRAM")
+		(date "2024-05-04")
+		(rev "A")
+		(company "0xTJ")
+	)
+	(lib_symbols)
+	(junction
+		(at 203.2 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1ec7fe08-198b-4363-9e2c-15087fc2dbee")
+	)
+	(junction
+		(at 203.2 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fbf1351f-e35b-4af9-a8ab-f787177787fc")
+	)
+	(polyline
+		(pts
+			(xy 151.892 145.288) (xy 152.4 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "027c28e3-8b14-4171-8ea6-f2b3ef639657")
+	)
+	(polyline
+		(pts
+			(xy 75.692 132.588) (xy 76.2 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03948068-7bcd-43dc-afe7-6bc3dbdfed82")
+	)
+	(polyline
+		(pts
+			(xy 101.092 129.032) (xy 101.6 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07d1383a-3579-4384-8b08-4602d4ed2c6c")
+	)
+	(polyline
+		(pts
+			(xy 151.892 131.572) (xy 152.4 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0db82241-2b37-48b9-b42b-975be3ce201e")
+	)
+	(polyline
+		(pts
+			(xy 101.092 160.528) (xy 101.6 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29f6b4bd-4202-4b60-9af8-d836ebad8368")
+	)
+	(polyline
+		(pts
+			(xy 95.25 134.62) (xy 95.25 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30ec804a-92f6-4949-99d3-417113f57abd")
+	)
+	(polyline
+		(pts
+			(xy 126.492 131.572) (xy 127 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33463cc6-1b4f-48ab-a96c-029bae4506f3")
+	)
+	(polyline
+		(pts
+			(xy 139.7 132.08) (xy 152.4 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "350b9c1f-9140-46bc-8474-0118dd2d420a")
+	)
+	(polyline
+		(pts
+			(xy 69.85 132.08) (xy 76.2 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "354729f5-05f8-401b-927e-c31cc94d772f")
+	)
+	(polyline
+		(pts
+			(xy 101.092 142.748) (xy 101.6 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35d651f7-2fa9-45ac-a147-b7d90ee5a581")
+	)
+	(polyline
+		(pts
+			(xy 101.092 141.732) (xy 101.6 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37651879-88b5-4eb6-9007-1676737509b2")
+	)
+	(polyline
+		(pts
+			(xy 88.9 129.54) (xy 101.6 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fd2dc30-3372-4f98-807c-bc59107ed12f")
+	)
+	(polyline
+		(pts
+			(xy 114.3 132.08) (xy 127 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4556d5e6-b690-4734-b15a-5c40f10dd575")
+	)
+	(bus
+		(pts
+			(xy 63.5 40.64) (xy 114.3 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45722606-944e-427d-a1ae-1e13888b6eec")
+	)
+	(polyline
+		(pts
+			(xy 101.092 130.048) (xy 101.6 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51846b7f-aae2-447f-9dce-98cfefdb7884")
+	)
+	(polyline
+		(pts
+			(xy 139.7 144.78) (xy 152.4 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "528ba0ed-5cc8-4310-a8b1-bc18aa51b36a")
+	)
+	(polyline
+		(pts
+			(xy 126.492 145.288) (xy 127 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f25dfa4-09d2-4462-bc56-654c0cd63531")
+	)
+	(polyline
+		(pts
+			(xy 126.492 144.272) (xy 127 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61893cf6-bb0a-4476-aec6-6018937f545b")
+	)
+	(polyline
+		(pts
+			(xy 101.092 155.448) (xy 101.6 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63a1813f-b933-477e-a8c7-231c4ffe4a45")
+	)
+	(polyline
+		(pts
+			(xy 95.25 154.94) (xy 101.6 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d21bfa9-bde4-45a9-97f5-dcca86626c7e")
+	)
+	(polyline
+		(pts
+			(xy 88.9 134.62) (xy 95.25 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6db133bf-1b46-43b9-a9c3-b82657d55ac0")
+	)
+	(polyline
+		(pts
+			(xy 101.092 154.432) (xy 101.6 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fa3fa3c-6711-4f0a-9a01-10d30febe49b")
+	)
+	(polyline
+		(pts
+			(xy 38.1 132.08) (xy 50.8 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7acda186-3ec0-4fa1-91af-69cb88c7290f")
+	)
+	(bus
+		(pts
+			(xy 215.9 91.44) (xy 203.2 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f71831e-acb4-4482-afea-341a4f2d9880")
+	)
+	(polyline
+		(pts
+			(xy 69.85 160.02) (xy 101.6 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83581c73-37f5-4cba-8d4d-8848447db875")
+	)
+	(polyline
+		(pts
+			(xy 64.008 131.572) (xy 63.5 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f7d086a-3bd3-4655-8920-933aadffbcd2")
+	)
+	(bus
+		(pts
+			(xy 203.2 91.44) (xy 203.2 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97328fc8-826d-43c1-94ce-0175c6fcf566")
+	)
+	(polyline
+		(pts
+			(xy 89.408 130.048) (xy 88.9 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98d77125-8be5-4700-997d-6439c5e18ce8")
+	)
+	(polyline
+		(pts
+			(xy 38.608 131.572) (xy 38.1 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4e8bbe6-2efb-47a5-b93b-0cdaf5a21f19")
+	)
+	(bus
+		(pts
+			(xy 203.2 40.64) (xy 215.9 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a787c263-88d3-416a-86a2-1a7e376195bc")
+	)
+	(polyline
+		(pts
+			(xy 50.292 131.572) (xy 50.8 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adb91af0-8f06-460e-8721-7c6b78af9617")
+	)
+	(polyline
+		(pts
+			(xy 69.85 142.24) (xy 69.85 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b788ce70-5c83-4421-85bb-66f683ddf758")
+	)
+	(polyline
+		(pts
+			(xy 38.608 132.588) (xy 38.1 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba994ed4-429d-4a4f-981a-685d506e428e")
+	)
+	(polyline
+		(pts
+			(xy 75.692 131.572) (xy 76.2 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcb3fc3e-35a4-426e-adef-59ccdca3967d")
+	)
+	(polyline
+		(pts
+			(xy 69.85 142.24) (xy 101.6 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd17a3c3-fd1b-40f8-a63b-6584309aef71")
+	)
+	(polyline
+		(pts
+			(xy 114.3 144.78) (xy 127 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c206b023-f03e-413d-9d67-aadd83b64f66")
+	)
+	(bus
+		(pts
+			(xy 203.2 66.04) (xy 203.2 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3fd7c1a-7049-4e54-95da-a4d9455b527c")
+	)
+	(polyline
+		(pts
+			(xy 50.292 132.588) (xy 50.8 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4ec57ec-50b7-4b2b-a59a-7f2b32e58019")
+	)
+	(polyline
+		(pts
+			(xy 89.408 129.032) (xy 88.9 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce476d13-c8ef-4448-8803-7c7f8068f9a1")
+	)
+	(polyline
+		(pts
+			(xy 12.7 114.3) (xy 266.7 114.3)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "cf112411-24cb-48f6-9b49-c95dc08a243e")
+	)
+	(polyline
+		(pts
+			(xy 69.85 132.08) (xy 69.85 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dda3e51a-7fe0-470a-bf30-3c498cf65594")
+	)
+	(polyline
+		(pts
+			(xy 101.092 159.512) (xy 101.6 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de7d2309-d028-41a6-8a5c-48848c4b78d6")
+	)
+	(bus
+		(pts
+			(xy 152.4 48.26) (xy 203.2 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e039535b-a33a-4c8e-8326-4885c05ab71e")
+	)
+	(bus
+		(pts
+			(xy 203.2 66.04) (xy 215.9 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e21095ab-0a90-4541-8051-41445db0d618")
+	)
+	(polyline
+		(pts
+			(xy 126.492 132.588) (xy 127 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8095d62-ee9b-40ef-8329-dafbf09f665d")
+	)
+	(polyline
+		(pts
+			(xy 151.892 132.588) (xy 152.4 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8e96f6a-a9d8-4776-a64f-e35a5b3600c1")
+	)
+	(polyline
+		(pts
+			(xy 64.008 132.588) (xy 63.5 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee87fec2-016f-46aa-b880-ab229c3224ba")
+	)
+	(polyline
+		(pts
+			(xy 63.5 132.08) (xy 69.85 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f19eccdf-4406-4a85-8711-ee8e8fc362f8")
+	)
+	(bus
+		(pts
+			(xy 203.2 48.26) (xy 203.2 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4dbd296-e2e0-4953-8b94-7a8fca4251c0")
+	)
+	(polyline
+		(pts
+			(xy 151.892 144.272) (xy 152.4 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f816c82e-97be-40b5-8a21-9a57bf027557")
+	)
+	(circle
+		(center 69.85 132.08)
+		(radius 0.254)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 0 0 0)
+		)
+		(uuid 2c02b124-11ff-4d49-9ebf-9ab912da3036)
+	)
+	(circle
+		(center 69.85 142.24)
+		(radius 0.254)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 0 0 0)
+		)
+		(uuid 3f256d9d-38ed-4457-9199-d3cf8c121e96)
+	)
+	(text_box "Audio Connector"
+		(exclude_from_sim no)
+		(at 152.4 139.7 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1174969c-4c14-4b94-ace2-033d141b5fe4")
+	)
+	(text_box "Level Shifters"
+		(exclude_from_sim no)
+		(at 50.8 127 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3220b84b-e35e-419e-a8ff-77d88efd62d5")
+	)
+	(text_box "Audio Filter"
+		(exclude_from_sim no)
+		(at 127 139.7 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4d6c5aaa-9766-4cce-bce2-422cc49df427")
+	)
+	(text_box "Decoder PLD"
+		(exclude_from_sim no)
+		(at 76.2 127 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "65ee30bb-c2ec-40f1-a1e4-304f61d9442b")
+	)
+	(text_box "Xosera FPGA"
+		(exclude_from_sim no)
+		(at 101.6 127 0)
+		(size 12.7 22.86)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6e4f49c5-c5ff-48e0-8627-2c80b3c6013b")
+	)
+	(text_box "DVI Connector"
+		(exclude_from_sim no)
+		(at 152.4 127 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "77d0b372-26ca-479a-812e-c96969adaf76")
+	)
+	(text_box "SDRAM"
+		(exclude_from_sim no)
+		(at 101.6 152.4 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b261943e-d809-4c22-893b-67b0c9ad27fd")
+	)
+	(text_box "DVI Transmitter"
+		(exclude_from_sim no)
+		(at 127 127 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c0008064-8ca6-49cb-8631-05276d294d1c")
+	)
+	(text_box "rosco_m68k"
+		(exclude_from_sim no)
+		(at 25.4 127 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e6a138af-0d3f-408e-b59f-00024ad16a92")
+	)
+	(text "My RosXos"
+		(exclude_from_sim no)
+		(at 13.97 13.97 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left top)
+		)
+		(uuid "4e1487e1-f677-4540-b1a9-cc09e0184b58")
+	)
+	(text "System Block Diagram"
+		(exclude_from_sim no)
+		(at 13.97 115.57 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left top)
+		)
+		(uuid "d503df3f-32a9-4b71-a045-934fb0dd6be4")
+	)
+	(label "BUS_5V0{ROSCO_M68K_BUS}"
+		(at 76.2 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51e27bfd-c28b-49ce-bee6-50405cbfb88c")
+	)
+	(label "BUS_3V3{ROSCO_M68K_BUS}"
+		(at 165.1 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "73f74734-8b96-4972-ae5e-5baa5cdd438e")
+	)
+	(sheet
+		(at 114.3 38.1)
+		(size 38.1 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0c764949-1b57-460e-8bc0-3b0169a3d604")
+		(property "Sheetname" "Level Shifters"
+			(at 114.3 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "level_shifters.kicad_sch"
+			(at 114.3 51.3846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "BUS_5V0{ROSCO_M68K_BUS}" bidirectional
+			(at 114.3 40.64 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "0e542d31-ae35-40ce-96e7-c9a7d6834112")
+		)
+		(pin "BUS_3V3{ROSCO_M68K_BUS}" bidirectional
+			(at 152.4 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "be3ec968-9176-48cc-b388-989b37305ba9")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215.9 63.5)
+		(size 38.1 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "102f9c08-7530-4b6b-acd2-4c93d2b071a6")
+		(property "Sheetname" "SDRAM"
+			(at 215.9 62.7884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sdram.kicad_sch"
+			(at 215.9 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ROSCO_M68K{ROSCO_M68K_BUS}" bidirectional
+			(at 215.9 66.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "9567d2bb-6796-45c3-9e57-101d60c6c747")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215.9 88.9)
+		(size 38.1 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "18e5dbf2-208a-49e4-9ac0-e1a616a0a134")
+		(property "Sheetname" "Xosera"
+			(at 215.9 88.1884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "xosera.kicad_sch"
+			(at 215.9 102.1846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ROSCO_M68K{ROSCO_M68K_BUS}" bidirectional
+			(at 215.9 91.44 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a60b311c-4592-4655-bffd-88ac324e593a")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 38.1)
+		(size 38.1 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e6666a35-0017-4ae8-98c6-4c82ca9b716f")
+		(property "Sheetname" "Mainboard"
+			(at 25.4 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mainboard.kicad_sch"
+			(at 25.4 51.3846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "BUS_5V0{ROSCO_M68K_BUS}" bidirectional
+			(at 63.5 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "4c6fbdf2-1f5c-4f39-bfec-622592e0e9ee")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 215.9 38.1)
+		(size 38.1 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ee2aa479-d246-407f-8485-60f6c701d790")
+		(property "Sheetname" "Decoder"
+			(at 215.9 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "decoder.kicad_sch"
+			(at 215.9 51.3846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ROSCO_M68K{ROSCO_M68K_BUS}" bidirectional
+			(at 215.9 40.64 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "9c36094b-d589-47e5-be00-e32293bb6a1b")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 63.5)
+		(size 38.1 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f250f56d-1209-47fa-99ff-c0f9151f41a6")
+		(property "Sheetname" "Power"
+			(at 25.4 62.7884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 25.4 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

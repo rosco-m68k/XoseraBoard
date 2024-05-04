@@ -1,5 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "UPduino Imports")(type "KiCad")(uri "${KIPRJMOD}/UPduino Imports.kicad_sym")(options "")(descr ""))
-  (lib (name "rosco_m68k")(type "KiCad")(uri "${KIPRJMOD}/rosco_m68k.kicad_sym")(options "")(descr ""))
-)
