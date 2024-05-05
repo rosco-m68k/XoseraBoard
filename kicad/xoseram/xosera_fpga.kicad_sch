@@ -8117,7 +8117,7 @@
 		)
 		(uuid "061e56fe-6bec-4133-8f6c-a676ba4e14be")
 	)
-	(label "ROSCO_M68K.D2"
+	(label "BUS_3V3.D2"
 		(at 50.8 55.88 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8260,7 +8260,7 @@
 		)
 		(uuid "46a4880a-03df-43ff-98e2-18944c371b43")
 	)
-	(label "ROSCO_M68K.D0"
+	(label "BUS_3V3.D0"
 		(at 50.8 50.8 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8337,7 +8337,7 @@
 		)
 		(uuid "59fd2ee9-9bb9-4b8d-8726-81ecc160f624")
 	)
-	(label "ROSCO_M68K.D7"
+	(label "BUS_3V3.D7"
 		(at 50.8 48.26 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8381,7 +8381,7 @@
 		)
 		(uuid "79e81956-3d87-407b-a32e-97685e703380")
 	)
-	(label "ROSCO_M68K.D4"
+	(label "BUS_3V3.D4"
 		(at 50.8 63.5 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8392,7 +8392,7 @@
 		)
 		(uuid "86eb81f2-d84f-4002-ac03-640a2b967814")
 	)
-	(label "ROSCO_M68K.D1"
+	(label "BUS_3V3.D1"
 		(at 50.8 58.42 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8425,7 +8425,7 @@
 		)
 		(uuid "a1b27ed1-46f0-48ef-b141-9517cc4408c7")
 	)
-	(label "ROSCO_M68K.D5"
+	(label "BUS_3V3.D5"
 		(at 50.8 71.12 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8480,7 +8480,7 @@
 		)
 		(uuid "af6a9e7b-7ffa-4bec-82cb-4493b826f512")
 	)
-	(label "ROSCO_M68K.D6"
+	(label "BUS_3V3.D6"
 		(at 50.8 68.58 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8491,7 +8491,7 @@
 		)
 		(uuid "b6815e7f-785a-4684-a56b-cf2bf0aa266e")
 	)
-	(label "ROSCO_M68K.R{slash}~{W}"
+	(label "BUS_3V3.R{slash}~{W}"
 		(at 50.8 73.66 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8524,7 +8524,7 @@
 		)
 		(uuid "c27df1f3-7d21-4d9a-951c-38602d536cc5")
 	)
-	(label "ROSCO_M68K.D3"
+	(label "BUS_3V3.D3"
 		(at 50.8 66.04 0)
 		(fields_autoplaced yes)
 		(effects
@@ -8730,7 +8730,7 @@
 		)
 		(uuid "3ddc10f7-e486-4dad-bdf3-89925d40d8e0")
 	)
-	(hierarchical_label "ROSCO_M68K{ROSCO_M68K_BUS}"
+	(hierarchical_label "BUS_3V3{ROSCO_M68K_BUS}"
 		(shape bidirectional)
 		(at 45.72 50.8 180)
 		(fields_autoplaced yes)

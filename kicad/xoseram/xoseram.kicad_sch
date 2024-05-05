@@ -843,7 +843,7 @@
 				(justify left top)
 			)
 		)
-		(pin "ROSCO_M68K{ROSCO_M68K_BUS}" bidirectional
+		(pin "BUS_3V3{ROSCO_M68K_BUS}" bidirectional
 			(at 215.9 66.04 180)
 			(effects
 				(font
@@ -851,7 +851,7 @@
 				)
 				(justify left)
 			)
-			(uuid "9567d2bb-6796-45c3-9e57-101d60c6c747")
+			(uuid "54337741-a388-424d-8893-510d8eb5eb3d")
 		)
 		(instances
 			(project "xoseram"
@@ -891,7 +891,7 @@
 				(justify left top)
 			)
 		)
-		(pin "ROSCO_M68K{ROSCO_M68K_BUS}" bidirectional
+		(pin "BUS_3V3{ROSCO_M68K_BUS}" bidirectional
 			(at 215.9 91.44 180)
 			(effects
 				(font
@@ -899,7 +899,7 @@
 				)
 				(justify left)
 			)
-			(uuid "a60b311c-4592-4655-bffd-88ac324e593a")
+			(uuid "15fd9ae5-c77b-4ccc-aa72-1ca8062ef85a")
 		)
 		(instances
 			(project "xoseram"
@@ -987,7 +987,7 @@
 				(justify left top)
 			)
 		)
-		(pin "ROSCO_M68K{ROSCO_M68K_BUS}" bidirectional
+		(pin "BUS_3V3{ROSCO_M68K_BUS}" bidirectional
 			(at 215.9 40.64 180)
 			(effects
 				(font
@@ -995,7 +995,7 @@
 				)
 				(justify left)
 			)
-			(uuid "9c36094b-d589-47e5-be00-e32293bb6a1b")
+			(uuid "c785d02c-fa79-48ca-88f9-e137047a0672")
 		)
 		(instances
 			(project "xoseram"

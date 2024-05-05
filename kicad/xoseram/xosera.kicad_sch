@@ -5086,7 +5086,7 @@
 		)
 		(uuid "f759b7c3-b5cb-4344-9fb0-50cb3b77b216")
 	)
-	(hierarchical_label "ROSCO_M68K{ROSCO_M68K_BUS}"
+	(hierarchical_label "BUS_3V3{ROSCO_M68K_BUS}"
 		(shape bidirectional)
 		(at 121.92 22.86 180)
 		(fields_autoplaced yes)
@@ -8007,16 +8007,6 @@
 			)
 			(uuid "54a1f64f-8722-45ae-86e3-59032c85bc34")
 		)
-		(pin "ROSCO_M68K{ROSCO_M68K_BUS}" bidirectional
-			(at 152.4 27.94 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "0be4db78-fb4e-4c6b-b489-3b9a31b1e50d")
-		)
 		(pin "~{CRESET}" input
 			(at 152.4 58.42 180)
 			(effects
@@ -8026,6 +8016,16 @@
 				(justify left)
 			)
 			(uuid "0743bdb8-2334-4dd9-ba78-b772f4613842")
+		)
+		(pin "BUS_3V3{ROSCO_M68K_BUS}" bidirectional
+			(at 152.4 27.94 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f47329e6-cd85-4e0e-8dff-762d097fba9b")
 		)
 		(instances
 			(project "xoseram"
