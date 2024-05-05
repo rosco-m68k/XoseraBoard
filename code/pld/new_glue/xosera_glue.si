@@ -1,0 +1,39 @@
+Name     xosera_glue ;
+PartNo   00 ;
+Date     04/05/2024 [DD/MM/YYYY];
+Revision 01 ;
+Designer Thomas Jager & Ross Bamford ;
+Company  rosco_m68k OSP ;
+Assembly None ;
+Location  ;
+Device   f1508isptqfp100 ;
+
+ORDER: SD_CLK, %2, SYS_RESET, %2, SD_STATE, %2, SD_CS, SD_RAS, SD_CAS, SD_WE, %2, REFRESH_Q, %2, SYS_DTACK; 
+
+
+VECTORS:
+P0*************
+C0*************
+C0*************
+C0*************
+C0*************
+C0*************
+C0*************
+C0*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
+C1*************
