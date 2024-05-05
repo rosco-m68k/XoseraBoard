@@ -1,0 +1,241 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# MW-10400000
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Sun May 05 10:53:48 2024
+
+LISTING FOR SIMULATION FILE: xosera_glue.si
+
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in3
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in4
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in5
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in6
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in7
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in8
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in9
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in10
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in11
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in12
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in13
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in14
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in15
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in16
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in17
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in18
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in19
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in20
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in21
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in22
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in23
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in24
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in25
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in26
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in27
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in28
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in29
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in30
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in31
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in32
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in33
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in34
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in35
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in36
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in37
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in38
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in39
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in40
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbers.in41
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersINIT0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersINIT0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersINIT0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersINIT0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersINIT0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRCOUNT
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersREFRESH_Q
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersREFRESH_Q
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersREFRESH_Q
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersREFRESH_Q
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ3
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ3
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ3
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ4
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ4
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ4
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ5
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ5
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersRQ5
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A3
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A4
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A5
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A6
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A7
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A8
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A9
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A10
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A11
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_A12
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_ADDR
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_BA0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_BA1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_BANK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CAS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CAS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CAS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CAS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CKE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CKE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CKE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CKE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CKE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CLK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_CS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_DQMH
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_DQML
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_DTACK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_DTACK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_DTACK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_DTACK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_DTACK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_RAS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_RAS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_RAS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_RAS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_STATE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_WE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_WE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_WE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSD_WE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A3
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A4
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A5
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A6
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A7
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A8
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A9
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A10
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A11
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A12
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A13
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A14
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A15
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A16
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A17
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A18
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A19
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A20
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A21
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A22
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_A23
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_ADDR
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_AS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_BANK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_BERR
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_CLK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_COL
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_DTACK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_DTACK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_DTACK
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_EXPSEL
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_FC0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_FC1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_FC2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_IOSEL
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_IRQ2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_IRQ3
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_IRQ5
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_IRQ6
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_LDS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_RESET
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_ROW
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_RnW
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_UDS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersSYS_VPA
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_BYTESEL
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_CDONE
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_CRESET
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_CS
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_IRQ
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_REG0
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_REG1
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_REG2
+[0033sa] Please note: jedec vectors cannot be created with undefined pin numbersXO_REG3
+   1: Name     xosera_glue ;
+   2: PartNo   00 ;
+   3: Date     04/05/2024 [DD/MM/YYYY];
+   4: Revision 01 ;
+   5: Designer Thomas Jager & Ross Bamford ;
+   6: Company  rosco_m68k OSP ;
+   7: Assembly None ;
+   8: Location  ;
+   9: Device   f1508isptqfp100 ;
+  10: 
+  11: FIELD RCOUNT = [RQ5,RQ4,RQ3,RQ2,RQ1,RQ0];
+  12: FIELD SD_ADDR = [SD_A12,SD_A11,SD_A10,SD_A9,SD_A8,SD_A7,SD_A6,SD_A5,SD_A4,SD_A3,SD_A2,SD_A1,SD_A0];
+  13: FIELD SD_BANK = [SD_BA1,SD_BA0];
+  14: FIELD SD_STATE = [SD_CS,SD_RAS,SD_CAS,SD_WE,SD_DTACK,INIT0,SD_CKE];
+  15: FIELD SYS_ADDR = [SYS_A23,SYS_A22,SYS_A21,SYS_A20,SYS_A19,SYS_A18,SYS_A17,SYS_A16,SYS_A15,SYS_A14,SYS_A13,SYS_A12,SYS_A11,SYS_A10,SYS_A9,SYS_A8,SYS_A7,SYS_A6,SYS_A5,SYS_A4,SYS_A3,SYS_A2,SYS_A1];
+  16: FIELD SYS_BANK = [SYS_FC2,SYS_A23];
+  17: FIELD SYS_COL = [SYS_A9,SYS_A8,SYS_A7,SYS_A6,SYS_A5,SYS_A4,SYS_A3,SYS_A2,SYS_A1];
+  18: FIELD SYS_ROW = [SYS_A22,SYS_A21,SYS_A20,SYS_A19,SYS_A18,SYS_A17,SYS_A16,SYS_A15,SYS_A14,SYS_A13,SYS_A12,SYS_A11,SYS_A10];
+  19:
+  20: ORDER: SD_CLK, %2, SYS_RESET, %2, SD_STATE, %2, SD_CS, SD_RAS, SD_CAS, SD_WE, %2, REFRESH_Q, %2, SYS_DTACK; 
+  21: 
+  22: 
+
+==================================
+         S                 R  S   
+         Y                 E  Y   
+         S                 F  S   
+      S  _            SS   R  _   
+      D  R           SDDS  E  D   
+      _  E           D__D  S  T   
+      C  S           _RC_  H  A   
+      L  E           CAAW  _  C   
+      K  T  SD_STATE SSSE  Q  K   
+==================================
+0001: P  0  *******  ****  *  *
+0002: C  0  LLLLLLL  LLLL  L  X
+0003: C  0  LLLLLLL  LLLL  L  X
+0004: C  0  LLLLLLL  LLLL  L  X
+0005: C  0  LLLLLLL  LLLL  L  X
+0006: C  0  LLLLLLL  LLLL  L  X
+0007: C  0  LLLLLLL  LLLL  L  X
+0008: C  0  LLLLLLL  LLLL  L  X
+0009: C  1  LLLLLHH  LLLL  L  Z
+0010: C  1  HLLLLHH  HLLL  L  Z
+0011: C  1  LLLLLLL  LLLL  L  Z
+0012: C  1  LLLLLHH  LLLL  L  Z
+0013: C  1  HLLLLHH  HLLL  L  Z
+0014: C  1  LLLLLLL  LLLL  L  Z
+0015: C  1  LLLLLHH  LLLL  L  Z
+0016: C  1  HLLLLHH  HLLL  L  Z
+0017: C  1  LLLLLLL  LLLL  L  Z
+0018: C  1  LLLLLHH  LLLL  L  Z
+0019: C  1  HLLLLHH  HLLL  L  Z
+0020: C  1  LLLLLLL  LLLL  L  Z
+0021: C  1  LLLLLHH  LLLL  L  Z
+0022: C  1  HLLLLHH  HLLL  L  Z
+0023: C  1  LLLLLLL  LLLL  L  Z
+0024: C  1  LLLLLHH  LLLL  L  Z
+0025: C  1  HLLLLHH  HLLL  L  Z

@@ -58,7 +58,7 @@ PIN  80 = SYS_A22;
 PIN  81 = SYS_A23;
 PIN  83 = !SYS_AS;
 PIN  84 = !SYS_BERR;
-PIN  85 = !SYS_DTACK;
+PIN  85 = SYS_DTACK;
 PIN  87 = SYS_CLK;
 PIN  88 = SYS_RnW;
 PIN  89 = !SYS_RESET;
@@ -112,6 +112,7 @@ PIN  37 = XO_CDONE;
 NODE  INIT0;
 NODE  REFRESH_Q;
 NODE  RQ5, RQ4, RQ3, RQ2, RQ1, RQ0;
+NODE  SD_DTACK;                         /* Active high! */
 
 FIELD SYS_BANK  = [SYS_FC2, SYS_A23];   /* TODO internal bank reg instead of FC2? */
 FIELD SYS_ROW   = [SYS_A22..SYS_A10];
@@ -119,12 +120,16 @@ FIELD SYS_COL   = [SYS_A9..SYS_A1];
 
 FIELD SD_BANK   = [SD_BA1, SD_BA0];
 FIELD SD_ADDR   = [SD_A12..SD_A0];
-FIELD SD_STATE  = [SD_CS, SD_RAS, SD_CAS, SD_WE, SYS_DTACK, INIT0, SD_CKE];
+FIELD SD_STATE  = [SD_CS, SD_RAS, SD_CAS, SD_WE, SD_DTACK, INIT0, SD_CKE];
 FIELD SYS_ADDR  = [SYS_A23..SYS_A1];
 FIELD RCOUNT    = [RQ5..RQ0];
 
+INIT0.sp        = 'b'0;
+SD_CKE.sp       = 'b'0;
+SD_DTACK.sp     = 'b'0;
+
 SD_STATE.ck     = SD_CLK;
-SD_STATE.ar     = SYS_RESET;
+SD_STATE.ar     = !SYS_RESET;
 
 SD_BANK         = SYS_BANK;
 SD_DQML         = SYS_LDS;
@@ -225,10 +230,8 @@ CONDITION {
 /* TODO initialization on /RESET... */
 SEQUENCE SD_STATE {
     PRESENT ST_START
-        if REFRESH_Q
-            NEXT ST_PRECHARGE;
-        if SYS_RESET
-            NEXT ST_START;
+/*        if SYS_RESET
+            NEXT ST_START;*/
         DEFAULT NEXT ST_INIT_CKE;
     PRESENT ST_INIT_CKE
         NEXT ST_INIT_PC;
@@ -243,6 +246,8 @@ SEQUENCE SD_STATE {
     PRESENT ST_LOADMODE
         NEXT ST_INHIBIT;
     PRESENT ST_INHIBIT
+        if REFRESH_Q
+            NEXT ST_PRECHARGE;
         IF SYS_EXPSEL
             NEXT ST_ACTIVE;
         DEFAULT NEXT ST_INHIBIT;
@@ -294,8 +299,9 @@ XO_CS       = SYS_IOSEL & !SYS_UDS & !SYS_LDS & SYS_AS & SYS_ADDR:'b'XXXXXX00000
 
 SYS_DTACK.SP    = 'b'0;
 SYS_DTACK       = 'b'0;
-SYS_DTACK.OE    = !SYS_RESET & XO_CS & SYS_AS & SYS_LDS;
-
+SYS_DTACK.OE    = !SYS_RESET & XO_CS & SYS_AS & SYS_LDS
+                # !SYS_RESET & SD_DTACK
+                ;
 /*
 VPA         = 'b'0;
 VPA.OE      = !RESET & AS & RnW & FC0 & FC1 & FC2 & !A1 & A2 & !A3 /* Xosera */
