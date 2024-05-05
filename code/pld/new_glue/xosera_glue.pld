@@ -137,14 +137,17 @@ SD_DQMH         = SYS_UDS;
 
 
 /** *********************** STATE  DEFINES ******************/
-/*                         CRCWDIC  */
-/*                         SAAETNK  */
-/*                          SS A_E  */
-/*                             CI   */
-/*                             KN   */
-/*                              I   */
-/*                              T   */
-
+/* N.B. IN_INIT is quite poorly named, it's just become a   */
+/* differentiator for states that would otherside have the  */
+/* same decoding...                                         */
+/*                                                          */
+/*                         CRCWDIC                          */
+/*                         SAAETNK                          */
+/*                          SS A_E                          */
+/*                             CI                           */
+/*                             KN                           */
+/*                              I                           */
+/*                              T                           */
 $define ST_START        'b'0000000  /* Start state               00 */
 $define ST_INHIBIT      'b'1000001  /* Inhibit (no CS)           41 */
 $define ST_INIT_CKE     'b'0000001  /* Initial CKE               01 */
@@ -156,6 +159,7 @@ $define ST_LOADMODE     'b'0000011  /* Load mode                 03 */
 $define ST_ACTIVE       'b'0011001  /* ACTIVATE (row)            19 */
 $define ST_READ_CMD     'b'0101001  /* READ (column)             29 */
 $define ST_WRITE_CMD    'b'0100001  /* WRITE (column)            21 */
+$define ST_ACK_DELAY    'b'0111011  /* Delay before ACK (unused) 3B */
 $define ST_ACK          'b'0111101  /* NOP, DTACK                3D */
 $define ST_BURST_TERM   'b'0110001  /* We don't use...           31 */
 $define ST_PRECHARGE    'b'0010001  /* End cycle                 11 */
@@ -196,12 +200,12 @@ CONDITION {
     IF SD_STATE:ST_WRITE_CMD    & SYS_A7        OUT SD_A6;
    
     /* SD A5 */
+    IF SD_STATE:ST_LOADMODE                     OUT SD_A5;      /* Init - CAS 010 (2 cycle)     */ 
     IF SD_STATE:ST_ACTIVE       & SYS_A15       OUT SD_A5;
     IF SD_STATE:ST_READ_CMD     & SYS_A6        OUT SD_A5;
     IF SD_STATE:ST_WRITE_CMD    & SYS_A6        OUT SD_A5;
    
     /* SD A4 */
-    IF SD_STATE:ST_LOADMODE                     OUT SD_A4;      /* Init - CAS 001 (1 cycle)     */ 
     IF SD_STATE:ST_ACTIVE       & SYS_A14       OUT SD_A4;
     IF SD_STATE:ST_READ_CMD     & SYS_A5        OUT SD_A4;
     IF SD_STATE:ST_WRITE_CMD    & SYS_A5        OUT SD_A4;
@@ -271,6 +275,8 @@ SEQUENCE SD_STATE {
         /* waiting for AS to deassert */
         DEFAULT NEXT ST_ACK;
 /*
+    PRESENT ST_ACK_DELAY
+        NEXT ST_ACK;
     PRESENT ST_BURST_TERM
         NEXT ST_PRECHARGE;
 */
