@@ -1,4 +1,7 @@
-all: xosera_glue.jed
+all: xosera_glue.vcd
+
+xosera_glue.vcd: xosera_glue.jed
+	ruby vis.rb xosera_glue
 
 xosera_glue.jed: xosera_glue.pld
 	./5vcomp $<
