@@ -15,12 +15,12 @@ IN_INIT					: 615
 SD_A4					: 92
 SD_A0					: 14
 SD_A1					: 13
-RQ2					: 620
 SD_A2					: 12
 SD_A3					: 10
-REFRESH_Q					: 623
+RQ2					: 623
 SD_CS					: 9
 SD_RAS					: 8
+REFRESH_Q					: 626
 SD_CAS					: 7
 SD_WE					: 6
 SD_DQML					: 5
