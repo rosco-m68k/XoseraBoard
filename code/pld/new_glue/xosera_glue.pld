@@ -303,8 +303,8 @@ XO_CS       = SYS_IOSEL & !SYS_UDS & !SYS_LDS & SYS_AS & SYS_ADDR:'b'XXXXXX00000
 
 SYS_DTACK.SP    = 'b'0;
 SYS_DTACK       = 'b'0;
-SYS_DTACK.OE    = !SYS_RESET & XO_CS & SYS_AS & SYS_LDS
-                # !SYS_RESET & SD_DTACK
+SYS_DTACK.OE    = SYS_RESET & XO_CS & SYS_AS & SYS_LDS
+                # SYS_RESET & SD_DTACK
                 ;
 /*
 VPA         = 'b'0;
