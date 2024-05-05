@@ -1,3 +1,21 @@
+#!/usr/bin/env ruby
+#
+# Super hacky script to convert CSIM .so to .vcd for vis in GTKWave.
+#
+# Copyright (c)2024 The Really Old-School Company Limited
+# MIT license.
+#
+# This will get field sizes and everything else it needs from 
+# the `.so` file, so should be generally good.
+#
+# Only a subset of CSIM test signals are supported.
+# Notably, it won't work with `C` clocks - you'll need to manually
+# drive your clocks in your vectors (because `C` clocks wrap a full
+# cycle and this isn't set up for that).
+#
+# Also, currently only supports files with a single ORDER. It
+# wouldn't be too hard to fix this, but I haven't needed to yet...
+#
 require 'date'
 #require 'pp'
 
