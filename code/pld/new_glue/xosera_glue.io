@@ -18,12 +18,12 @@ BEGIN
     "SD_A4"                                   : OUTPUT_PIN = 92 ;
     "SD_A0"                                   : OUTPUT_PIN = 14 ;
     "SD_A1"                                   : OUTPUT_PIN = 13 ;
-    "RQ2"                                     : NODE_NUM = 620 ;
     "SD_A2"                                   : OUTPUT_PIN = 12 ;
     "SD_A3"                                   : OUTPUT_PIN = 10 ;
-    "REFRESH_Q"                               : NODE_NUM = 623 ;
+    "RQ2"                                     : NODE_NUM = 623 ;
     "SD_CS"                                   : OUTPUT_PIN = 9 ;
     "SD_RAS"                                  : OUTPUT_PIN = 8 ;
+    "REFRESH_Q"                               : NODE_NUM = 626 ;
     "SD_CAS"                                  : OUTPUT_PIN = 7 ;
     "SD_WE"                                   : OUTPUT_PIN = 6 ;
     "SD_DQML"                                 : OUTPUT_PIN = 5 ;

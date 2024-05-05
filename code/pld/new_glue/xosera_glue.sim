@@ -116,11 +116,11 @@ REFRESH_Q.d  =>
   # REFRESH_Q & !RQ1 & RQ2 & RQ3
   # REFRESH_Q & !RQ2 & RQ3
 
-REFRESH_Q.ar  =>
-    !IN_INIT & REFRESH_Q & SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS & SD_WE
-
 REFRESH_Q.ck  =>
     SD_CLK
+
+REFRESH_Q.sr  =>
+    !IN_INIT & REFRESH_Q & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & SD_WE
 
 RQ0.d  =>
     !RQ0
@@ -222,7 +222,6 @@ SD_BA1 =>
 SD_CAS.d  =>
     !IN_INIT & SD_CAS & SD_CKE & !SD_CS & SD_DTACK & SD_RAS & SD_WE
   # !IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_WE
-  # !IN_INIT & REFRESH_Q & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & SD_WE
   # !IN_INIT & REFRESH_Q & !SD_CAS & SD_CKE & SD_CS & !SD_DTACK & !SD_RAS & !SD_WE
   # !IN_INIT & !SD_CAS & SD_CKE & SD_CS & !SD_DTACK & !SD_RAS & !SD_WE & !SYS_EXPSEL
   # !IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS & SD_WE
@@ -237,12 +236,11 @@ SD_CKE.d  =>
     !IN_INIT & !SD_CAS & !SD_CS & !SD_DTACK & !SD_RAS & !SD_WE
   # IN_INIT & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & !SD_WE
   # !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & SD_WE
-  # !IN_INIT & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS & SD_WE
   # !IN_INIT & REFRESH_Q & !SD_CAS & SD_CKE & SD_CS & !SD_DTACK & !SD_RAS & !SD_WE
   # !IN_INIT & !SD_CAS & SD_CKE & SD_CS & !SD_DTACK & !SD_RAS & !SD_WE & !SYS_EXPSEL
   # !IN_INIT & !REFRESH_Q & !SD_CAS & SD_CKE & SD_CS & !SD_DTACK & !SD_RAS & !SD_WE & SYS_EXPSEL
   # !IN_INIT & SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS
-  # !IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS & !SD_WE
+  # !IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS
   # !IN_INIT & SD_CAS & SD_CKE & !SD_CS & SD_DTACK & SD_RAS & SD_WE
 
 SD_CKE.ar  =>
@@ -256,7 +254,7 @@ SD_CKE.sp  =>
 
 SD_CS.d  =>
     !IN_INIT & !REFRESH_Q & SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & !SD_WE
-  # !IN_INIT & SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS & SD_WE
+  # !IN_INIT & REFRESH_Q & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & SD_WE
   # IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & !SD_WE
   # !IN_INIT & !REFRESH_Q & !SD_CAS & SD_CKE & SD_CS & !SD_DTACK & !SD_RAS & !SD_WE & SYS_EXPSEL
 
@@ -287,7 +285,6 @@ SD_DTACK.sp  =>
 
 SD_RAS.d  =>
     !IN_INIT & SD_CAS & SD_CKE & !SD_CS & SD_DTACK & SD_RAS & SD_WE & !SYS_EXPSEL
-  # !IN_INIT & REFRESH_Q & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & SD_WE
   # !IN_INIT & SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & SD_WE
   # !IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS
 
@@ -300,10 +297,10 @@ SD_RAS.ck  =>
 SD_WE.d  =>
     !IN_INIT & REFRESH_Q & SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & !SD_WE
   # IN_INIT & SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & !SD_WE
-  # !IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_WE
+  # !IN_INIT & !REFRESH_Q & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & SD_WE
   # !IN_INIT & !SD_CAS & SD_CKE & SD_CS & !SD_DTACK & !SD_RAS & !SD_WE & !SYS_EXPSEL
   # !IN_INIT & SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & !SD_RAS & SD_WE & SYS_RnW
-  # !IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS & !SD_WE
+  # !IN_INIT & !SD_CAS & SD_CKE & !SD_CS & !SD_DTACK & SD_RAS
   # !IN_INIT & SD_CAS & SD_CKE & !SD_CS & SD_DTACK & SD_RAS & SD_WE & !SYS_EXPSEL
 
 SD_WE.ar  =>
