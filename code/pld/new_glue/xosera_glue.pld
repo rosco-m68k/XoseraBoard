@@ -150,6 +150,7 @@ $define ST_INHIBIT      'b'1000001  /* Inhibit (no CS)           41 */
 $define ST_INIT_CKE     'b'0000001  /* Initial CKE               01 */
 $define ST_INIT_PC      'b'0010011  /* Initial precharge         13 */
 $define ST_REFRESH      'b'0001001  /* Refresh general or init1  09 */
+$define ST_RDONE        'b'0111001  /* Refresh done (NOP)        39 */
 $define ST_INITR2       'b'0001011  /* 2nd init refr             0B */
 $define ST_LOADMODE     'b'0000011  /* Load mode                 03 */
 $define ST_ACTIVE       'b'0011001  /* ACTIVATE (row)            19 */
@@ -158,7 +159,6 @@ $define ST_WRITE_CMD    'b'0100001  /* WRITE (column)            21 */
 $define ST_ACK          'b'0111101  /* NOP, DTACK                3D */
 $define ST_BURST_TERM   'b'0110001  /* We don't use...           31 */
 $define ST_PRECHARGE    'b'0010001  /* End cycle                 11 */
-
 
 /** *********************** SDRAM ADDR BUS ******************/
 /* TODO INIT, Load mode reg opcodes                                 */
@@ -242,8 +242,12 @@ SEQUENCE SD_STATE {
         NEXT ST_REFRESH;
     PRESENT ST_REFRESH
         IF REFRESH_Q
+            NEXT ST_RDONE;
+        DEFAULT NEXT ST_INITR2;
+    PRESENT ST_RDONE
+        IF REFRESH_Q
             NEXT ST_INHIBIT OUT REFRESH_Q.AR;
-        NEXT ST_INITR2;
+        DEFAULT NEXT ST_INHIBIT;
     PRESENT ST_INITR2
         NEXT ST_LOADMODE;
     PRESENT ST_LOADMODE
