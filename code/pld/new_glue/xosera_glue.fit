@@ -1,4 +1,4 @@
-Atmel ATF1508 Fitter Version 1918 ,running Sun May 05 10:53:48 2024
+Atmel ATF1508 Fitter Version 1918 ,running Sun May 05 12:38:31 2024
 
 
 
@@ -61,10 +61,6 @@ Warning - .P extension unknown
 ---------------------------------------------------------
  Fitter_Pass 2, Preassign = KEEP, NODE ASSIGN : OFF 
  ... 
- ## Warning : Placement fail 
----------------------------------------------------------
- Fitter_Pass 3, Preassign = KEEP, CASCADE_LOGIC : (TRY) 
- ... 
 
 Performing global Output Enable pin assignments ...
 
@@ -92,17 +88,18 @@ Attempt to place floating signals ...
 ------------------------------------
 SD_DQMH is placed at pin 2 (MC 1)
 SD_CKE is placed at pin 1 (MC 3)
+RQ0 is placed at feedback node 604 (MC 4)
 SD_A12 is placed at pin 100 (MC 5)
 SD_A11 is placed at pin 99 (MC 6)
-SD_DTACK is placed at feedback node 607 (MC 7)
+RQ1 is placed at feedback node 607 (MC 7)
 SD_A9 is placed at pin 98 (MC 8)
 SD_A8 is placed at pin 97 (MC 9)
-XXL_118 is placed at feedback node 610 (MC 10)
+SD_DTACK is placed at feedback node 610 (MC 10)
 SD_A7 is placed at pin 96 (MC 11)
-XXL_116 is placed at feedback node 612 (MC 12)
+IN_INIT is placed at feedback node 612 (MC 12)
 SD_A6 is placed at pin 94 (MC 13)
 SD_A5 is placed at pin 93 (MC 14)
-XXL_119 is placed at feedback node 615 (MC 15)
+RQ2 is placed at feedback node 615 (MC 15)
 SD_A4 is placed at pin 92 (MC 16)
 SD_A0 is placed at pin 14 (MC 17)
 SD_A1 is placed at pin 13 (MC 19)
@@ -110,28 +107,22 @@ SD_A2 is placed at pin 12 (MC 21)
 SD_A3 is placed at pin 10 (MC 22)
 SD_CS is placed at pin 9 (MC 24)
 SD_RAS is placed at pin 8 (MC 25)
-RQ0 is placed at feedback node 626 (MC 26)
+REFRESH_Q is placed at feedback node 626 (MC 26)
 SD_CAS is placed at pin 7 (MC 27)
-RQ1 is placed at feedback node 628 (MC 28)
 SD_WE is placed at pin 6 (MC 29)
 SD_DQML is placed at pin 5 (MC 30)
-SYS_DTACK.OE is placed at feedback node 631 (MC 31)
+RQ3 is placed at feedback node 631 (MC 31)
 TDI is placed at pin 4 (MC 32)
-INIT0 is placed at feedback node 632 (MC 32)
+RQ4 is placed at feedback node 632 (MC 32)
 SYS_DTACK_P is placed at pin 23 (MC 37)
 SD_DTACK_P is placed at pin 22 (MC 38)
-REFRESH_Q is placed at feedback node 638 (MC 38)
-RQ5 is placed at feedback node 639 (MC 39)
-SD_CKE_P is placed at pin 21 (MC 40)
-INIT0_P is placed at pin 20 (MC 41)
-RQ2 is placed at feedback node 642 (MC 42)
+IN_INIT_P is placed at pin 21 (MC 40)
+SD_CKE_P is placed at pin 20 (MC 41)
 SD_BA0 is placed at pin 19 (MC 43)
-RQ3 is placed at feedback node 644 (MC 44)
 SD_BA1 is placed at pin 17 (MC 45)
 SD_A10 is placed at pin 16 (MC 46)
-RQ4 is placed at feedback node 647 (MC 47)
 TMS is placed at pin 15 (MC 48)
-XXL_117 is placed at feedback node 648 (MC 48)
+SYS_DTACK.OE is placed at feedback node 648 (MC 48)
 XO_CS is placed at pin 27 (MC 64)
 SYS_A1 is placed at pin 40 (MC 65)
 SYS_A2 is placed at pin 41 (MC 67)
@@ -196,8 +187,8 @@ SYS_DTACK is placed at pin 85 (MC 128)
            SD_BA1| 17                                                                        59 |GND
               VCC| 18                                                                        58 |SYS_A11
            SD_BA0| 19                                                                        57 |   
-          INIT0_P| 20                                                                        56 |SYS_A10
-         SD_CKE_P| 21                                                                        55 |   
+         SD_CKE_P| 20                                                                        56 |SYS_A10
+        IN_INIT_P| 21                                                                        55 |   
        SD_DTACK_P| 22                                                                        54 |SYS_A9
       SYS_DTACK_P| 23                                                                        53 |SYS_EXPSEL
                  | 24                                                                        52 |SYS_A8
@@ -229,120 +220,112 @@ Universal-Interconnect-Multiplexer assignments
 ------------------------------------------------
 FanIn assignment for block A [25]
 {
-INIT0,
-REFRESH_Q,
-SD_CAS,SYS_A14,SD_CS,SYS_A16,SYS_A22,SYS_A15,SYS_A17,SYS_A7,SYS_A18,SYS_A5,SD_WE,SD_CKE,SYS_AS,SD_DTACK,SYS_A19,SYS_A8,SYS_UDS,SYS_A21,SD_RAS,SYS_A9,SYS_A6,SYS_RnW,
-XXL_118,
+IN_INIT,
+RQ2,RQ1,RQ0,
+SD_CAS,SYS_A14,SYS_A15,SD_CS,SYS_A16,SYS_A9,SYS_A22,SYS_UDS,SYS_A17,SYS_A7,SYS_A18,SYS_A5,SD_WE,SD_CKE,SYS_A21,SYS_EXPSEL,SYS_A8,SD_DTACK,SD_RAS,SYS_A19,SYS_A6,
 }
 Multiplexer assignment for block A
-SD_CAS			(MC6	P)   : MUX 0		Ref (B27p)
+SD_CAS			(MC9	P)   : MUX 0		Ref (B27p)
 SYS_A14			(MC11	P)   : MUX 1		Ref (G102p)
-SD_CS			(MC4	P)   : MUX 3		Ref (B24p)
+SYS_A15			(MC14	P)   : MUX 2		Ref (G105p)
+SD_CS			(MC7	P)   : MUX 3		Ref (B24p)
 SYS_A16			(MC16	P)   : MUX 4		Ref (G109p)
-SYS_A22			(MC24	P)   : MUX 6		Ref (H121p)
-INIT0			(MC8	FB)  : MUX 7		Ref (B32fb)
-SYS_A15			(MC14	P)   : MUX 8		Ref (G105p)
-SYS_A17			(MC20	P)   : MUX 11		Ref (H113p)
+SYS_A9			(MC18	P)   : MUX 5		Ref (F85p)
+SYS_A22			(MC25	P)   : MUX 6		Ref (H121p)
+RQ2			(MC6	FB)  : MUX 7		Ref (A15fb)
+SYS_UDS			(MC19	P)   : MUX 10		Ref (G110p)
+SYS_A17			(MC21	P)   : MUX 11		Ref (H113p)
 SYS_A7			(MC15	P)   : MUX 12		Ref (E78p)
-SYS_A18			(MC21	P)   : MUX 13		Ref (H115p)
+SYS_A18			(MC23	P)   : MUX 13		Ref (H115p)
 SYS_A5			(MC12	P)   : MUX 14		Ref (E73p)
-SD_WE			(MC7	P)   : MUX 16		Ref (B29p)
+SD_WE			(MC10	P)   : MUX 16		Ref (B29p)
 SD_CKE			(MC1	P)   : MUX 17		Ref (A3p)
-SYS_AS			(MC10	P)   : MUX 18		Ref (H125p)
-SD_DTACK		(MC2	FB)  : MUX 20		Ref (A7fb)
-SYS_A19			(MC22	P)   : MUX 21		Ref (H117p)
+SYS_A21			(MC24	P)   : MUX 19		Ref (H120p)
+RQ1			(MC3	FB)  : MUX 20		Ref (A7fb)
+SYS_EXPSEL		(MC20	P)   : MUX 21		Ref (F83p)
 SYS_A8			(MC17	P)   : MUX 25		Ref (F81p)
-SYS_UDS			(MC19	P)   : MUX 26		Ref (G110p)
-SYS_A21			(MC23	P)   : MUX 27		Ref (H120p)
-SD_RAS			(MC5	P)   : MUX 30		Ref (B25p)
-SYS_A9			(MC18	P)   : MUX 31		Ref (F85p)
+SD_DTACK		(MC4	FB)  : MUX 29		Ref (A10fb)
+SD_RAS			(MC8	P)   : MUX 30		Ref (B25p)
+SYS_A19			(MC22	P)   : MUX 31		Ref (H117p)
 SYS_A6			(MC13	P)   : MUX 32		Ref (E75p)
-SYS_RnW			(MC25	FB)  : MUX 37		Ref (OE1)
-REFRESH_Q		(MC9	FB)  : MUX 38		Ref (C38fb)
-XXL_118			(MC3	FB)  : MUX 39		Ref (A10fb)
+IN_INIT			(MC5	FB)  : MUX 37		Ref (A12fb)
+RQ0			(MC2	FB)  : MUX 38		Ref (A4fb)
 
-FanIn assignment for block B [25]
+FanIn assignment for block B [24]
 {
-INIT0,
-REFRESH_Q,RQ0,RQ1,
-SD_CAS,SYS_A13,SD_CS,SYS_AS,SYS_A4,SD_DTACK,SYS_A3,SYS_EXPSEL,SYS_A12,SYS_A2,SYS_A11,SD_CKE,SYS_LDS,SD_RAS,SD_WE,SYS_A10,SYS_RESET,SYS_A1,
-XO_CS,XXL_116,XXL_119,
+IN_INIT,
+REFRESH_Q,RQ1,RQ2,RQ3,RQ4,RQ0,
+SYS_A13,SD_CAS,SD_CS,SYS_A4,SYS_LDS,SD_CKE,SYS_A12,SYS_A3,SYS_EXPSEL,SD_RAS,SYS_A10,SYS_A11,SYS_A1,SD_WE,SYS_A2,SYS_RnW,SD_DTACK,
 }
 Multiplexer assignment for block B
-SD_CAS			(MC8	P)   : MUX 0		Ref (B27p)
-SYS_A13			(MC19	P)   : MUX 1		Ref (G99p)
-SD_CS			(MC5	P)   : MUX 3		Ref (B24p)
-SYS_AS			(MC14	P)   : MUX 4		Ref (H125p)
-SYS_A4			(MC18	P)   : MUX 7		Ref (E72p)
-SD_DTACK		(MC2	FB)  : MUX 8		Ref (A7fb)
+SYS_A13			(MC20	P)   : MUX 1		Ref (G99p)
+SD_CAS			(MC10	P)   : MUX 2		Ref (B27p)
+SD_CS			(MC7	P)   : MUX 3		Ref (B24p)
+SYS_A4			(MC19	P)   : MUX 5		Ref (E72p)
+SYS_LDS			(MC14	P)   : MUX 6		Ref (G107p)
+SD_CKE			(MC1	P)   : MUX 7		Ref (A3p)
+SYS_A12			(MC18	P)   : MUX 8		Ref (F94p)
 SYS_A3			(MC24	P)   : MUX 9		Ref (E69p)
-XO_CS			(MC13	P)   : MUX 12		Ref (D64p)
-SYS_EXPSEL		(MC21	P)   : MUX 13		Ref (F83p)
-SYS_A12			(MC17	P)   : MUX 14		Ref (F94p)
-SYS_A2			(MC23	P)   : MUX 15		Ref (E67p)
-SYS_A11			(MC16	P)   : MUX 16		Ref (F91p)
-SD_CKE			(MC1	P)   : MUX 17		Ref (A3p)
-XXL_116			(MC3	FB)  : MUX 21		Ref (A12fb)
-XXL_119			(MC4	FB)  : MUX 25		Ref (A15fb)
-REFRESH_Q		(MC12	FB)  : MUX 26		Ref (C38fb)
-SYS_LDS			(MC20	P)   : MUX 28		Ref (G107p)
-RQ0			(MC7	FB)  : MUX 29		Ref (B26fb)
-SD_RAS			(MC6	P)   : MUX 30		Ref (B25p)
-RQ1			(MC9	FB)  : MUX 31		Ref (B28fb)
-SD_WE			(MC10	P)   : MUX 32		Ref (B29p)
-INIT0			(MC11	FB)  : MUX 33		Ref (B32fb)
-SYS_A10			(MC15	P)   : MUX 35		Ref (F88p)
-SYS_RESET		(MC25	FB)  : MUX 36		Ref (GCLR)
-SYS_A1			(MC22	P)   : MUX 39		Ref (E65p)
+REFRESH_Q		(MC9	FB)  : MUX 11		Ref (B26fb)
+SYS_EXPSEL		(MC15	P)   : MUX 13		Ref (F83p)
+SD_RAS			(MC8	P)   : MUX 14		Ref (B25p)
+SYS_A10			(MC17	P)   : MUX 17		Ref (F88p)
+IN_INIT			(MC5	FB)  : MUX 19		Ref (A12fb)
+RQ1			(MC3	FB)  : MUX 20		Ref (A7fb)
+RQ2			(MC6	FB)  : MUX 23		Ref (A15fb)
+SYS_A11			(MC16	P)   : MUX 24		Ref (F91p)
+RQ3			(MC12	FB)  : MUX 25		Ref (B31fb)
+RQ4			(MC13	FB)  : MUX 29		Ref (B32fb)
+SYS_A1			(MC23	P)   : MUX 31		Ref (E65p)
+SD_WE			(MC11	P)   : MUX 32		Ref (B29p)
+SYS_A2			(MC22	P)   : MUX 33		Ref (E67p)
+SYS_RnW			(MC21	FB)  : MUX 37		Ref (OE1)
+RQ0			(MC2	FB)  : MUX 38		Ref (A4fb)
+SD_DTACK		(MC4	FB)  : MUX 39		Ref (A10fb)
 
-FanIn assignment for block C [18]
+FanIn assignment for block C [14]
 {
-INIT0,
-RQ3,RQ2,RQ5,RQ4,RQ0,REFRESH_Q,RQ1,
-SD_CAS,SD_CS,SYS_A23,SYS_FC2,SD_WE,SD_CKE,SD_DTACK,SYS_A20,SD_RAS,
-XXL_117,
+IN_INIT,
+SD_CAS,SYS_RESET,SD_CS,SYS_LDS,SYS_A20,SYS_AS,SYS_FC2,SD_DTACK,SYS_A23,SD_WE,SD_CKE,SD_RAS,
+XO_CS,
 }
 Multiplexer assignment for block C
 SD_CAS			(MC6	P)   : MUX 0		Ref (B27p)
-SD_CS			(MC3	P)   : MUX 3		Ref (B24p)
-RQ3			(MC13	FB)  : MUX 7		Ref (C44fb)
-SYS_A23			(MC16	P)   : MUX 8		Ref (H123p)
-RQ2			(MC12	FB)  : MUX 9		Ref (C42fb)
-INIT0			(MC9	FB)  : MUX 11		Ref (B32fb)
-SYS_FC2			(MC18	P)   : MUX 12		Ref (F93p)
-RQ5			(MC11	FB)  : MUX 14		Ref (C39fb)
-RQ4			(MC14	FB)  : MUX 15		Ref (C47fb)
-SD_WE			(MC8	P)   : MUX 16		Ref (B29p)
+IN_INIT			(MC3	FB)  : MUX 1		Ref (A12fb)
+SYS_RESET		(MC14	FB)  : MUX 2		Ref (GCLR)
+SD_CS			(MC4	P)   : MUX 3		Ref (B24p)
+SYS_LDS			(MC9	P)   : MUX 6		Ref (G107p)
+SYS_A20			(MC12	P)   : MUX 7		Ref (H118p)
+SYS_AS			(MC11	P)   : MUX 8		Ref (H125p)
+SYS_FC2			(MC13	P)   : MUX 12		Ref (F93p)
+SD_DTACK		(MC2	FB)  : MUX 13		Ref (A10fb)
+SYS_A23			(MC10	P)   : MUX 14		Ref (H123p)
+SD_WE			(MC7	P)   : MUX 16		Ref (B29p)
 SD_CKE			(MC1	P)   : MUX 17		Ref (A3p)
-RQ0			(MC5	FB)  : MUX 21		Ref (B26fb)
-SD_DTACK		(MC2	FB)  : MUX 22		Ref (A7fb)
-REFRESH_Q		(MC10	FB)  : MUX 24		Ref (C38fb)
-SYS_A20			(MC17	P)   : MUX 25		Ref (H118p)
-XXL_117			(MC15	FB)  : MUX 27		Ref (C48fb)
-SD_RAS			(MC4	P)   : MUX 30		Ref (B25p)
-RQ1			(MC7	FB)  : MUX 31		Ref (B28fb)
+SD_RAS			(MC5	P)   : MUX 30		Ref (B25p)
+XO_CS			(MC8	P)   : MUX 38		Ref (D64p)
 
 FanIn assignment for block D [18]
 {
-SYS_A5,SYS_A13,SYS_A15,SYS_A10,SYS_IOSEL,SYS_A4,SYS_A6,SYS_UDS,SYS_A8,SYS_LDS,SYS_A9,SYS_A23,SYS_A11,SYS_AS,SYS_A16,SYS_A14,SYS_A7,SYS_A12,
+SYS_A5,SYS_A13,SYS_A15,SYS_A10,SYS_A4,SYS_A6,SYS_AS,SYS_A8,SYS_LDS,SYS_A9,SYS_IOSEL,SYS_A11,SYS_A16,SYS_A14,SYS_A23,SYS_UDS,SYS_A7,SYS_A12,
 }
 Multiplexer assignment for block D
 SYS_A5			(MC3	P)   : MUX 0		Ref (E73p)
 SYS_A13			(MC15	P)   : MUX 1		Ref (G99p)
 SYS_A15			(MC5	P)   : MUX 2		Ref (G105p)
-SYS_A10			(MC11	P)   : MUX 3		Ref (F88p)
-SYS_IOSEL		(MC18	P)   : MUX 4		Ref (E80p)
+SYS_A10			(MC12	P)   : MUX 3		Ref (F88p)
 SYS_A4			(MC14	P)   : MUX 5		Ref (E72p)
 SYS_A6			(MC4	P)   : MUX 6		Ref (E75p)
-SYS_UDS			(MC10	P)   : MUX 8		Ref (G110p)
+SYS_AS			(MC17	P)   : MUX 8		Ref (H125p)
 SYS_A8			(MC8	P)   : MUX 11		Ref (F81p)
-SYS_LDS			(MC16	P)   : MUX 12		Ref (G107p)
+SYS_LDS			(MC1	P)   : MUX 12		Ref (G107p)
 SYS_A9			(MC9	P)   : MUX 13		Ref (F85p)
-SYS_A23			(MC17	P)   : MUX 14		Ref (H123p)
-SYS_A11			(MC12	P)   : MUX 16		Ref (F91p)
-SYS_AS			(MC1	P)   : MUX 18		Ref (H125p)
+SYS_IOSEL		(MC18	P)   : MUX 14		Ref (E80p)
+SYS_A11			(MC11	P)   : MUX 16		Ref (F91p)
 SYS_A16			(MC7	P)   : MUX 24		Ref (G109p)
 SYS_A14			(MC2	P)   : MUX 25		Ref (G102p)
+SYS_A23			(MC16	P)   : MUX 26		Ref (H123p)
+SYS_UDS			(MC10	P)   : MUX 28		Ref (G110p)
 SYS_A7			(MC6	P)   : MUX 30		Ref (E78p)
 SYS_A12			(MC13	P)   : MUX 34		Ref (F94p)
 
@@ -351,28 +334,28 @@ FanIn assignment for block H [1]
 SYS_DTACK.OE,
 }
 Multiplexer assignment for block H
-SYS_DTACK.OE		(MC1	FB)  : MUX 3		Ref (B31fb)
+SYS_DTACK.OE		(MC1	FB)  : MUX 3		Ref (C48fb)
 
 Creating JEDEC file xosera_glue.jed ...
 
 TQFP100 programmed logic:
 -----------------------------------
-INIT0.D = ((!INIT0.Q & SD_CAS.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q & SD_CKE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
-	# XXL_116);
+IN_INIT.D = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q)
+	# (!SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q));
 
-INIT0_P = 0;
+IN_INIT_P = 0;
 
-REFRESH_Q.D = (RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & RQ4.Q & RQ5.Q);
+REFRESH_Q.D = (REFRESH_Q.Q
+	# (RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & RQ4.Q));
 
 RQ0.D = !RQ0.Q;
-
-RQ1.D = ((RQ0.Q & !RQ1.Q)
-	# (!RQ0.Q & RQ1.Q));
 
 RQ2.D = ((RQ0.Q & RQ1.Q & !RQ2.Q)
 	# (!RQ1.Q & RQ2.Q)
 	# (!RQ0.Q & RQ2.Q));
+
+RQ1.D = ((RQ0.Q & !RQ1.Q)
+	# (!RQ0.Q & RQ1.Q));
 
 RQ3.D = ((RQ0.Q & RQ1.Q & RQ2.Q & !RQ3.Q)
 	# (!RQ1.Q & RQ3.Q)
@@ -385,135 +368,114 @@ RQ4.D = ((RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & !RQ4.Q)
 	# (!RQ1.Q & RQ4.Q)
 	# (!RQ0.Q & RQ4.Q));
 
-RQ5.D = ((!RQ0.Q & RQ5.Q)
-	# XXL_117);
+SD_A0 = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A1)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A10));
 
-SD_A2 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A3)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A12));
+SD_A3 = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A4)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A13));
 
-SD_A0 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A1)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A10));
+SD_A1 = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A2)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A11));
 
-SD_A1 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A2)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A11));
+SD_A2 = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A3)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A12));
 
-SD_A3 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A4)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A13));
+SD_A4 = ((!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A14)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A5)
+	# (IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q));
 
-SD_A4 = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A14)
-	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A5)
-	# (INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q));
+SD_A5 = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A6)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A15));
 
-SD_A7 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A8)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A17));
+SD_A6 = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A7)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A16));
 
-SD_A5 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A6)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A15));
+SD_A7 = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A8)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A17));
 
-SD_A6 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A7)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A16));
+SD_A8 = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A9)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A18));
 
-SD_A8 = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q & SYS_A9)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A18));
+SD_A9 = ((!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A19)
+	# (IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q));
 
-SD_A9 = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A19)
-	# (INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q));
-
-SD_A12 = (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A22);
+SD_A12 = (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A22);
 
 SD_A10 = ((SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SYS_A20));
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SYS_A20));
 
-SD_A11 = (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A21);
+SD_A11 = (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_A21);
 
 SD_BA0 = SYS_A23;
 
 SD_BA1 = SYS_FC2;
 
-SD_CAS.D = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & !SYS_EXPSEL)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_WE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q)
-	# (!INIT0.Q & REFRESH_Q.Q & !SD_CAS.Q & SD_CKE.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q));
+SD_CAS.D = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_WE.Q)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & REFRESH_Q.Q)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & SYS_EXPSEL)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q));
 
-SD_CKE.D = ((!INIT0.Q & SD_CAS.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q & SD_CKE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
-	# XXL_118);
+SD_CKE.D = ((!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
+	# (!IN_INIT.Q & !SD_CAS.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
+	# (SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
+	# (!SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q)
+	# (!IN_INIT.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q));
 
 SD_CKE_P = 0;
 
-SD_CS.D = ((!INIT0.Q & REFRESH_Q.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q)
-	# (INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
-	# (!INIT0.Q & !REFRESH_Q.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
-	# (!INIT0.Q & !REFRESH_Q.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & SYS_EXPSEL));
-
-SD_DQML = !SYS_LDS;
+SD_CS.D = ((IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
+	# (!IN_INIT.Q & !REFRESH_Q.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & !SYS_EXPSEL)
+	# (!IN_INIT.Q & !REFRESH_Q.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
+	# (!IN_INIT.Q & REFRESH_Q.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q));
 
 SD_DQMH = !SYS_UDS;
 
-SD_DTACK.D = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q & !SYS_AS)
-	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q));
+SD_DQML = !SYS_LDS;
 
-SD_RAS.D = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q & !SYS_AS)
-	# (!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q));
+SD_DTACK.D = ((!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q & SYS_EXPSEL)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q));
 
 SD_DTACK_P = 0;
 
-SD_WE.D = ((!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q)
-	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & !SYS_EXPSEL)
-	# XXL_119);
+SD_RAS.D = ((!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q & SYS_EXPSEL)
+	# (!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q));
+
+SD_WE.D = ((!IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q & SYS_EXPSEL)
+	# (SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & REFRESH_Q.Q)
+	# (IN_INIT.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_WE.Q)
+	# (!IN_INIT.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_RnW)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_RAS.Q)
+	# (!IN_INIT.Q & !SD_CAS.Q & SD_CKE.Q & SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & SYS_EXPSEL));
+
+SYS_DTACK_P = 0;
 
 SYS_DTACK = 0;
 
 !XO_CS = ((!SYS_A4 & !SYS_A5 & SYS_A6 & !SYS_A7 & !SYS_A8 & !SYS_A9 & !SYS_A10 & !SYS_A11 & !SYS_A12 & !SYS_A13 & !SYS_A14 & !SYS_A15 & !SYS_A16 & !SYS_A23 & !SYS_AS & !SYS_IOSEL & SYS_LDS & SYS_UDS)
 	# (SYS_A4 & SYS_A5 & !SYS_A6 & !SYS_A7 & !SYS_A8 & !SYS_A9 & !SYS_A10 & !SYS_A11 & !SYS_A12 & !SYS_A13 & !SYS_A14 & !SYS_A15 & !SYS_A16 & !SYS_A23 & !SYS_AS & !SYS_IOSEL & SYS_LDS & SYS_UDS));
 
-SYS_DTACK_P = 0;
+IN_INIT.C = SD_CLK;
 
-XXL_116 = ((!SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & SD_CKE.Q)
-	# (!SD_CAS.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_CKE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & SD_CKE.Q)
-	# (!INIT0.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_CKE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & !SD_CS.Q & !SD_DTACK.Q & SD_CKE.Q));
-
-XXL_117 = ((RQ0.Q & RQ1.Q & RQ2.Q & RQ3.Q & RQ4.Q & !RQ5.Q)
-	# (!RQ4.Q & RQ5.Q)
-	# (!RQ3.Q & RQ5.Q)
-	# (!RQ2.Q & RQ5.Q)
-	# (!RQ1.Q & RQ5.Q));
-
-XXL_118 = ((!SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & SD_CKE.Q)
-	# (!SD_CAS.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_CKE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & SD_CKE.Q)
-	# (!INIT0.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_CKE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & !SD_CS.Q & !SD_DTACK.Q & SD_CKE.Q));
-
-XXL_119 = ((!INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & SD_DTACK.Q & SD_RAS.Q & SD_WE.Q & !SYS_AS)
-	# (SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q & REFRESH_Q.Q)
-	# (INIT0.Q & SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & !SD_WE.Q)
-	# (!INIT0.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & SD_WE.Q)
-	# (!INIT0.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q & SYS_RnW));
-
-INIT0.C = SD_CLK;
-
-INIT0.AR = SYS_RESET;
+IN_INIT.AR = SYS_RESET;
 
 REFRESH_Q.C = SD_CLK;
 
-REFRESH_Q.AR = (!INIT0.Q & REFRESH_Q.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q);
+REFRESH_Q.AR = (!IN_INIT.Q & REFRESH_Q.Q & !SD_CAS.Q & SD_CKE.Q & !SD_CS.Q & !SD_DTACK.Q & !SD_RAS.Q & SD_WE.Q);
 
 RQ0.C = SD_CLK;
 
-RQ1.C = SD_CLK;
-
 RQ2.C = SD_CLK;
+
+RQ1.C = SD_CLK;
 
 RQ3.C = SD_CLK;
 
 RQ4.C = SD_CLK;
-
-RQ5.C = SD_CLK;
 
 SD_CAS.C = SD_CLK;
 
@@ -561,8 +523,8 @@ Pin 15 = TMS; /* MC 48 */
 Pin 16 = SD_A10; /* MC 46 */ 
 Pin 17 = SD_BA1; /* MC 45 */ 
 Pin 19 = SD_BA0; /* MC 43 */ 
-Pin 20 = INIT0_P; /* MC 41 */ 
-Pin 21 = SD_CKE_P; /* MC 40 */ 
+Pin 20 = SD_CKE_P; /* MC 41 */ 
+Pin 21 = IN_INIT_P; /* MC 40 */ 
 Pin 22 = SD_DTACK_P; /* MC 38 */ 
 Pin 23 = SYS_DTACK_P; /* MC 37 */ 
 Pin 27 = XO_CS; /* MC 64 */ 
@@ -609,20 +571,15 @@ Pin 97 = SD_A8; /* MC  9 */
 Pin 98 = SD_A9; /* MC  8 */
 Pin 99 = SD_A11; /* MC  6 */
 Pin 100 = SD_A12; /* MC  5 */
-PINNODE 607 = SD_DTACK; /* MC 7 Feedback */
-PINNODE 610 = XXL_118; /* MC 10 Feedback */
-PINNODE 612 = XXL_116; /* MC 12 Feedback */
-PINNODE 615 = XXL_119; /* MC 15 Feedback */
-PINNODE 626 = RQ0; /* MC 26 Feedback */
-PINNODE 628 = RQ1; /* MC 28 Feedback */
-PINNODE 631 = SYS_DTACK.OE; /* MC 31 Feedback */
-PINNODE 632 = INIT0; /* MC 32 Feedback */
-PINNODE 638 = REFRESH_Q; /* MC 38 Feedback */
-PINNODE 639 = RQ5; /* MC 39 Feedback */
-PINNODE 642 = RQ2; /* MC 42 Feedback */
-PINNODE 644 = RQ3; /* MC 44 Feedback */
-PINNODE 647 = RQ4; /* MC 47 Feedback */
-PINNODE 648 = XXL_117; /* MC 48 Feedback */
+PINNODE 604 = RQ0; /* MC 4 Feedback */
+PINNODE 607 = RQ1; /* MC 7 Feedback */
+PINNODE 610 = SD_DTACK; /* MC 10 Feedback */
+PINNODE 612 = IN_INIT; /* MC 12 Feedback */
+PINNODE 615 = RQ2; /* MC 15 Feedback */
+PINNODE 626 = REFRESH_Q; /* MC 26 Feedback */
+PINNODE 631 = RQ3; /* MC 31 Feedback */
+PINNODE 632 = RQ4; /* MC 32 Feedback */
+PINNODE 648 = SYS_DTACK.OE; /* MC 48 Feedback */
 
 ** Resource Usage **
 
@@ -651,20 +608,20 @@ SO Pin Options Field = Summary of Allocations.
 
 MCell Pin# Oe   PinDrive    DCERP  FBDrive      DCERP  Foldback  CascadeOut     TotPT SO
 MC1   2    on   SD_DQMH     C----  --                  --        --             1     f- 
-MC2   0         --                 --                  --        --             0     f- 
-MC3   1    on   SD_CKE      Dg-g-  --                  --        --             3     f- 
-MC4   0         --                 --                  --        --             0     f- 
+MC2   0         --                 --                  --        -> SD_CKE      5     f- 
+MC3   1    on   SD_CKE      Dg-g-  --                  --        --             2     f- 
+MC4   0         --                 RQ0          Dg---  --        --             1     f- 
 MC5   100  on   SD_A12      C----  --                  --        --             1     f- 
 MC6   99   on   SD_A11      C----  --                  --        --             1     f- 
-MC7   0         --                 SD_DTACK     Dg-g-  --        --             2     f- 
+MC7   0         --                 RQ1          Dg---  --        --             2     f- 
 MC8   98   on   SD_A9       C----  --                  --        --             2     f- 
 MC9   97   on   SD_A8       C----  --                  --        --             2     f- 
-MC10  0         --                 XXL_118      C----  NA        --             5     f- 
+MC10  0         --                 SD_DTACK     Dg-g-  --        --             2     f- 
 MC11  96   on   SD_A7       C----  --                  --        --             2     f- 
-MC12  0         --                 XXL_116      C----  NA        --             5     f- 
+MC12  0         --                 IN_INIT      Dg-g-  --        --             2     f- 
 MC13  94   on   SD_A6       C----  --                  --        --             2     f- 
 MC14  93   on   SD_A5       C----  --                  --        --             2     f- 
-MC15  0         --                 XXL_119      C----  NA        --             5     f- 
+MC15  0         --                 RQ2          Dg---  --        --             3     f- 
 MC16  92   on   SD_A4       C----  --                  --        --             3     f- 
 MC17  14   on   SD_A0       C----  --                  --        --             2     f- 
 MC18  0         --                 --                  --        --             0     f- 
@@ -675,29 +632,29 @@ MC22  10   on   SD_A3       C----  --                  --        --             
 MC23  0         --                 --                  --        --             0     f- 
 MC24  9    on   SD_CS       Dg-g-  --                  --        --             4     f- 
 MC25  8    on   SD_RAS      Dg-g-  --                  --        --             3     f- 
-MC26  0         --                 RQ0          Dg---  --        --             1     f- 
+MC26  0         --                 REFRESH_Q    Dg-r-  --        --             3     f- 
 MC27  7    on   SD_CAS      Dg-g-  --                  NA        --             5     f- 
-MC28  0         --                 RQ1          Dg---  --        --             2     f- 
-MC29  6    on   SD_WE       Dg-g-  --                  --        --             3     f- 
+MC28  0         --                 --                  --        -> SD_WE       5     f- 
+MC29  6    on   SD_WE       Dg-g-  --                  --        --             2     f- 
 MC30  5    on   SD_DQML     C----  --                  --        --             1     f- 
-MC31  0         --                 SYS_DTACK.OE C----  --        --             2     f- 
-MC32  4    --   TDI         INPUT  INIT0        Dg-g-  --        --             3     f- 
+MC31  0         --                 RQ3          Dg---  --        --             4     f- 
+MC32  4    --   TDI         INPUT  RQ4          Dg---  NA        --             5     f- 
 MC33  25        --                 --                  --        --             0     f- 
 MC34  0         --                 --                  --        --             0     f- 
 MC35  24        --                 --                  --        --             0     f- 
 MC36  0         --                 --                  --        --             0     f- 
 MC37  23   on   SYS_DTACK_P C----  --                  --        --             0     f- 
-MC38  22   on   SD_DTACK_P  C----  REFRESH_Q    Dg-r-  --        --             3     f- 
-MC39  0         --                 RQ5          Dg---  --        --             2     f- 
-MC40  21   on   SD_CKE_P    C----  --                  --        --             0     f- 
-MC41  20   on   INIT0_P     C----  --                  --        --             0     f- 
-MC42  0         --                 RQ2          Dg---  --        --             3     f- 
+MC38  22   on   SD_DTACK_P  C----  --                  --        --             0     f- 
+MC39  0         --                 --                  --        --             0     f- 
+MC40  21   on   IN_INIT_P   C----  --                  --        --             0     f- 
+MC41  20   on   SD_CKE_P    C----  --                  --        --             0     f- 
+MC42  0         --                 --                  --        --             0     f- 
 MC43  19   on   SD_BA0      C----  --                  --        --             1     f- 
-MC44  0         --                 RQ3          Dg---  --        --             4     f- 
+MC44  0         --                 --                  --        --             0     f- 
 MC45  17   on   SD_BA1      C----  --                  --        --             1     f- 
 MC46  16   on   SD_A10      C----  --                  --        --             2     f- 
-MC47  0         --                 RQ4          Dg---  NA        --             5     f- 
-MC48  15   --   TMS         INPUT  XXL_117      C----  NA        --             5     f- 
+MC47  0         --                 --                  --        --             0     f- 
+MC48  15   --   TMS         INPUT  SYS_DTACK.OE C----  --        --             2     f- 
 MC49  37        --                 --                  --        --             0     f- 
 MC50  0         --                 --                  --        --             0     f- 
 MC51  36        --                 --                  --        --             0     f- 
@@ -784,9 +741,9 @@ MC0   88        SYS_RnW     INPUT  --                  --        --             
 MC0   87        --                 --                  --        --             0     f- 
 
 Logic Array Block			Macro Cells	I/O Pins	Foldbacks	TotalPT	FanIN		Cascades
-A: MC1	- MC16		14/16(87%)	10/16(62%)	0/16(0%)	36/80(45%)	25/40(62%)	0
-B: MC17	- MC32		13/16(81%)	10/16(62%)	0/16(0%)	32/80(40%)	25/40(62%)	0
-C: MC33	- MC48		13/16(81%)	8/16(50%)	0/16(0%)	26/80(32%)	18/40(45%)	0
+A: MC1	- MC16		15/16(93%)	10/16(62%)	0/16(0%)	33/80(41%)	25/40(62%)	1
+B: MC17	- MC32		12/16(75%)	10/16(62%)	0/16(0%)	40/80(50%)	24/40(60%)	1
+C: MC33	- MC48		8/16(50%)	8/16(50%)	0/16(0%)	6/80(7%)	14/40(35%)	0
 D: MC49	- MC64		1/16(6%)	1/16(6%)	0/16(0%)	2/80(2%)	18/40(45%)	0
 E: MC65	- MC80		0/16(0%)	8/16(50%)	0/16(0%)	0/80(0%)	1/40(2%)	0
 F: MC81	- MC96		0/16(0%)	8/16(50%)	0/16(0%)	0/80(0%)	1/40(2%)	0
@@ -795,14 +752,14 @@ H: MC113- MC128		1/16(6%)	9/16(56%)	0/16(0%)	1/80(1%)	1/40(2%)	0
 
 Total dedicated input used:	3/4 	(75%)
 Total I/O pins used		61/80 	(76%)
-Total Macro cells used 		43/128 	(33%)
-Total Flip-Flop used 		14/128 	(10%)
+Total Macro cells used 		40/128 	(31%)
+Total Flip-Flop used 		13/128 	(10%)
 Total Foldback logic used 	0/128 	(0%)
-Total Nodes+FB/MCells 		43/128 	(33%)
-Total cascade used 		0
+Total Nodes+FB/MCells 		38/128 	(29%)
+Total cascade used 		2
 Total input pins 			35
 Total output pins 		29
-Total Pts 				97
+Total Pts 				82
 Creating pla file xosera_glue.tt3 with 0 inputs 0 outputs, 0 pins 0 nodes and 0 pterms...
 
 ----------------  End fitter, Design FITS
