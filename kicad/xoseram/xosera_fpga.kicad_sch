@@ -6459,7 +6459,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 68.58) (xy 76.2 68.58)
+			(xy 50.8 50.8) (xy 76.2 50.8)
 		)
 		(stroke
 			(width 0)
@@ -6529,7 +6529,7 @@
 	)
 	(bus
 		(pts
-			(xy 121.92 50.8) (xy 124.46 50.8)
+			(xy 121.92 48.26) (xy 124.46 48.26)
 		)
 		(stroke
 			(width 0)
@@ -6666,6 +6666,16 @@
 			(type default)
 		)
 		(uuid "35520434-236b-48b6-8d98-459d4a143d01")
+	)
+	(bus
+		(pts
+			(xy 215.9 48.26) (xy 215.9 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "378a9bb3-92a8-4760-874d-e27beee3141c")
 	)
 	(wire
 		(pts
@@ -6907,16 +6917,6 @@
 		)
 		(uuid "54507cbb-1347-4c9c-b9d8-14dbc5057557")
 	)
-	(bus
-		(pts
-			(xy 121.92 71.12) (xy 124.46 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b06ebce-99c7-47cd-9c0f-fee45dbc3f3d")
-	)
 	(wire
 		(pts
 			(xy 215.9 88.9) (xy 215.9 91.44)
@@ -7109,7 +7109,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 66.04) (xy 76.2 66.04)
+			(xy 50.8 58.42) (xy 76.2 58.42)
 		)
 		(stroke
 			(width 0)
@@ -7189,7 +7189,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 55.88) (xy 76.2 55.88)
+			(xy 50.8 68.58) (xy 76.2 68.58)
 		)
 		(stroke
 			(width 0)
@@ -7217,16 +7217,6 @@
 		)
 		(uuid "84160735-6095-458b-b1c8-6af5c9c6c4de")
 	)
-	(bus
-		(pts
-			(xy 215.9 50.8) (xy 215.9 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85d6607a-981b-4ce2-9ddb-dc18bb4963a9")
-	)
 	(wire
 		(pts
 			(xy 241.3 137.16) (xy 251.46 137.16)
@@ -7249,13 +7239,13 @@
 	)
 	(bus
 		(pts
-			(xy 215.9 45.72) (xy 215.9 48.26)
+			(xy 124.46 71.12) (xy 124.46 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8ab546e2-6d40-4dd9-b8e0-e0aadbae95cb")
+		(uuid "89bfdbb0-fac3-42c1-a800-48cd1eeab3c7")
 	)
 	(wire
 		(pts
@@ -7289,7 +7279,7 @@
 	)
 	(bus
 		(pts
-			(xy 213.36 50.8) (xy 215.9 50.8)
+			(xy 144.78 81.28) (xy 147.32 81.28)
 		)
 		(stroke
 			(width 0)
@@ -7326,6 +7316,16 @@
 			(type default)
 		)
 		(uuid "9d16977b-d548-4c5d-9dd2-a8b24ddcd2f5")
+	)
+	(bus
+		(pts
+			(xy 215.9 43.18) (xy 215.9 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dbe42ed-eb20-4c6a-86aa-e83575f118d7")
 	)
 	(wire
 		(pts
@@ -7469,13 +7469,23 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 50.8) (xy 76.2 50.8)
+			(xy 50.8 66.04) (xy 76.2 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "ab736ca2-2191-4d01-a347-2f7c1501c0f2")
+	)
+	(bus
+		(pts
+			(xy 215.9 45.72) (xy 215.9 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac1aef44-340a-4977-898d-c8af49207e97")
 	)
 	(wire
 		(pts
@@ -7579,7 +7589,7 @@
 	)
 	(bus
 		(pts
-			(xy 213.36 58.42) (xy 215.9 58.42)
+			(xy 213.36 55.88) (xy 215.9 55.88)
 		)
 		(stroke
 			(width 0)
@@ -7626,6 +7636,16 @@
 			(type default)
 		)
 		(uuid "c0f675f0-9493-435b-ae79-260c3f4af07e")
+	)
+	(bus
+		(pts
+			(xy 124.46 63.5) (xy 124.46 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c21b1bea-44b5-40f7-8eeb-8588ef0f511d")
 	)
 	(wire
 		(pts
@@ -7689,7 +7709,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 58.42) (xy 76.2 58.42)
+			(xy 50.8 71.12) (xy 76.2 71.12)
 		)
 		(stroke
 			(width 0)
@@ -7746,6 +7766,16 @@
 			(type default)
 		)
 		(uuid "d4d090da-a1c8-4b68-bfc9-fcb704b6149f")
+	)
+	(bus
+		(pts
+			(xy 215.9 55.88) (xy 215.9 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d88f6c75-0f4b-405f-b4fe-cd506892547a")
 	)
 	(bus
 		(pts
@@ -7827,16 +7857,6 @@
 		)
 		(uuid "de6a3d07-960c-4e98-bfa8-4e53f56c1115")
 	)
-	(bus
-		(pts
-			(xy 213.36 45.72) (xy 215.9 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dfebfa17-8ae3-4f65-bf9b-f2bb6b0c49e4")
-	)
 	(wire
 		(pts
 			(xy 193.04 116.84) (xy 193.04 121.92)
@@ -7846,16 +7866,6 @@
 			(type default)
 		)
 		(uuid "e073706c-36fa-4c6e-945c-2b025dd6e320")
-	)
-	(bus
-		(pts
-			(xy 121.92 68.58) (xy 124.46 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e33be5f8-4991-4402-9c9d-8136d5c432de")
 	)
 	(wire
 		(pts
@@ -7869,7 +7879,7 @@
 	)
 	(bus
 		(pts
-			(xy 121.92 48.26) (xy 124.46 48.26)
+			(xy 124.46 50.8) (xy 124.46 48.26)
 		)
 		(stroke
 			(width 0)
@@ -7969,7 +7979,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 71.12) (xy 76.2 71.12)
+			(xy 50.8 55.88) (xy 76.2 55.88)
 		)
 		(stroke
 			(width 0)
@@ -8085,7 +8095,7 @@
 		(uuid "db8d11a8-1cde-448e-b31c-d785f380f4f3")
 	)
 	(label "DVI_DATA_B2"
-		(at 127 45.72 0)
+		(at 218.44 40.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8118,7 +8128,7 @@
 		(uuid "061e56fe-6bec-4133-8f6c-a676ba4e14be")
 	)
 	(label "BUS_3V3.D2"
-		(at 50.8 55.88 0)
+		(at 50.8 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8184,7 +8194,7 @@
 		(uuid "338f62a1-d752-4691-bb51-bad7e71e53c3")
 	)
 	(label "DVI_DATA_R0"
-		(at 218.44 45.72 0)
+		(at 127 53.34 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8195,7 +8205,7 @@
 		(uuid "3477d06e-b0ef-42da-b70b-500a8159aed0")
 	)
 	(label "DVI_DATA_R3"
-		(at 127 60.96 0)
+		(at 127 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8228,7 +8238,7 @@
 		(uuid "36fab04c-f1e3-43a7-8a56-24f0b73dac88")
 	)
 	(label "DVI_DATA_G0"
-		(at 218.44 48.26 0)
+		(at 218.44 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8261,7 +8271,7 @@
 		(uuid "46a4880a-03df-43ff-98e2-18944c371b43")
 	)
 	(label "BUS_3V3.D0"
-		(at 50.8 50.8 0)
+		(at 50.8 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8272,7 +8282,7 @@
 		(uuid "49397f87-afb4-4d6e-8be1-db17757d04db")
 	)
 	(label "DVI_DATA_G3"
-		(at 127 66.04 0)
+		(at 127 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8305,7 +8315,7 @@
 		(uuid "503ec597-b058-41ab-a1a7-1c55568c6612")
 	)
 	(label "DVI_DATA_B0"
-		(at 218.44 40.64 0)
+		(at 218.44 43.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8349,7 +8359,7 @@
 		(uuid "5f33ea92-91c9-47e9-bf3b-7450e5f9cd49")
 	)
 	(label "DVI_DATA_G2"
-		(at 127 48.26 0)
+		(at 127 45.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8393,7 +8403,7 @@
 		(uuid "86eb81f2-d84f-4002-ac03-640a2b967814")
 	)
 	(label "BUS_3V3.D1"
-		(at 50.8 58.42 0)
+		(at 50.8 71.12 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8426,7 +8436,7 @@
 		(uuid "a1b27ed1-46f0-48ef-b141-9517cc4408c7")
 	)
 	(label "BUS_3V3.D5"
-		(at 50.8 71.12 0)
+		(at 50.8 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8470,7 +8480,7 @@
 		(uuid "ae3f6f80-a67c-4990-b0be-b533b81027e8")
 	)
 	(label "DVI_DATA_B3"
-		(at 127 68.58 0)
+		(at 218.44 45.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8481,7 +8491,7 @@
 		(uuid "af6a9e7b-7ffa-4bec-82cb-4493b826f512")
 	)
 	(label "BUS_3V3.D6"
-		(at 50.8 68.58 0)
+		(at 50.8 50.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8525,7 +8535,7 @@
 		(uuid "c27df1f3-7d21-4d9a-951c-38602d536cc5")
 	)
 	(label "BUS_3V3.D3"
-		(at 50.8 66.04 0)
+		(at 50.8 58.42 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8547,7 +8557,7 @@
 		(uuid "c9f8bb07-481b-4b45-abe1-dd198f86cd46")
 	)
 	(label "DVI_DATA_B1"
-		(at 218.44 55.88 0)
+		(at 218.44 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8558,7 +8568,7 @@
 		(uuid "cab7c6e3-f676-4b05-a0ea-86e80dc02466")
 	)
 	(label "DVI_DATA_R1"
-		(at 218.44 43.18 0)
+		(at 127 60.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8613,7 +8623,7 @@
 		(uuid "e64b7c1f-a6d4-46d2-83d8-4c82e91fa721")
 	)
 	(label "DVI_DATA_R2"
-		(at 127 53.34 0)
+		(at 127 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8660,7 +8670,7 @@
 	)
 	(hierarchical_label "DVI_DATA_G[0..3]"
 		(shape output)
-		(at 121.92 50.8 180)
+		(at 121.92 48.26 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8696,7 +8706,7 @@
 	)
 	(hierarchical_label "DVI_DATA_G[0..3]"
 		(shape output)
-		(at 213.36 50.8 180)
+		(at 213.36 55.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8718,18 +8728,6 @@
 		)
 		(uuid "3c48af8c-cfb5-4151-b7cc-d5a3f8714234")
 	)
-	(hierarchical_label "DVI_DATA_B[0..3]"
-		(shape output)
-		(at 121.92 48.26 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "3ddc10f7-e486-4dad-bdf3-89925d40d8e0")
-	)
 	(hierarchical_label "BUS_3V3{ROSCO_M68K_BUS}"
 		(shape bidirectional)
 		(at 45.72 50.8 180)
@@ -8741,18 +8739,6 @@
 			(justify right)
 		)
 		(uuid "48dea5ca-8753-421a-bece-73894841efde")
-	)
-	(hierarchical_label "DVI_DATA_G[0..3]"
-		(shape output)
-		(at 121.92 68.58 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "49bb5d91-fb73-4e40-a601-0ae12c859be6")
 	)
 	(hierarchical_label "DVI_DE"
 		(shape output)
@@ -8789,18 +8775,6 @@
 			(justify right)
 		)
 		(uuid "60885e6a-9b93-4124-ba80-829d5f13443d")
-	)
-	(hierarchical_label "DVI_DATA_R[0..3]"
-		(shape output)
-		(at 213.36 45.72 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "687af118-f383-4514-84d3-0133fd83483b")
 	)
 	(hierarchical_label "DVI_HSYNC"
 		(shape output)
@@ -8876,7 +8850,7 @@
 	)
 	(hierarchical_label "DVI_DATA_B[0..3]"
 		(shape output)
-		(at 213.36 58.42 180)
+		(at 144.78 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8885,18 +8859,6 @@
 			(justify right)
 		)
 		(uuid "e740e9bf-7212-455a-ae41-22b09bc03845")
-	)
-	(hierarchical_label "DVI_DATA_B[0..3]"
-		(shape output)
-		(at 121.92 71.12 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f53c99db-487f-416f-9165-5896d52bb30c")
 	)
 	(symbol
 		(lib_id "Device:R_Small")
