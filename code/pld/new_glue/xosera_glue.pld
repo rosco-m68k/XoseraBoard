@@ -63,6 +63,7 @@ PIN  87 = SYS_CLK;
 PIN  88 = SYS_RnW;
 PIN  89 = !SYS_RESET;
 PIN  90 = SD_CLK;
+PIN  33 = XO_IRQ;
 
 
 /* *************** OUTPUT PINS *********************/
@@ -102,7 +103,6 @@ PIN  29 = XO_REG3;
 PIN  30 = XO_REG2;
 PIN  31 = XO_REG1;
 PIN  32 = XO_REG0;
-PIN  33 = XO_IRQ;
 /*
 PIN  35 = NC;
 */
@@ -110,9 +110,10 @@ PIN  36 = XO_CRESET;
 PIN  37 = XO_CDONE;
 
 NODE  IN_INIT;
-NODE  REFRESH_Q;
+NODE  REFRESH_Q;                        /* Active high! */
 NODE  RQ4, RQ3, RQ2, RQ1, RQ0;
 NODE  SD_DTACK;                         /* Active high! */
+NODE  XO_IRQRQ;                         /* Active high! */
 
 FIELD SYS_BANK  = [SYS_FC2, SYS_A23];   /* TODO internal bank reg instead of FC2? */
 FIELD SYS_ROW   = [SYS_A22..SYS_A10];
@@ -135,6 +136,11 @@ SD_BANK         = SYS_BANK;
 SD_DQML         = SYS_LDS;
 SD_DQMH         = SYS_UDS;
 
+SYS_DTACK.sp    = 'b'0;
+SYS_DTACK       = 'b'0;
+SYS_DTACK.oe    = SYS_RESET & XO_CS 
+                # SYS_RESET & SD_DTACK
+                ;
 
 /** *********************** STATE  DEFINES ******************/
 /* N.B. IN_INIT is quite poorly named, it's just become a   */
@@ -253,7 +259,7 @@ SEQUENCE SD_STATE {
     PRESENT ST_LOADMODE
         NEXT ST_INHIBIT;
     PRESENT ST_INHIBIT
-        if REFRESH_Q
+        IF REFRESH_Q
             NEXT ST_PRECHARGE;
         IF !SYS_EXPSEL
             NEXT ST_ACTIVE;
@@ -303,27 +309,28 @@ $repend
 
  
 /** ***********************   XOSERA GLUE  ******************/
-XO_CS       = SYS_IOSEL & !SYS_UDS & !SYS_LDS & SYS_AS & SYS_ADDR:'b'XXXXXX0000000000011XXXX
-            # SYS_IOSEL & !SYS_UDS & !SYS_LDS & SYS_AS & SYS_ADDR:'b'XXXXXX0000000000100XXXX
+!XO_CS      = SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000011XXXXX
+            # SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000100XXXXX
             ;
 
-SYS_DTACK.SP    = 'b'0;
-SYS_DTACK       = 'b'0;
-SYS_DTACK.OE    = SYS_RESET & XO_CS & SYS_AS & SYS_LDS
-                # SYS_RESET & SD_DTACK
-                ;
+XO_BYTESEL  = SYS_A1;
+XO_REG3     = SYS_A7;
+XO_REG2     = SYS_A4;
+XO_REG1     = SYS_A3;
+XO_REG0     = SYS_A2;
+
+SYS_VPA     = 'b'0;
+SYS_VPA.oe  = SYS_RESET & SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 &  SYS_A2 & !SYS_A3 /* Xosera */
 /*
-VPA         = 'b'0;
-VPA.OE      = !RESET & AS & RnW & FC0 & FC1 & FC2 & !A1 & A2 & !A3 /* Xosera */
+            # SYS_RESET & SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 &  SYS_A1 &  SYS_A2 & !SYS_A3 /* IDE    */
 /*
-            # !RESET & AS & RnW & FC2 & FC1 & FC0 & !A3 & A2 &  A1 /* IDE    */
-/*
-            # !RESET & AS & RnW & FC2 & FC1 & FC0 &  A3 & A2 & !A1 /* UART   *
+            # SYS_RESET & SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & !SYS_A1 *  SYS_A2 &  SYS_A3 /* UART   */
             ;
 
-/*
-IRQRS       =          AS & RnW & FC0 & FC1 & FC2 & !A1 &  A2 & !A3 
-            # RESET
+XO_IRQRQ.l  = 'b'1;
+XO_IRQRQ.ck = XO_IRQ;
+XO_IRQRQ.ar = SYS_RESET & SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 & SYS_A2 & !SYS_A3;
 
-            ;
-*/
+SYS_IRQ2    = 'b'0;
+SYS_IRQ2.oe = XO_IRQRQ;
+
