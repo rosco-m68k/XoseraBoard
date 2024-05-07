@@ -3730,10 +3730,6 @@
 		(uuid "07df7b39-e3cf-410d-8c3d-f0abb7a064ca")
 	)
 	(no_connect
-		(at 88.9 116.84)
-		(uuid "5657f82d-bb3b-4b5e-8a03-32b84a0eb7be")
-	)
-	(no_connect
 		(at 88.9 106.68)
 		(uuid "5d8c0e1b-d885-45d7-b209-988d73110a10")
 	)
@@ -4061,6 +4057,16 @@
 			(type default)
 		)
 		(uuid "1cf9b8ef-8003-4033-b2df-fe883d04bc0f")
+	)
+	(wire
+		(pts
+			(xy 88.9 116.84) (xy 119.38 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1dccf429-92d3-4b29-8880-4a783325f16f")
 	)
 	(polyline
 		(pts
@@ -5863,6 +5869,28 @@
 		(uuid "4c7f5447-3c8a-4ea5-9225-6f1833fa43f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 144.318 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "XOSERA_R{slash}~{W}"
+		(shape output)
+		(at 119.38 116.84 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5e9d6802-0f3b-4da9-a1b3-9579011a33fd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 134.6418 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
