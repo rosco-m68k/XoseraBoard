@@ -21,6 +21,9 @@ property   atmel {tdi_pullup=on};
 property   atmel {tms_pullup=on};
 
 /* *************** INPUT PINS *********************/
+PIN  33 = XO_IRQ;
+PIN  36 = XO_CRESET;
+PIN  37 = XO_CDONE;
 PIN  40 = SYS_A1;
 PIN  41 = SYS_A2;
 PIN  42 = SYS_A3;
@@ -63,8 +66,6 @@ PIN  87 = SYS_CLK;
 PIN  88 = SYS_RnW;
 PIN  89 = !SYS_RESET;
 PIN  90 = SD_CLK;
-PIN  33 = XO_IRQ;
-
 
 /* *************** OUTPUT PINS *********************/
 PIN  92 = SD_A4;
@@ -106,8 +107,6 @@ PIN  32 = XO_REG0;
 /*
 PIN  35 = NC;
 */
-PIN  36 = XO_CRESET;
-PIN  37 = XO_CDONE;
 
 NODE  IN_INIT;
 NODE  REFRESH_Q;                        /* Active high! */
@@ -309,8 +308,8 @@ $repend
 
  
 /** ***********************   XOSERA GLUE  ******************/
-!XO_CS      = SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000011XXXXX
-            # SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000100XXXXX
+!XO_CS      = XO_CDONE & SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000011XXXXX
+            # XO_CDONE & SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000100XXXXX
             ;
 
 XO_BYTESEL  = SYS_A1;
