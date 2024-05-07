@@ -22,6 +22,7 @@ property   atmel {tms_pullup=on};
 
 /* *************** INPUT PINS *********************/
 PIN  33 = XO_IRQ;
+PIN  35 = XO_DTACK;
 PIN  36 = XO_CRESET;
 PIN  37 = XO_CDONE;
 PIN  40 = SYS_A1;
@@ -96,17 +97,15 @@ PIN  21 = NC;
 PIN  22 = NC;
 PIN  23 = NC;
 PIN  24 = NC;
-PIN  25 = NC;
 */
+
+PIN  25 = XO_RnW;
 PIN  27 = !XO_CS;
 PIN  28 = XO_BYTESEL;
 PIN  29 = XO_REG3;
 PIN  30 = XO_REG2;
 PIN  31 = XO_REG1;
 PIN  32 = XO_REG0;
-/*
-PIN  35 = NC;
-*/
 
 NODE  IN_INIT;
 NODE  REFRESH_Q;                        /* Active high! */
@@ -137,9 +136,11 @@ SD_DQMH         = SYS_UDS;
 
 SYS_DTACK.sp    = 'b'0;
 SYS_DTACK       = 'b'0;
-SYS_DTACK.oe    = SYS_RESET & XO_CS 
+SYS_DTACK.oe    = SYS_RESET & XO_CS /* switch XO_CS to XO_DTACK when ready */
                 # SYS_RESET & SD_DTACK
                 ;
+
+XO_RnW          = SYS_RnW;
 
 /** *********************** STATE  DEFINES ******************/
 /* N.B. IN_INIT is quite poorly named, it's just become a   */
