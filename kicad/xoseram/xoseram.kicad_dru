@@ -9,5 +9,5 @@
 	(constraint skew (max 10mm)))
 
 (rule dv_skew
-	(condition "A.NetClass == 'dv_parallel' && A.fromTo('U14','U15')")
+	(condition "A.NetClass == 'dv_parallel'")
 	(constraint skew (max 15mm)))
