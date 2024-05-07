@@ -711,7 +711,7 @@
 		)
 		(uuid "e6a138af-0d3f-408e-b59f-00024ad16a92")
 	)
-	(text "My RosXos"
+	(text "${TITLE}"
 		(exclude_from_sim no)
 		(at 13.97 13.97 0)
 		(effects

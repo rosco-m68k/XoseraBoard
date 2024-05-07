@@ -3237,12 +3237,6 @@
 		(uuid "caafeb35-dfbe-4341-bc33-74d5aa70c7df")
 	)
 	(junction
-		(at 33.02 144.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d4f550fb-84cf-474c-9002-749e14c50107")
-	)
-	(junction
 		(at 78.74 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3748,16 +3742,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 144.78) (xy 33.02 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17122271-9d3a-4ccc-bb39-4445a1cb7755")
-	)
-	(wire
-		(pts
 			(xy 210.82 63.5) (xy 220.98 63.5)
 		)
 		(stroke
@@ -3818,16 +3802,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 144.78) (xy 35.56 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1e7bcaac-a4a7-4c55-9da0-b78ee96958e9")
-	)
-	(wire
-		(pts
 			(xy 78.74 33.02) (xy 78.74 30.48)
 		)
 		(stroke
@@ -3835,6 +3809,16 @@
 			(type default)
 		)
 		(uuid "20e30ef0-dcad-447d-b01d-1438e4f5704b")
+	)
+	(wire
+		(pts
+			(xy 35.56 144.78) (xy 21.59 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2113986f-7827-4b7b-bef8-f5da28c1b582")
 	)
 	(wire
 		(pts
@@ -5118,6 +5102,16 @@
 	)
 	(wire
 		(pts
+			(xy 21.59 137.16) (xy 21.59 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c76f20a6-a2ea-402f-9538-1d10795f0f31")
+	)
+	(wire
+		(pts
 			(xy 111.76 66.04) (xy 99.06 66.04)
 		)
 		(stroke
@@ -5148,7 +5142,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 132.08) (xy 33.02 144.78)
+			(xy 33.02 132.08) (xy 33.02 147.32)
 		)
 		(stroke
 			(width 0)
@@ -10323,6 +10317,73 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
 					(reference "C67")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "+3V3_1")
+		(lib_id "power:+3V3")
+		(at 21.59 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d35478f4-cdee-4f5e-ad99-4f13954f73ea")
+		(property "Reference" "#PWR0118"
+			(at 21.59 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3_DVI_DVDD"
+			(at 21.59 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 21.59 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8b697534-341f-469f-bb96-fb826767b250")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
+					(reference "#PWR0118")
 					(unit 1)
 				)
 			)

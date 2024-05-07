@@ -11783,7 +11783,7 @@
 			(at -0.5 0 180)
 			(size 0.5 0.5)
 			(layers "F.Cu")
-			(net 2 "GND")
+			(net 10 "+3V3_DVI_DVDD")
 			(pinfunction "1")
 			(pintype "passive")
 			(uuid "f5344586-f157-4602-b96d-1e1c1e0bb15b")
@@ -55335,14 +55335,6 @@
 		(uuid "e0dba859-7017-4c02-936a-7d9301b2b569")
 	)
 	(segment
-		(start 187.5 52)
-		(end 187.5 50)
-		(width 0.5)
-		(layer "F.Cu")
-		(net 2)
-		(uuid "e11f4b2d-ec8a-40ff-914d-e5781e2d92f0")
-	)
-	(segment
 		(start 98.874688 84.711099)
 		(end 99.735787 83.85)
 		(width 0.3)
@@ -55541,6 +55533,14 @@
 		(layer "F.Cu")
 		(net 2)
 		(uuid "f40945f2-ec3f-45d8-a6b3-fb9119f5aede")
+	)
+	(segment
+		(start 187.5 51)
+		(end 187.5 52)
+		(width 0.56)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "f62a7c84-6ca8-454b-8b43-9c7f9e758bf3")
 	)
 	(segment
 		(start 80.48 117.25)
@@ -59946,6 +59946,14 @@
 		(layer "F.Cu")
 		(net 10)
 		(uuid "f752f212-07d0-4dc5-8b7a-bfd5b22c501b")
+	)
+	(via
+		(at 187.5 50)
+		(size 0.45)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 10)
+		(uuid "16fd3e75-7f56-4054-a464-efd5e42b140a")
 	)
 	(via
 		(at 170.75 51.25)
