@@ -112,8 +112,13 @@ NODE  REFRESH_Q;                        /* Active high! */
 NODE  RQ4, RQ3, RQ2, RQ1, RQ0;
 NODE  SD_DTACK;                         /* Active high! */
 NODE  XO_IRQRQ;                         /* Active high! */
+NODE  BANK_FF;
 
-FIELD SYS_BANK  = [SYS_FC2, SYS_A23];   /* TODO internal bank reg instead of FC2? */
+NODE COMMAND_SEL;
+NODE CMD_DTACK;                         /* Active high! */
+NODE CMDa, CMDb;
+
+FIELD SYS_BANK  = [BANK_FF, SYS_A23];
 FIELD SYS_ROW   = [SYS_A22..SYS_A10];
 FIELD SYS_COL   = [SYS_A9..SYS_A1];
 
@@ -122,6 +127,8 @@ FIELD SD_ADDR   = [SD_A12..SD_A0];
 FIELD SD_STATE  = [SD_CS, SD_RAS, SD_CAS, SD_WE, SD_DTACK, IN_INIT, SD_CKE];
 FIELD SYS_ADDR  = [SYS_A23..SYS_A1];
 FIELD RCOUNT    = [RQ4..RQ0];
+
+FIELD COMMAND   = [CMDb, CMDa, CMD_DTACK];
 
 IN_INIT.sp      = 'b'0;
 SD_CKE.sp       = 'b'0;
@@ -136,8 +143,9 @@ SD_DQMH         = SYS_UDS;
 
 SYS_DTACK.sp    = 'b'0;
 SYS_DTACK       = 'b'0;
-SYS_DTACK.oe    = SYS_RESET & XO_CS /* switch XO_CS to XO_DTACK when ready */
+SYS_DTACK.oe    = SYS_RESET & XO_CS         /* switch XO_CS to XO_DTACK when ready */
                 # SYS_RESET & SD_DTACK
+                # SYS_RESET & CMD_DTACK
                 ;
 
 XO_RnW          = SYS_RnW;
@@ -171,7 +179,6 @@ $define ST_BURST_TERM   'b'0110001  /* We don't use...           31 */
 $define ST_PRECHARGE    'b'0010001  /* End cycle                 11 */
 
 /** *********************** SDRAM ADDR BUS ******************/
-/* TODO INIT, Load mode reg opcodes                                 */
 /* TODO there has to be a better way to do this... tables maybe?    */
 /*      I can't find a nice way to conditionally assign fields...   */
 CONDITION {
@@ -333,4 +340,59 @@ XO_IRQRQ.ar = SYS_RESET & SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A
 
 SYS_IRQ2    = 'b'0;
 SYS_IRQ2.oe = XO_IRQRQ;
+
+
+/** ***********************    REGISTERS   *******************/
+/** *********************** COMMAND DEFINES ******************/
+$define CMD_BANK_LOW    'b'XXXXXXXXXXXXXXXXXXX0000X
+$define CMD_BANK_HIGH   'b'XXXXXXXXXXXXXXXXXXX0001X
+
+/** *********************** COMMAND  STATES ******************/
+/*
+                             S
+                             Y
+                             S
+                             _
+                             D
+                             T
+                             A
+                             C
+                           baK                                      */
+$define CMD_START       'b'000      /* Start state               00 */
+$define CMD_IDLE        'b'010      /* Idle state                02 */
+$define CMD_LATCH       'b'100      /* Latch state               04 */
+$define CMD_ACK         'b'001      /* ACK command               01 */
+
+/** *********************** OUTPUT  SIGNALS ******************/
+BANK_FF.l   = 'b'1;
+
+COMMAND.sp  = 'b'0;
+COMMAND.ar  = !SYS_RESET;
+COMMAND.ck  = SYS_CLK;
+
+!COMMAND_SEL= SYS_RESET & !SYS_IOSEL & (!SYS_UDS # !SYS_LDS) & !SYS_AS & SYS_ADDR:'b'XXXXXX0000010000011XXXXX;
+
+/** *********************** COMMAND OUTPUTS ******************/
+CONDITION {
+    IF COMMAND:CMD_LATCH & SYS_ADDR:CMD_BANK_LOW        OUT BANK_FF.ar;
+    IF COMMAND:CMD_LATCH & SYS_ADDR:CMD_BANK_HIGH       OUT BANK_FF.ck;
+}
+
+/** *********************** COMMAND MACHINE ******************/
+SEQUENCE COMMAND {
+    PRESENT CMD_START
+        NEXT CMD_IDLE;
+    PRESENT CMD_IDLE
+        IF !COMMAND_SEL
+            NEXT CMD_LATCH;
+        DEFAULT NEXT CMD_IDLE;
+    PRESENT CMD_LATCH
+        NEXT CMD_ACK;
+    PRESENT CMD_ACK
+        IF !SYS_IOSEL
+            NEXT CMD_ACK;
+
+        DEFAULT NEXT CMD_IDLE;
+}
+
 
