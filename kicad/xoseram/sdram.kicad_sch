@@ -6,9 +6,10 @@
 	(paper "USLetter")
 	(title_block
 		(title "XoseRAM")
-		(date "2024-05-08")
+		(date "2024-05-09")
 		(rev "A")
-		(company "0xTJ")
+		(company "Thomas Jager")
+		(comment 1 "Licensed under CERN OHL v.1.2")
 	)
 	(lib_symbols
 		(symbol "Device:C_Small"
@@ -5108,7 +5109,7 @@
 		)
 		(uuid "fe701c72-3c02-4110-a976-6f309e356aa2")
 	)
-	(text "NOTE: By default. use synchronous operation. Asynchronous operation may also be possible.\n	For synchronous operation with ~{DTACK}/~{DSACKx}:\n		On read, data must be available during the CPU clock falling edge\n			after the CPU clock falling edge where ~{DTACK} is low.\n	For asynchronous operation:\n		Remove ${a77ea4cd-ce07-40e4-a79e-65a137e972db:REFERENCE}.\n		On read, SDRAM clock must be paused until the data has been latched\n			by the CPU.\n\nNOTE: In synchronous operation, the SDRAM's t_{AC}, the level shifters' t_{PHL}/t_{PLH}, and\n	the CPU's Setup Time on Read should allow for operation at up to 24 MHz with CL=2\n	and up to 27 MHz with CL=3.\n\nNOTE: For layout purposes, the CPU to SDRAM data pin mapping has been adjusted\n	within individual bytes.\n\nTODO: Is any termination needed?"
+	(text "NOTE: By default. use synchronous operation. Asynchronous operation may also be possible.\n	For synchronous operation with ~{DTACK}/~{DSACKx}:\n		On read, data must be available during the CPU clock falling edge\n			after the CPU clock falling edge where ~{DTACK} is low.\n	For asynchronous operation:\n		Remove ${a77ea4cd-ce07-40e4-a79e-65a137e972db:REFERENCE}.\n		On read, SDRAM clock must be paused until the data has been latched\n			by the CPU.\n\nNOTE: In synchronous operation, the SDRAM's t_{AC}, the level shifters' t_{PHL}/t_{PLH}, and\n	the CPU's Setup Time on Read should allow for operation at up to 24 MHz with CL=2\n	and up to 27 MHz with CL=3.\n\nNOTE: For layout purposes, the CPU to SDRAM data pin mapping has been adjusted\n	within individual bytes."
 		(exclude_from_sim no)
 		(at 162.56 133.35 0)
 		(effects
@@ -6028,6 +6029,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" "90"
+			(at 73.66 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "89"
 			(uuid "98f584b6-d2c5-4a9b-9bcd-cd6d417b9739")
 		)
@@ -6438,6 +6448,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 205.74 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a7586fcf-a6dd-4bef-86f7-32116aab2a90")
 		)
@@ -6546,6 +6565,15 @@
 			)
 		)
 		(property "LCSC Part #" "C1525"
+			(at 195.58 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 195.58 116.84 0)
 			(effects
 				(font
@@ -6670,6 +6698,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 185.42 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "662edeeb-9d26-4bca-8fce-e08db1cde916")
 		)
@@ -6778,6 +6815,15 @@
 			)
 		)
 		(property "LCSC Part #" "C1525"
+			(at 215.9 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 215.9 116.84 0)
 			(effects
 				(font
@@ -6968,6 +7014,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 226.06 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f3f74f51-7e43-4481-961b-58773e7a5790")
 		)
@@ -7146,6 +7201,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 86.36 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e079455d-9ceb-419b-8e32-1442746e149b")
 		)
@@ -7262,6 +7326,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 165.1 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4b2e80e8-85d2-444c-be02-d4737b8c69f8")
 		)
@@ -7351,6 +7424,15 @@
 			)
 		)
 		(property "LCSC Part #" "C2921079"
+			(at 73.66 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" "90"
 			(at 73.66 50.8 0)
 			(effects
 				(font
@@ -7816,6 +7898,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" "90"
+			(at 73.66 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "89"
 			(uuid "98f584b6-d2c5-4a9b-9bcd-cd6d417b973b")
 		)
@@ -8226,6 +8317,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" "-90"
+			(at 203.2 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "42"
 			(uuid "cab41d48-e64d-4e72-95a2-b251f39114c5")
 		)
@@ -8490,6 +8590,15 @@
 			)
 		)
 		(property "LCSC Part #" "C1525"
+			(at 175.26 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 175.26 116.84 0)
 			(effects
 				(font

@@ -6,9 +6,10 @@
 	(paper "USLetter")
 	(title_block
 		(title "XoseRAM")
-		(date "2024-05-08")
+		(date "2024-05-09")
 		(rev "A")
-		(company "0xTJ")
+		(company "Thomas Jager")
+		(comment 1 "Licensed under CERN OHL v.1.2")
 	)
 	(lib_symbols
 		(symbol "Device:C_Small"
@@ -823,6 +824,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 76.2 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "907b20fc-9a5c-4a89-88ee-722db0012635")
 		)
@@ -1068,6 +1078,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 58.42 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bd7ee5d6-ffc3-4769-ae80-909fb206d703")
 		)
@@ -1181,6 +1200,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 71.12 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0063618e-112a-439f-96a8-f51c994eccdc")
 		)
@@ -1279,6 +1307,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 76.2 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 76.2 55.88 0)
 			(effects
 				(font
@@ -1400,6 +1437,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 58.42 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2f2e17e8-01f7-4ee9-a692-2d4cad61dc99")
 		)
@@ -1513,6 +1559,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 71.12 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a0994784-92d0-4740-b322-027028a0e958")
 		)
@@ -1611,6 +1666,15 @@
 			)
 		)
 		(property "V_{DC}" ""
+			(at 66.04 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 66.04 81.28 0)
 			(effects
 				(font
@@ -1791,6 +1855,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 58.42 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "09764bae-cd98-4a84-bb82-9edbad247be0")
 		)
@@ -1963,6 +2036,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 58.42 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bf32a02f-a37b-4e55-a1b3-3148662dd95d")
 		)
@@ -2061,6 +2143,15 @@
 			)
 		)
 		(property "V_{DC}" ""
+			(at 66.04 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 66.04 55.88 0)
 			(effects
 				(font

@@ -6,9 +6,10 @@
 	(paper "USLetter")
 	(title_block
 		(title "XoseRAM")
-		(date "2024-05-08")
+		(date "2024-05-09")
 		(rev "A")
-		(company "0xTJ")
+		(company "Thomas Jager")
+		(comment 1 "Licensed under CERN OHL v.1.2")
 	)
 	(lib_symbols
 		(symbol "Connector:AVR-JTAG-10"
@@ -6282,6 +6283,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" "90"
+			(at 205.74 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "22"
 			(uuid "5edda8e4-f454-4f8b-a7c7-d0ecb927d4bf")
 		)
@@ -6644,6 +6654,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 95.25 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "28b5262f-d42f-40e6-93f9-b65eab56328c")
 		)
@@ -6763,6 +6782,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 208.28 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c65efa68-8e03-4e93-9450-402fde844ec6")
 		)
@@ -6871,6 +6899,15 @@
 			)
 		)
 		(property "LCSC Part #" "C1525"
+			(at 198.12 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 198.12 93.98 0)
 			(effects
 				(font
@@ -7373,6 +7410,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" "90"
+			(at 104.14 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "82e1489c-7d77-4173-a810-1ece318e454c")
 		)
@@ -7831,6 +7877,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" "90"
+			(at 104.14 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "82e1489c-7d77-4173-a810-1ece318e454b")
 		)
@@ -8241,6 +8296,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 187.96 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d81e1573-7b30-471a-81d4-257bf84a7c79")
 		)
@@ -8331,6 +8395,15 @@
 			)
 		)
 		(property "LCSC Part #" "C2921079"
+			(at 104.14 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" "90"
 			(at 104.14 147.32 0)
 			(effects
 				(font
@@ -8749,6 +8822,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 248.92 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7f0ad713-46da-4b29-ad15-e1fb3cbe36c7")
 		)
@@ -8856,6 +8938,15 @@
 			)
 		)
 		(property "LCSC Part #" "C17168"
+			(at 86.36 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 86.36 180.34 0)
 			(effects
 				(font
@@ -9084,6 +9175,15 @@
 			)
 		)
 		(property "LCSC Part #" "C2921079"
+			(at 104.14 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" "90"
 			(at 104.14 40.64 0)
 			(effects
 				(font
@@ -9502,6 +9602,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 218.44 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "54498e2e-cf1b-46f6-8ed6-8042fabaa45d")
 		)
@@ -9684,6 +9793,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 238.76 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f827f3b1-4774-4ae3-8f66-4cb1217eec16")
 		)
@@ -9800,6 +9918,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 177.8 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8d2bb25f-eec7-47cc-967f-1d9725dce369")
 		)
@@ -9861,6 +9988,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 132.08 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 132.08 175.26 0)
 			(effects
 				(font
@@ -9959,6 +10095,15 @@
 			)
 		)
 		(property "LCSC Part #" "C2921079"
+			(at 104.14 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" "90"
 			(at 104.14 63.5 0)
 			(effects
 				(font
@@ -10377,6 +10522,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 228.6 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4c405234-7bd1-40c9-843c-4b713287f9a0")
 		)
@@ -10475,6 +10629,15 @@
 			)
 		)
 		(property "V_{DC}" ""
+			(at 203.2 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
 			(at 203.2 144.78 0)
 			(effects
 				(font
