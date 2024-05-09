@@ -10,4 +10,4 @@
 
 (rule dv_skew
 	(condition "A.NetClass == 'dv_parallel'")
-	(constraint skew (max 15mm)))
+	(constraint skew (max 16mm)))

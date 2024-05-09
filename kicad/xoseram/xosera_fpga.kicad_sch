@@ -6,7 +6,7 @@
 	(paper "USLetter")
 	(title_block
 		(title "XoseRAM")
-		(date "2024-05-04")
+		(date "2024-05-08")
 		(rev "A")
 		(company "0xTJ")
 	)
@@ -6468,6 +6468,16 @@
 		)
 		(uuid "1612f6c0-2f1b-4e55-b640-d4f5971f8521")
 	)
+	(bus
+		(pts
+			(xy 215.9 53.34) (xy 215.9 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16ace89a-5aa4-4d0d-a2ac-8f38be08e3c4")
+	)
 	(wire
 		(pts
 			(xy 69.85 172.72) (xy 110.49 172.72)
@@ -6657,16 +6667,6 @@
 			(type default)
 		)
 		(uuid "35520434-236b-48b6-8d98-459d4a143d01")
-	)
-	(bus
-		(pts
-			(xy 215.9 48.26) (xy 215.9 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3625f1c6-7fe1-4118-b6c8-13d5dcf1dbd2")
 	)
 	(wire
 		(pts
@@ -7157,6 +7157,16 @@
 			(type default)
 		)
 		(uuid "7834d590-cf07-4e03-bcc6-1b5a6ff907e3")
+	)
+	(bus
+		(pts
+			(xy 215.9 48.26) (xy 215.9 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "785fdbef-ee1e-49e4-aea7-895eb0ecc245")
 	)
 	(wire
 		(pts
@@ -7717,16 +7727,6 @@
 			(type default)
 		)
 		(uuid "d06e7a5b-6b4f-4f5c-ba10-4ed9b3a21633")
-	)
-	(bus
-		(pts
-			(xy 215.9 53.34) (xy 215.9 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d255431f-8a0d-4cbc-bae2-ce67bed49bdd")
 	)
 	(wire
 		(pts
