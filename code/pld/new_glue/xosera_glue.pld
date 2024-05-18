@@ -175,7 +175,7 @@ $define ST_LOADMODE     'b'0000011  /* Load mode                 03 */
 $define ST_ACTIVE       'b'0011001  /* ACTIVATE (row)            19 */
 $define ST_READ_CMD     'b'0101001  /* READ (column)             29 */
 $define ST_WRITE_CMD    'b'0100001  /* WRITE (column)            21 */
-$define ST_ACK_DELAY    'b'0111011  /* Delay before ACK (unused) 3B */
+$define ST_ACK_DELAY    'b'0111011  /* Delay before ACK (reads ) 3B */
 $define ST_ACK          'b'0111101  /* NOP, DTACK                3D */
 $define ST_BURST_TERM   'b'0110001  /* We don't use...           31 */
 $define ST_PRECHARGE    'b'0010001  /* End cycle                 11 */
@@ -249,7 +249,6 @@ CONDITION {
 
 /** ***********************  SDRAM STATES  ******************/
 
-/* TODO initialization on /RESET... */
 SEQUENCE SD_STATE {
     PRESENT ST_START
 /*        if SYS_RESET
