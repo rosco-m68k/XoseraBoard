@@ -320,13 +320,13 @@ $repend
 !XO_CS      = XO_CDONE & SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000011XXXXX
             # XO_CDONE & SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000100XXXXX
             ;
-
-XO_BYTESEL  = SYS_A1;
-XO_REG3     = SYS_A7;
-XO_REG2     = SYS_A4;
-XO_REG1     = SYS_A3;
-XO_REG0     = SYS_A2;
-
+*/
+XO_BYTESEL  = 'b'0; /* SYS_A1; */
+XO_REG3     = 'b'0; /* SYS_A7; */
+XO_REG2     = 'b'0; /* SYS_A4; */
+XO_REG1     = 'b'0; /* SYS_A3; */
+XO_REG0     = 'b'0; /* SYS_A2; */
+/*
 SYS_VPA     = 'b'0;
 SYS_VPA.oe  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 &  SYS_A2 & !SYS_A3 /* Xosera */
 /*
