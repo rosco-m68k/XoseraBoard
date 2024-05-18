@@ -138,8 +138,10 @@ SD_STATE.ck     = SD_CLK;
 SD_STATE.ar     = !SYS_RESET;
 
 SD_BANK         = SYS_BANK;
-SD_DQML         = SYS_LDS;
-SD_DQMH         = SYS_UDS;
+SD_DQML.ck      = SD_CLK;
+!SD_DQML.d      = !SYS_LDS & !SYS_EXPSEL;
+SD_DQMH.ck      = SD_CLK;
+!SD_DQMH.d      = !SYS_UDS & !SYS_EXPSEL;
 
 SYS_DTACK.sp    = 'b'0;
 SYS_DTACK       = 'b'0;
