@@ -28,11 +28,11 @@ PIN  37 = XO_CDONE;
 PIN  40 = SYS_A1;
 PIN  41 = SYS_A2;
 PIN  42 = SYS_A3;
-PIN  44 = SYS_VPA;
+PIN  44 = !SYS_VPA;
 PIN  45 = SYS_A4;
 PIN  46 = SYS_A5;
 PIN  47 = SYS_A6;
-PIN  48 = SYS_IRQ3;
+PIN  48 = !SYS_IRQ3;
 PIN  49 = SYS_A7;
 PIN  50 = SYS_IOSEL;
 PIN  52 = SYS_A8;
@@ -44,11 +44,11 @@ PIN  57 = SYS_FC1;
 PIN  58 = SYS_A11;
 PIN  60 = SYS_FC2;
 PIN  61 = SYS_A12;
-PIN  63 = SYS_IRQ5;
+PIN  63 = !SYS_IRQ5;
 PIN  64 = SYS_A13;
-PIN  65 = SYS_IRQ2;
+PIN  65 = !SYS_IRQ2;
 PIN  67 = SYS_A14;
-PIN  68 = SYS_IRQ6;
+PIN  68 = !SYS_IRQ6;
 PIN  69 = SYS_A15;
 PIN  70 = SYS_LDS;
 PIN  71 = SYS_A16;
@@ -61,7 +61,7 @@ PIN  79 = SYS_A21;
 PIN  80 = SYS_A22;
 PIN  81 = SYS_A23;
 PIN  83 = SYS_AS;
-PIN  84 = SYS_BERR;
+PIN  84 = !SYS_BERR;
 PIN  85 = SYS_DTACK;
 PIN  87 = SYS_CLK;
 PIN  88 = SYS_RnW;
@@ -100,7 +100,7 @@ PIN  24 = NC;
 */
 
 PIN  25 = XO_RnW;
-PIN  27 = XO_CS;
+PIN  27 = !XO_CS;
 PIN  28 = XO_BYTESEL;
 PIN  29 = XO_REG3;
 PIN  30 = XO_REG2;
@@ -143,7 +143,7 @@ SD_DQMH         = SYS_UDS;
 
 SYS_DTACK.sp    = 'b'0;
 SYS_DTACK       = 'b'0;
-SYS_DTACK.oe    = /*SYS_RESET & !XO_CS         /* switch XO_CS to XO_DTACK when ready */
+SYS_DTACK.oe    = /*SYS_RESET & XO_CS         /* switch XO_CS to XO_DTACK when ready */
                 /*#*/ SYS_RESET & SD_DTACK
                 # SYS_RESET & CMD_DTACK
                 ;
@@ -277,7 +277,7 @@ SEQUENCE SD_STATE {
         IF !SYS_RnW
             NEXT ST_WRITE_CMD;
     PRESENT ST_READ_CMD
-        NEXT ST_ACK_DELAY;
+        NEXT ST_ACK;
     PRESENT ST_WRITE_CMD
         NEXT ST_ACK;
     PRESENT ST_ACK
@@ -287,9 +287,9 @@ SEQUENCE SD_STATE {
 
         /* waiting for AS to deassert */
         DEFAULT NEXT ST_ACK;
+/*
     PRESENT ST_ACK_DELAY
         NEXT ST_ACK;
-/*
     PRESENT ST_BURST_TERM
         NEXT ST_PRECHARGE;
 */
@@ -320,15 +320,15 @@ $repend
 !XO_CS      = XO_CDONE & SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000011XXXXX
             # XO_CDONE & SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000100XXXXX
             ;
-*/
-XO_BYTESEL  = 'b'0; /* SYS_A1; */
-XO_REG3     = 'b'0; /* SYS_A7; */
-XO_REG2     = 'b'0; /* SYS_A4; */
-XO_REG1     = 'b'0; /* SYS_A3; */
-XO_REG0     = 'b'0; /* SYS_A2; */
-/*
+
+XO_BYTESEL  = SYS_A1;
+XO_REG3     = SYS_A7;
+XO_REG2     = SYS_A4;
+XO_REG1     = SYS_A3;
+XO_REG0     = SYS_A2;
+
 SYS_VPA     = 'b'0;
-SYS_VPA.oe  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 &  SYS_A2 & !SYS_A3 /* Xosera */
+SYS_VPA.oe  = SYS_RESET & SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 &  SYS_A2 & !SYS_A3 /* Xosera */
 /*
             # SYS_RESET & SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 &  SYS_A1 &  SYS_A2 & !SYS_A3 /* IDE    */
 /*
@@ -338,9 +338,8 @@ SYS_VPA.oe  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_
 
 XO_IRQRQ.l  = 'b'1;
 XO_IRQRQ.ck = XO_IRQ;
-XO_IRQRQ.ar = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 & SYS_A2 & !SYS_A3;
+XO_IRQRQ.ar = SYS_RESET & SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 & SYS_A2 & !SYS_A3;
 
-/*
 SYS_IRQ2    = 'b'0;
 SYS_IRQ2.oe = XO_IRQRQ;
 */
