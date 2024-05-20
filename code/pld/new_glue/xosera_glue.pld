@@ -137,12 +137,6 @@ SD_DTACK.sp     = 'b'0;
 SD_STATE.ck     = SD_CLK;
 SD_STATE.ar     = !SYS_RESET;
 
-SD_BANK         = SYS_BANK;
-SD_DQML.ck      = SD_CLK;
-!SD_DQML.d      = !SYS_LDS & !SYS_EXPSEL;
-SD_DQMH.ck      = SD_CLK;
-!SD_DQMH.d      = !SYS_UDS & !SYS_EXPSEL;
-
 SYS_DTACK.sp    = 'b'0;
 SYS_DTACK       = 'b'0;
 SYS_DTACK.oe    = /*SYS_RESET & !XO_CS         /* switch XO_CS to XO_DTACK when ready */
@@ -180,10 +174,23 @@ $define ST_ACK          'b'0111101  /* NOP, DTACK                3D */
 $define ST_BURST_TERM   'b'0110001  /* We don't use...           31 */
 $define ST_PRECHARGE    'b'0010001  /* End cycle                 11 */
 
+SD_DQML.ck      = SD_CLK;
+!SD_DQML.d      = !SYS_LDS & SD_STATE:ST_ACTIVE;
+SD_DQMH.ck      = SD_CLK;
+!SD_DQMH.d      = !SYS_UDS & SD_STATE:ST_ACTIVE;
+
 /** *********************** SDRAM ADDR BUS ******************/
 /* TODO there has to be a better way to do this... tables maybe?    */
 /*      I can't find a nice way to conditionally assign fields...   */
 CONDITION {
+    /* SD BA1 */
+    IF SD_STATE:ST_READ_CMD     & BANK_FF       OUT SD_BA1;
+    IF SD_STATE:ST_WRITE_CMD    & BANK_FF       OUT SD_BA1;
+
+    /* SD BA0 */
+    IF SD_STATE:ST_READ_CMD     & SYS_A23       OUT SD_BA0;
+    IF SD_STATE:ST_WRITE_CMD    & SYS_A23       OUT SD_BA0;
+
     /* SD A12 */
     IF SD_STATE:ST_ACTIVE       & SYS_A22       OUT SD_A12;
 
@@ -192,7 +199,7 @@ CONDITION {
    
     /* SD A10 */
     IF SD_STATE:ST_ACTIVE       & SYS_A20       OUT SD_A10;
-    IF SD_STATE:ST_PRECHARGE                    OUT SD_A10;
+    IF SD_STATE:ST_PRECHARGE                    OUT SD_A10;     /* All banks */
     IF SD_STATE:ST_INIT_PC                      OUT SD_A10;
    
     /* SD A9 */
@@ -216,11 +223,14 @@ CONDITION {
    
     /* SD A5 */
     IF SD_STATE:ST_LOADMODE                     OUT SD_A5;      /* Init - CAS 010 (2 cycle)     */ 
+
     IF SD_STATE:ST_ACTIVE       & SYS_A15       OUT SD_A5;
     IF SD_STATE:ST_READ_CMD     & SYS_A6        OUT SD_A5;
     IF SD_STATE:ST_WRITE_CMD    & SYS_A6        OUT SD_A5;
    
     /* SD A4 */
+/*
+    IF SD_STATE:ST_LOADMODE                     OUT SD_A4;      /* Init - CAS 001 (1 cycle)     */ 
     IF SD_STATE:ST_ACTIVE       & SYS_A14       OUT SD_A4;
     IF SD_STATE:ST_READ_CMD     & SYS_A5        OUT SD_A4;
     IF SD_STATE:ST_WRITE_CMD    & SYS_A5        OUT SD_A4;
@@ -260,11 +270,13 @@ SEQUENCE SD_STATE {
         NEXT ST_REFRESH;
     PRESENT ST_REFRESH
         IF REFRESH_Q
-            NEXT ST_INHIBIT OUT REFRESH_Q.SR;
+            NEXT ST_RDONE OUT REFRESH_Q.SR;
         DEFAULT NEXT ST_INITR2;
     PRESENT ST_INITR2
         NEXT ST_LOADMODE;
     PRESENT ST_LOADMODE
+        NEXT ST_INHIBIT;
+    PRESENT ST_RDONE
         NEXT ST_INHIBIT;
     PRESENT ST_INHIBIT
         IF REFRESH_Q
