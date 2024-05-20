@@ -10,17 +10,23 @@
 #define REG_RAM_LOW     0xfc1060
 #define REG_RAM_HIGH    0xfc1062
 
+#define MEMCHECK_START  0x100000
+#define MEMCHECK_END    0x200000
+
 //#define ONLY_HIGH8
 #define RUN_SIZE    0x100
 //#define VALUE       (( 0xff - ((uint8_t)i) )) 
 #define VALUE       0x08
 //#define ONLY_ODD
 
-#define TEST_EACH_MEG
-#define TEST_BANK
+//#define TEST_EACH_MEG
+//#define TEST_BANK
 #define TEST_LFSR
 
 //#define SILENCE_ERRORS
+
+void onboard_stack() {
+}
 
 void each_megabyte_test() {
     volatile uint8_t *ptr;
@@ -170,11 +176,11 @@ static inline uint32_t next_LFSR() {
 
 void memcheck() {
   printf("Continuous testing from 0x%06x to 0x%06x (press a key to exit)\n",
-         (unsigned int)0x100000,
-         (unsigned int)0xe00000 - 1);
+         (unsigned int)MEMCHECK_START,
+         (unsigned int)MEMCHECK_END - 1);
 
-  int          memtest_words   = (0xe00000 - 0x100000) / sizeof(uint16_t);
-  uint16_t    *word_ptr        = (uint16_t *)0x100000;
+  int          memtest_words   = (MEMCHECK_END - MEMCHECK_START) / sizeof(uint16_t);
+  uint16_t    *word_ptr        = (uint16_t *)MEMCHECK_START;
   int          update_interval = 0x7000;
   int          pass            = 1;
   int          badpasses       = 0;
