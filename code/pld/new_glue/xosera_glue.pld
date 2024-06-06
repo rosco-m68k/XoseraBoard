@@ -95,9 +95,9 @@ PIN  19 = SD_BA0;
 PIN  20 = NC;
 PIN  21 = NC;
 PIN  22 = NC;
-PIN  23 = NC;
-PIN  24 = NC;
 */
+PIN  23 = SD_CLK_OUT1;
+PIN  24 = SD_CLK_OUT2;
 
 PIN  25 = XO_RnW;
 PIN  27 = XO_CS;
@@ -120,7 +120,9 @@ NODE CMDa, CMDb;
 
 FIELD SYS_BANK  = [BANK_FF, SYS_A23];
 FIELD SYS_ROW   = [SYS_A22..SYS_A10];
-FIELD SYS_COL   = [SYS_A9..SYS_A1];
+FIELD SYS_COL   = ['b'0, 'b'0, 'b'0, 'b'0, SYS_A9..SYS_A1];
+FIELD SYS_MR    = 'b'0001000100000;
+FIELD SYS_PCHRG = 'b'0010000000000;
 
 FIELD SD_BANK   = [SD_BA1, SD_BA0];
 FIELD SD_ADDR   = [SD_A12..SD_A0];
@@ -137,10 +139,18 @@ SD_DTACK.sp     = 'b'0;
 SD_STATE.ck     = SD_CLK;
 SD_STATE.ar     = !SYS_RESET;
 
+SD_CLK_OUT1     = !SYS_CLK;
+SD_CLK_OUT2     = !SYS_CLK;
+SD_CLK_OUT2.oe = 'b'0;
+
+NODE SD_DTACK_S;
+SD_DTACK_S.ck = SYS_CLK;
+SD_DTACK_S.d  = SD_DTACK;
+
 SYS_DTACK.sp    = 'b'0;
 SYS_DTACK       = 'b'0;
 SYS_DTACK.oe    = /*SYS_RESET & !XO_CS         /* switch XO_CS to XO_DTACK when ready */
-                /*#*/ SYS_RESET & SD_DTACK
+                /*#*/ SYS_RESET & SD_DTACK_S
                 # SYS_RESET & CMD_DTACK
                 ;
 
@@ -159,7 +169,7 @@ XO_RnW          = SYS_RnW;
 /*                              I                           */
 /*                              T                           */
 $define ST_START        'b'0000000  /* Start state               00 */
-$define ST_INHIBIT      'b'1000001  /* Inhibit (no CS)           41 */
+$define ST_INHIBIT      'b'1110001  /* Inhibit (no CS)           41 */
 $define ST_INIT_CKE     'b'0000001  /* Initial CKE               01 */
 $define ST_INIT_PC      'b'0010011  /* Initial precharge         13 */
 $define ST_REFRESH      'b'0001001  /* Refresh general or init1  09 */
@@ -169,100 +179,30 @@ $define ST_LOADMODE     'b'0000011  /* Load mode                 03 */
 $define ST_ACTIVE       'b'0011001  /* ACTIVATE (row)            19 */
 $define ST_READ_CMD     'b'0101001  /* READ (column)             29 */
 $define ST_WRITE_CMD    'b'0100001  /* WRITE (column)            21 */
-$define ST_ACK_DELAY    'b'0111011  /* Delay before ACK (reads ) 3B */
 $define ST_ACK          'b'0111101  /* NOP, DTACK                3D */
 $define ST_BURST_TERM   'b'0110001  /* We don't use...           31 */
 $define ST_PRECHARGE    'b'0010001  /* End cycle                 11 */
 
-SD_DQML.ck      = SD_CLK;
-!SD_DQML.d      = !SYS_LDS & SD_STATE:ST_ACTIVE;
-SD_DQMH.ck      = SD_CLK;
-!SD_DQMH.d      = !SYS_UDS & SD_STATE:ST_ACTIVE;
+!SD_DQML      = !SYS_LDS & (SD_STATE:ST_READ_CMD # SD_STATE:ST_WRITE_CMD);
+!SD_DQMH      = !SYS_UDS & (SD_STATE:ST_READ_CMD # SD_STATE:ST_WRITE_CMD);
 
 /** *********************** SDRAM ADDR BUS ******************/
-/* TODO there has to be a better way to do this... tables maybe?    */
-/*      I can't find a nice way to conditionally assign fields...   */
-CONDITION {
-    /* SD BA1 */
-    IF SD_STATE:ST_READ_CMD     & BANK_FF       OUT SD_BA1;
-    IF SD_STATE:ST_WRITE_CMD    & BANK_FF       OUT SD_BA1;
-
-    /* SD BA0 */
-    IF SD_STATE:ST_READ_CMD     & SYS_A23       OUT SD_BA0;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A23       OUT SD_BA0;
-
-    /* SD A12 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A22       OUT SD_A12;
-
-    /* SD A11 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A21       OUT SD_A11;
-   
-    /* SD A10 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A20       OUT SD_A10;
-    IF SD_STATE:ST_PRECHARGE                    OUT SD_A10;     /* All banks */
-    IF SD_STATE:ST_INIT_PC                      OUT SD_A10;
-   
-    /* SD A9 */
-    IF SD_STATE:ST_LOADMODE                     OUT SD_A9;      /* Init - Single Loc Write      */
-    IF SD_STATE:ST_ACTIVE       & SYS_A19       OUT SD_A9;
-   
-    /* SD A8 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A18       OUT SD_A8;
-    IF SD_STATE:ST_READ_CMD     & SYS_A9        OUT SD_A8;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A9        OUT SD_A8;
-   
-    /* SD A7 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A17       OUT SD_A7;
-    IF SD_STATE:ST_READ_CMD     & SYS_A8        OUT SD_A7;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A8        OUT SD_A7;
-   
-    /* SD A6 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A16       OUT SD_A6;
-    IF SD_STATE:ST_READ_CMD     & SYS_A7        OUT SD_A6;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A7        OUT SD_A6;
-   
-    /* SD A5 */
-    IF SD_STATE:ST_LOADMODE                     OUT SD_A5;      /* Init - CAS 010 (2 cycle)     */ 
-
-    IF SD_STATE:ST_ACTIVE       & SYS_A15       OUT SD_A5;
-    IF SD_STATE:ST_READ_CMD     & SYS_A6        OUT SD_A5;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A6        OUT SD_A5;
-   
-    /* SD A4 */
-/*
-    IF SD_STATE:ST_LOADMODE                     OUT SD_A4;      /* Init - CAS 001 (1 cycle)     */ 
-    IF SD_STATE:ST_ACTIVE       & SYS_A14       OUT SD_A4;
-    IF SD_STATE:ST_READ_CMD     & SYS_A5        OUT SD_A4;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A5        OUT SD_A4;
-   
-    /* SD A3 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A13       OUT SD_A3;
-    IF SD_STATE:ST_READ_CMD     & SYS_A4        OUT SD_A3;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A4        OUT SD_A3;
-   
-    /* SD A2 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A12       OUT SD_A2;
-    IF SD_STATE:ST_READ_CMD     & SYS_A3        OUT SD_A2;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A3        OUT SD_A2;
-   
-    /* SD A1 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A11       OUT SD_A1;
-    IF SD_STATE:ST_READ_CMD     & SYS_A2        OUT SD_A1;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A2        OUT SD_A1;
-   
-    /* SD A0 */
-    IF SD_STATE:ST_ACTIVE       & SYS_A10       OUT SD_A0;
-    IF SD_STATE:ST_READ_CMD     & SYS_A1        OUT SD_A0;
-    IF SD_STATE:ST_WRITE_CMD    & SYS_A1        OUT SD_A0;
-}
+APPEND SD_BANK =  SD_STATE:ST_LOADMODE  & ['b'0, 'b'0];
+APPEND SD_BANK = !SD_STATE:ST_LOADMODE  & SYS_BANK;
+APPEND SD_ADDR =  SD_STATE:ST_ACTIVE    & SYS_ROW;
+APPEND SD_ADDR =  SD_STATE:ST_READ_CMD  & SYS_COL;
+APPEND SD_ADDR =  SD_STATE:ST_WRITE_CMD & SYS_COL;
+APPEND SD_ADDR =  SD_STATE:ST_LOADMODE  & SYS_MR;
+APPEND SD_ADDR =  SD_STATE:ST_PRECHARGE & SYS_PCHRG;
+APPEND SD_ADDR =  SD_STATE:ST_INIT_PC   & SYS_PCHRG;
 
 
 /** ***********************  SDRAM STATES  ******************/
 
 SEQUENCE SD_STATE {
     PRESENT ST_START
-/*        if SYS_RESET
-            NEXT ST_START;*/
+        IF !SYS_RESET
+            NEXT ST_START;
         DEFAULT NEXT ST_INIT_CKE;
     PRESENT ST_INIT_CKE
         NEXT ST_INIT_PC;
@@ -279,36 +219,32 @@ SEQUENCE SD_STATE {
     PRESENT ST_RDONE
         NEXT ST_INHIBIT;
     PRESENT ST_INHIBIT
-        IF REFRESH_Q
-            NEXT ST_PRECHARGE;
-        IF !SYS_EXPSEL
+        IF  REFRESH_Q
+            NEXT ST_REFRESH;
+        IF !REFRESH_Q & !SYS_AS & !SYS_EXPSEL
             NEXT ST_ACTIVE;
         DEFAULT NEXT ST_INHIBIT;
     PRESENT ST_ACTIVE
-        IF SYS_RnW
+        IF  SYS_AS
+            NEXT ST_PRECHARGE;
+        IF !SYS_AS & (!SYS_LDS # !SYS_UDS) &  SYS_RnW
             NEXT ST_READ_CMD;
-        IF !SYS_RnW
+        IF !SYS_AS & (!SYS_LDS # !SYS_UDS) & !SYS_RnW
             NEXT ST_WRITE_CMD;
+        DEFAULT NEXT ST_ACTIVE;
     PRESENT ST_READ_CMD
-        NEXT ST_ACK_DELAY;
+        NEXT ST_ACK;
     PRESENT ST_WRITE_CMD
         NEXT ST_ACK;
     PRESENT ST_ACK
-        IF SYS_EXPSEL
-            /* TODO could keep row open here and use bursts when poss */
+        IF SYS_AS
             NEXT ST_PRECHARGE;
-
-        /* waiting for AS to deassert */
-        DEFAULT NEXT ST_ACK;
-    PRESENT ST_ACK_DELAY
-        NEXT ST_ACK;
-/*
-    PRESENT ST_BURST_TERM
-        NEXT ST_PRECHARGE;
-*/
+        DEFAULT NEXT ST_ACTIVE;
     PRESENT ST_PRECHARGE
         IF REFRESH_Q
             NEXT ST_REFRESH;
+        IF !REFRESH_Q & !SYS_AS & !SYS_EXPSEL
+            NEXT ST_ACTIVE;
         DEFAULT NEXT ST_INHIBIT;
 }
 
