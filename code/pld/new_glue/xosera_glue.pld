@@ -112,6 +112,7 @@ NODE  REFRESH_Q;                        /* Active high! */
 NODE  RQ4, RQ3, RQ2, RQ1, RQ0;
 NODE  SD_DTACK;                         /* Active high! */
 NODE  XO_IRQRQ;                         /* Active high! */
+NODE  XO_IRQRQ_AR;
 NODE  BANK_FF;
 
 NODE COMMAND_SEL;
@@ -132,10 +133,6 @@ FIELD RCOUNT    = [RQ4..RQ0];
 
 FIELD COMMAND   = [CMDb, CMDa, CMD_DTACK];
 
-IN_INIT.sp      = 'b'0;
-SD_CKE.sp       = 'b'0;
-SD_DTACK.sp     = 'b'0;
-
 SD_STATE.ck     = SD_CLK;
 SD_STATE.ar     = !SYS_RESET;
 
@@ -147,7 +144,6 @@ NODE SD_DTACK_S;
 SD_DTACK_S.ck = SYS_CLK;
 SD_DTACK_S.d  = SD_DTACK;
 
-SYS_DTACK.sp    = 'b'0;
 SYS_DTACK       = 'b'0;
 SYS_DTACK.oe    = /*SYS_RESET & !XO_CS         /* switch XO_CS to XO_DTACK when ready */
                 /*#*/ SYS_RESET & SD_DTACK_S
@@ -277,17 +273,19 @@ XO_REG1     = 'b'0; /* SYS_A3; */
 XO_REG0     = 'b'0; /* SYS_A2; */
 /*
 SYS_VPA     = 'b'0;
-SYS_VPA.oe  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 &  SYS_A2 & !SYS_A3 /* Xosera */
+SYS_VPA.oe  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 &  SYS_A2 & !SYS_A3; /* Xosera */
 /*
             # SYS_RESET & SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 &  SYS_A1 &  SYS_A2 & !SYS_A3 /* IDE    */
 /*
             # SYS_RESET & SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & !SYS_A1 *  SYS_A2 &  SYS_A3 /* UART   */
-/*
-            ;
 
-XO_IRQRQ.l  = 'b'1;
+XO_CRESET.oe = !SYS_RESET;
+XO_CRESET = 'b'0;
+
+XO_IRQRQ.d  = 'b'1;
 XO_IRQRQ.ck = XO_IRQ;
-XO_IRQRQ.ar = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 & SYS_A2 & !SYS_A3;
+XO_IRQRQ_AR = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 & SYS_A2 & !SYS_A3;
+XO_IRQRQ.ar = XO_IRQRQ_AR;
 
 /*
 SYS_IRQ2    = 'b'0;
@@ -318,7 +316,6 @@ $define CMD_ACK         'b'001      /* ACK command               01 */
 /** *********************** OUTPUT  SIGNALS ******************/
 BANK_FF.l   = 'b'1;
 
-COMMAND.sp  = 'b'0;
 COMMAND.ar  = !SYS_RESET;
 COMMAND.ck  = SYS_CLK;
 
