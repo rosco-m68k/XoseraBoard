@@ -181,14 +181,14 @@ $define ST_PRECHARGE    'b'0010001  /* End cycle                 11 */
 !SD_DQMH        = !SYS_UDS & (SD_STATE:ST_READ_CMD # SD_STATE:ST_WRITE_CMD);
 
 /** *********************** SDRAM ADDR BUS ******************/
-APPEND SD_BANK  =  SD_STATE:ST_LOADMODE  & ['b'0, 'b'0];
-APPEND SD_BANK  = !SD_STATE:ST_LOADMODE  & SYS_BANK;
-APPEND SD_ADDR  =  SD_STATE:ST_ACTIVE    & SYS_ROW;
-APPEND SD_ADDR  =  SD_STATE:ST_READ_CMD  & SYS_COL;
-APPEND SD_ADDR  =  SD_STATE:ST_WRITE_CMD & SYS_COL;
-APPEND SD_ADDR  =  SD_STATE:ST_LOADMODE  & SYS_MR;
-APPEND SD_ADDR  =  SD_STATE:ST_PRECHARGE & SYS_PCHRG;
-APPEND SD_ADDR  =  SD_STATE:ST_INIT_PC   & SYS_PCHRG;
+APPEND SD_BANK  =   SD_STATE:ST_LOADMODE  & ['b'0, 'b'0];
+APPEND SD_BANK  = !(SD_STATE:ST_LOADMODE) & SYS_BANK;
+APPEND SD_ADDR  =   SD_STATE:ST_ACTIVE    & SYS_ROW;
+APPEND SD_ADDR  =   SD_STATE:ST_READ_CMD  & SYS_COL;
+APPEND SD_ADDR  =   SD_STATE:ST_WRITE_CMD & SYS_COL;
+APPEND SD_ADDR  =   SD_STATE:ST_LOADMODE  & SYS_MR;
+APPEND SD_ADDR  =   SD_STATE:ST_PRECHARGE & SYS_PCHRG;
+APPEND SD_ADDR  =   SD_STATE:ST_INIT_PC   & SYS_PCHRG;
 
 
 /** ***********************  SDRAM STATES  ******************/
@@ -293,11 +293,6 @@ SYS_IRQ2    = 'b'0;
 SYS_IRQ2.oe = XO_IRQRQ;
 */
 
-/** ***********************    REGISTERS   *******************/
-/** *********************** COMMAND DEFINES ******************/
-$define CMD_BANK_LOW    'b'XXXXXXXXXXXXXXXXXXX0000X
-$define CMD_BANK_HIGH   'b'XXXXXXXXXXXXXXXXXXX0001X
-
 /** *********************** COMMAND  STATES ******************/
 /*
                              S
@@ -315,18 +310,14 @@ $define CMD_LATCH       'b'100      /* Latch state               04 */
 $define CMD_ACK         'b'001      /* ACK command               01 */
 
 /** *********************** OUTPUT  SIGNALS ******************/
-BANK_FF.l   = 'b'1;
+BANK_FF.ar  = !SYS_RESET;
+BANK_FF.l   = SYS_A1;
+BANK_FF.ck  = COMMAND:CMD_LATCH;
 
 COMMAND.ar  = !SYS_RESET;
 COMMAND.ck  = SYS_CLK;
 
-!COMMAND_SEL= SYS_RESET & !SYS_IOSEL & (!SYS_UDS # !SYS_LDS) & !SYS_AS & SYS_ADDR:'b'XXXXXX0000010000011XXXXX;
-
-/** *********************** COMMAND OUTPUTS ******************/
-CONDITION {
-    IF COMMAND:CMD_LATCH & SYS_ADDR:CMD_BANK_LOW        OUT BANK_FF.ar;
-    IF COMMAND:CMD_LATCH & SYS_ADDR:CMD_BANK_HIGH       OUT BANK_FF.ck;
-}
+!COMMAND_SEL= SYS_RESET & !SYS_IOSEL & (!SYS_UDS # !SYS_LDS) & !SYS_AS & SYS_ADDR:'b'XXXXXX0000010000011000XX;
 
 /** *********************** COMMAND MACHINE ******************/
 SEQUENCE COMMAND {
