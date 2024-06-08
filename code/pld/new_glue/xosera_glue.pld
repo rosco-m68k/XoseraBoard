@@ -138,19 +138,17 @@ SD_STATE.ar     = !SYS_RESET;
 
 SD_CLK_OUT1     = !SYS_CLK;
 SD_CLK_OUT2     = !SYS_CLK;
-SD_CLK_OUT2.oe = 'b'0;
+SD_CLK_OUT2.oe  = 'b'0;
 
 NODE SD_DTACK_S;
 SD_DTACK_S.ck = SYS_CLK;
 SD_DTACK_S.d  = SD_DTACK;
 
 SYS_DTACK       = 'b'0;
-SYS_DTACK.oe    = /*SYS_RESET & !XO_CS         /* switch XO_CS to XO_DTACK when ready */
-                /*#*/ SYS_RESET & SD_DTACK_S
+SYS_DTACK.oe    = SYS_RESET & !XO_CS        /* switch XO_CS to XO_DTACK when ready */
+                # SYS_RESET & SD_DTACK_S
                 # SYS_RESET & CMD_DTACK
                 ;
-
-XO_RnW          = SYS_RnW;
 
 /** *********************** STATE  DEFINES ******************/
 /* N.B. IN_INIT is quite poorly named, it's just become a   */
@@ -179,18 +177,18 @@ $define ST_ACK          'b'0111101  /* NOP, DTACK                3D */
 $define ST_BURST_TERM   'b'0110001  /* We don't use...           31 */
 $define ST_PRECHARGE    'b'0010001  /* End cycle                 11 */
 
-!SD_DQML      = !SYS_LDS & (SD_STATE:ST_READ_CMD # SD_STATE:ST_WRITE_CMD);
-!SD_DQMH      = !SYS_UDS & (SD_STATE:ST_READ_CMD # SD_STATE:ST_WRITE_CMD);
+!SD_DQML        = !SYS_LDS & (SD_STATE:ST_READ_CMD # SD_STATE:ST_WRITE_CMD);
+!SD_DQMH        = !SYS_UDS & (SD_STATE:ST_READ_CMD # SD_STATE:ST_WRITE_CMD);
 
 /** *********************** SDRAM ADDR BUS ******************/
-APPEND SD_BANK =  SD_STATE:ST_LOADMODE  & ['b'0, 'b'0];
-APPEND SD_BANK = !SD_STATE:ST_LOADMODE  & SYS_BANK;
-APPEND SD_ADDR =  SD_STATE:ST_ACTIVE    & SYS_ROW;
-APPEND SD_ADDR =  SD_STATE:ST_READ_CMD  & SYS_COL;
-APPEND SD_ADDR =  SD_STATE:ST_WRITE_CMD & SYS_COL;
-APPEND SD_ADDR =  SD_STATE:ST_LOADMODE  & SYS_MR;
-APPEND SD_ADDR =  SD_STATE:ST_PRECHARGE & SYS_PCHRG;
-APPEND SD_ADDR =  SD_STATE:ST_INIT_PC   & SYS_PCHRG;
+APPEND SD_BANK  =  SD_STATE:ST_LOADMODE  & ['b'0, 'b'0];
+APPEND SD_BANK  = !SD_STATE:ST_LOADMODE  & SYS_BANK;
+APPEND SD_ADDR  =  SD_STATE:ST_ACTIVE    & SYS_ROW;
+APPEND SD_ADDR  =  SD_STATE:ST_READ_CMD  & SYS_COL;
+APPEND SD_ADDR  =  SD_STATE:ST_WRITE_CMD & SYS_COL;
+APPEND SD_ADDR  =  SD_STATE:ST_LOADMODE  & SYS_MR;
+APPEND SD_ADDR  =  SD_STATE:ST_PRECHARGE & SYS_PCHRG;
+APPEND SD_ADDR  =  SD_STATE:ST_INIT_PC   & SYS_PCHRG;
 
 
 /** ***********************  SDRAM STATES  ******************/
@@ -261,30 +259,33 @@ $repend
 
  
 /** ***********************   XOSERA GLUE  ******************/
-/*
-!XO_CS      = XO_CDONE & SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000011XXXXX
-            # XO_CDONE & SYS_RESET & !SYS_IOSEL & SYS_UDS  & !SYS_LDS & !SYS_AS & SYS_ADDR:'b'XXXXXX0000000000100XXXXX
-            ;
-*/
-XO_BYTESEL  = 'b'0; /* SYS_A1; */
-XO_REG3     = 'b'0; /* SYS_A7; */
-XO_REG2     = 'b'0; /* SYS_A4; */
-XO_REG1     = 'b'0; /* SYS_A3; */
-XO_REG0     = 'b'0; /* SYS_A2; */
+
+!XO_CS      = XO_CDONE & SYS_RESET & !SYS_AS & !SYS_IOSEL & (
+                SYS_ADDR:'b'XXXX000000000000011XXXXX #
+                SYS_ADDR:'b'XXXX000000000000100XXXXX
+            ) & !SYS_LDS;
+
+XO_RnW      = SYS_RnW;
+
+XO_REG3     = !SYS_A5;
+XO_REG2     =  SYS_A4;
+XO_REG1     =  SYS_A3;
+XO_REG0     =  SYS_A2;
+XO_BYTESEL  =  SYS_A1;
+
 /*
 SYS_VPA     = 'b'0;
-SYS_VPA.oe  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 &  SYS_A2 & !SYS_A3; /* Xosera */
-/*
-            # SYS_RESET & SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 &  SYS_A1 &  SYS_A2 & !SYS_A3 /* IDE    */
-/*
-            # SYS_RESET & SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & !SYS_A1 *  SYS_A2 &  SYS_A3 /* UART   */
+SYS_VPA.oe  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 & !SYS_A3 &  SYS_A2 & !SYS_A1 & XO_CDONE; /* Xosera */
+/*          # SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 & !SYS_A3 &  SYS_A2 &  SYS_A1;            /* IDE    */
+/*          # SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 &  SYS_A3 &  SYS_A2 & !SYS_A1;            /* UART   */
 
 XO_CRESET.oe = !SYS_RESET;
 XO_CRESET = 'b'0;
 
-XO_IRQRQ.d  = 'b'1;
+XO_IRQRQ.l  = 'b'1;
 XO_IRQRQ.ck = XO_IRQ;
-XO_IRQRQ_AR = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC0 & SYS_FC1 & SYS_FC2 & SYS_A19 & !SYS_A1 & SYS_A2 & !SYS_A3;
+XO_IRQRQ_AR = !SYS_RESET
+            # !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 & !SYS_A3 & SYS_A2 & !SYS_A1;
 XO_IRQRQ.ar = XO_IRQRQ_AR;
 
 /*
