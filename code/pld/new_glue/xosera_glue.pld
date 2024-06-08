@@ -140,13 +140,9 @@ SD_CLK_OUT1     = !SYS_CLK;
 SD_CLK_OUT2     = !SYS_CLK;
 SD_CLK_OUT2.oe  = 'b'0;
 
-NODE SD_DTACK_S;
-SD_DTACK_S.ck = SYS_CLK;
-SD_DTACK_S.d  = SD_DTACK;
-
 SYS_DTACK       = 'b'0;
 SYS_DTACK.oe    = SYS_RESET & !XO_CS        /* switch XO_CS to XO_DTACK when ready */
-                # SYS_RESET & SD_DTACK_S
+                # SYS_RESET & SD_DTACK
                 # SYS_RESET & CMD_DTACK
                 ;
 
