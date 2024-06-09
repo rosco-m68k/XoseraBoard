@@ -256,8 +256,8 @@ $repend
 /** ***********************   XOSERA GLUE  ******************/
 
 !XO_CS      = SYS_RESET & !SYS_AS & !SYS_IOSEL & (
-                SYS_ADDR:'b'XXXX000000000000011XXXXX #
-                SYS_ADDR:'b'XXXX000000000000100XXXXX
+                SYS_ADDR:'b'XXXXXX0000000000011XXXXX #
+                SYS_ADDR:'b'XXXXXX0000000000100XXXXX
             ) & !SYS_LDS;
 
 XO_RnW      = SYS_RnW;
