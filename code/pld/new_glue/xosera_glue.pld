@@ -113,7 +113,6 @@ NODE  RQ4, RQ3, RQ2, RQ1, RQ0;
 NODE  SD_DTACK;                         /* Active high! */
 NODE  XO_IRQRQ;                         /* Active high! */
 NODE  XO_IRQRQ_AR;
-NODE  XO_CS_C;
 NODE  BANK_FF;
 
 NODE COMMAND_SEL;
@@ -142,7 +141,7 @@ SD_CLK_OUT2     = !SYS_CLK;
 SD_CLK_OUT2.oe  = 'b'0;
 
 SYS_DTACK       = 'b'0;
-SYS_DTACK.oe    = SYS_RESET & !XO_CS_C      /* switch XO_CS_C to XO_DTACK when ready */
+SYS_DTACK.oe    = SYS_RESET & !XO_CS        /* switch XO_CS to XO_DTACK when ready */
                 # SYS_RESET & SD_DTACK
                 # SYS_RESET & CMD_DTACK;
 
@@ -260,10 +259,6 @@ $repend
                 SYS_ADDR:'b'XXXXXX0000000000011XXXXX #
                 SYS_ADDR:'b'XXXXXX0000000000100XXXXX
             ) & !SYS_LDS;
-
-XO_CS_C.d   =  XO_CS;
-XO_CS_C.ar  = !XO_CS;
-XO_CS_C.ck  = SYS_CLK;
 
 XO_RnW      = SYS_RnW;
 
