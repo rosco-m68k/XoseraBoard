@@ -772,7 +772,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "ICE40UP5K-SG48ITR"
+			(property "Value" "ICE40UP5K-SG48I"
 				(at 6.35 -1.2699 0)
 				(effects
 					(font
@@ -790,7 +790,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra"
+			(property "Datasheet" "https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus"
 				(at -10.16 25.4 0)
 				(effects
 					(font
@@ -800,6 +800,60 @@
 				)
 			)
 			(property "Description" "iCE40 UltraPlus FPGA, 5280 LUTs, 1.2V, 48-pin QFN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MPN" "ICE40UP5K-SG48I"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Lattice Semiconductor Corporation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temperature Coefficient" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "V_{DC}" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part #" "C2678152"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Rotation Offset" "-90"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1782,7 +1836,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "ICE40UP5K-SG48ITR"
+			(property "Value" "ICE40UP5K-SG48I"
 				(at 6.35 -1.2699 0)
 				(effects
 					(font
@@ -1800,7 +1854,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra"
+			(property "Datasheet" "https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus"
 				(at -10.16 25.4 0)
 				(effects
 					(font
@@ -1810,6 +1864,60 @@
 				)
 			)
 			(property "Description" "iCE40 UltraPlus FPGA, 5280 LUTs, 1.2V, 48-pin QFN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MPN" "ICE40UP5K-SG48I"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Lattice Semiconductor Corporation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temperature Coefficient" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "V_{DC}" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part #" "C2678152"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Rotation Offset" "-90"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2792,7 +2900,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "ICE40UP5K-SG48ITR"
+			(property "Value" "ICE40UP5K-SG48I"
 				(at 6.35 -1.2699 0)
 				(effects
 					(font
@@ -2810,7 +2918,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra"
+			(property "Datasheet" "https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus"
 				(at -10.16 25.4 0)
 				(effects
 					(font
@@ -2820,6 +2928,60 @@
 				)
 			)
 			(property "Description" "iCE40 UltraPlus FPGA, 5280 LUTs, 1.2V, 48-pin QFN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MPN" "ICE40UP5K-SG48I"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Lattice Semiconductor Corporation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temperature Coefficient" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "V_{DC}" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part #" "C2678152"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Rotation Offset" "-90"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3802,7 +3964,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "ICE40UP5K-SG48ITR"
+			(property "Value" "ICE40UP5K-SG48I"
 				(at 6.35 -1.2699 0)
 				(effects
 					(font
@@ -3820,7 +3982,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra"
+			(property "Datasheet" "https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus"
 				(at -10.16 25.4 0)
 				(effects
 					(font
@@ -3830,6 +3992,60 @@
 				)
 			)
 			(property "Description" "iCE40 UltraPlus FPGA, 5280 LUTs, 1.2V, 48-pin QFN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MPN" "ICE40UP5K-SG48I"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "Lattice Semiconductor Corporation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temperature Coefficient" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "V_{DC}" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part #" "C2678152"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "JLCPCB Rotation Offset" "-90"
 				(at 0 0 0)
 				(effects
 					(font
@@ -6158,6 +6374,12 @@
 		(uuid "786cc778-3b4e-4888-9dfe-06d953ad27dd")
 	)
 	(junction
+		(at 129.54 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7942a905-6c8c-40ef-8b50-02e6f3badca9")
+	)
+	(junction
 		(at 72.39 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6230,10 +6452,10 @@
 		(uuid "e3615116-9204-470a-8e19-a254c9157e35")
 	)
 	(junction
-		(at 146.05 38.1)
+		(at 76.2 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e7a0a10b-9feb-41ea-a311-39a7a630e792")
+		(uuid "e6a575aa-cfdf-40db-a3d4-63fe59ece2f4")
 	)
 	(no_connect
 		(at 114.3 119.38)
@@ -6471,6 +6693,16 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 78.74) (xy 76.2 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "037143f8-9fc8-4fb3-97b1-f3123542d03a")
+	)
+	(wire
+		(pts
 			(xy 187.96 81.28) (xy 203.2 81.28)
 		)
 		(stroke
@@ -6669,16 +6901,6 @@
 		)
 		(uuid "1c1d4b38-3a2c-433d-bd76-bf3c90de43b0")
 	)
-	(wire
-		(pts
-			(xy 121.92 38.1) (xy 124.46 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c746af5-2d87-41ea-9189-527d344b277b")
-	)
 	(bus
 		(pts
 			(xy 121.92 48.26) (xy 124.46 48.26)
@@ -6688,6 +6910,16 @@
 			(type default)
 		)
 		(uuid "1d0d5b8f-552c-44f3-9bb5-119654cb480a")
+	)
+	(wire
+		(pts
+			(xy 73.66 60.96) (xy 76.2 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f0b9e01-f693-4d61-9a71-5e147410cdb6")
 	)
 	(wire
 		(pts
@@ -6788,6 +7020,16 @@
 			(type default)
 		)
 		(uuid "30bf1bc2-b787-4a23-930d-8574e8279e0c")
+	)
+	(wire
+		(pts
+			(xy 76.2 85.09) (xy 76.2 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31ca9a8c-e6ae-49b3-aef0-d44512fa327e")
 	)
 	(wire
 		(pts
@@ -6918,6 +7160,16 @@
 			(type dash)
 		)
 		(uuid "471130b8-87c9-4bae-9908-6a22cd48a535")
+	)
+	(wire
+		(pts
+			(xy 129.54 38.1) (xy 132.08 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "475b7497-1254-4462-8a5b-7111cd3e2e30")
 	)
 	(wire
 		(pts
@@ -7241,6 +7493,16 @@
 	)
 	(wire
 		(pts
+			(xy 73.66 53.34) (xy 76.2 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72beab60-4ca9-4185-9bc2-00c339bf1747")
+	)
+	(wire
+		(pts
 			(xy 127 60.96) (xy 152.4 60.96)
 		)
 		(stroke
@@ -7341,7 +7603,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 35.56) (xy 146.05 38.1)
+			(xy 129.54 35.56) (xy 129.54 38.1)
 		)
 		(stroke
 			(width 0)
@@ -7441,6 +7703,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 85.09) (xy 63.5 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90ae14bc-49a5-404f-ae3e-3f245ae134c4")
+	)
+	(wire
+		(pts
 			(xy 187.96 91.44) (xy 215.9 91.44)
 		)
 		(stroke
@@ -7471,7 +7743,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 38.1) (xy 146.05 38.1)
+			(xy 137.16 38.1) (xy 152.4 38.1)
 		)
 		(stroke
 			(width 0)
@@ -7508,6 +7780,26 @@
 			(type default)
 		)
 		(uuid "9e38e2fc-9b5b-481a-a1e2-9a3b34e980bc")
+	)
+	(wire
+		(pts
+			(xy 121.92 38.1) (xy 129.54 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9eac7983-9c1b-4688-abca-86406d9c25b1")
+	)
+	(wire
+		(pts
+			(xy 73.66 76.2) (xy 76.2 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0e9e842-30b3-4aba-afdf-838f08862fba")
 	)
 	(wire
 		(pts
@@ -7598,16 +7890,6 @@
 			(type default)
 		)
 		(uuid "a8021478-ae3b-4c0f-8484-95c86aa538cf")
-	)
-	(wire
-		(pts
-			(xy 146.05 38.1) (xy 152.4 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a917d6e7-f928-41cd-8f1c-d8e803e9b275")
 	)
 	(wire
 		(pts
@@ -8009,6 +8291,16 @@
 		)
 		(uuid "e4197d3c-adff-4bef-a2be-cf797cc91e54")
 	)
+	(wire
+		(pts
+			(xy 73.66 73.66) (xy 76.2 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4586131-c958-4117-a86a-288e37cb9315")
+	)
 	(bus
 		(pts
 			(xy 124.46 50.8) (xy 124.46 48.26)
@@ -8018,6 +8310,16 @@
 			(type default)
 		)
 		(uuid "eb3d8079-7ebb-41cc-b6f0-4f23cfbc54a3")
+	)
+	(wire
+		(pts
+			(xy 68.58 85.09) (xy 76.2 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb99ac6f-dc1d-4115-9083-7d2831a1e5b7")
 	)
 	(wire
 		(pts
@@ -8206,16 +8508,6 @@
 		)
 		(uuid "8ea113c3-f7d5-4040-83ae-870ed4ccd77e")
 	)
-	(text "NOTE: 0R jumpers on ~{CRESET}, CDONE, ~{IRQ}, and ~{DATCK} at power domain crossing."
-		(exclude_from_sim no)
-		(at 203.2 17.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "db8d11a8-1cde-448e-b31c-d785f380f4f3")
-	)
 	(label "DVI_DATA_B2"
 		(at 218.44 50.8 0)
 		(fields_autoplaced yes)
@@ -8239,13 +8531,13 @@
 		(uuid "04ee3ba1-7fab-4dae-a209-53eccf90153b")
 	)
 	(label "~{CRESET_RAW}"
-		(at 143.51 38.1 180)
+		(at 139.7 38.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "061e56fe-6bec-4133-8f6c-a676ba4e14be")
 	)
@@ -8338,13 +8630,13 @@
 		(uuid "3524a2f5-1be0-4737-934b-7198cedbbf00")
 	)
 	(label "CDONE_RAW"
-		(at 186.69 38.1 0)
+		(at 198.12 38.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "36e4c8da-dd54-421d-ae7a-b5ee5ce88ae6")
 	)
@@ -8780,7 +9072,7 @@
 	)
 	(hierarchical_label "AUDIO_L"
 		(shape output)
-		(at 76.2 53.34 180)
+		(at 73.66 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8804,7 +9096,7 @@
 	)
 	(hierarchical_label "AUDIO_R"
 		(shape output)
-		(at 76.2 60.96 180)
+		(at 73.66 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8876,7 +9168,7 @@
 	)
 	(hierarchical_label "BYTESEL"
 		(shape input)
-		(at 76.2 76.2 180)
+		(at 73.66 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8912,7 +9204,7 @@
 	)
 	(hierarchical_label "R{slash}~{W}"
 		(shape input)
-		(at 76.2 73.66 180)
+		(at 73.66 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8948,7 +9240,7 @@
 	)
 	(hierarchical_label "~{CS}"
 		(shape input)
-		(at 76.2 78.74 180)
+		(at 73.66 78.74 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9643,7 +9935,6 @@
 		)
 	)
 	(symbol
-		(lib_name "ICE40UP5K-SG48ITR_3")
 		(lib_id "FPGA_Lattice:ICE40UP5K-SG48ITR")
 		(at 254 43.18 0)
 		(unit 3)
@@ -9654,19 +9945,21 @@
 		(fields_autoplaced yes)
 		(uuid "199e7d00-af1b-49d1-a61a-abd92e2a3493")
 		(property "Reference" "U15"
-			(at 254 60.96 0)
+			(at 260.35 41.9099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "ICE40UP5K-SG48I"
-			(at 254 63.5 0)
+			(at 260.35 44.4499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm"
@@ -9973,7 +10266,7 @@
 		)
 	)
 	(symbol
-		(lib_name "ICE40UP5K-SG48ITR_2")
+		(lib_name "ICE40UP5K-SG48ITR_3")
 		(lib_id "FPGA_Lattice:ICE40UP5K-SG48ITR")
 		(at 165.1 55.88 0)
 		(unit 2)
@@ -9984,19 +10277,21 @@
 		(fields_autoplaced yes)
 		(uuid "23069f9b-a984-4f00-aeeb-cdbfcc251334")
 		(property "Reference" "U15"
-			(at 165.1 83.82 0)
+			(at 171.45 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "ICE40UP5K-SG48I"
-			(at 165.1 86.36 0)
+			(at 171.45 57.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm"
@@ -10876,7 +11171,7 @@
 	(symbol
 		(lib_name "+3V3_1")
 		(lib_id "power:+3V3")
-		(at 146.05 30.48 0)
+		(at 129.54 30.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10885,7 +11180,7 @@
 		(fields_autoplaced yes)
 		(uuid "38e6777d-169c-4e8e-bc48-f4d76e2fa5d8")
 		(property "Reference" "#PWR0139"
-			(at 146.05 34.29 0)
+			(at 129.54 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10894,7 +11189,7 @@
 			)
 		)
 		(property "Value" "+3V3_FPGA_DVI"
-			(at 146.05 25.4 0)
+			(at 129.54 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10902,7 +11197,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 30.48 0)
+			(at 129.54 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10911,7 +11206,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 30.48 0)
+			(at 129.54 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10920,7 +11215,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 146.05 30.48 0)
+			(at 129.54 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12038,7 +12333,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 146.05 33.02 0)
+		(at 129.54 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12047,7 +12342,7 @@
 		(fields_autoplaced yes)
 		(uuid "63d859b9-a028-42cf-aae0-4ddb482a29dc")
 		(property "Reference" "R18"
-			(at 143.51 31.7499 0)
+			(at 127 31.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12056,7 +12351,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 143.51 34.2899 0)
+			(at 127 34.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12065,7 +12360,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12074,7 +12369,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12083,7 +12378,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12092,7 +12387,7 @@
 			)
 		)
 		(property "MPN" "RC0402FR-0710KL"
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12101,7 +12396,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12110,7 +12405,7 @@
 			)
 		)
 		(property "Temperature Coefficient" ""
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12119,7 +12414,7 @@
 			)
 		)
 		(property "V_{DC}" ""
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12128,7 +12423,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12137,7 +12432,7 @@
 			)
 		)
 		(property "LCSC Part #" "C25744"
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12146,7 +12441,7 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
-			(at 146.05 33.02 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12296,6 +12591,138 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
 					(reference "#PWR053")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 134.62 38.1 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7ab50d16-bc23-4287-87d3-d406f3a54f67")
+		(property "Reference" "R42"
+			(at 134.62 33.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2K"
+			(at 134.62 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-072KL"
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" ""
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "V_{DC}" ""
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C4109"
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 134.62 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd93f8d5-b65d-463f-8465-3d410768accf")
+		)
+		(pin "2"
+			(uuid "86c3f71f-4b87-44ca-bb4f-293cf9d975a0")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -13714,6 +14141,137 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 66.04 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af595592-08b8-4318-984d-c3a3d577c3d5")
+		(property "Reference" "R47"
+			(at 66.04 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 66.04 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" ""
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "V_{DC}" ""
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25744"
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 66.04 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "80810668-452c-42ca-b16a-89fd8cce9017")
+		)
+		(pin "1"
+			(uuid "490306ce-1a4b-4ad3-a34a-933334503745")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
+					(reference "R47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 49.53 193.04 0)
 		(unit 1)
@@ -13903,6 +14461,7 @@
 		)
 	)
 	(symbol
+		(lib_name "ICE40UP5K-SG48ITR_2")
 		(lib_id "FPGA_Lattice:ICE40UP5K-SG48ITR")
 		(at 193.04 132.08 0)
 		(unit 4)
@@ -14659,7 +15218,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 49.53 187.96 0)
 			(effects
 				(font
@@ -14962,6 +15521,72 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
 					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 57.15 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e4d1a66a-70d1-464c-bd60-9732764ab4ea")
+		(property "Reference" "#PWR0153"
+			(at 57.15 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 57.15 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 57.15 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd598a74-0437-43e1-9b9b-fe28f6c3562b")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
+					(reference "#PWR0153")
 					(unit 1)
 				)
 			)
@@ -15348,128 +15973,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 127 38.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ec9c229b-1a3f-44f7-9a48-eb58a370dff0")
-		(property "Reference" "R42"
-			(at 127 33.02 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0R"
-			(at 127 35.56 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "RC0402FR-070RL"
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Temperature Coefficient" ""
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "V_{DC}" ""
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C17168"
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 127 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "77bd75d0-fc34-405b-a097-cffe7fbd7110")
-		)
-		(pin "1"
-			(uuid "4e10a089-aad2-478f-9eac-7fc0791cf832")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
-					(reference "R42")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 133.35 165.1 90)
 		(unit 1)
@@ -15603,19 +16106,21 @@
 		(fields_autoplaced yes)
 		(uuid "f2ba9a1e-4982-4a83-80e4-7da6717e0c5d")
 		(property "Reference" "U15"
-			(at 86.36 83.82 0)
+			(at 92.71 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "ICE40UP5K-SG48I"
-			(at 86.36 86.36 0)
+			(at 92.71 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm"

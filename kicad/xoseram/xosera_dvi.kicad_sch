@@ -6191,16 +6191,6 @@
 		)
 		(uuid "fd82c864-b75d-46aa-86e6-45e2a59c7275")
 	)
-	(text "NOTE: Using this neat connector for DVI.\n	I wonder what pins 13 and 14 do..."
-		(exclude_from_sim no)
-		(at 236.22 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "135bf088-94ca-4933-bfd4-0b5c18c37488")
-	)
 	(text "DVI Connector"
 		(exclude_from_sim no)
 		(at 191.77 13.97 0)

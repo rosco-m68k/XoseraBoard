@@ -3738,10 +3738,6 @@
 		(uuid "6ffa2704-2f87-4895-8f0f-f3478ef1b543")
 	)
 	(no_connect
-		(at 88.9 114.3)
-		(uuid "8bcfac51-1623-40a4-b89a-01a69e14eac6")
-	)
-	(no_connect
 		(at 88.9 109.22)
 		(uuid "fed9ec56-75ae-4059-955a-0c4b6789e2e9")
 	)
@@ -3827,7 +3823,7 @@
 		(uuid "678eb82c-fc55-407a-b45d-73c33c73e6bf")
 	)
 	(bus_entry
-		(at 63.5 139.7)
+		(at 66.04 139.7)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -3970,6 +3966,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.9 114.3) (xy 119.38 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c1e49da-0b70-4917-9946-88c0f4a995ef")
+	)
+	(wire
+		(pts
 			(xy 165.1 121.92) (xy 175.26 121.92)
 		)
 		(stroke
@@ -4010,7 +4016,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 139.7) (xy 88.9 139.7)
+			(xy 119.38 139.7) (xy 91.44 139.7)
 		)
 		(stroke
 			(width 0)
@@ -4890,7 +4896,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 139.7) (xy 83.82 139.7)
+			(xy 66.04 139.7) (xy 86.36 139.7)
 		)
 		(stroke
 			(width 0)
@@ -5100,7 +5106,7 @@
 	)
 	(bus
 		(pts
-			(xy 58.42 142.24) (xy 60.96 142.24)
+			(xy 60.96 142.24) (xy 63.5 142.24)
 		)
 		(stroke
 			(width 0)
@@ -5108,7 +5114,7 @@
 		)
 		(uuid "fe701c72-3c02-4110-a976-6f309e356aa2")
 	)
-	(text "NOTE: By default. use synchronous operation. Asynchronous operation may also be possible.\n	For synchronous operation with ~{DTACK}/~{DSACKx}:\n		On read, data must be available during the CPU clock falling edge\n			after the CPU clock falling edge where ~{DTACK} is low.\n	For asynchronous operation:\n		Remove ${a77ea4cd-ce07-40e4-a79e-65a137e972db:REFERENCE}.\n		On read, SDRAM clock must be paused until the data has been latched\n			by the CPU.\n\nNOTE: In synchronous operation, the SDRAM's t_{AC}, the level shifters' t_{PHL}/t_{PLH}, and\n	the CPU's Setup Time on Read should allow for operation at up to 24 MHz with CL=2\n	and up to 27 MHz with CL=3.\n\nNOTE: For layout purposes, the CPU to SDRAM data pin mapping has been adjusted\n	within individual bytes."
+	(text "NOTE:\n	For synchronous operation with ~{DTACK}/~{DSACKx}:\n		Do not install ${a77ea4cd-ce07-40e4-a79e-65a137e972db:REFERENCE}.\n		Generate SDRAM.CLK = !BUS_3V3.CLK.\n		On read, data must be available during the CPU clock falling edge\n			after the CPU clock falling edge where ~{DTACK} is low.\n	For asynchronous operation:\n		Do not install ${a77ea4cd-ce07-40e4-a79e-65a137e972db:REFERENCE}.\n		On read, SDRAM clock must be paused until the data has been latched\n			by the CPU.\n\nNOTE: In synchronous operation, the SDRAM's t_{AC}, the level shifters' t_{PHL}/t_{PLH}, and\n	the CPU's Setup Time on Read should allow for operation at up to 24 MHz with CL=2\n	and up to 27 MHz with CL=3.\n\nNOTE: For layout purposes, the CPU to SDRAM data pin mapping has been adjusted\n	within individual bytes."
 		(exclude_from_sim no)
 		(at 162.56 133.35 0)
 		(effects
@@ -5197,7 +5203,7 @@
 		(uuid "1acc1f19-2503-4645-bad8-562f1750e5e7")
 	)
 	(label "BUS_3V3.CLK"
-		(at 64.77 139.7 0)
+		(at 67.31 139.7 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5549,7 +5555,7 @@
 		(uuid "aa340323-caee-461d-878a-ececabdeebab")
 	)
 	(label "SDRAM.CLK"
-		(at 114.3 139.7 180)
+		(at 116.84 139.7 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5836,7 +5842,7 @@
 	)
 	(global_label "SDRAM.CLK"
 		(shape output)
-		(at 116.84 139.7 0)
+		(at 119.38 139.7 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5846,7 +5852,7 @@
 		)
 		(uuid "21884403-26e1-4ed5-a5c2-c89dfe55a067")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 130.2876 139.7 0)
+			(at 132.8276 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5922,9 +5928,31 @@
 			)
 		)
 	)
+	(global_label "PLD_EN_LEVEL_SHIFTERS"
+		(shape output)
+		(at 119.38 114.3 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7061917-cbe0-4cd6-90bc-36b412b47319")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 145.5879 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(hierarchical_label "BUS_3V3{ROSCO_M68K_BUS}"
 		(shape bidirectional)
-		(at 58.42 142.24 180)
+		(at 60.96 142.24 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7105,15 +7133,15 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 86.36 139.7 90)
+		(at 88.9 139.7 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "a77ea4cd-ce07-40e4-a79e-65a137e972db")
 		(property "Reference" "R28"
-			(at 86.36 134.62 90)
+			(at 88.9 134.62 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7121,7 +7149,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 86.36 137.16 90)
+			(at 88.9 137.16 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7129,7 +7157,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7138,7 +7166,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7147,7 +7175,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7156,7 +7184,7 @@
 			)
 		)
 		(property "MPN" "RC0402FR-070RL"
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7165,7 +7193,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7174,7 +7202,7 @@
 			)
 		)
 		(property "Temperature Coefficient" ""
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7183,7 +7211,7 @@
 			)
 		)
 		(property "V_{DC}" ""
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7192,7 +7220,7 @@
 			)
 		)
 		(property "LCSC Part #" "C17168"
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7201,7 +7229,7 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
-			(at 86.36 139.7 0)
+			(at 88.9 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)

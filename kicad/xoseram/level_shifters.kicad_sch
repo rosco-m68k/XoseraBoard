@@ -146,127 +146,6 @@
 				)
 			)
 		)
-		(symbol "Device:NetTie_2"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "NT"
-				(at 0 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "NetTie_2"
-				(at 0 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Net tie, 2 pins"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "net tie short"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Net*Tie*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NetTie_2_0_1"
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "NetTie_2_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:R_Small"
 			(pin_numbers hide)
 			(pin_names
@@ -1211,16 +1090,16 @@
 		(uuid "41dc9546-7a44-41f7-9cb5-52030275a6a8")
 	)
 	(junction
+		(at 215.9 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4738e92a-d163-4982-adf6-40dfdc127b7d")
+	)
+	(junction
 		(at 142.24 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4df10ac1-028c-4919-894a-1cdb43bf7bbd")
-	)
-	(junction
-		(at 215.9 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4ec3dbbb-9ca8-4fd9-94b0-dd6984d96b46")
 	)
 	(junction
 		(at 101.6 119.38)
@@ -1253,6 +1132,12 @@
 		(uuid "905574b8-966a-4f3f-9648-7019ef54d154")
 	)
 	(junction
+		(at 213.36 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "964464af-4b0c-4246-a47f-48750f90af19")
+	)
+	(junction
 		(at 137.16 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1281,6 +1166,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ae2baa90-b03c-453f-b4bb-a240e95fd236")
+	)
+	(junction
+		(at 226.06 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0daaebf-69c6-47ba-b925-9afa54274704")
 	)
 	(junction
 		(at 58.42 128.27)
@@ -2648,6 +2539,16 @@
 		)
 		(uuid "0da70db3-f68b-445b-9c37-5fb2b8f1d3d9")
 	)
+	(wire
+		(pts
+			(xy 213.36 154.94) (xy 213.36 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e584b56-eac6-42a3-b3b1-b17b8ac58783")
+	)
 	(bus
 		(pts
 			(xy 101.6 119.38) (xy 180.34 119.38)
@@ -2737,6 +2638,16 @@
 			(type default)
 		)
 		(uuid "16f8cf22-28c7-419e-a8ca-16eca363fb61")
+	)
+	(wire
+		(pts
+			(xy 215.9 139.7) (xy 218.44 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "178bee61-3833-49ce-ba75-5d65a4502307")
 	)
 	(wire
 		(pts
@@ -2947,6 +2858,16 @@
 			(type default)
 		)
 		(uuid "2f62531f-d7a9-4670-82b5-9fc39ad954b4")
+	)
+	(wire
+		(pts
+			(xy 226.06 139.7) (xy 228.6 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3018109b-8fce-4691-9cc2-1f4cf8a4006c")
 	)
 	(bus
 		(pts
@@ -3260,6 +3181,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 139.7) (xy 226.06 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4815dff5-c6e3-4165-8b18-9fa9eb8eab26")
+	)
+	(wire
+		(pts
 			(xy 149.86 151.13) (xy 175.26 151.13)
 		)
 		(stroke
@@ -3267,16 +3198,6 @@
 			(type default)
 		)
 		(uuid "48916931-7aed-40c5-aee7-cef7b5fb2e49")
-	)
-	(wire
-		(pts
-			(xy 215.9 139.7) (xy 241.3 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cb43228-3f25-49c3-a199-b32d870d0f76")
 	)
 	(wire
 		(pts
@@ -3430,7 +3351,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 139.7) (xy 215.9 139.7)
+			(xy 210.82 139.7) (xy 213.36 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3450,7 +3371,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 152.4) (xy 215.9 148.59)
+			(xy 226.06 154.94) (xy 226.06 152.4)
 		)
 		(stroke
 			(width 0)
@@ -3750,6 +3671,16 @@
 	)
 	(wire
 		(pts
+			(xy 215.9 129.54) (xy 215.9 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b9dea03-ce8a-4fb7-9a6c-aeaa76bb2cd2")
+	)
+	(wire
+		(pts
 			(xy 228.6 49.53) (xy 254 49.53)
 		)
 		(stroke
@@ -3757,16 +3688,6 @@
 			(type default)
 		)
 		(uuid "7ba5afa4-59e0-4c86-a8ef-a6b402cc0319")
-	)
-	(wire
-		(pts
-			(xy 215.9 139.7) (xy 215.9 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c4400d3-1a9d-436b-be58-33697b538c28")
 	)
 	(bus
 		(pts
@@ -3908,6 +3829,16 @@
 		)
 		(uuid "85122e00-2bb3-4da5-8603-2f438764b146")
 	)
+	(wire
+		(pts
+			(xy 226.06 139.7) (xy 226.06 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8533627f-cb12-4a0c-8942-cd6514b5a157")
+	)
 	(bus
 		(pts
 			(xy 101.6 146.05) (xy 101.6 148.59)
@@ -4047,6 +3978,16 @@
 			(type default)
 		)
 		(uuid "8e4f4654-2586-425f-b31a-761a36121f5e")
+	)
+	(wire
+		(pts
+			(xy 213.36 139.7) (xy 213.36 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ed8692c-bbcf-45d1-8dd2-cf6b98ee6702")
 	)
 	(bus
 		(pts
@@ -4620,6 +4561,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 139.7) (xy 215.9 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bad662e4-4412-4d6a-b011-452ac72eb24d")
+	)
+	(wire
+		(pts
 			(xy 228.6 44.45) (xy 254 44.45)
 		)
 		(stroke
@@ -5040,7 +4991,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 139.7) (xy 207.01 139.7)
+			(xy 200.66 139.7) (xy 205.74 139.7)
 		)
 		(stroke
 			(width 0)
@@ -5137,6 +5088,16 @@
 			(type default)
 		)
 		(uuid "e9c9d8da-52e7-47a0-bc51-01e780455a82")
+	)
+	(wire
+		(pts
+			(xy 215.9 129.54) (xy 236.22 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eabcdf7d-77db-4561-b36e-733f50bece9b")
 	)
 	(wire
 		(pts
@@ -5723,7 +5684,7 @@
 		(uuid "3b1f6fb4-e4ee-4831-9e87-fda329ca51a1")
 	)
 	(label "LEVEL_SHIFTER_OE"
-		(at 241.3 139.7 180)
+		(at 236.22 129.54 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6822,6 +6783,28 @@
 		)
 		(uuid "feac82a6-5cef-4b3a-9a32-e49604f74ee5")
 	)
+	(global_label "PLD_EN_LEVEL_SHIFTERS"
+		(shape input)
+		(at 228.6 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "900c5927-3aab-4384-89fe-c9c5e70bcd3a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 254.8079 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(hierarchical_label "BUS_3V3{ROSCO_M68K_BUS}"
 		(shape bidirectional)
 		(at 254 119.38 180)
@@ -7405,6 +7388,127 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
 					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 208.28 139.7 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(uuid "1704617c-fc40-4933-8dd3-530b75205dd1")
+		(property "Reference" "R48"
+			(at 208.28 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0R"
+			(at 208.28 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-070RL"
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" ""
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "V_{DC}" ""
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C17168"
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 208.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0548fc52-496d-4770-a4dd-cf3ed1a5e1c2")
+		)
+		(pin "2"
+			(uuid "ece432f5-7b46-4e6f-b40b-e53507a35e65")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -8232,7 +8336,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 203.2 139.7 0)
+		(at 200.66 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8241,7 +8345,7 @@
 		(fields_autoplaced yes)
 		(uuid "41ac9f54-24aa-401e-823b-d301c99b7d74")
 		(property "Reference" "#PWR035"
-			(at 203.2 143.51 0)
+			(at 200.66 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8250,7 +8354,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 203.2 134.62 0)
+			(at 200.66 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8258,7 +8362,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 203.2 139.7 0)
+			(at 200.66 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8267,7 +8371,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 139.7 0)
+			(at 200.66 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8276,7 +8380,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 203.2 139.7 0)
+			(at 200.66 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11116,7 +11220,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 215.9 146.05 0)
+		(at 226.06 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11124,7 +11228,7 @@
 		(dnp no)
 		(uuid "be0c90cd-ff6d-4f7c-ab36-d18f7699b46c")
 		(property "Reference" "R44"
-			(at 213.36 144.7799 0)
+			(at 223.52 148.5899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11133,7 +11237,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 213.36 147.3199 0)
+			(at 223.52 151.1299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11142,7 +11246,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11151,7 +11255,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11160,7 +11264,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11169,7 +11273,7 @@
 			)
 		)
 		(property "MPN" "RC0402FR-0710KL"
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11178,7 +11282,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11187,7 +11291,7 @@
 			)
 		)
 		(property "Temperature Coefficient" ""
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11196,7 +11300,7 @@
 			)
 		)
 		(property "V_{DC}" ""
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11205,7 +11309,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11214,7 +11318,7 @@
 			)
 		)
 		(property "LCSC Part #" "C25744"
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11223,7 +11327,7 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
-			(at 215.9 146.05 0)
+			(at 226.06 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11436,6 +11540,138 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 220.98 139.7 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2302ad0-8d62-4a01-88d4-00f3ddadbe2a")
+		(property "Reference" "R49"
+			(at 220.98 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2K"
+			(at 220.98 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-072KL"
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" ""
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "V_{DC}" ""
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C4109"
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 220.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4629dec7-2a92-468e-a149-1a9d411ce9a8")
+		)
+		(pin "2"
+			(uuid "39584a45-362f-4d92-9e75-399cd62c8bf5")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -11706,6 +11942,138 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 213.36 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(uuid "d48aac3f-0e7a-41d5-95c5-5ef4d4beca7c")
+		(property "Reference" "R50"
+			(at 210.82 148.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 210.82 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" ""
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "V_{DC}" ""
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25744"
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 213.36 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0fc1c46b-0e26-4372-b415-45aa342548e4")
+		)
+		(pin "1"
+			(uuid "3be9a437-0a7a-4815-b4f8-0196961efe98")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 76.2 74.93 0)
 		(unit 1)
@@ -11887,6 +12255,71 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
 					(reference "C16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 213.36 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dccd8be6-39f7-48bb-bb5d-dc480c5077bc")
+		(property "Reference" "#PWR0154"
+			(at 213.36 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 213.487 159.3342 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 213.36 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 213.36 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4047624c-ab2c-4186-a9ee-6b637707726c")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
+					(reference "#PWR0154")
 					(unit 1)
 				)
 			)
@@ -12375,7 +12808,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 215.9 152.4 0)
+		(at 226.06 154.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12383,7 +12816,7 @@
 		(dnp no)
 		(uuid "e2adeff7-8cd4-433a-ba44-ecfcb5772aba")
 		(property "Reference" "#PWR034"
-			(at 215.9 158.75 0)
+			(at 226.06 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12392,7 +12825,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 216.027 156.7942 0)
+			(at 226.187 159.3342 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12400,7 +12833,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 152.4 0)
+			(at 226.06 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12409,7 +12842,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 152.4 0)
+			(at 226.06 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12418,7 +12851,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 152.4 0)
+			(at 226.06 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12498,120 +12931,6 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
 					(reference "#PWR0114")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:NetTie_2")
-		(at 209.55 139.7 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e4fb2874-e962-49dc-8599-23f00015f352")
-		(property "Reference" "NT1"
-			(at 209.55 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NetTie_2"
-			(at 209.55 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
-			(at 209.55 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 209.55 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Net tie, 2 pins"
-			(at 209.55 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" ""
-			(at 209.55 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 209.55 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Temperature Coefficient" ""
-			(at 209.55 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "V_{DC}" ""
-			(at 209.55 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 209.55 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "989326ac-a491-4536-960c-b3111b47da2b")
-		)
-		(pin "1"
-			(uuid "4dacb947-5107-431e-9a83-7fc24aaeeb80")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/0c764949-1b57-460e-8bc0-3b0169a3d604"
-					(reference "NT1")
 					(unit 1)
 				)
 			)
