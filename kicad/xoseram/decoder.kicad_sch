@@ -6,8 +6,7 @@
 	(paper "USLetter")
 	(title_block
 		(title "XoseRAM")
-		(date "2024-05-09")
-		(rev "A")
+		(rev "B")
 		(company "Thomas Jager")
 		(comment 1 "Licensed under CERN OHL v.1.2")
 	)
@@ -3731,7 +3730,7 @@
 		(uuid "65305db2-37b2-4f01-beac-67185d6f24d1")
 	)
 	(bus_entry
-		(at 63.5 53.34)
+		(at 63.5 55.88)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -3758,7 +3757,7 @@
 		(uuid "73f782ed-936b-4a64-94ea-77cc683d6f5e")
 	)
 	(bus_entry
-		(at 63.5 55.88)
+		(at 63.5 38.1)
 		(size -2.54 2.54)
 		(stroke
 			(width 0)
@@ -3864,6 +3863,15 @@
 			(type default)
 		)
 		(uuid "d258d73b-7cb3-4401-8626-9f0a7ae7441e")
+	)
+	(bus_entry
+		(at 63.5 53.34)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d32e9500-2b62-470f-8d44-0e45ba04a34c")
 	)
 	(bus_entry
 		(at 63.5 58.42)
@@ -4157,6 +4165,16 @@
 		)
 		(uuid "1d66ca97-6fea-4db3-9b9a-13ed156263ea")
 	)
+	(bus
+		(pts
+			(xy 60.96 40.64) (xy 60.96 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1df200ef-895d-4dee-a076-121c0fd4cf69")
+	)
 	(wire
 		(pts
 			(xy 208.28 96.52) (xy 208.28 99.06)
@@ -4299,7 +4317,7 @@
 	)
 	(bus
 		(pts
-			(xy 60.96 58.42) (xy 60.96 60.96)
+			(xy 60.96 48.26) (xy 60.96 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4367,6 +4385,16 @@
 		)
 		(uuid "384ef42e-bd78-424c-add4-f689d9f48cba")
 	)
+	(bus
+		(pts
+			(xy 60.96 55.88) (xy 60.96 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cf26966-588b-44c3-a96a-b6415037fd99")
+	)
 	(wire
 		(pts
 			(xy 63.5 119.38) (xy 88.9 119.38)
@@ -4409,7 +4437,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 50.8) (xy 88.9 50.8)
+			(xy 63.5 53.34) (xy 88.9 53.34)
 		)
 		(stroke
 			(width 0)
@@ -4819,7 +4847,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 55.88) (xy 88.9 55.88)
+			(xy 63.5 38.1) (xy 88.9 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4957,6 +4985,16 @@
 		)
 		(uuid "a4e4bde4-01e4-45ca-b4b7-a8c0f785a75e")
 	)
+	(bus
+		(pts
+			(xy 60.96 58.42) (xy 60.96 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6cc79a9-e4e4-497a-9850-9a2d44143699")
+	)
 	(wire
 		(pts
 			(xy 187.96 58.42) (xy 190.5 58.42)
@@ -4986,16 +5024,6 @@
 			(type default)
 		)
 		(uuid "aa530853-4979-4ce3-b16f-7bdb54f1aecb")
-	)
-	(bus
-		(pts
-			(xy 60.96 48.26) (xy 60.96 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abfbd424-ae54-4895-91b4-682fc764e920")
 	)
 	(wire
 		(pts
@@ -5207,16 +5235,6 @@
 		)
 		(uuid "c9014cbc-18eb-4151-a1b3-919e9fa8bb58")
 	)
-	(bus
-		(pts
-			(xy 60.96 55.88) (xy 60.96 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb17c984-2766-4e3c-b52f-8471852cfcd2")
-	)
 	(wire
 		(pts
 			(xy 63.5 109.22) (xy 88.9 109.22)
@@ -5329,7 +5347,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 53.34) (xy 88.9 53.34)
+			(xy 63.5 55.88) (xy 88.9 55.88)
 		)
 		(stroke
 			(width 0)
@@ -5459,7 +5477,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 38.1) (xy 88.9 38.1)
+			(xy 58.42 50.8) (xy 88.9 50.8)
 		)
 		(stroke
 			(width 0)
@@ -5529,7 +5547,7 @@
 		)
 		(uuid "9fa0d8d6-7834-4164-98d0-02c69caadc53")
 	)
-	(text "NOTE: Using resistor ${b1ba9cec-6da1-4d1d-8394-150f2b05805b:REFERENCE} instead of a normally-closed solder jumper\n	for the default R/~{W} to avoid a little bit of metal shorting\n	DECODER_PLD_OE1 to BUS_3V3.R/~{W}.\n\nWARNING: Never install ${215729d7-14e7-45bd-943c-9c15aaa5a8e5:REFERENCE} without first removing ${b1ba9cec-6da1-4d1d-8394-150f2b05805b:REFERENCE}."
+	(text "NOTE: Using resistor ${b1ba9cec-6da1-4d1d-8394-150f2b05805b:REFERENCE} instead of a normally-closed solder jumper\n	for the default R/~{W} to avoid a little bit of metal shorting\n	DECODER_PLD_OE1 to BUS_3V3.R/~{W}.\n\nWARNING: Never install ${215729d7-14e7-45bd-943c-9c15aaa5a8e5:REFERENCE} without first removing ${b1ba9cec-6da1-4d1d-8394-150f2b05805b:REFERENCE},\n	and checking for a lack of continuity."
 		(exclude_from_sim no)
 		(at 58.42 194.31 0)
 		(effects
@@ -5849,7 +5867,7 @@
 		(uuid "8cfa5742-6eae-4a63-9c28-a6739c427a44")
 	)
 	(label "BUS_3V3.~{BERR}"
-		(at 63.5 53.34 0)
+		(at 63.5 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5937,7 +5955,7 @@
 		(uuid "b267b46c-0c13-4fa8-9ef3-b3ed8be803f6")
 	)
 	(label "BUS_3V3.~{DTACK}"
-		(at 63.5 50.8 0)
+		(at 63.5 53.34 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6003,7 +6021,7 @@
 		(uuid "eaae4de0-0c19-4d41-8b6c-ed2cde40fd4e")
 	)
 	(label "BUS_3V3.~{AS}"
-		(at 63.5 55.88 0)
+		(at 63.5 38.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6058,8 +6076,8 @@
 		)
 	)
 	(global_label "SDRAM.CLK"
-		(shape input)
-		(at 58.42 38.1 180)
+		(shape bidirectional)
+		(at 58.42 50.8 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6069,7 +6087,7 @@
 		)
 		(uuid "33104e63-8a2d-4058-8535-d3db05583ab8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.9724 38.1 0)
+			(at 43.8611 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
