@@ -1,0 +1,13 @@
+(version 1)
+
+(rule SDRAM_control_skew
+	(condition "A.NetClass == 'SDRAM_control'")
+	(constraint skew (max 5mm)))
+
+(rule SDRAM_data_skew
+	(condition "A.NetClass == 'rosco_m68k_bus' && (A.fromTo('U7','U1') || A.fromTo('U8','U1') || A.fromTo('U9','U1') || A.fromTo('U10','U1'))")
+	(constraint skew (max 10mm)))
+
+(rule dv_skew
+	(condition "A.NetClass == 'dv_parallel'")
+	(constraint skew (max 16mm)))
