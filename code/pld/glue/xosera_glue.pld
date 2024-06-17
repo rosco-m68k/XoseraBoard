@@ -107,27 +107,27 @@ PIN  30 = XO_REG2;
 PIN  31 = XO_REG1;
 PIN  32 = XO_REG0;
 
-NODE  IN_INIT;
-NODE  REFRESH_Q;                        /* Active high! */
-NODE  RQ4, RQ3, RQ2, RQ1, RQ0;
-NODE  SD_DTACK;                         /* Active high! */
-NODE  SD_IN_CYCLE;
-NODE  XO_IRQRQ;                         /* Active high! */
-NODE  XO_IRQRQ_AR;
-NODE  BANK_FF;
+NODE REFRESH_Q;                        /* Active high! */
+NODE REFRESH_Q_AR;                     /* Used because SR isn't supported */
+NODE RQ4, RQ3, RQ2, RQ1, RQ0;
+NODE SD_DTACK;                         /* Active high! */
+NODE SD_IN_CYCLE;
+NODE XO_IRQRQ;                         /* Active high! */
+NODE XO_IRQRQ_AR;
+NODE BANK_FF;
 
-NODE DO_COMMAND_INHIBIT;
-NODE DO_NO_OPERATION;
-NODE DO_ACTIVE;
-NODE DO_READ;
-NODE DO_WRITE;
-NODE DO_BURST_TERMINATE;
-NODE DO_PRECHARGE;
-NODE DO_AUTO_REFRESH;
-NODE DO_SELF_REFRESH;
-NODE DO_LOAD_MODE_REGISTER;
+NODE SD_DO_COMMAND_INHIBIT;
+NODE SD_DO_NO_OPERATION;
+NODE SD_DO_ACTIVE;
+NODE SD_DO_READ;
+NODE SD_DO_WRITE;
+NODE SD_DO_BURST_TERMINATE;
+NODE SD_DO_PRECHARGE;
+NODE SD_DO_AUTO_REFRESH;
+NODE SD_DO_SELF_REFRESH;
+NODE SD_DO_LOAD_MODE_REGISTER;
 
-NODE  SD_ACK2;
+NODE SD_ACK2;
 
 NODE CTRL_REG_SEL;
 NODE CTRL_REG_DTACK;                    /* Active high! */
@@ -141,24 +141,24 @@ FIELD SYS_COL   = ['b'0, 'b'0, 'b'0, 'b'0, SYS_A9..SYS_A1];
 FIELD SYS_MR    = 'b'0001000100000;
 FIELD SYS_PCHRG = 'b'0010000000000;
 
-FIELD SD_BANK   = [SD_BA1, SD_BA0];
-FIELD SD_ADDR   = [SD_A12..SD_A0];
-FIELD SD_STATE  = [SD_STATE6..SD_STATE0];
-FIELD SD_COMMAND  = [SD_CS, SD_RAS, SD_CAS, SD_WE];
-FIELD SYS_ADDR  = [SYS_A23..SYS_A1];
-FIELD RCOUNT    = [RQ4..RQ0];
+FIELD SD_BANK       = [SD_BA1, SD_BA0];
+FIELD SD_ADDR       = [SD_A12..SD_A0];
+FIELD SD_STATE      = [SD_STATE6..SD_STATE0];
+FIELD SD_COMMAND    = [SD_CS, SD_RAS, SD_CAS, SD_WE];
+FIELD SYS_ADDR      = [SYS_A23..SYS_A1];
+FIELD RCOUNT        = [RQ4..RQ0];
 
 FIELD CTRL_REG_ST   = [CTRL_REG_ST1, CTRL_REG_ST0];
 
-SD_STATE.ck     = SD_CLK;
-SD_STATE.ar     = !SYS_RESET;
+SD_STATE.CK     = SD_CLK;
+SD_STATE.AR     = !SYS_RESET;
 
 SD_CLK_OUT1     = !SYS_CLK;
 SD_CLK_OUT2     = !SYS_CLK;
-SD_CLK_OUT2.oe  = 'b'0;
+SD_CLK_OUT2.OE  = 'b'0;
 
 SYS_DTACK       = 'b'0;
-SYS_DTACK.oe    = SYS_RESET & !XO_CS        /* switch XO_CS to XO_DTACK when ready */
+SYS_DTACK.OE    = SYS_RESET & !XO_CS        /* switch XO_CS to XO_DTACK when ready */
                 # SYS_RESET & SD_ACK2
                 # SYS_RESET & CTRL_REG_DTACK;
 
@@ -179,22 +179,21 @@ $define SD_SELF_REFRESH         'b'0001
 $define SD_LOAD_MODE_REGISTER   'b'0000
 
 /*
-SD_ACK2.d = SD_DTACK;
-SD_ACK2.ck = SYS_CLK;*/
+SD_ACK2.D = SD_DTACK;
+SD_ACK2.CK = SYS_CLK;*/
 SD_ACK2 = SD_DTACK;
 
-SD_DTACK.ck = SD_CLK;
+SD_CKE.CK   = SD_CLK;
 
-SD_CKE.ck = SD_CLK;
+APPEND SD_IN_CYCLE.D    = SD_IN_CYCLE;
+SD_IN_CYCLE.CK          = SD_CLK;
+SD_IN_CYCLE.AR          = SYS_AS # SYS_EXPSEL # !SYS_RESET;
 
-APPEND SD_IN_CYCLE.d = SD_IN_CYCLE;
-SD_IN_CYCLE.ar = SYS_AS # SYS_EXPSEL # !SYS_RESET;
-SD_IN_CYCLE.ck = SD_CLK;
+APPEND SD_DTACK.D       = SD_DTACK;
+SD_DTACK.CK             = SD_CLK;
+SD_DTACK.AR             = (SYS_LDS & SYS_UDS) # !SD_IN_CYCLE;
 
-APPEND SD_DTACK.d = SD_DTACK;
-SD_DTACK.ar = (SYS_LDS & SYS_UDS) # !SD_IN_CYCLE;
-
-/** *********************** STATE  DEFINES ******************************/
+/** *********************** STATE DEFINES *******************************/
 $define ST_START            'b'0000000  /* Start state               00 */
 $define ST_INIT_CKE         'b'0000001  /* Initial CKE               01 */
 $define ST_INIT_PC          'b'0000010  /* Initial precharge         13 */
@@ -228,100 +227,102 @@ APPEND SD_ADDR  =   SD_COMMAND:SD_WRITE                 & SYS_COL;
 APPEND SD_ADDR  =   SD_COMMAND:SD_LOAD_MODE_REGISTER    & SYS_MR;
 APPEND SD_ADDR  =   SD_COMMAND:SD_PRECHARGE             & SYS_PCHRG;
 
-DO_COMMAND_INHIBIT.ck           = SD_CLK;
-DO_NO_OPERATION.ck              = SD_CLK;
-DO_ACTIVE.ck                    = SD_CLK;
-DO_READ.ck                      = SD_CLK;
-DO_WRITE.ck                     = SD_CLK;
-DO_BURST_TERMINATE.ck           = SD_CLK;
-DO_PRECHARGE.ck                 = SD_CLK;
-DO_AUTO_REFRESH.ck              = SD_CLK;
-DO_SELF_REFRESH.ck              = SD_CLK;
-DO_LOAD_MODE_REGISTER.ck        = SD_CLK;
+SD_DO_COMMAND_INHIBIT.CK            = SD_CLK;
+SD_DO_NO_OPERATION.CK               = SD_CLK;
+SD_DO_ACTIVE.CK                     = SD_CLK;
+SD_DO_READ.CK                       = SD_CLK;
+SD_DO_WRITE.CK                      = SD_CLK;
+SD_DO_BURST_TERMINATE.CK            = SD_CLK;
+SD_DO_PRECHARGE.CK                  = SD_CLK;
+SD_DO_AUTO_REFRESH.CK               = SD_CLK;
+SD_DO_SELF_REFRESH.CK               = SD_CLK;
+SD_DO_LOAD_MODE_REGISTER.CK         = SD_CLK;
 
-APPEND DO_COMMAND_INHIBIT.d     ='d'0;
-APPEND DO_NO_OPERATION.d        ='d'0;
-APPEND DO_ACTIVE.d              ='d'0;
-APPEND DO_READ.d                ='d'0;
-APPEND DO_WRITE.d               ='d'0;
-APPEND DO_BURST_TERMINATE.d     ='d'0;
-APPEND DO_PRECHARGE.d           ='d'0;
-APPEND DO_AUTO_REFRESH.d        ='d'0;
-APPEND DO_SELF_REFRESH.d        ='d'0;
-APPEND DO_LOAD_MODE_REGISTER.d  ='d'0;
+APPEND SD_DO_COMMAND_INHIBIT.D      ='d'0;
+APPEND SD_DO_NO_OPERATION.D         ='d'0;
+APPEND SD_DO_ACTIVE.D               ='d'0;
+APPEND SD_DO_READ.D                 ='d'0;
+APPEND SD_DO_WRITE.D                ='d'0;
+APPEND SD_DO_BURST_TERMINATE.D      ='d'0;
+APPEND SD_DO_PRECHARGE.D            ='d'0;
+APPEND SD_DO_AUTO_REFRESH.D         ='d'0;
+APPEND SD_DO_SELF_REFRESH.D         ='d'0;
+APPEND SD_DO_LOAD_MODE_REGISTER.D   ='d'0;
 
 /** ***********************  SDRAM STATES  ******************/
 
 SEQUENCE SD_STATE {
     PRESENT ST_START
         IF !SYS_RESET
-            NEXT ST_START           OUT DO_COMMAND_INHIBIT      OUT !SD_CKE;
-        DEFAULT NEXT ST_INIT_CKE    OUT DO_NO_OPERATION         OUT  SD_CKE;
+            NEXT ST_START           OUT SD_DO_COMMAND_INHIBIT       OUT !SD_CKE;
+        DEFAULT NEXT ST_INIT_CKE    OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
     PRESENT ST_INIT_CKE
-        NEXT ST_INIT_PC             OUT DO_PRECHARGE            OUT  SD_CKE;
+        NEXT ST_INIT_PC             OUT SD_DO_PRECHARGE             OUT  SD_CKE;
     PRESENT ST_INIT_PC
-        NEXT ST_INIT_REFRESH1       OUT DO_AUTO_REFRESH         OUT  SD_CKE;
+        NEXT ST_INIT_REFRESH1       OUT SD_DO_AUTO_REFRESH          OUT  SD_CKE;
     PRESENT ST_INIT_REFRESH1
-        NEXT ST_INIT_RFC1           OUT DO_NO_OPERATION         OUT  SD_CKE;
+        NEXT ST_INIT_RFC1           OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
     PRESENT ST_INIT_RFC1
-        NEXT ST_INIT_REFRESH2       OUT DO_AUTO_REFRESH         OUT  SD_CKE;
+        NEXT ST_INIT_REFRESH2       OUT SD_DO_AUTO_REFRESH          OUT  SD_CKE;
     PRESENT ST_INIT_REFRESH2
-        NEXT ST_INIT_RFC2           OUT DO_NO_OPERATION         OUT  SD_CKE;
+        NEXT ST_INIT_RFC2           OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
     PRESENT ST_INIT_RFC2
-        NEXT ST_LOADMODE            OUT DO_LOAD_MODE_REGISTER   OUT  SD_CKE;
+        NEXT ST_LOADMODE            OUT SD_DO_LOAD_MODE_REGISTER    OUT  SD_CKE;
     PRESENT ST_LOADMODE
-        NEXT ST_IDLE                OUT DO_COMMAND_INHIBIT      OUT  SD_CKE;
+        NEXT ST_IDLE                OUT SD_DO_COMMAND_INHIBIT       OUT  SD_CKE;
 
     PRESENT ST_REFRESHING
-        NEXT ST_RFC                 OUT DO_NO_OPERATION         OUT  SD_CKE OUT REFRESH_Q.SR;
+        NEXT ST_RFC                 OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT REFRESH_Q_AR;
     PRESENT ST_RFC
-        NEXT ST_IDLE                OUT DO_COMMAND_INHIBIT      OUT  SD_CKE;
+        NEXT ST_IDLE                OUT SD_DO_COMMAND_INHIBIT       OUT  SD_CKE;
 
     PRESENT ST_IDLE
         IF  REFRESH_Q
-            NEXT ST_REFRESHING      OUT DO_AUTO_REFRESH         OUT  SD_CKE;
+            NEXT ST_REFRESHING      OUT SD_DO_AUTO_REFRESH          OUT  SD_CKE;
         IF !REFRESH_Q & !SYS_AS & !SYS_EXPSEL
-            NEXT ST_ROW_ACTIVE      OUT DO_ACTIVE               OUT  SD_CKE OUT SD_IN_CYCLE;
-        DEFAULT NEXT ST_IDLE        OUT DO_COMMAND_INHIBIT      OUT  SD_CKE;
+            NEXT ST_ROW_ACTIVE      OUT SD_DO_ACTIVE                OUT  SD_CKE OUT SD_IN_CYCLE;
+        DEFAULT NEXT ST_IDLE        OUT SD_DO_COMMAND_INHIBIT       OUT  SD_CKE;
     PRESENT ST_ROW_ACTIVE
         /* Don't do PRECHARGE next if the current command is ACTIVE */
         IF !SD_IN_CYCLE & !(SD_COMMAND:SD_ACTIVE)
-            NEXT ST_PRECHARGING     OUT DO_PRECHARGE            OUT  SD_CKE;
+            NEXT ST_PRECHARGING     OUT SD_DO_PRECHARGE             OUT  SD_CKE;
         IF  SD_IN_CYCLE & (!SYS_LDS # !SYS_UDS) &  SYS_RnW
-            NEXT ST_READING         OUT DO_READ                 OUT  SD_CKE;
+            NEXT ST_READING         OUT SD_DO_READ                  OUT  SD_CKE;
         IF  SD_IN_CYCLE & (!SYS_LDS # !SYS_UDS) & !SYS_RnW
-            NEXT ST_WRITING         OUT DO_WRITE                OUT  SD_CKE;
-        DEFAULT NEXT ST_ROW_ACTIVE  OUT DO_NO_OPERATION         OUT  SD_CKE;
+            NEXT ST_WRITING         OUT SD_DO_WRITE                 OUT  SD_CKE;
+        DEFAULT NEXT ST_ROW_ACTIVE  OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
     PRESENT ST_READING
-        NEXT ST_ACK                 OUT DO_NO_OPERATION         OUT  SD_CKE OUT SD_DTACK;
+        NEXT ST_ACK                 OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT SD_DTACK;
     PRESENT ST_WRITING
-        NEXT ST_ACK                 OUT DO_NO_OPERATION         OUT  SD_CKE OUT SD_DTACK;
+        NEXT ST_ACK                 OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT SD_DTACK;
     PRESENT ST_DELAY_ACK
-        NEXT ST_ACK                 OUT DO_NO_OPERATION         OUT  SD_CKE OUT SD_DTACK;
+        NEXT ST_ACK                 OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT SD_DTACK;
     PRESENT ST_ACK
         IF  SD_IN_CYCLE
-            NEXT ST_ROW_ACTIVE      OUT DO_NO_OPERATION         OUT  SD_CKE;
-        DEFAULT NEXT ST_PRECHARGING OUT DO_PRECHARGE            OUT  SD_CKE;
+            NEXT ST_ROW_ACTIVE      OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
+        DEFAULT NEXT ST_PRECHARGING OUT SD_DO_PRECHARGE             OUT  SD_CKE;
     PRESENT ST_PRECHARGING
         IF REFRESH_Q
-            NEXT ST_REFRESHING      OUT DO_AUTO_REFRESH         OUT  SD_CKE;
-        DEFAULT NEXT ST_IDLE        OUT DO_COMMAND_INHIBIT      OUT  SD_CKE;
+            NEXT ST_REFRESHING      OUT SD_DO_AUTO_REFRESH          OUT  SD_CKE;
+        DEFAULT NEXT ST_IDLE        OUT SD_DO_COMMAND_INHIBIT       OUT  SD_CKE;
 }
 
-SD_COMMAND  = DO_COMMAND_INHIBIT    & SD_COMMAND_INHIBIT
-            # DO_NO_OPERATION       & SD_NO_OPERATION
-            # DO_ACTIVE             & SD_ACTIVE
-            # DO_READ               & SD_READ
-            # DO_WRITE              & SD_WRITE
-            # DO_BURST_TERMINATE    & SD_BURST_TERMINATE
-            # DO_PRECHARGE          & SD_PRECHARGE
-            # DO_AUTO_REFRESH       & SD_AUTO_REFRESH
-            # DO_SELF_REFRESH       & SD_SELF_REFRESH
-            # DO_LOAD_MODE_REGISTER & SD_LOAD_MODE_REGISTER;
+SD_COMMAND  = SD_DO_COMMAND_INHIBIT     & SD_COMMAND_INHIBIT
+            # SD_DO_NO_OPERATION        & SD_NO_OPERATION
+            # SD_DO_ACTIVE              & SD_ACTIVE
+            # SD_DO_READ                & SD_READ
+            # SD_DO_WRITE               & SD_WRITE
+            # SD_DO_BURST_TERMINATE     & SD_BURST_TERMINATE
+            # SD_DO_PRECHARGE           & SD_PRECHARGE
+            # SD_DO_AUTO_REFRESH        & SD_AUTO_REFRESH
+            # SD_DO_SELF_REFRESH        & SD_SELF_REFRESH
+            # SD_DO_LOAD_MODE_REGISTER  & SD_LOAD_MODE_REGISTER;
 
 
 /** ***********************  REFRESH COUNT ******************/
 REFRESH_Q.CK    = SD_CLK;
+REFRESH_Q.AR    = REFRESH_Q_AR;
+REFRESH_Q_AR.CK = SD_CLK;
 RCOUNT.CK       = SD_CLK;
 
 SEQUENCE RCOUNT {
@@ -336,10 +337,9 @@ $repend
 
  
 /** ***********************   XOSERA GLUE  ******************/
-
 !XO_CS      = SYS_RESET & !SYS_AS & !SYS_IOSEL & (
-                SYS_ADDR:'b'XXXXXX0000000000011XXXXX #
-                SYS_ADDR:'b'XXXXXX0000000000100XXXXX
+                SYS_ADDR:'b'XXXX100000000000011XXXXX #
+                SYS_ADDR:'b'XXXX100000000000100XXXXX
             ) & !SYS_LDS;
 
 XO_RnW      = SYS_RnW;
@@ -351,22 +351,22 @@ XO_REG0     =  SYS_A2;
 XO_BYTESEL  =  SYS_A1;
 
 SYS_VPA     = 'b'0;
-SYS_VPA.oe  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 & !SYS_A3 &  SYS_A2 & !SYS_A1 & XO_CDONE; /* Xosera */
+SYS_VPA.OE  = SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 & !SYS_A3 &  SYS_A2 & !SYS_A1 & XO_CDONE; /* Xosera */
 /*          # SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 & !SYS_A3 &  SYS_A2 &  SYS_A1;            /* IDE    */
 /*          # SYS_RESET & !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 &  SYS_A3 &  SYS_A2 & !SYS_A1;            /* UART   */
 
-XO_CRESET.oe = !SYS_RESET;
-XO_CRESET = 'b'0;
+XO_CRESET       = 'b'0;
+XO_CRESET.OE    = !SYS_RESET;
 
-XO_IRQRQ.l  = 'b'1;
-XO_IRQRQ.ck = XO_IRQ;
+XO_IRQRQ.L  = 'b'1;
+XO_IRQRQ.LE = XO_IRQ;
 XO_IRQRQ_AR = !SYS_RESET
             # !XO_CDONE
             # !SYS_AS & SYS_RnW & SYS_FC2 & SYS_FC1 & SYS_FC0 & SYS_A19 & SYS_A18 & SYS_A17 & SYS_A16 & !SYS_A3 & SYS_A2 & !SYS_A1;
-XO_IRQRQ.ar = XO_IRQRQ_AR;
+XO_IRQRQ.AR = XO_IRQRQ_AR;
 
 SYS_IRQ2    = 'b'0;
-SYS_IRQ2.oe = XO_CDONE & XO_IRQ;
+SYS_IRQ2.OE = XO_CDONE & XO_IRQ;
 
 /** ********************* CTRL_REG_ST STATES *******************/
 $define CTRL_REG_START  'b'00   /* Start state               00 */
@@ -375,17 +375,17 @@ $define CTRL_REG_LATCH  'b'10   /* Latch state               02 */
 $define CTRL_REG_ACK    'b'11   /* ACK command               03 */
 
 /** ********************* OUTPUT SIGNALS ************************/
-BANK_FF.ar  = !SYS_RESET;
-BANK_FF.l   = SYS_A1;
-BANK_FF.ck  = CTRL_REG_ST:CTRL_REG_LATCH;
+BANK_FF.AR  = !SYS_RESET;
+BANK_FF.L   = SYS_A1;
+BANK_FF.LE  = CTRL_REG_ST:CTRL_REG_LATCH;
 
-CTRL_REG_ST.ar  = !SYS_RESET;
-CTRL_REG_ST.ck  = SYS_CLK;
+CTRL_REG_ST.AR  = !SYS_RESET;
+CTRL_REG_ST.CK  = SYS_CLK;
 
 CTRL_REG_SEL    = SYS_RESET & !SYS_IOSEL & SYS_FC2 & !SYS_FC1 & SYS_FC0 & (!SYS_UDS # !SYS_LDS) & !SYS_AS & SYS_ADDR:'b'XXXXXX0000010000011000XX;
 
-CTRL_REG_DTACK.ck   = SYS_CLK;
-CTRL_REG_DTACK.ar   = !SYS_RESET # SYS_AS # (SYS_UDS & SYS_LDS);
+CTRL_REG_DTACK.CK   = SYS_CLK;
+CTRL_REG_DTACK.AR   = !SYS_RESET # SYS_AS # (SYS_UDS & SYS_LDS);
 
 /** ***************** CONTROL REGISTER MACHINE ******************/
 SEQUENCE CTRL_REG_ST {
