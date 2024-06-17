@@ -118,9 +118,9 @@ NODE  BANK_FF;
 
 NODE  SD_ACK2;
 
-NODE COMMAND_SEL;
-NODE CMD_DTACK;                         /* Active high! */
-NODE CMDa, CMDb;
+NODE CTRL_REG_SEL;
+NODE CTRL_REG_DTACK;                    /* Active high! */
+NODE CTRL_REG_ST1, CTRL_REG_ST0;
 
 NODE SD_STATE6, SD_STATE5, SD_STATE4, SD_STATE3, SD_STATE2, SD_STATE1, SD_STATE0;
 
@@ -137,7 +137,7 @@ FIELD SD_COMMAND  = [SD_CS, SD_RAS, SD_CAS, SD_WE];
 FIELD SYS_ADDR  = [SYS_A23..SYS_A1];
 FIELD RCOUNT    = [RQ4..RQ0];
 
-FIELD COMMAND   = [CMDb, CMDa, CMD_DTACK];
+FIELD CTRL_REG_ST   = [CTRL_REG_ST1, CTRL_REG_ST0];
 
 SD_STATE.ck     = SD_CLK;
 SD_STATE.ar     = !SYS_RESET;
@@ -149,10 +149,10 @@ SD_CLK_OUT2.oe  = 'b'0;
 SYS_DTACK       = 'b'0;
 SYS_DTACK.oe    = SYS_RESET & !XO_CS        /* switch XO_CS to XO_DTACK when ready */
                 # SYS_RESET & SD_ACK2
-                # SYS_RESET & CMD_DTACK;
+                # SYS_RESET & CTRL_REG_DTACK;
 
 
-/** ****** SDRAM COMMAND  DEFINES *******/
+/** ******* SDRAM COMMAND DEFINES *******/
 /*                                 CRCW */
 /*                                 SAAE */
 /*                                  SS  */
@@ -186,21 +186,21 @@ SD_DTACK.ar = (SYS_LDS & SYS_UDS) # !SD_IN_CYCLE;
 /** *********************** STATE  DEFINES ******************************/
 $define ST_START            'b'0000000  /* Start state               00 */
 $define ST_INIT_CKE         'b'0000001  /* Initial CKE               01 */
-$define ST_INIT_PC          'b'0010011  /* Initial precharge         13 */
-$define ST_INIT_REFRESH1    'b'0101011  /* 2nd init refr             0B */
-$define ST_INIT_RFC1        'b'0101111  /* 2nd init refr             0B */
-$define ST_INIT_REFRESH2    'b'1101011  /* 2nd init refr             0B */
-$define ST_INIT_RFC2        'b'0001111  /* 2nd init refr             0B */
-$define ST_IDLE             'b'1110001  /* Inhibit (no CS)           41 */
-$define ST_REFRESHING       'b'0001001  /* Refresh general or init1  09 */
-$define ST_RFC              'b'0111001  /* Refresh done (NOP)        39 */
-$define ST_LOADMODE         'b'0000011  /* Load mode                 03 */
-$define ST_ACTIVE           'b'0111011  /* NOP (while active)        3B */
-$define ST_READING          'b'0101001  /* READ (column)             29 */
-$define ST_WRITING          'b'0100001  /* WRITE (column)            21 */
-$define ST_ACK              'b'0111101  /* NOP, DTACK                3D */
-$define ST_DELAY_ACK        'b'1111001  /* NOP,                      3B */
-$define ST_BURST_TERM       'b'0110001  /* We don't use...           31 */
+$define ST_INIT_PC          'b'0000010  /* Initial precharge         13 */
+$define ST_INIT_REFRESH1    'b'0000011  /* 2nd init refr             0B */
+$define ST_INIT_RFC1        'b'0000100  /* 2nd init refr             0B */
+$define ST_INIT_REFRESH2    'b'0000101  /* 2nd init refr             0B */
+$define ST_INIT_RFC2        'b'0000110  /* 2nd init refr             0B */
+$define ST_IDLE             'b'0000111  /* Inhibit (no CS)           41 */
+$define ST_REFRESHING       'b'0001000  /* Refresh general or init1  09 */
+$define ST_RFC              'b'0001001  /* Refresh done (NOP)        39 */
+$define ST_LOADMODE         'b'0001010  /* Load mode                 03 */
+$define ST_ROW_ACTIVE       'b'0001011  /* NOP (while active)        3B */
+$define ST_READING          'b'0001100  /* READ (column)             29 */
+$define ST_WRITING          'b'0001101  /* WRITE (column)            21 */
+$define ST_ACK              'b'0001110  /* NOP, DTACK                3D */
+$define ST_DELAY_ACK        'b'0001111  /* NOP,                      3B */
+$define ST_BURST_TERM       'b'0010000  /* We don't use...           31 */
 $define ST_PRECHARGING      'b'0010001  /* End cycle                 11 */
 
 !SD_DQML        = !SYS_LDS & !SYS_RnW & SD_STATE:ST_WRITING
@@ -281,16 +281,17 @@ SEQUENCE SD_STATE {
         IF  REFRESH_Q
             NEXT ST_REFRESHING      OUT DO_AUTO_REFRESH         OUT  SD_CKE;
         IF !REFRESH_Q & !SYS_AS & !SYS_EXPSEL
-            NEXT ST_ACTIVE          OUT DO_ACTIVE               OUT  SD_CKE OUT SD_IN_CYCLE;
+            NEXT ST_ROW_ACTIVE      OUT DO_ACTIVE               OUT  SD_CKE OUT SD_IN_CYCLE;
         DEFAULT NEXT ST_IDLE        OUT DO_COMMAND_INHIBIT      OUT  SD_CKE;
-    PRESENT ST_ACTIVE
-        IF !SD_IN_CYCLE
+    PRESENT ST_ROW_ACTIVE
+        /* Don't do PRECHARGE next if the current command is ACTIVE */
+        IF !SD_IN_CYCLE & !(SD_COMMAND:SD_ACTIVE)
             NEXT ST_PRECHARGING     OUT DO_PRECHARGE            OUT  SD_CKE;
         IF  SD_IN_CYCLE & (!SYS_LDS # !SYS_UDS) &  SYS_RnW
             NEXT ST_READING         OUT DO_READ                 OUT  SD_CKE;
         IF  SD_IN_CYCLE & (!SYS_LDS # !SYS_UDS) & !SYS_RnW
             NEXT ST_WRITING         OUT DO_WRITE                OUT  SD_CKE;
-        DEFAULT NEXT ST_ACTIVE      OUT DO_NO_OPERATION         OUT  SD_CKE;
+        DEFAULT NEXT ST_ROW_ACTIVE  OUT DO_NO_OPERATION         OUT  SD_CKE;
     PRESENT ST_READING
         NEXT ST_ACK                 OUT DO_NO_OPERATION         OUT  SD_CKE OUT SD_DTACK;
     PRESENT ST_WRITING
@@ -299,7 +300,7 @@ SEQUENCE SD_STATE {
         NEXT ST_ACK                 OUT DO_NO_OPERATION         OUT  SD_CKE OUT SD_DTACK;
     PRESENT ST_ACK
         IF  SD_IN_CYCLE
-            NEXT ST_ACTIVE          OUT DO_NO_OPERATION         OUT  SD_CKE;
+            NEXT ST_ROW_ACTIVE      OUT DO_NO_OPERATION         OUT  SD_CKE;
         DEFAULT NEXT ST_PRECHARGING OUT DO_PRECHARGE            OUT  SD_CKE;
     PRESENT ST_PRECHARGING
         IF REFRESH_Q
@@ -367,47 +368,37 @@ XO_IRQRQ.ar = XO_IRQRQ_AR;
 SYS_IRQ2    = 'b'0;
 SYS_IRQ2.oe = XO_CDONE & XO_IRQ;
 
-/** *********************** COMMAND  STATES ******************/
-/*
-                             S
-                             Y
-                             S
-                             _
-                             D
-                             T
-                             A
-                             C
-                           baK                                      */
-$define CMD_START       'b'000      /* Start state               00 */
-$define CMD_IDLE        'b'010      /* Idle state                02 */
-$define CMD_LATCH       'b'100      /* Latch state               04 */
-$define CMD_ACK         'b'001      /* ACK command               01 */
+/** ********************* CTRL_REG_ST STATES *******************/
+$define CTRL_REG_START  'b'00   /* Start state               00 */
+$define CTRL_REG_IDLE   'b'01   /* Idle state                01 */
+$define CTRL_REG_LATCH  'b'10   /* Latch state               02 */
+$define CTRL_REG_ACK    'b'11   /* ACK command               03 */
 
-/** *********************** OUTPUT  SIGNALS ******************/
+/** ********************* OUTPUT SIGNALS ************************/
 BANK_FF.ar  = !SYS_RESET;
 BANK_FF.l   = SYS_A1;
-BANK_FF.ck  = COMMAND:CMD_LATCH;
+BANK_FF.ck  = CTRL_REG_ST:CTRL_REG_LATCH;
 
-COMMAND.ar  = !SYS_RESET;
-COMMAND.ck  = SYS_CLK;
+CTRL_REG_ST.ar  = !SYS_RESET;
+CTRL_REG_ST.ck  = SYS_CLK;
 
-!COMMAND_SEL= SYS_RESET & !SYS_IOSEL & SYS_FC2 & !SYS_FC1 & SYS_FC0 & (!SYS_UDS # !SYS_LDS) & !SYS_AS & SYS_ADDR:'b'XXXXXX0000010000011000XX;
+CTRL_REG_SEL    = SYS_RESET & !SYS_IOSEL & SYS_FC2 & !SYS_FC1 & SYS_FC0 & (!SYS_UDS # !SYS_LDS) & !SYS_AS & SYS_ADDR:'b'XXXXXX0000010000011000XX;
 
-/** *********************** COMMAND MACHINE ******************/
-SEQUENCE COMMAND {
-    PRESENT CMD_START
-        NEXT CMD_IDLE;
-    PRESENT CMD_IDLE
-        IF !COMMAND_SEL
-            NEXT CMD_LATCH;
-        DEFAULT NEXT CMD_IDLE;
-    PRESENT CMD_LATCH
-        NEXT CMD_ACK;
-    PRESENT CMD_ACK
-        IF !SYS_IOSEL
-            NEXT CMD_ACK;
+CTRL_REG_DTACK.ck   = SYS_CLK;
+CTRL_REG_DTACK.ar   = !SYS_RESET # SYS_AS # (SYS_UDS & SYS_LDS);
 
-        DEFAULT NEXT CMD_IDLE;
+/** ***************** CONTROL REGISTER MACHINE ******************/
+SEQUENCE CTRL_REG_ST {
+    PRESENT CTRL_REG_START
+        NEXT CTRL_REG_IDLE;
+    PRESENT CTRL_REG_IDLE
+        IF CTRL_REG_SEL
+            NEXT CTRL_REG_LATCH;
+        DEFAULT NEXT CTRL_REG_IDLE;
+    PRESENT CTRL_REG_LATCH
+        NEXT CTRL_REG_ACK        OUT CTRL_REG_DTACK;
+    PRESENT CTRL_REG_ACK
+        IF CTRL_REG_SEL
+            NEXT CTRL_REG_ACK    OUT CTRL_REG_DTACK;
+        DEFAULT NEXT CTRL_REG_IDLE;
 }
-
-
