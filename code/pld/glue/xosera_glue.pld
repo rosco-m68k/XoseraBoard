@@ -158,7 +158,7 @@ SD_CLK_OUT2     = !SYS_CLK;
 SD_CLK_OUT2.OE  = 'b'0;
 
 SYS_DTACK       = 'b'0;
-SYS_DTACK.OE    = SYS_RESET & !XO_CS        /* switch XO_CS to XO_DTACK when ready */
+SYS_DTACK.OE    = SYS_RESET & !XO_DTACK
                 # SYS_RESET & SD_ACK2
                 # SYS_RESET & CTRL_REG_DTACK;
 
