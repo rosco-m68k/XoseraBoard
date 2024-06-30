@@ -13,7 +13,7 @@ property   atmel {xor_synthesis=on};
 property   atmel {cascade_logic=on};
 */
 property   atmel {preassign=keep};
-property   atmel {logic_doubling=on};
+property   atmel {logic_doubling=off};
 property   atmel {pin_keep=off};
 property   atmel {security=off};
 property   atmel {output_fast=on};
@@ -155,10 +155,9 @@ SD_STATE.AR     = !SYS_RESET;
 
 SD_CLK_OUT1     = !SYS_CLK;
 SD_CLK_OUT2     = !SYS_CLK;
-SD_CLK_OUT2.OE  = 'b'0;
 
 SYS_DTACK       = 'b'0;
-SYS_DTACK.OE    = SYS_RESET & !XO_DTACK
+SYS_DTACK.OE    = SYS_RESET & !XO_CS & ((XO_CDONE & !XO_DTACK) # !XO_CDONE)
                 # SYS_RESET & SD_ACK2
                 # SYS_RESET & CTRL_REG_DTACK;
 
