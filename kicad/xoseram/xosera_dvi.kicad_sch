@@ -9684,7 +9684,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_HDMI:HDMI_A_Amphenol_10029449-x01xLF_Horizontal"
+		(property "Footprint" "Connector_Video:HDMI_A_Amphenol_10029449-x01xLF_Horizontal"
 			(at 249.555 66.04 0)
 			(effects
 				(font
