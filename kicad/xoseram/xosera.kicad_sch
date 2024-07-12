@@ -131,6 +131,108 @@
 				)
 			)
 		)
+		(symbol "Connector:TestPoint_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Small"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_Small_0_1"
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016) hide)
@@ -3313,6 +3415,12 @@
 		(uuid "031e02ba-646f-4a98-9eba-3175eff9a082")
 	)
 	(junction
+		(at 90.17 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "08f26cf9-828e-4b34-9ee5-29e52bff8fbe")
+	)
+	(junction
 		(at 93.98 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3341,6 +3449,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "21428c9e-027e-4874-8434-d4e6a7770650")
+	)
+	(junction
+		(at 90.17 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "218ef918-dcac-414f-9549-37a50e3cbdee")
 	)
 	(junction
 		(at 91.44 152.4)
@@ -3379,6 +3493,12 @@
 		(uuid "53a1f587-37af-4e34-94c3-9c1daaaf4e03")
 	)
 	(junction
+		(at 90.17 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "644d790e-3b56-4e66-a88c-38a936056f26")
+	)
+	(junction
 		(at 81.28 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3389,6 +3509,30 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6a2a6349-318e-4cdf-a263-73b1f4867fae")
+	)
+	(junction
+		(at 90.17 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "78d51eff-4448-4c63-9ece-f14af7e5a21f")
+	)
+	(junction
+		(at 124.46 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e187273-9c73-4702-b365-8ae5a505894b")
+	)
+	(junction
+		(at 90.17 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82797146-5fc1-42c8-a9be-2057041d3dd3")
+	)
+	(junction
+		(at 90.17 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8788f071-4189-4490-9c18-08e21e9e4c57")
 	)
 	(junction
 		(at 50.8 134.62)
@@ -3415,6 +3559,18 @@
 		(uuid "a2cf0d15-cdfc-4d87-b44a-b1a76cc11343")
 	)
 	(junction
+		(at 90.17 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a3f1a11f-edf5-4a19-ac28-1a3391169f27")
+	)
+	(junction
+		(at 90.17 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6296b30-a30b-4466-8f00-f00706fe756c")
+	)
+	(junction
 		(at 93.98 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3425,6 +3581,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bafe7d85-a1ea-415a-bd3d-2a2f01a3815a")
+	)
+	(junction
+		(at 90.17 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bdae08df-25fb-48fe-9766-fd45e577309e")
 	)
 	(junction
 		(at 215.9 96.52)
@@ -3443,6 +3605,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e6adc945-f3c7-4da3-a965-f0140b69e52f")
+	)
+	(junction
+		(at 90.17 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd6f4a91-e1c0-4198-aa0e-7efa78e18003")
 	)
 	(bus_entry
 		(at 124.46 45.72)
@@ -3612,6 +3780,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 58.42) (xy 111.76 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b54444e-f070-4947-a85a-5cb0ab355b33")
+	)
+	(wire
+		(pts
 			(xy 114.3 111.76) (xy 114.3 114.3)
 		)
 		(stroke
@@ -3649,6 +3827,16 @@
 			(type default)
 		)
 		(uuid "23d0bf14-d92a-481e-99cd-50f93fc9bb2b")
+	)
+	(wire
+		(pts
+			(xy 90.17 38.1) (xy 152.4 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "243e426b-40e4-489d-98a3-7d04d88d3082")
 	)
 	(bus
 		(pts
@@ -3752,7 +3940,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 58.42) (xy 111.76 58.42)
+			(xy 83.82 58.42) (xy 90.17 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3769,6 +3957,16 @@
 			(type default)
 		)
 		(uuid "2e08f1e6-6573-460b-83ef-1367c9724920")
+	)
+	(wire
+		(pts
+			(xy 90.17 43.18) (xy 124.46 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e48e1de-dfee-4964-9291-a908124b0f96")
 	)
 	(wire
 		(pts
@@ -3872,6 +4070,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 48.26) (xy 124.46 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60ab4c98-8c32-4d8d-abb1-9d947c16550d")
+	)
+	(wire
+		(pts
 			(xy 81.28 142.24) (xy 83.82 142.24)
 		)
 		(stroke
@@ -3882,7 +4090,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 40.64) (xy 124.46 40.64)
+			(xy 83.82 40.64) (xy 90.17 40.64)
 		)
 		(stroke
 			(width 0)
@@ -3959,6 +4167,16 @@
 			(type default)
 		)
 		(uuid "6c1fc590-7376-41e5-9087-bd0419839fe1")
+	)
+	(wire
+		(pts
+			(xy 124.46 33.02) (xy 152.4 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cd7188b-8e73-4e68-b1ce-c09203ff7808")
 	)
 	(wire
 		(pts
@@ -4082,7 +4300,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 48.26) (xy 124.46 48.26)
+			(xy 83.82 48.26) (xy 90.17 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4119,6 +4337,16 @@
 			(type default)
 		)
 		(uuid "88910c82-84ea-45a8-8eb5-01712b5336dd")
+	)
+	(wire
+		(pts
+			(xy 90.17 53.34) (xy 116.84 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "894d5ae5-5082-4696-b19c-677719c58d2e")
 	)
 	(wire
 		(pts
@@ -4202,7 +4430,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 43.18) (xy 124.46 43.18)
+			(xy 83.82 43.18) (xy 90.17 43.18)
 		)
 		(stroke
 			(width 0)
@@ -4212,7 +4440,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 50.8) (xy 119.38 50.8)
+			(xy 83.82 50.8) (xy 90.17 50.8)
 		)
 		(stroke
 			(width 0)
@@ -4239,6 +4467,16 @@
 			(type default)
 		)
 		(uuid "9f15b7fb-574c-4374-ac13-8b0aec52077a")
+	)
+	(wire
+		(pts
+			(xy 90.17 40.64) (xy 124.46 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f63526e-3f85-40a0-b01c-d17856f7d3be")
 	)
 	(wire
 		(pts
@@ -4272,7 +4510,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 53.34) (xy 116.84 53.34)
+			(xy 83.82 53.34) (xy 90.17 53.34)
 		)
 		(stroke
 			(width 0)
@@ -4322,7 +4560,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 35.56) (xy 152.4 35.56)
+			(xy 83.82 35.56) (xy 90.17 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4362,7 +4600,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 33.02) (xy 152.4 33.02)
+			(xy 116.84 33.02) (xy 124.46 33.02)
 		)
 		(stroke
 			(width 0)
@@ -4449,6 +4687,16 @@
 			(type default)
 		)
 		(uuid "ba13e381-4dd9-4bac-a4db-f96b63e41e03")
+	)
+	(wire
+		(pts
+			(xy 90.17 50.8) (xy 119.38 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba932b30-16c3-4877-ac63-71efbcffc86a")
 	)
 	(wire
 		(pts
@@ -4582,6 +4830,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 35.56) (xy 152.4 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e81c2318-bb54-4e79-b3e2-bf3cbdfd6a3d")
+	)
+	(wire
+		(pts
 			(xy 137.16 182.88) (xy 137.16 185.42)
 		)
 		(stroke
@@ -4622,7 +4880,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 55.88) (xy 114.3 55.88)
+			(xy 83.82 55.88) (xy 90.17 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4642,7 +4900,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 38.1) (xy 152.4 38.1)
+			(xy 83.82 38.1) (xy 90.17 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4652,13 +4910,23 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 45.72) (xy 124.46 45.72)
+			(xy 83.82 45.72) (xy 90.17 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f73da316-149d-4bdd-a523-2e7d49c20f9f")
+	)
+	(wire
+		(pts
+			(xy 90.17 45.72) (xy 124.46 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f74d2ee0-239c-4e67-abcd-d76946e97fd0")
 	)
 	(wire
 		(pts
@@ -4679,6 +4947,16 @@
 			(type dash)
 		)
 		(uuid "f9b567b1-d18c-40b4-952c-56f90b59a2e2")
+	)
+	(wire
+		(pts
+			(xy 90.17 55.88) (xy 114.3 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "faba1b66-71eb-4516-a0bb-ff83067e0dea")
 	)
 	(bus
 		(pts
@@ -5815,6 +6093,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3fc7a5e0-f7c3-48f0-9e79-e5043febb5a3")
+		(property "Reference" "TP14"
+			(at 91.44 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 46.9899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72ef54b5-336c-47b6-8b03-3a459b93718a")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 134.62 147.32 0)
 		(unit 1)
@@ -6139,6 +6484,73 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
 					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "60f8489c-39f6-443a-9ebb-641615f770ca")
+		(property "Reference" "TP13"
+			(at 91.44 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 49.5299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff736407-411b-4e94-abf7-e084efe9ec8a")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -6935,6 +7347,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9735259b-6a86-405e-94e4-9983187c0cf8")
+		(property "Reference" "TP18"
+			(at 91.44 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "74ed77ec-6328-4bca-a293-fa35d0ed7262")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 93.98 116.84 0)
 		(mirror y)
@@ -7062,6 +7541,207 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
 					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 124.46 33.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a797723c-6de7-443f-8282-2a4e003eb7e9")
+		(property "Reference" "TP19"
+			(at 125.73 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 125.73 34.2899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 129.54 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 124.46 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a72e6a13-937a-4ee0-99af-db730f45c9e4")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b1fed41b-4cee-447f-8002-62ffd723880a")
+		(property "Reference" "TP10"
+			(at 91.44 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 57.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "603b41b8-6416-43c3-b2dc-9b894bebb6a3")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b257b149-f3d5-4303-ae9d-c7a55d42630b")
+		(property "Reference" "TP4"
+			(at 91.44 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 59.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eaa635d2-a924-41bf-84b5-de6503d8a56d")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -7377,6 +8057,140 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
 					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ba98ae04-2c65-4497-ad42-8e65e081d547")
+		(property "Reference" "TP15"
+			(at 91.44 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 44.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9f92a511-12ca-441f-aabc-c6e6eabc97bb")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d4b89de1-8c0a-48b0-b636-83f994fc97d0")
+		(property "Reference" "TP11"
+			(at 91.44 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "50dea280-f81f-4f98-8a3d-b7ed569de6af")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -7779,6 +8593,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e30b7ac3-db12-4afd-a387-77cd70970ee1")
+		(property "Reference" "TP17"
+			(at 91.44 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1cdb61bf-9e00-4652-98d6-9dced64e72ac")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 215.9 91.44 180)
 		(unit 1)
@@ -7897,6 +8778,140 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
 					(reference "R34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e3b98faf-3131-4617-b715-c871acd3f5c1")
+		(property "Reference" "TP16"
+			(at 91.44 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 41.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2082433-ad36-440e-a4af-78bed5cf7f35")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 90.17 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e8360041-ffa8-4c5b-9f13-8986371de4a9")
+		(property "Reference" "TP12"
+			(at 91.44 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "${NET_NAME(1)}"
+			(at 91.44 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 95.25 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 90.17 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d3ec494e-6048-4660-8393-f989c65ea0a2")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134"
+					(reference "TP12")
 					(unit 1)
 				)
 			)
