@@ -193,29 +193,31 @@ SD_DTACK.CK             = SD_CLK;
 SD_DTACK.AR             = (SYS_LDS & SYS_UDS) # !SD_IN_CYCLE;
 
 /** *********************** STATE DEFINES *******************************/
-$define ST_START            'b'0000000  /* Start state               00 */
-$define ST_INIT_CKE         'b'0000001  /* Initial CKE               01 */
-$define ST_INIT_PC          'b'0000010  /* Initial precharge         13 */
-$define ST_INIT_REFRESH1    'b'0000011  /* 2nd init refr             0B */
-$define ST_INIT_RFC1        'b'0000100  /* 2nd init refr             0B */
-$define ST_INIT_REFRESH2    'b'0000101  /* 2nd init refr             0B */
-$define ST_INIT_RFC2        'b'0000110  /* 2nd init refr             0B */
-$define ST_IDLE             'b'0000111  /* Inhibit (no CS)           41 */
-$define ST_REFRESHING       'b'0001000  /* Refresh general or init1  09 */
-$define ST_RFC              'b'0001001  /* Refresh done (NOP)        39 */
-$define ST_LOADMODE         'b'0001010  /* Load mode                 03 */
-$define ST_ROW_ACTIVE       'b'0001011  /* NOP (while active)        3B */
-$define ST_READING          'b'0001100  /* READ (column)             29 */
-$define ST_WRITING          'b'0001101  /* WRITE (column)            21 */
-$define ST_ACK              'b'0001110  /* NOP, DTACK                3D */
-$define ST_DELAY_ACK        'b'0001111  /* NOP,                      3B */
-$define ST_BURST_TERM       'b'0010000  /* We don't use...           31 */
-$define ST_PRECHARGING      'b'0010001  /* End cycle                 11 */
+$define ST_START            'b'0000000  /* Start state                  */
+$define ST_INIT_CKE         'b'0000001  /* Initial CKE                  */
+$define ST_INIT_PC          'b'0000010  /* Initial precharge            */
+$define ST_INIT_REFRESH1    'b'0000011  /* 2nd init refr                */
+$define ST_INIT_RFC1        'b'0000100  /* 2nd init refr                */
+$define ST_INIT_REFRESH2    'b'0000101  /* 2nd init refr                */
+$define ST_INIT_RFC2        'b'0000110  /* 2nd init refr                */
+$define ST_IDLE             'b'0000111  /* Inhibit (no CS)              */
+$define ST_REFRESHING       'b'0001000  /* Refresh general or init1     */
+$define ST_RFC              'b'0001001  /* Refresh done (NOP)           */
+$define ST_LOADMODE         'b'0001010  /* Load mode                    */
+$define ST_ROW_ACTIVE       'b'0001011  /* NOP (while active)           */
+$define ST_READ             'b'0001100  /* READ (column)                */
+$define ST_WRITE            'b'0001101  /* WRITE (column)               */
+$define ST_READ_DELAY_ACK   'b'0001110  /* NOP                          */
+$define ST_WRITE_DELAY_ACK  'b'0001111  /* NOP                          */
+$define ST_READ_ACK         'b'0010000  /* NOP, DTACK                   */
+$define ST_WRITE_ACK        'b'0010001  /* NOP, DTACK                   */
+$define ST_BURST_TERM       'b'0010010  /* We don't use...              */
+$define ST_PRECHARGING      'b'0010011  /* End cycle                    */
 
-!SD_DQML        = !SYS_LDS & !SYS_RnW & SD_STATE:ST_WRITING
-                # !SYS_LDS &  SYS_RnW & SD_STATE:ST_READING;
-!SD_DQMH        = !SYS_UDS & !SYS_RnW & SD_STATE:ST_WRITING
-                # !SYS_UDS &  SYS_RnW & SD_STATE:ST_READING;
+!SD_DQML        = !SYS_LDS & !SYS_RnW & (SD_STATE:ST_WRITE  # SD_STATE:ST_WRITE_DELAY_ACK)
+                # !SYS_LDS &  SYS_RnW & (SD_STATE:ST_READ   # SD_STATE:ST_READ_DELAY_ACK);
+!SD_DQMH        = !SYS_UDS & !SYS_RnW & (SD_STATE:ST_WRITE  # SD_STATE:ST_WRITE_DELAY_ACK)
+                # !SYS_UDS &  SYS_RnW & (SD_STATE:ST_READ   # SD_STATE:ST_READ_DELAY_ACK);
 
 /** *********************** SDRAM ADDR BUS ******************/
 APPEND SD_BANK  =   SD_COMMAND:SD_LOAD_MODE_REGISTER    & ['b'0, 'b'0];
@@ -286,17 +288,23 @@ SEQUENCE SD_STATE {
         IF !SD_IN_CYCLE & !(SD_COMMAND:SD_ACTIVE)
             NEXT ST_PRECHARGING     OUT SD_DO_PRECHARGE             OUT  SD_CKE;
         IF  SD_IN_CYCLE & (!SYS_LDS # !SYS_UDS) &  SYS_RnW
-            NEXT ST_READING         OUT SD_DO_READ                  OUT  SD_CKE;
+            NEXT ST_READ            OUT SD_DO_READ                  OUT  SD_CKE;
         IF  SD_IN_CYCLE & (!SYS_LDS # !SYS_UDS) & !SYS_RnW
-            NEXT ST_WRITING         OUT SD_DO_WRITE                 OUT  SD_CKE;
+            NEXT ST_WRITE           OUT SD_DO_WRITE                 OUT  SD_CKE;
         DEFAULT NEXT ST_ROW_ACTIVE  OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
-    PRESENT ST_READING
-        NEXT ST_ACK                 OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT SD_DTACK;
-    PRESENT ST_WRITING
-        NEXT ST_ACK                 OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT SD_DTACK;
-    PRESENT ST_DELAY_ACK
-        NEXT ST_ACK                 OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT SD_DTACK;
-    PRESENT ST_ACK
+    PRESENT ST_READ
+        NEXT ST_READ_DELAY_ACK      OUT SD_DO_READ                  OUT  SD_CKE;
+    PRESENT ST_WRITE
+        NEXT ST_WRITE_DELAY_ACK     OUT SD_DO_WRITE                 OUT  SD_CKE;
+    PRESENT ST_READ_DELAY_ACK
+        NEXT ST_READ_ACK            OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT SD_DTACK;
+    PRESENT ST_WRITE_DELAY_ACK
+        NEXT ST_WRITE_ACK           OUT SD_DO_NO_OPERATION          OUT  SD_CKE OUT SD_DTACK;
+    PRESENT ST_READ_ACK
+        IF  SD_IN_CYCLE
+            NEXT ST_ROW_ACTIVE      OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
+        DEFAULT NEXT ST_PRECHARGING OUT SD_DO_PRECHARGE             OUT  SD_CKE;
+    PRESENT ST_WRITE_ACK
         IF  SD_IN_CYCLE
             NEXT ST_ROW_ACTIVE      OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
         DEFAULT NEXT ST_PRECHARGING OUT SD_DO_PRECHARGE             OUT  SD_CKE;
