@@ -174,7 +174,115 @@ static inline uint32_t next_LFSR() {
   return lfsr_val;
 }
 
-void memcheck() {
+void memcheck_bytes() {
+  printf("Continuous testing from 0x%06x to 0x%06x (press a key to exit)\n",
+         (unsigned int)MEMCHECK_START,
+         (unsigned int)MEMCHECK_END - 1);
+
+  int          memtest_words   = (MEMCHECK_END - MEMCHECK_START) / sizeof(uint8_t);
+  uint8_t     *word_ptr        = (uint8_t *)MEMCHECK_START;
+  int          update_interval = 0x7000;
+  int          pass            = 1;
+  int          badpasses       = 0;
+  int          goodpasses      = 0;
+  int          errors          = 0;
+  unsigned int start_ts        = _TIMER_100HZ;
+  for (;;) {
+    bool pass_bad = false;
+
+    init_LFSR();
+
+    for (int i = 0; i < memtest_words; i += update_interval) {
+      if (checkinput()) {
+        break;
+      }
+      unsigned int ts = _TIMER_100HZ - start_ts;
+      unsigned int tm = ts / (60 * 100);
+      ts              = (ts - (tm * (60 * 100))) / 100;
+
+      printf("\r%u:%02u %s Pass #%d - Filling bytes @ 0x%06x (LFSR 0x%02x)...    ",
+             tm,
+             ts,
+             errors ? "[BAD]" : "[OK]",
+             pass,
+             (unsigned int)&word_ptr[i],
+             (unsigned int)lfsr_val & 0xff);
+      int k = memtest_words > (i + update_interval) ? (i + update_interval) : memtest_words;
+      for (int j = i; j < k; j++) {
+        uint8_t v  = next_LFSR();
+        word_ptr[j] = v;
+      }
+    }
+
+    if (checkinput()) {
+      break;
+    }
+
+#if 0  // fake error testing
+    if (pass > 2) {
+      word_ptr[0xbaaad + pass] = 0xbaad;
+    }
+#endif
+
+    reset_LFSR();
+
+    for (int i = 0; i < memtest_words; i += update_interval) {
+      if (checkinput()) {
+        break;
+      }
+      unsigned int ts = _TIMER_100HZ - start_ts;
+      unsigned int tm = ts / (60 * 100);
+      ts              = (ts - (tm * (60 * 100))) / 100;
+      printf("\r%u:%02u %s Pass #%d - Verifying bytes @ 0x%06x (LFSR 0x%02x)...",
+             tm,
+             ts,
+             errors ? "[BAD]" : "[OK]",
+             pass,
+             (unsigned int)&word_ptr[i],
+             (unsigned int)lfsr_val & 0xff);
+      int k = memtest_words > (i + update_interval) ? (i + update_interval) : memtest_words;
+      for (int j = i; j < k; j++) {
+        uint8_t v = next_LFSR();
+        if (word_ptr[j] != v) {
+          errors++;
+          if (!pass_bad) {
+            badpasses++;
+          }
+          pass_bad = true;
+#ifndef SILENCE_ERRORS
+          printf("\r > Err %d, pass %d, 0x%06x=0x%04x vs 0x%04x expected                 \n",
+                 errors,
+                 pass,
+                 (unsigned int)&word_ptr[j],
+                 word_ptr[j],
+                 v);
+#endif
+        }
+      }
+    }
+    if (checkinput()) {
+      break;
+    }
+    if (!pass_bad) {
+      goodpasses++;
+    }
+    pass++;
+  }
+  inputchar();
+
+  unsigned int ts = _TIMER_100HZ - start_ts;
+  unsigned int tm = ts / (60 * 100);
+  ts              = (ts - (tm * (60 * 100))) / 100;
+  printf("\n\nTesting for %u:%02u, memcheck exiting...\n", tm, ts);
+  if (errors) {
+    printf(
+        "FAILED! %d failed passes, %d good (%d word errors total).", badpasses, goodpasses, errors);
+  } else if (goodpasses > 0) {
+    printf("PASSED! %d error-free test passes.", goodpasses);
+  }
+}
+
+void memcheck_words() {
   printf("Continuous testing from 0x%06x to 0x%06x (press a key to exit)\n",
          (unsigned int)MEMCHECK_START,
          (unsigned int)MEMCHECK_END - 1);
@@ -282,6 +390,114 @@ void memcheck() {
   }
 }
 
+void memcheck_long() {
+  printf("Continuous testing from 0x%06x to 0x%06x (press a key to exit)\n",
+         (unsigned int)MEMCHECK_START,
+         (unsigned int)MEMCHECK_END - 1);
+
+  int          memtest_words   = (MEMCHECK_END - MEMCHECK_START) / sizeof(uint32_t);
+  uint32_t    *word_ptr        = (uint32_t *)MEMCHECK_START;
+  int          update_interval = 0x7000;
+  int          pass            = 1;
+  int          badpasses       = 0;
+  int          goodpasses      = 0;
+  int          errors          = 0;
+  unsigned int start_ts        = _TIMER_100HZ;
+  for (;;) {
+    bool pass_bad = false;
+
+    init_LFSR();
+
+    for (int i = 0; i < memtest_words; i += update_interval) {
+      if (checkinput()) {
+        break;
+      }
+      unsigned int ts = _TIMER_100HZ - start_ts;
+      unsigned int tm = ts / (60 * 100);
+      ts              = (ts - (tm * (60 * 100))) / 100;
+
+      printf("\r%u:%02u %s Pass #%d - Filling longs @ 0x%06x (LFSR 0x%08lx)...    ",
+             tm,
+             ts,
+             errors ? "[BAD]" : "[OK]",
+             pass,
+             (unsigned int)&word_ptr[i],
+             lfsr_val);
+      int k = memtest_words > (i + update_interval) ? (i + update_interval) : memtest_words;
+      for (int j = i; j < k; j++) {
+        uint32_t v = next_LFSR();
+        word_ptr[j] = v;
+      }
+    }
+
+    if (checkinput()) {
+      break;
+    }
+
+#if 0  // fake error testing
+    if (pass > 2) {
+      word_ptr[0xbaaad + pass] = 0xbaad;
+    }
+#endif
+
+    reset_LFSR();
+
+    for (int i = 0; i < memtest_words >> 1; i += update_interval) {
+      if (checkinput()) {
+        break;
+      }
+      unsigned int ts = _TIMER_100HZ - start_ts;
+      unsigned int tm = ts / (60 * 100);
+      ts              = (ts - (tm * (60 * 100))) / 100;
+      printf("\r%u:%02u %s Pass #%d - Verifying longs @ 0x%06x (LFSR 0x%08lx)...",
+             tm,
+             ts,
+             errors ? "[BAD]" : "[OK]",
+             pass,
+             (unsigned int)&word_ptr[i],
+             (unsigned long)lfsr_val);
+      int k = memtest_words > (i + update_interval) ? (i + update_interval) : memtest_words;
+      for (int j = i; j < k; j++) {
+        uint32_t v = next_LFSR();
+        if (word_ptr[j] != v) {
+          errors++;
+          if (!pass_bad) {
+            badpasses++;
+          }
+          pass_bad = true;
+#ifndef SILENCE_ERRORS
+          printf("\r > Err %d, pass %d, 0x%06x=0x%08lx vs 0x%08lx expected                 \n",
+                 errors,
+                 pass,
+                 (unsigned int)&word_ptr[j],
+                 word_ptr[j],
+                 v);
+#endif
+        }
+      }
+    }
+    if (checkinput()) {
+      break;
+    }
+    if (!pass_bad) {
+      goodpasses++;
+    }
+    pass++;
+  }
+  inputchar();
+
+  unsigned int ts = _TIMER_100HZ - start_ts;
+  unsigned int tm = ts / (60 * 100);
+  ts              = (ts - (tm * (60 * 100))) / 100;
+  printf("\n\nTesting for %u:%02u, memcheck exiting...\n", tm, ts);
+  if (errors) {
+    printf(
+        "FAILED! %d failed passes, %d good (%d word errors total).", badpasses, goodpasses, errors);
+  } else if (goodpasses > 0) {
+    printf("PASSED! %d error-free test passes.", goodpasses);
+  }
+}
+
 void kmain() {
     printf("\x1b[1;37mXoseRAM \x1b[0mbringup tests\n");
 
@@ -297,6 +513,6 @@ void kmain() {
     while (checkinput()) {  // clear any queued input
         inputchar();
     }
-    memcheck();
+    memcheck_bytes();
 #endif
 }
