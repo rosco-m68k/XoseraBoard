@@ -10,8 +10,8 @@
 #define REG_RAM_LOW     0xfc1060
 #define REG_RAM_HIGH    0xfc1062
 
-#define MEMCHECK_START  0x100000
-#define MEMCHECK_END    0x200000
+#define MEMCHECK_START  0xc00000
+#define MEMCHECK_END    0xd00000
 
 //#define ONLY_HIGH8
 #define RUN_SIZE    0x100
@@ -513,6 +513,6 @@ void kmain() {
     while (checkinput()) {  // clear any queued input
         inputchar();
     }
-    memcheck_bytes();
+    memcheck_long();
 #endif
 }
