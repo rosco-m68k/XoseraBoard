@@ -115,6 +115,7 @@ NODE SD_IN_CYCLE;
 NODE XO_IRQRQ;                         /* Active high! */
 NODE XO_IRQRQ_AR;
 NODE BANK_FF;
+NODE SD_DO_DQM;
 
 NODE SD_DO_COMMAND_INHIBIT;
 NODE SD_DO_NO_OPERATION;
@@ -182,7 +183,8 @@ SD_ACK2.D = SD_DTACK;
 SD_ACK2.CK = SYS_CLK;*/
 SD_ACK2 = SD_DTACK;
 
-SD_CKE.CK   = SD_CLK;
+SD_DO_DQM.CK    = SD_CLK;
+SD_CKE.CK       = SD_CLK;
 
 APPEND SD_IN_CYCLE.D    = SD_IN_CYCLE;
 SD_IN_CYCLE.CK          = SD_CLK;
@@ -214,10 +216,8 @@ $define ST_WRITE_ACK        'b'0010001  /* NOP, DTACK                   */
 $define ST_BURST_TERM       'b'0010010  /* We don't use...              */
 $define ST_PRECHARGING      'b'0010011  /* End cycle                    */
 
-!SD_DQML        = !SYS_LDS & !SYS_RnW & (SD_STATE:ST_WRITE  # SD_STATE:ST_WRITE_DELAY_ACK)
-                # !SYS_LDS &  SYS_RnW & (SD_STATE:ST_READ   # SD_STATE:ST_READ_DELAY_ACK);
-!SD_DQMH        = !SYS_UDS & !SYS_RnW & (SD_STATE:ST_WRITE  # SD_STATE:ST_WRITE_DELAY_ACK)
-                # !SYS_UDS &  SYS_RnW & (SD_STATE:ST_READ   # SD_STATE:ST_READ_DELAY_ACK);
+!SD_DQML        = !SYS_LDS & SD_DO_DQM;
+!SD_DQMH        = !SYS_UDS & SD_DO_DQM;
 
 /** *********************** SDRAM ADDR BUS ******************/
 APPEND SD_BANK  =   SD_COMMAND:SD_LOAD_MODE_REGISTER    & ['b'0, 'b'0];
@@ -288,9 +288,9 @@ SEQUENCE SD_STATE {
         IF !SD_IN_CYCLE & !(SD_COMMAND:SD_ACTIVE)
             NEXT ST_PRECHARGING     OUT SD_DO_PRECHARGE             OUT  SD_CKE;
         IF  SD_IN_CYCLE & (!SYS_LDS # !SYS_UDS) &  SYS_RnW
-            NEXT ST_READ            OUT SD_DO_READ                  OUT  SD_CKE;
+            NEXT ST_READ            OUT SD_DO_READ                  OUT  SD_CKE OUT SD_DO_DQM;
         IF  SD_IN_CYCLE & (!SYS_LDS # !SYS_UDS) & !SYS_RnW
-            NEXT ST_WRITE           OUT SD_DO_WRITE                 OUT  SD_CKE;
+            NEXT ST_WRITE           OUT SD_DO_WRITE                 OUT  SD_CKE OUT SD_DO_DQM;
         DEFAULT NEXT ST_ROW_ACTIVE  OUT SD_DO_NO_OPERATION          OUT  SD_CKE;
     PRESENT ST_READ
         NEXT ST_READ_DELAY_ACK      OUT SD_DO_NO_OPERATION          ;
