@@ -708,151 +708,6 @@
 				)
 			)
 		)
-		(symbol "Jumper:Jumper_2_Open"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim yes)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at 0 2.794 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Jumper_2_Open"
-				(at 0 -2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Jumper, 2-pole, open"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Jumper SPST"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Jumper_2_Open_0_0"
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Jumper_2_Open_0_1"
-				(arc
-					(start 1.524 1.27)
-					(mid 0 1.778)
-					(end -1.524 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Jumper_2_Open_1_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Regulator_Linear:TLV75512PDBV"
 			(pin_names
 				(offset 0.254)
@@ -1921,6 +1776,18 @@
 		(uuid "5a9c4d2a-f202-4268-821c-18ff3837267c")
 	)
 	(junction
+		(at 21.59 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "65c61c04-301f-4a74-b1d3-85504d80137c")
+	)
+	(junction
+		(at 34.29 165.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "692ea8fc-5094-4186-aa1f-80991460bc9f")
+	)
+	(junction
 		(at 88.9 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1931,12 +1798,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7fdba060-2c18-437c-b27f-1ed3a09535be")
-	)
-	(junction
-		(at 67.31 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "885af68b-e054-43cb-8071-e614b36b26d9")
 	)
 	(junction
 		(at 101.6 127)
@@ -1975,22 +1836,22 @@
 		(uuid "c3174624-1c29-408a-8ae0-a79345f51ca8")
 	)
 	(junction
-		(at 67.31 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c4347e86-fdd2-4cd2-849d-b3456bcaf24b")
-	)
-	(junction
 		(at 114.3 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c7bec17b-60ae-4b45-b6e6-d5e7fa1260b0")
 	)
 	(junction
-		(at 67.31 78.74)
+		(at 21.59 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ebf7e712-9fab-450d-b960-685874086dfd")
+		(uuid "d0f6110e-b303-49eb-87ed-9913665be9d7")
+	)
+	(junction
+		(at 46.99 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f125e248-2f5d-4128-b06a-1466b961f033")
 	)
 	(junction
 		(at 88.9 152.4)
@@ -2007,26 +1868,6 @@
 			(type default)
 		)
 		(uuid "002589a5-ea45-4a72-8ffb-bed6ee1a02b8")
-	)
-	(wire
-		(pts
-			(xy 67.31 78.74) (xy 93.98 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "008a5bfd-9cf8-43eb-b704-3b8f2b05896a")
-	)
-	(wire
-		(pts
-			(xy 67.31 78.74) (xy 67.31 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "025aab9d-3930-4e2c-8000-82bb7f04de08")
 	)
 	(wire
 		(pts
@@ -2130,6 +1971,26 @@
 	)
 	(wire
 		(pts
+			(xy -10.16 154.94) (xy -7.62 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c20b79c-9ea6-427e-b3db-fbaa305002c3")
+	)
+	(wire
+		(pts
+			(xy 46.99 165.1) (xy 34.29 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ee7c729-33fb-4fd3-a01c-8f30c27a4a6a")
+	)
+	(wire
+		(pts
 			(xy 101.6 50.8) (xy 101.6 48.26)
 		)
 		(stroke
@@ -2188,6 +2049,16 @@
 		)
 		(uuid "2ced770f-cdaf-4659-9ef5-1fcf3e8d0f30")
 	)
+	(wire
+		(pts
+			(xy 21.59 152.4) (xy 26.67 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "324c341e-7ce1-4585-ab46-dbd4fc0b1bb4")
+	)
 	(polyline
 		(pts
 			(xy 234.95 30.48) (xy 241.3 30.48)
@@ -2200,7 +2071,17 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 78.74) (xy 67.31 78.74)
+			(xy -10.16 149.86) (xy -10.16 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36cd0812-579e-438a-9d84-a86cd9c9b36d")
+	)
+	(wire
+		(pts
+			(xy 64.77 78.74) (xy 93.98 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2330,6 +2211,16 @@
 	)
 	(wire
 		(pts
+			(xy 21.59 165.1) (xy 21.59 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53c65466-a04b-4a43-a147-8ed95b3223a8")
+	)
+	(wire
+		(pts
 			(xy 88.9 152.4) (xy 97.79 152.4)
 		)
 		(stroke
@@ -2368,6 +2259,16 @@
 		)
 		(uuid "5b805660-919a-45db-9da7-af98819c058f")
 	)
+	(wire
+		(pts
+			(xy 46.99 152.4) (xy 46.99 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cbca90c-ef6f-4bb8-902c-d2a50040674c")
+	)
 	(polyline
 		(pts
 			(xy 171.45 71.12) (xy 177.8 71.12)
@@ -2377,6 +2278,26 @@
 			(type default)
 		)
 		(uuid "5ed288f6-8757-4559-b40f-d138ebe73620")
+	)
+	(wire
+		(pts
+			(xy 21.59 165.1) (xy 34.29 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fe54b78-f72f-4c9e-90cb-230167041334")
+	)
+	(wire
+		(pts
+			(xy 21.59 149.86) (xy 21.59 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "600c19df-1a4e-489d-b675-e8648d4b87a3")
 	)
 	(wire
 		(pts
@@ -2540,6 +2461,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 165.1) (xy 34.29 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dc0c45b-ae7c-4285-ad30-d374b4aa26be")
+	)
+	(wire
+		(pts
 			(xy 114.3 38.1) (xy 109.22 38.1)
 		)
 		(stroke
@@ -2547,6 +2478,16 @@
 			(type default)
 		)
 		(uuid "8ed03567-ef4c-4e9b-a194-dbab50b25adc")
+	)
+	(wire
+		(pts
+			(xy 21.59 152.4) (xy 21.59 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "930d25c8-50f0-4812-828f-d9a56a94d4b1")
 	)
 	(polyline
 		(pts
@@ -2600,13 +2541,13 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 116.84) (xy 67.31 116.84)
+			(xy -2.54 154.94) (xy 26.67 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9bbf8fa2-5949-47be-b4b9-e2a8f7383367")
+		(uuid "9c7c2e0c-985c-4103-b618-93e81c815302")
 	)
 	(polyline
 		(pts
@@ -2657,16 +2598,6 @@
 			(type default)
 		)
 		(uuid "a2f52667-2712-479c-891e-f1c6b9d60c63")
-	)
-	(wire
-		(pts
-			(xy 67.31 116.84) (xy 67.31 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a52fafa5-8d03-451c-aaed-28256525d0cb")
 	)
 	(wire
 		(pts
@@ -2798,6 +2729,26 @@
 		)
 		(uuid "bdc75f61-900a-4b66-99c3-7a3625b1e2ef")
 	)
+	(wire
+		(pts
+			(xy 46.99 165.1) (xy 46.99 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be018f1e-9ac3-438f-b6e2-0167a01a5f70")
+	)
+	(wire
+		(pts
+			(xy 46.99 152.4) (xy 41.91 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be3e7575-eb58-432c-94cb-3dbc8d4eb7b3")
+	)
 	(polyline
 		(pts
 			(xy 240.792 85.852) (xy 241.3 86.36)
@@ -2840,7 +2791,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 40.64) (xy 67.31 40.64)
+			(xy 64.77 40.64) (xy 93.98 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2857,6 +2808,16 @@
 			(type default)
 		)
 		(uuid "cac4a0b6-fa40-46ce-827f-aa05ba64058d")
+	)
+	(wire
+		(pts
+			(xy 46.99 149.86) (xy 46.99 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cade857b-9d87-42d0-92ca-436a5fbffbd4")
 	)
 	(polyline
 		(pts
@@ -2990,7 +2951,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 116.84) (xy 93.98 116.84)
+			(xy 64.77 116.84) (xy 93.98 116.84)
 		)
 		(stroke
 			(width 0)
@@ -3110,16 +3071,6 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 40.64) (xy 93.98 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6a17885-297e-4b7d-8529-7bc76c2f2c2e")
-	)
-	(wire
-		(pts
 			(xy 88.9 76.2) (xy 88.9 81.28)
 		)
 		(stroke
@@ -3127,16 +3078,6 @@
 			(type default)
 		)
 		(uuid "f8767671-8a0a-4721-8c6b-37092e9eb49d")
-	)
-	(wire
-		(pts
-			(xy 67.31 40.64) (xy 67.31 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb0e62a3-f025-476c-93f3-e4af6f350fa1")
 	)
 	(polyline
 		(pts
@@ -3577,6 +3518,17 @@
 		)
 		(uuid "23b4fcfb-6d96-4af1-a423-83d05a42b3f4")
 	)
+	(label "EN_+3V3A"
+		(at 0 154.94 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "79c0172a-48fa-42a2-b048-399b78b2b4c7")
+	)
 	(label "EN_+3V3"
 		(at 67.31 116.84 0)
 		(fields_autoplaced yes)
@@ -3667,36 +3619,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:Jumper_2_Open")
-		(at 67.31 87.63 90)
+		(lib_id "Device:R_Small")
+		(at -5.08 154.94 90)
 		(mirror x)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0e006363-07d7-4ce7-8a2a-dd746375785f")
-		(property "Reference" "JP7"
-			(at 68.58 86.3599 90)
+		(uuid "0e487dd2-2c3e-4838-8cc6-3657881fe006")
+		(property "Reference" "R31"
+			(at -5.08 149.86 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "DIS_+3V3_FPGA_DVI"
-			(at 68.58 88.8999 90)
+		(property "Value" "10K"
+			(at -5.08 152.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 67.31 87.63 0)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at -5.08 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3705,7 +3655,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 87.63 0)
+			(at -5.08 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3713,8 +3663,62 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Jumper, 2-pole, open"
-			(at 67.31 87.63 0)
+		(property "Description" "Resistor, small symbol"
+			(at -5.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at -5.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at -5.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" ""
+			(at -5.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "V_{DC}" ""
+			(at -5.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at -5.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25744"
+			(at -5.08 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3723,7 +3727,7 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
-			(at 67.31 87.63 0)
+			(at -5.08 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3732,15 +3736,81 @@
 			)
 		)
 		(pin "1"
-			(uuid "a1efa55c-bdb3-4e72-94ee-0f59c0181790")
+			(uuid "8e8fa11f-a080-40dd-bdc7-920109cd0fbd")
 		)
 		(pin "2"
-			(uuid "e8ce646e-9a72-47d7-a0cf-962c423f7568")
+			(uuid "7dee1048-056f-43ae-8f23-28492535b34d")
 		)
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
-					(reference "JP7")
+					(reference "R31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 46.99 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0fca4cd8-3d5b-49ab-a714-c77114ecdc7e")
+		(property "Reference" "#PWR0166"
+			(at 46.99 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3A"
+			(at 46.99 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.99 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 46.99 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb99725a-be33-42c4-bb81-df1075c3ec88")
+		)
+		(instances
+			(project ""
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
+					(reference "#PWR0166")
 					(unit 1)
 				)
 			)
@@ -4119,6 +4189,263 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
 					(reference "R39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 21.59 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "30a0aa6b-92ce-4c25-9d84-e4b6d3806b24")
+		(property "Reference" "#PWR0165"
+			(at 21.59 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 21.59 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 21.59 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b588032a-1d33-4c61-8abb-b9d8f49bb77a")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
+					(reference "#PWR0165")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 46.99 160.02 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3b538919-e6fd-467f-9441-c178b746bf63")
+		(property "Reference" "C32"
+			(at 49.53 158.7562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4u7"
+			(at 49.53 161.2962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "X5R"
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "V_{DC}" "10V"
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0603KRX5R6BB475"
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C19666"
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 46.99 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9cb0ab9c-c10a-4b2b-84b3-94a7556bc971")
+		)
+		(pin "2"
+			(uuid "f58af9e4-8eb5-476a-8aca-ecc33c83ab0e")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
+					(reference "C32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 21.59 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3b5bb6e5-b4c6-4b12-ad1f-f3aae605ce4f")
+		(property "Reference" "#PWR0163"
+			(at 21.59 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 21.59 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 21.59 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "41bc9406-f7ca-43c5-85c0-61df02f5449a")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
+					(reference "#PWR0163")
 					(unit 1)
 				)
 			)
@@ -4665,72 +4992,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 67.31 92.71 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6df8f746-9abc-4458-b032-1da67e75fe45")
-		(property "Reference" "#PWR0115"
-			(at 67.31 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 67.31 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 67.31 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 67.31 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 67.31 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b86e5fde-9c93-44b9-88b1-83248c8dc407")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
-					(reference "#PWR0115")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 114.3 83.82 0)
 		(mirror y)
@@ -4850,6 +5111,72 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
 					(reference "C46")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at -10.16 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76170dd0-1952-423e-9be3-ecbd1e1d136f")
+		(property "Reference" "#PWR0161"
+			(at -10.16 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at -10.16 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -10.16 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at -10.16 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at -10.16 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c7e7dc03-185a-450a-bd1a-25b4f73ba0a2")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
+					(reference "#PWR0161")
 					(unit 1)
 				)
 			)
@@ -5237,152 +5564,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 67.31 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8dd160a6-8b5b-432b-b340-ce25d796cd7b")
-		(property "Reference" "#PWR0116"
-			(at 67.31 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 67.31 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 67.31 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 67.31 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 67.31 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fd87f999-6494-43ec-84ae-4190707c8f12")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
-					(reference "#PWR0116")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:Jumper_2_Open")
-		(at 67.31 49.53 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "90b6fc1a-6efa-4938-82c3-47d4e02a3d95")
-		(property "Reference" "JP5"
-			(at 68.58 48.2599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "DIS_+1V2_FPGA"
-			(at 68.58 50.7999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 67.31 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 67.31 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Jumper, 2-pole, open"
-			(at 67.31 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 67.31 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3554d3af-4e36-424c-99cd-74a0cd03c82c")
-		)
-		(pin "2"
-			(uuid "769cc082-31a6-40c0-bbf3-ca53d20e47ba")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
-					(reference "JP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+1V2")
 		(at 57.15 73.66 0)
 		(unit 1)
@@ -5443,6 +5624,129 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
 					(reference "#PWR086")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 21.59 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "91abd004-fcb0-4654-b5f0-bd26a0fdee85")
+		(property "Reference" "C31"
+			(at 19.05 158.7562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4u7"
+			(at 19.05 161.2962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "X5R"
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "V_{DC}" "10V"
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CC0603KRX5R6BB475"
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C19666"
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 21.59 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c508c3a-3570-4517-85be-664f5d611b12")
+		)
+		(pin "2"
+			(uuid "a14d5dfb-db85-4dc8-8146-98699b15aefe")
+		)
+		(instances
+			(project "xoseram"
+				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -6213,17 +6517,43 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 67.31 54.61 0)
+		(lib_id "Regulator_Linear:TLV75533PDBV")
+		(at 34.29 154.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c53349ad-d0ac-42ec-bd3c-e859ed363948")
-		(property "Reference" "#PWR093"
-			(at 67.31 60.96 0)
+		(uuid "bd641275-eceb-4d65-87d0-0da8ce2f535a")
+		(property "Reference" "U17"
+			(at 34.29 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV75533PDBV"
+			(at 34.29 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 34.29 146.685 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv755p.pdf"
+			(at 34.29 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6231,16 +6561,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 67.31 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 67.31 54.61 0)
+		(property "Description" "500mA Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"
+			(at 34.29 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6248,8 +6570,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 67.31 54.61 0)
+		(property "MPN" "TLV75533PDBVR"
+			(at 34.29 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6257,22 +6579,52 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 67.31 54.61 0)
+		(property "Manufacturer" "Texas Instruments"
+			(at 34.29 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(property "LCSC Part #" "C404027"
+			(at 34.29 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB Rotation Offset" ""
+			(at 34.29 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "8f3a8e07-946e-4560-bbc3-b3f428e739e0")
+		)
+		(pin "4"
+			(uuid "e4c02401-18bf-4cf1-bed1-eae8bfd0295c")
+		)
+		(pin "5"
+			(uuid "99f8b965-d0ab-4d6f-882e-19031179173d")
+		)
+		(pin "2"
+			(uuid "3d2f8ee6-dea0-44c4-834d-636a605741f0")
 		)
 		(pin "1"
-			(uuid "932cf91b-5404-43c6-96f1-2b11a2e38e8c")
+			(uuid "ded8feaf-8823-463e-9fc8-65d542005646")
 		)
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
-					(reference "#PWR093")
+					(reference "U17")
 					(unit 1)
 				)
 			)
@@ -6397,86 +6749,6 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
 					(reference "C27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:Jumper_2_Open")
-		(at 67.31 125.73 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "caefe152-c048-4703-af10-305984dc37d2")
-		(property "Reference" "JP8"
-			(at 68.58 124.4599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "DIS_+3V3"
-			(at 68.58 126.9999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 67.31 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 67.31 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Jumper, 2-pole, open"
-			(at 67.31 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 67.31 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "547b6640-9505-4d2b-92c3-7f6d185d0dd7")
-		)
-		(pin "2"
-			(uuid "8288264b-5c13-4ce5-a2e1-ca34d508376f")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/f250f56d-1209-47fa-99ff-c0f9151f41a6"
-					(reference "JP8")
 					(unit 1)
 				)
 			)

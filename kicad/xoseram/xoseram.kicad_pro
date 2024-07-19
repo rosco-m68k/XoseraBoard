@@ -463,7 +463,10 @@
     ],
     "pinned_symbol_libs": [
       "rosco_m68k_classic_v3",
-      "my_rosxos"
+      "my_rosxos",
+      "0xTJ_Amplifier_Operational",
+      "0xTJ_CPU_WDC",
+      "0xTJ_Amplifier_Audio"
     ]
   },
   "meta": {
@@ -761,6 +764,12 @@
           "label": "JLCPCB Rotation Offset",
           "name": "JLCPCB Rotation Offset",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "JLCPCB Position Offset",
+          "name": "JLCPCB Position Offset",
+          "show": false
         }
       ],
       "filter_string": "",

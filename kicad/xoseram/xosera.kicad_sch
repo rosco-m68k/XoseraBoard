@@ -4180,6 +4180,16 @@
 		)
 		(uuid "436897b3-9755-40cf-8939-417cfcde5feb")
 	)
+	(wire
+		(pts
+			(xy 25.4 187.96) (xy 50.8 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4573dc9e-c503-4ea2-8c74-c949a07cb8eb")
+	)
 	(bus
 		(pts
 			(xy 119.38 22.86) (xy 119.38 27.94)
@@ -5372,6 +5382,17 @@
 			(justify left bottom)
 		)
 		(uuid "457e171e-317d-41f5-a793-efc44bccd013")
+	)
+	(label "CDONE"
+		(at 25.4 187.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4775b0e0-428a-45d5-99be-4bfde0f70c1d")
 	)
 	(label "~{CRESET}"
 		(at 109.22 55.88 180)
@@ -9829,6 +9850,16 @@
 				(justify left)
 			)
 			(uuid "028d231e-3a59-44f8-a558-8badee943294")
+		)
+		(pin "~{MUTE}" input
+			(at 50.8 187.96 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "45249d5c-6004-489b-b64e-9c5de7cca354")
 		)
 		(instances
 			(project "xoseram"
