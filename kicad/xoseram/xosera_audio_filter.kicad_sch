@@ -1810,7 +1810,7 @@
 		)
 		(uuid "820aeb79-50d7-43ae-b557-314e647bbfa1")
 	)
-	(text "Input: 3.3 V_{pp} ~ 1.17 V_{RMS} = 1.34 dBV\nOutput: -10 dBV = 0.316 V_{RMS} ~ 0.894 V_{pp}\nGain: -0.27 V/V\n\nTODO: Update values"
+	(text "Input: 3.3 V_{pp} ~ 1.17 V_{RMS} = 1.34 dBV\nOutput: -10 dBV = 0.316 V_{RMS} ~ 0.894 V_{pp}\nGain: -0.27 V/V"
 		(exclude_from_sim no)
 		(at 83.82 38.1 0)
 		(effects
@@ -2140,7 +2140,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "300p"
+		(property "Value" "330p"
 			(at 71.12 120.6435 0)
 			(effects
 				(font
@@ -2635,7 +2635,7 @@
 				)
 			)
 		)
-		(property "Value" "12K7"
+		(property "Value" "11K0"
 			(at 81.28 50.8 90)
 			(effects
 				(font
@@ -2769,7 +2769,7 @@
 				)
 			)
 		)
-		(property "Value" "22K6"
+		(property "Value" "24K3"
 			(at 76.2 111.76 90)
 			(effects
 				(font
@@ -3177,7 +3177,7 @@
 				)
 			)
 		)
-		(property "Value" "22K6"
+		(property "Value" "24K3"
 			(at 76.2 60.96 90)
 			(effects
 				(font
@@ -3575,7 +3575,7 @@
 				)
 			)
 		)
-		(property "Value" "46K4"
+		(property "Value" "40K2"
 			(at 63.5 60.96 90)
 			(effects
 				(font
@@ -3984,7 +3984,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "300p"
+		(property "Value" "330p"
 			(at 71.12 69.8435 0)
 			(effects
 				(font
@@ -4189,7 +4189,7 @@
 				)
 			)
 		)
-		(property "Value" "12K7"
+		(property "Value" "11K0"
 			(at 81.28 101.6 90)
 			(effects
 				(font
@@ -4431,7 +4431,7 @@
 				)
 			)
 		)
-		(property "Value" "46K4"
+		(property "Value" "40K2"
 			(at 63.5 111.76 90)
 			(effects
 				(font
