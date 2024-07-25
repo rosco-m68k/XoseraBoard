@@ -1811,6 +1811,50 @@
 		)
 		(uuid "a2b5bef8-374a-4bf8-ab2d-42360f16b960")
 	)
+	(label "VSS"
+		(at 195.58 93.98 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1008a15d-c136-4e1c-9b04-05cda74ca365")
+	)
+	(label "CN"
+		(at 205.74 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "57903806-5612-4878-9ac2-5bd77bb05473")
+	)
+	(label "UVP"
+		(at 226.06 76.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "95ebc5c5-dbcf-4e94-a69c-c180a95d6486")
+	)
+	(label "CP"
+		(at 220.98 101.6 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "be1d5336-2b70-46cd-af1b-0551a42b8eef")
+	)
 	(hierarchical_label "AUDIO_L_IN"
 		(shape input)
 		(at 50.8 63.5 180)
