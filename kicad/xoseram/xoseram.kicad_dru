@@ -10,7 +10,7 @@
 
 (rule dv_skew
 	(condition "A.NetClass == 'dv_parallel'")
-	(constraint skew (max 16mm)))
+	(constraint skew (max 15mm)))
 
 (rule drill_hole_size
 	(constraint hole_size (min 0.3mm) (max 6.3mm)))
@@ -122,9 +122,10 @@
 #(rule via_covering
 #	Not sure how to implement this
 
+# Technically less than specified, but only by 3 um
 (rule silk_size
 	(layer "*.Silkscreen")
-	(constraint text_thickness (min 0.153mm))
+	(constraint text_thickness (min 0.15mm))
 	(constraint text_height (min 1.0mm)))
 
 # This doesn't work because it also applies to silk in a footprint
