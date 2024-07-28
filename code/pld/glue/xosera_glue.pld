@@ -373,7 +373,7 @@ XO_IRQRQ_AR = !SYS_RESET
 XO_IRQRQ.AR = XO_IRQRQ_AR;
 
 SYS_IRQ2    = 'b'0;
-SYS_IRQ2.OE = XO_CDONE & XO_IRQ;
+SYS_IRQ2.OE = XO_CDONE & XO_IRQRQ;
 
 /** ********************* CTRL_REG_ST STATES *******************/
 $define CTRL_REG_START  'b'00   /* Start state               00 */
