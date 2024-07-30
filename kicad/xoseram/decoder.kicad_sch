@@ -6852,7 +6852,7 @@
 				)
 			)
 		)
-		(property "Value" "_R/~{W}_OE1"
+		(property "Value" "R/~{W}_OE1"
 			(at 95.25 171.45 0)
 			(effects
 				(font
@@ -10969,7 +10969,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" " ~"
+		(property "Datasheet" "~"
 			(at 170.815 158.75 0)
 			(effects
 				(font

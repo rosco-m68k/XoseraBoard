@@ -6358,6 +6358,24 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "PPPC021LFBN-RC"
+			(at 220.98 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Sullins Connector Solutions"
+			(at 220.98 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b3958823-c5b4-4f07-a381-b28f3e7104cd")
 		)

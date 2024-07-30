@@ -7142,7 +7142,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 170.18 127 0)
 			(effects
 				(font
@@ -8678,7 +8678,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 160.02 104.14 0)
 			(effects
 				(font
@@ -10100,7 +10100,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 160.02 127 0)
 			(effects
 				(font
@@ -10803,7 +10803,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 170.18 104.14 0)
 			(effects
 				(font
@@ -11263,7 +11263,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 180.34 149.86 0)
 			(effects
 				(font
@@ -11453,7 +11453,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 170.18 149.86 0)
 			(effects
 				(font
@@ -11577,7 +11577,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 180.34 104.14 0)
 			(effects
 				(font
@@ -11835,7 +11835,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 180.34 127 0)
 			(effects
 				(font

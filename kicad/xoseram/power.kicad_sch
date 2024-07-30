@@ -2101,6 +2101,16 @@
 	)
 	(polyline
 		(pts
+			(xy 177.292 121.412) (xy 177.8 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39a62b1d-5bf8-4e2c-a69d-840a80cf8df5")
+	)
+	(polyline
+		(pts
 			(xy 240.792 29.972) (xy 241.3 30.48)
 		)
 		(stroke
@@ -2158,6 +2168,16 @@
 			(type default)
 		)
 		(uuid "4a85a637-968b-49ba-a942-551bbfd0f73e")
+	)
+	(polyline
+		(pts
+			(xy 177.292 122.428) (xy 177.8 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c1c7a3a-4062-44a5-9d1c-a6be0b3a322f")
 	)
 	(wire
 		(pts
@@ -2339,6 +2359,16 @@
 		)
 		(uuid "70876fac-1061-4734-b7bb-7e03b5457412")
 	)
+	(polyline
+		(pts
+			(xy 190.5 121.92) (xy 241.3 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71fc7987-187b-4bb4-8c37-7480aede1cc4")
+	)
 	(wire
 		(pts
 			(xy 57.15 73.66) (xy 57.15 78.74)
@@ -2429,6 +2459,16 @@
 		)
 		(uuid "86cb81d9-63c0-47d1-a0cb-ebc7dac18f89")
 	)
+	(polyline
+		(pts
+			(xy 240.792 121.412) (xy 241.3 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88d58575-e368-4cec-8240-339f0d771ad6")
+	)
 	(wire
 		(pts
 			(xy 114.3 50.8) (xy 101.6 50.8)
@@ -2448,6 +2488,16 @@
 			(type default)
 		)
 		(uuid "8bab00f5-651e-4054-a5f3-c268ed8f2337")
+	)
+	(polyline
+		(pts
+			(xy 240.792 122.428) (xy 241.3 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cb04825-a82f-4e53-8bf8-6ad58b80d1bf")
 	)
 	(wire
 		(pts
@@ -2661,13 +2711,23 @@
 	)
 	(polyline
 		(pts
-			(xy 139.7 12.7) (xy 139.7 127)
+			(xy 139.7 12.7) (xy 139.7 139.7)
 		)
 		(stroke
 			(width 0)
 			(type dash)
 		)
 		(uuid "b2bf8190-423f-4904-aece-e49f3eaff2a9")
+	)
+	(polyline
+		(pts
+			(xy 171.45 121.92) (xy 171.45 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2c56262-4fec-4f57-8db0-6ac7b2cefba5")
 	)
 	(wire
 		(pts
@@ -2901,7 +2961,7 @@
 	)
 	(polyline
 		(pts
-			(xy 139.7 127) (xy 266.7 127)
+			(xy 139.7 139.7) (xy 266.7 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3018,6 +3078,16 @@
 			(type default)
 		)
 		(uuid "e2a8b532-0068-43ba-a438-4ea1c6b6d6d3")
+	)
+	(polyline
+		(pts
+			(xy 171.45 121.92) (xy 177.8 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e45fadb7-7676-4817-ab63-68cf87e1aabd")
 	)
 	(polyline
 		(pts
@@ -3231,6 +3301,19 @@
 		(uuid 6eec2142-e3c7-4ebf-82f1-04c846347981)
 	)
 	(circle
+		(center 171.45 93.98)
+		(radius 0.254)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 0 0 0)
+		)
+		(uuid c29487d2-c010-4608-8f46-c113105ab94c)
+	)
+	(circle
 		(center 234.95 86.36)
 		(radius 0.254)
 		(stroke
@@ -3273,6 +3356,24 @@
 			)
 		)
 		(uuid "081a9f1e-62b6-4c2b-850d-7ab351672b79")
+	)
+	(text_box "DRV632\n50 mA"
+		(exclude_from_sim no)
+		(at 241.3 116.84 0)
+		(size 12.7 10.16)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3588a081-3a92-4779-bc57-28f9fa2ad205")
 	)
 	(text_box "DVI Transmitter\n250 mA"
 		(exclude_from_sim no)
@@ -3402,6 +3503,24 @@
 	)
 	(text_box "Reg. 3.3 V"
 		(exclude_from_sim no)
+		(at 177.8 119.38 0)
+		(size 12.7 5.08)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e8c7ccbc-5a86-4e0c-84fe-b5474040a1f1")
+	)
+	(text_box "Reg. 3.3 V"
+		(exclude_from_sim no)
 		(at 177.8 68.58 0)
 		(size 12.7 5.08)
 		(stroke
@@ -3442,7 +3561,7 @@
 	)
 	(text "NOTE: Power sequencing:\n	+3V3_FPGA_DVI must be sequenced on/after +1V2_FPGA reaching 0.5 V.\n	+2V5_FPGA must must be sequenced on/after +3V3_FPGA_DVI reaching 0.5 V.\n	+3V3 must be sequenced on/after +1V2_FPGA reaching 0.5 V."
 		(exclude_from_sim no)
-		(at 148.59 100.33 0)
+		(at 149.86 22.86 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3505,6 +3624,17 @@
 			(justify left top)
 		)
 		(uuid "d6f58c00-09b4-4747-912b-68495c811b47")
+	)
+	(text "+3V3A"
+		(exclude_from_sim no)
+		(at 191.008 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f3b4abd8-28c3-41d6-b060-c2af9084e99c")
 	)
 	(text "+1V2_FPGA"
 		(exclude_from_sim no)

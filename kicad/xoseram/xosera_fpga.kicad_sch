@@ -6416,12 +6416,6 @@
 		(uuid "1f056702-2c31-41fc-9366-fd9e6cb211c5")
 	)
 	(junction
-		(at 181.61 38.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "259217f5-9112-42ec-9618-361f171ff63c")
-	)
-	(junction
 		(at 80.01 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6462,12 +6456,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "52008eef-00af-4d38-991b-8b5bd8b930b2")
-	)
-	(junction
-		(at 139.7 38.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "61fca407-9e4d-4d0c-9111-bc1c950872ff")
 	)
 	(junction
 		(at 177.8 154.94)
@@ -7131,7 +7119,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 38.1) (xy 184.15 38.1)
+			(xy 177.8 38.1) (xy 184.15 38.1)
 		)
 		(stroke
 			(width 0)
@@ -7198,16 +7186,6 @@
 			(type default)
 		)
 		(uuid "35520434-236b-48b6-8d98-459d4a143d01")
-	)
-	(wire
-		(pts
-			(xy 139.7 38.1) (xy 152.4 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "356704df-a602-47a9-a682-07137ee93e7f")
 	)
 	(wire
 		(pts
@@ -7611,16 +7589,6 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 38.1) (xy 181.61 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f15aeaf-2bf6-4343-9d07-e1f6f18ad799")
-	)
-	(wire
-		(pts
 			(xy 50.8 38.1) (xy 76.2 38.1)
 		)
 		(stroke
@@ -7931,7 +7899,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 38.1) (xy 139.7 38.1)
+			(xy 137.16 38.1) (xy 152.4 38.1)
 		)
 		(stroke
 			(width 0)
@@ -11791,73 +11759,6 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
 					(reference "R29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 181.61 38.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "46075ad7-faa5-4196-ab8a-22c8f6a28d38")
-		(property "Reference" "TP5"
-			(at 181.61 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "${NET_NAME(1)}"
-			(at 182.88 39.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 186.69 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 186.69 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 181.61 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8c5f178f-5876-48ce-abfb-6b5c6f6cea01")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
-					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -16927,73 +16828,6 @@
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
 					(reference "U11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 139.7 38.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f3f3bd62-85f0-408e-9ea2-d7b74c65a895")
-		(property "Reference" "TP3"
-			(at 139.7 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify top)
-			)
-		)
-		(property "Value" "${NET_NAME(1)}"
-			(at 140.97 39.3699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 144.78 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 144.78 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 139.7 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1810034c-b1b8-4eef-886b-3a350bd16950")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93"
-					(reference "TP3")
 					(unit 1)
 				)
 			)
