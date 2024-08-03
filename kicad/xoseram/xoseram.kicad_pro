@@ -79,6 +79,7 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -249,9 +250,12 @@
     "erc_exclusions": [
       "lib_symbol_issues|1651000|558800|23069f9b-a984-4f00-aeeb-cdbfcc251334|00000000-0000-0000-0000-000000000000|||",
       "lib_symbol_issues|1930400|1320800|b63c8f5e-bc57-4605-8fbe-381a5903f868|00000000-0000-0000-0000-000000000000|||",
+      "lib_symbol_issues|2133600|914400|ef68e443-a272-4e00-9768-ebd5833899e6|00000000-0000-0000-0000-000000000000|||",
       "lib_symbol_issues|2489200|660400|807a947b-6105-4b0b-b87f-31511b94c214|00000000-0000-0000-0000-000000000000|||",
       "lib_symbol_issues|2540000|431800|199e7d00-af1b-49d1-a61a-abd92e2a3493|00000000-0000-0000-0000-000000000000|||",
-      "lib_symbol_issues|863600|533400|f2ba9a1e-4982-4a83-80e4-7da6717e0c5d|00000000-0000-0000-0000-000000000000|||"
+      "lib_symbol_issues|863600|533400|f2ba9a1e-4982-4a83-80e4-7da6717e0c5d|00000000-0000-0000-0000-000000000000|||",
+      "lib_symbol_issues|990600|1270000|11c8a57d-b619-497f-8c99-12a2fe0e3796|00000000-0000-0000-0000-000000000000|||",
+      "lib_symbol_issues|990600|762000|1a487495-7bf7-4430-a069-2a41e95e0c89|00000000-0000-0000-0000-000000000000|||"
     ],
     "meta": {
       "version": 0
@@ -644,6 +648,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "bom_export_filename": "",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
