@@ -158,7 +158,7 @@ SD_CLK_OUT1     = !SYS_CLK;
 SD_CLK_OUT2     = !SYS_CLK;
 
 SYS_DTACK       = 'b'0;
-SYS_DTACK.OE    = SYS_RESET & !XO_CS & ((XO_CDONE & !XO_DTACK) # !XO_CDONE)
+SYS_DTACK.OE    = SYS_RESET & !XO_CS & ((XO_CDONE & XO_DTACK) # !XO_CDONE)
                 # SYS_RESET & SD_ACK2
                 # SYS_RESET & CTRL_REG_DTACK;
 
@@ -346,7 +346,7 @@ $repend
 !XO_CS.D    = SYS_RESET & !SYS_AS & !SYS_IOSEL & (
                 SYS_ADDR:'b'XXXX100000000000011XXXXX #
                 SYS_ADDR:'b'XXXX100000000000100XXXXX
-            ) & !SYS_LDS & (!XO_CS # XO_DTACK);
+            ) & !SYS_LDS;
 XO_CS.CK    = SYS_CLK;
 XO_CS.AP    = SYS_AS # SYS_IOSEL # SYS_LDS;
 
