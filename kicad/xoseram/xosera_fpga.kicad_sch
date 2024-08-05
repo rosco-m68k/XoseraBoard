@@ -17165,12 +17165,12 @@
 		(dnp no)
 		(uuid "fa412e39-4a65-4c4f-ad25-4e5358342671")
 		(property "Reference" "TP7"
-			(at 193.04 118.11 0)
+			(at 194.31 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify top)
+				(justify left)
 			)
 		)
 		(property "Value" "${NET_NAME(1)}"
