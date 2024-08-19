@@ -58,7 +58,14 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "lib_footprint_issues|171779114|119508303|a65bd7f9-7a64-4c42-99ce-3de009f04784|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|180787570|125895369|135ea9ef-7aef-4cc9-bc8a-22d6532e32a9|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_issues|184802650|119508232|580946a7-a523-4a64-b250-a24afb053581|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|155500000|65000000|a1583dd1-4353-4067-8f7f-49c68529f32c|00000000-0000-0000-0000-000000000000",
+        "silk_edge_clearance|178900000|29999999|8d33d206-e05a-4aeb-be77-bed11d99707b|2bf9f01c-c4a6-4e15-ad1e-dbbaa5b84c08",
+        "silk_edge_clearance|185100000|29999999|8d33d206-e05a-4aeb-be77-bed11d99707b|1c23ad47-4267-4a3a-9fe8-5f4049f00d58"
+      ],
       "meta": {
         "version": 2
       },
@@ -247,7 +254,13 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      "lib_symbol_issues|1651000|558800|23069f9b-a984-4f00-aeeb-cdbfcc251334|00000000-0000-0000-0000-000000000000|||",
+      "lib_symbol_issues|1930400|1320800|b63c8f5e-bc57-4605-8fbe-381a5903f868|00000000-0000-0000-0000-000000000000|||",
+      "lib_symbol_issues|2489200|660400|807a947b-6105-4b0b-b87f-31511b94c214|00000000-0000-0000-0000-000000000000|||",
+      "lib_symbol_issues|2540000|431800|199e7d00-af1b-49d1-a61a-abd92e2a3493|00000000-0000-0000-0000-000000000000|||",
+      "lib_symbol_issues|863600|533400|f2ba9a1e-4982-4a83-80e4-7da6717e0c5d|00000000-0000-0000-0000-000000000000|||"
+    ],
     "meta": {
       "version": 0
     },
@@ -761,6 +774,12 @@
           "label": "JLCPCB Rotation Offset",
           "name": "JLCPCB Rotation Offset",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "JLCPCB Position Offset",
+          "name": "JLCPCB Position Offset",
+          "show": false
         }
       ],
       "filter_string": "",

@@ -792,7 +792,7 @@
 		(path "/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93/503cbcca-0c4d-4248-abc3-2d7b4acba832")
 		(sheetname "Xosera FPGA")
 		(sheetfile "xosera_fpga.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -3391,7 +3391,7 @@
 		(layer "F.Cu")
 		(uuid "135ea9ef-7aef-4cc9-bc8a-22d6532e32a9")
 		(at 181.790133 126.008527)
-		(property "Reference" "REF**"
+		(property "Reference" "G1"
 			(at 0 -0.5 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -19223,7 +19223,7 @@
 		(path "/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93/115a1a42-d9df-4d41-b7a5-4164d66e848d")
 		(sheetname "Xosera FPGA")
 		(sheetfile "xosera_fpga.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -19630,7 +19630,7 @@
 		(path "/0c764949-1b57-460e-8bc0-3b0169a3d604/d6de5eed-ca78-4a71-b52e-349e857019ba")
 		(sheetname "Level Shifters")
 		(sheetfile "level_shifters.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -20952,7 +20952,7 @@
 				)
 			)
 		)
-		(path "/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a7a8a8ed-9524-45c4-a44a-306ab9855ab6/ef68e443-a272-4e00-9768-ebd5833899e6")
+		(path "/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a7a8a8ed-9524-45c4-a44a-306ab9855ab6/1a487495-7bf7-4430-a069-2a41e95e0c89")
 		(sheetname "Xosera Audio Filter")
 		(sheetfile "xosera_audio_filter.kicad_sch")
 		(attr smd)
@@ -22155,7 +22155,7 @@
 		(layer "F.Cu")
 		(uuid "580946a7-a523-4a64-b250-a24afb053581")
 		(at 184.8 119.482608)
-		(property "Reference" "REF**"
+		(property "Reference" "G2"
 			(at 0 -0.5 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -40081,7 +40081,7 @@
 		(layer "F.Cu")
 		(uuid "a65bd7f9-7a64-4c42-99ce-3de009f04784")
 		(at 171.85 119.7)
-		(property "Reference" "REF**"
+		(property "Reference" "G3"
 			(at 0 -0.5 0)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -48597,7 +48597,7 @@
 			)
 		)
 		(property ki_fp_filters "TQFP?100*")
-		(path "/ee2aa479-d246-407f-8485-60f6c701d790/ebe3a917-99b6-4fbb-a49c-97282921d83e")
+		(path "/ee2aa479-d246-407f-8485-60f6c701d790/cdc5c733-0969-4bae-ab92-28e90fe0c922")
 		(sheetname "Decoder")
 		(sheetfile "decoder.kicad_sch")
 		(attr smd)
@@ -57020,7 +57020,7 @@
 		(path "/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93/fa412e39-4a65-4c4f-ad25-4e5358342671")
 		(sheetname "Xosera FPGA")
 		(sheetfile "xosera_fpga.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -64403,7 +64403,7 @@
 		(path "/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/a151e9e8-1bfb-4949-ba3f-20d6fb579c93/06db8f0a-f62f-45f2-a20e-53a8203097b8")
 		(sheetname "Xosera FPGA")
 		(sheetfile "xosera_fpga.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
