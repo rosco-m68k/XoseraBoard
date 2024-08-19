@@ -8872,7 +8872,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Video:HDMI_A_Amphenol_10029449-x01xLF_Horizontal"
+		(property "Footprint" "Connector_Video:HDMI_A_Molex_208658-1001_Horizontal"
 			(at 249.555 66.04 0)
 			(effects
 				(font
@@ -8881,7 +8881,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.amphenol-cs.com/media/wysiwyg/files/drawing/10029449.pdf"
+		(property "Datasheet" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/208/208658/2086581001_sd.pdf?inline"
 			(at 249.555 66.04 0)
 			(effects
 				(font
@@ -8899,7 +8899,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Amphenol ICC (FCI)"
+		(property "Manufacturer" "Molex"
 			(at 248.92 66.04 0)
 			(effects
 				(font
@@ -8908,7 +8908,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "10029449-001RLF"
+		(property "MPN" "2086581001"
 			(at 248.92 66.04 0)
 			(effects
 				(font
@@ -8917,7 +8917,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C428493"
+		(property "LCSC Part #" "C22750565"
 			(at 248.92 66.04 0)
 			(effects
 				(font
