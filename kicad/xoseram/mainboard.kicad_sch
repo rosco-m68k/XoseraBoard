@@ -5185,7 +5185,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15750443-6c5d-420f-9a29-f464288272aa")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR02"
 			(at 203.2 60.96 0)
 			(effects
 				(font
@@ -5235,7 +5235,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/e6666a35-0017-4ae8-98c6-4c82ca9b716f"
-					(reference "#PWR03")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -5251,7 +5251,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20058109-5ae1-4ddd-a612-561bb71ae651")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR05"
 			(at 215.9 73.66 0)
 			(effects
 				(font
@@ -5301,7 +5301,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/e6666a35-0017-4ae8-98c6-4c82ca9b716f"
-					(reference "#PWR06")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -5596,7 +5596,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "44af59d8-3127-4b55-921a-4fe8a1adefbd")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR06"
 			(at 129.54 138.43 0)
 			(effects
 				(font
@@ -5646,7 +5646,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/e6666a35-0017-4ae8-98c6-4c82ca9b716f"
-					(reference "#PWR02")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -5888,7 +5888,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6eb0e100-4d23-4def-92e0-7e1c731f4bda")
-		(property "Reference" "H3"
+		(property "Reference" "H2"
 			(at 218.44 50.7999 0)
 			(effects
 				(font
@@ -5985,7 +5985,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/e6666a35-0017-4ae8-98c6-4c82ca9b716f"
-					(reference "H3")
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -6200,7 +6200,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0363f96-2a5f-4ef8-b3dd-d5a5e7afecad")
-		(property "Reference" "H2"
+		(property "Reference" "H3"
 			(at 205.74 63.4999 0)
 			(effects
 				(font
@@ -6297,7 +6297,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/e6666a35-0017-4ae8-98c6-4c82ca9b716f"
-					(reference "H2")
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -6469,7 +6469,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bede2d41-9cb4-44ed-abe0-68babb6f4c47")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR03"
 			(at 215.9 60.96 0)
 			(effects
 				(font
@@ -6519,7 +6519,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/e6666a35-0017-4ae8-98c6-4c82ca9b716f"
-					(reference "#PWR05")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
