@@ -13100,7 +13100,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Molex"
+		(property "Manufacturer" "G-Switch"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13113,7 +13113,7 @@
 				)
 			)
 		)
-		(property "MPN" "2086581001"
+		(property "MPN" "GT-HD001A-FNNG0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49217,7 +49217,7 @@
 			)
 		)
 		(property ki_fp_filters "TQFP?100*")
-		(path "/ee2aa479-d246-407f-8485-60f6c701d790/ebe3a917-99b6-4fbb-a49c-97282921d83e")
+		(path "/ee2aa479-d246-407f-8485-60f6c701d790/cdc5c733-0969-4bae-ab92-28e90fe0c922")
 		(sheetname "Decoder")
 		(sheetfile "decoder.kicad_sch")
 		(attr smd)

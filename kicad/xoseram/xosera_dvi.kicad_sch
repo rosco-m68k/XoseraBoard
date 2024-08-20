@@ -8899,7 +8899,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Molex"
+		(property "Manufacturer" "G-Switch"
 			(at 248.92 66.04 0)
 			(effects
 				(font
@@ -8908,7 +8908,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "2086581001"
+		(property "MPN" "GT-HD001A-FNNG0"
 			(at 248.92 66.04 0)
 			(effects
 				(font
