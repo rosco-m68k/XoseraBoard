@@ -21,6 +21,7 @@ property   atmel {tdi_pullup=on};
 property   atmel {tms_pullup=on};
 
 /* *************** INPUT PINS *********************/
+PIN  23 = EN_XOSERA;
 PIN  33 = XO_IRQ;
 PIN  35 = XO_DTACK;
 PIN  36 = XO_CRESET;
@@ -60,13 +61,13 @@ PIN  78 = SYS_A20;
 PIN  79 = SYS_A21;
 PIN  80 = SYS_A22;
 PIN  81 = SYS_A23;
-PIN  83 = SYS_AS;
-PIN  84 = SYS_BERR;
-PIN  85 = SYS_DTACK;
+PIN  83 = SYS_BERR;
+PIN  84 = SYS_DTACK;
+PIN  85 = SD_CLK;
 PIN  87 = SYS_CLK;
 PIN  88 = SYS_RnW;
 PIN  89 = SYS_RESET;
-PIN  90 = SD_CLK;
+PIN  90 = SYS_AS;
 
 /* *************** OUTPUT PINS *********************/
 PIN  92 = SD_A4;
@@ -95,9 +96,9 @@ PIN  19 = SD_BA0;
 PIN  20 = NC;
 PIN  21 = NC;
 PIN  22 = NC;
+PIN  23 = NC;
 */
-PIN  23 = SD_CLK_OUT1;
-PIN  24 = SD_CLK_OUT2;
+PIN  24 = SHIFT_EN;
 
 PIN  25 = XO_RnW;
 PIN  27 = XO_CS;
@@ -151,11 +152,12 @@ FIELD RCOUNT        = [RQ4..RQ0];
 
 FIELD CTRL_REG_ST   = [CTRL_REG_ST1, CTRL_REG_ST0];
 
+SHIFT_EN        = 'b'1;
+
 SD_STATE.CK     = SD_CLK;
 SD_STATE.AR     = !SYS_RESET;
 
-SD_CLK_OUT1     = !SYS_CLK;
-SD_CLK_OUT2     = !SYS_CLK;
+SD_CLK          = !SYS_CLK;
 
 SYS_DTACK       = 'b'0;
 SYS_DTACK.OE    = SYS_RESET & !XO_CS & ((XO_CDONE & XO_DTACK) # !XO_CDONE)
