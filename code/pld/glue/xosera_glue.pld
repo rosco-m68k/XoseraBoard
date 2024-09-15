@@ -96,8 +96,8 @@ PIN  19 = SD_BA0;
 PIN  20 = NC;
 PIN  21 = NC;
 */
-PIN  22 = SD_CLK_EX2;
-PIN  23 = SD_CLK_EX;
+PIN  22 = SD_CLK_EX;
+PIN  23 = NC;
 PIN  24 = SHIFT_EN;
 
 PIN  25 = XO_RnW;
@@ -157,13 +157,13 @@ SHIFT_EN        = 'b'1;
 SD_STATE.CK     = SD_CLK;
 SD_STATE.AR     = !SYS_RESET;
 
-SD_CLK_EX2.ap  = !SYS_CLK;
-SD_CLK_EX2.ar  = SYS_CLK;
-SD_CLK_EX2.ck  = 'b'0;
-SD_CLK_EX2.d   = 'b'0;
+SD_CLK_EX.ap  = !SYS_CLK;
+SD_CLK_EX.ar  = SYS_CLK;
+SD_CLK_EX.ck  = 'b'0;
+SD_CLK_EX.d   = 'b'0;
 
-SD_CLK.ap  = SD_CLK_EX2;
-SD_CLK.ar  = !SD_CLK_EX2;
+SD_CLK.ap  = SD_CLK_EX;
+SD_CLK.ar  = !SD_CLK_EX;
 SD_CLK.ck  = 'b'0;
 SD_CLK.d   = 'b'0;
 
