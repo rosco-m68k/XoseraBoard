@@ -97,7 +97,7 @@ PIN  20 = NC;
 PIN  21 = NC;
 */
 PIN  22 = SD_CLK_EX;
-PIN  23 = NC;
+PIN  23 = XO_ENABLE;
 PIN  24 = SHIFT_EN;
 
 PIN  25 = XO_RnW;
@@ -115,6 +115,7 @@ NODE SD_DTACK;                         /* Active high! */
 NODE SD_IN_CYCLE;
 NODE XO_IRQRQ;                         /* Active high! */
 NODE XO_IRQRQ_AR;
+NODE XO_SEL;
 NODE BANK_FF;
 NODE SD_DO_DQM;
 
@@ -168,7 +169,7 @@ SD_CLK.ck  = 'b'0;
 SD_CLK.d   = 'b'0;
 
 SYS_DTACK       = 'b'0;
-SYS_DTACK.OE    = SYS_RESET & !XO_CS & ((XO_CDONE & XO_DTACK) # !XO_CDONE)
+SYS_DTACK.OE    = SYS_RESET & ((XO_CDONE & !XO_CS & XO_DTACK) # ((!XO_CDONE) & XO_SEL))
                 # SYS_RESET & SD_ACK2
                 # SYS_RESET & CTRL_REG_DTACK;
 
@@ -353,12 +354,13 @@ $repend
 }
 
 /** ***********************   XOSERA GLUE  ******************/
-!XO_CS.D    = SYS_RESET & !SYS_AS & !SYS_IOSEL & (
+XO_SEL      = SYS_RESET & !SYS_AS & !SYS_IOSEL & (
                 SYS_ADDR:'b'XXXX100000000000011XXXXX #
                 SYS_ADDR:'b'XXXX100000000000100XXXXX
-            ) & !SYS_LDS;
+            ) & !SYS_LDS & XO_ENABLE;
+!XO_CS.D    = XO_SEL & (!XO_CS # !XO_DTACK);
 XO_CS.CK    = SYS_CLK;
-XO_CS.AP    = SYS_AS # SYS_IOSEL # SYS_LDS;
+XO_CS.AP    = !XO_SEL;
 
 XO_RnW      = SYS_RnW;
 
