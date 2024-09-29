@@ -358,9 +358,7 @@ XO_SEL      = SYS_RESET & !SYS_AS & !SYS_IOSEL & (
                 SYS_ADDR:'b'XXXX100000000000011XXXXX #
                 SYS_ADDR:'b'XXXX100000000000100XXXXX
             ) & !SYS_LDS & XO_ENABLE;
-!XO_CS.D    = XO_SEL & (!XO_CS # !XO_DTACK);
-XO_CS.CK    = SYS_CLK;
-XO_CS.AP    = !XO_SEL;
+!XO_CS      = XO_SEL & (!XO_CS # !XO_DTACK);
 
 XO_RnW      = SYS_RnW;
 
