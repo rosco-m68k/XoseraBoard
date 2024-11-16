@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "XoseRAM")
-		(date "2024-05-09")
-		(rev "A")
+		(date "2024-08-20")
+		(rev "B")
 		(company "Thomas Jager")
 		(comment 1 "Licensed under CERN OHL v.1.2")
 	)
@@ -1713,379 +1713,6 @@
 				)
 			)
 		)
-		(symbol "Jumper:SolderJumper_2_Bridged"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim yes)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SolderJumper_2_Bridged"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "solder jumper SPST"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Bridged*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SolderJumper_2_Bridged_0_1"
-				(rectangle
-					(start -0.508 0.508)
-					(end 0.508 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016) (xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Bridged_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Jumper:SolderJumper_2_Open"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim yes)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at 0 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SolderJumper_2_Open"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Solder Jumper, 2-pole, open"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "solder jumper SPST"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SolderJumper*Open*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SolderJumper_2_Open_0_1"
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.016) (xy 0.254 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "SolderJumper_2_Open_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Video:TFP410PAP"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3723,12 +3350,6 @@
 		(uuid "3c3c9ad7-efc0-47c2-8c0f-2c6131db4916")
 	)
 	(junction
-		(at 22.86 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "404b3c22-8659-41cc-963d-40e6ecb070bd")
-	)
-	(junction
 		(at 160.02 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3795,12 +3416,6 @@
 		(uuid "69742f98-5cf9-4a17-ad29-b13e85f6f4d0")
 	)
 	(junction
-		(at 55.88 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "725f4616-29d3-4c2c-9bb5-507fe171cb69")
-	)
-	(junction
 		(at 180.34 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3837,7 +3452,7 @@
 		(uuid "901877f4-6451-492c-9389-ead54fc595f0")
 	)
 	(junction
-		(at 53.34 162.56)
+		(at 55.88 162.56)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9d764f52-8a40-4e61-8321-f469d6c07c20")
@@ -3889,12 +3504,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e0459243-7f62-4fee-814a-a45ec72e5e31")
-	)
-	(junction
-		(at 50.8 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e3ac78c2-f6ec-4915-bfb1-0762f0dc8b21")
 	)
 	(junction
 		(at 170.18 109.22)
@@ -4184,16 +3793,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 185.42) (xy 22.86 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "129b355b-f49f-4a97-ac3e-e3b6339fd8e4")
-	)
-	(wire
-		(pts
 			(xy 33.02 124.46) (xy 33.02 127)
 		)
 		(stroke
@@ -4274,7 +3873,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 172.72) (xy 50.8 170.18)
+			(xy 53.34 172.72) (xy 53.34 170.18)
 		)
 		(stroke
 			(width 0)
@@ -4304,7 +3903,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 165.1) (xy 50.8 162.56)
+			(xy 53.34 165.1) (xy 53.34 162.56)
 		)
 		(stroke
 			(width 0)
@@ -4444,16 +4043,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 185.42) (xy 58.42 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a9cc339-f8fb-41e8-8be6-3c7d40c58a00")
-	)
-	(wire
-		(pts
 			(xy 149.86 109.22) (xy 160.02 109.22)
 		)
 		(stroke
@@ -4574,16 +4163,6 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 185.42) (xy 39.37 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ea2ddeb-3bbf-482b-a276-3537176bc413")
-	)
-	(wire
-		(pts
 			(xy 226.06 55.88) (xy 238.76 55.88)
 		)
 		(stroke
@@ -4674,16 +4253,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 172.72) (xy 50.8 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4388118a-44d1-44e3-8b48-93b67eb1f5b7")
-	)
-	(wire
-		(pts
 			(xy 50.8 68.58) (xy 63.5 68.58)
 		)
 		(stroke
@@ -4744,16 +4313,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 172.72) (xy 27.94 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4dcef53e-5e9d-4040-8a05-37de8c27ceee")
-	)
-	(wire
-		(pts
 			(xy 203.2 78.74) (xy 205.74 78.74)
 		)
 		(stroke
@@ -4771,16 +4330,6 @@
 			(type default)
 		)
 		(uuid "4eeeba47-912f-4b8a-b5a9-fa503daa10a1")
-	)
-	(wire
-		(pts
-			(xy 44.45 185.42) (xy 55.88 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f1e1213-640b-4c3b-9f4f-292c586040ea")
 	)
 	(wire
 		(pts
@@ -4954,16 +4503,6 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 185.42) (xy 22.86 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64b57ace-cdd1-41d1-ba43-bbf1f0e36a68")
-	)
-	(wire
-		(pts
 			(xy 50.8 91.44) (xy 63.5 91.44)
 		)
 		(stroke
@@ -5084,7 +4623,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 162.56) (xy 55.88 165.1)
+			(xy 58.42 162.56) (xy 58.42 165.1)
 		)
 		(stroke
 			(width 0)
@@ -5191,16 +4730,6 @@
 			(type default)
 		)
 		(uuid "7e881957-d585-417b-899b-2058d6d39742")
-	)
-	(wire
-		(pts
-			(xy 50.8 172.72) (xy 53.34 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ec63b5a-4b89-4fbb-b602-3e08b5d8cb32")
 	)
 	(wire
 		(pts
@@ -5364,7 +4893,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 170.18) (xy 55.88 185.42)
+			(xy 58.42 170.18) (xy 58.42 185.42)
 		)
 		(stroke
 			(width 0)
@@ -5494,7 +5023,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 162.56) (xy 53.34 162.56)
+			(xy 53.34 162.56) (xy 55.88 162.56)
 		)
 		(stroke
 			(width 0)
@@ -5524,7 +5053,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 162.56) (xy 55.88 162.56)
+			(xy 55.88 162.56) (xy 58.42 162.56)
 		)
 		(stroke
 			(width 0)
@@ -5551,16 +5080,6 @@
 			(type default)
 		)
 		(uuid "a0706408-40fd-4197-8fe6-909b5f82a4a2")
-	)
-	(wire
-		(pts
-			(xy 22.86 167.64) (xy 22.86 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1244096-a765-471e-8e2a-ff028c602dba")
 	)
 	(wire
 		(pts
@@ -5821,16 +5340,6 @@
 			(type default)
 		)
 		(uuid "c15eecd2-04f5-46f1-afdf-c8f0dfb2941b")
-	)
-	(wire
-		(pts
-			(xy 35.56 172.72) (xy 39.37 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c29bdfc1-8cf6-4569-9052-7de95986f960")
 	)
 	(wire
 		(pts
@@ -6191,16 +5700,6 @@
 			(type default)
 		)
 		(uuid "fd82c864-b75d-46aa-86e6-45e2a59c7275")
-	)
-	(text "NOTE: Using this neat connector for DVI.\n	I wonder what pins 13 and 14 do..."
-		(exclude_from_sim no)
-		(at 236.22 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "135bf088-94ca-4933-bfd4-0b5c18c37488")
 	)
 	(text "DVI Connector"
 		(exclude_from_sim no)
@@ -6965,7 +6464,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08c549c5-3292-4615-90e8-3d21cb352c54")
-		(property "Reference" "#PWR089"
+		(property "Reference" "#PWR0109"
 			(at 63.5 29.21 0)
 			(effects
 				(font
@@ -7015,7 +6514,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR089")
+					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -7029,10 +6528,10 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "0c5cb5fb-c916-425f-ba6c-3427c7030048")
-		(property "Reference" "R55"
+		(property "Reference" "R45"
 			(at 52.07 189.2299 0)
 			(effects
 				(font
@@ -7149,7 +6648,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R55")
+					(reference "R45")
 					(unit 1)
 				)
 			)
@@ -7165,7 +6664,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0fc1fc22-5d78-4501-a44d-bed6fe8c3538")
-		(property "Reference" "R8"
+		(property "Reference" "R41"
 			(at 27.94 120.6499 0)
 			(effects
 				(font
@@ -7282,7 +6781,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R8")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -7410,128 +6909,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 41.91 172.72 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1e528141-a307-469f-aa4c-c71fea5aeb7c")
-		(property "Reference" "R53"
-			(at 41.91 167.64 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0R"
-			(at 41.91 170.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "RC0402FR-070RL"
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Temperature Coefficient" ""
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "V_{DC}" ""
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C17168"
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 41.91 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "79d1053f-aae3-4beb-8b56-5997dd6cca1f")
-		)
-		(pin "1"
-			(uuid "b9b4512e-98e5-4568-a888-8423b273969c")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R53")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 243.84 96.52 0)
 		(unit 1)
@@ -7541,7 +6918,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ed24031-03e2-4393-9871-c205b8cf5f00")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR0120"
 			(at 243.84 102.87 0)
 			(effects
 				(font
@@ -7591,7 +6968,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR043")
+					(reference "#PWR0120")
 					(unit 1)
 				)
 			)
@@ -7608,7 +6985,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "202a495c-d010-4ab1-b939-60585e409217")
-		(property "Reference" "J5"
+		(property "Reference" "J9"
 			(at 198.12 64.77 0)
 			(effects
 				(font
@@ -7678,7 +7055,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "J5")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -7694,7 +7071,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "208d2b6b-5db8-4b25-9d4b-30b98fcbde78")
-		(property "Reference" "C70"
+		(property "Reference" "C54"
 			(at 167.64 125.7362 0)
 			(effects
 				(font
@@ -7766,7 +7143,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 170.18 127 0)
 			(effects
 				(font
@@ -7802,7 +7179,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C70")
+					(reference "C54")
 					(unit 1)
 				)
 			)
@@ -7818,7 +7195,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "21188399-8ec1-4095-b95e-86bb17bd29ce")
-		(property "Reference" "#PWR0142"
+		(property "Reference" "#PWR0122"
 			(at 149.86 115.57 0)
 			(effects
 				(font
@@ -7868,7 +7245,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0142")
+					(reference "#PWR0122")
 					(unit 1)
 				)
 			)
@@ -7885,7 +7262,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "23db650f-a6b3-4b36-89e0-727511712140")
-		(property "Reference" "#PWR090"
+		(property "Reference" "#PWR0111"
 			(at 99.06 29.21 0)
 			(effects
 				(font
@@ -7935,7 +7312,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR090")
+					(reference "#PWR0111")
 					(unit 1)
 				)
 			)
@@ -7943,7 +7320,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 55.88 167.64 0)
+		(at 58.42 167.64 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7951,8 +7328,8 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "23fb50f9-0df5-4549-8514-f5b8643dfe4c")
-		(property "Reference" "R52"
-			(at 57.15 166.37 0)
+		(property "Reference" "R44"
+			(at 59.69 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7961,7 +7338,7 @@
 			)
 		)
 		(property "Value" "2K"
-			(at 57.15 168.91 0)
+			(at 59.69 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7970,7 +7347,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7979,7 +7356,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7988,7 +7365,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7997,7 +7374,7 @@
 			)
 		)
 		(property "MPN" "RC0402FR-072KL"
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8006,7 +7383,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8015,7 +7392,7 @@
 			)
 		)
 		(property "Temperature Coefficient" ""
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8024,7 +7401,7 @@
 			)
 		)
 		(property "V_{DC}" ""
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8033,7 +7410,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8042,7 +7419,7 @@
 			)
 		)
 		(property "LCSC Part #" "C4109"
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8051,7 +7428,7 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
-			(at 55.88 167.64 0)
+			(at 58.42 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8068,7 +7445,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R52")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -8085,7 +7462,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "287a7c44-ea8f-4fa5-bdfc-5f528ead9a67")
-		(property "Reference" "R9"
+		(property "Reference" "R42"
 			(at 35.56 120.6499 0)
 			(effects
 				(font
@@ -8202,7 +7579,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R9")
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -8218,7 +7595,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3947ff7b-268b-45cd-a333-a626c4c836c2")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR0128"
 			(at 33.02 156.21 0)
 			(effects
 				(font
@@ -8268,7 +7645,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR048")
+					(reference "#PWR0128")
 					(unit 1)
 				)
 			)
@@ -8284,7 +7661,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d2801a0-a41d-4f15-8d35-5b04b4528db1")
-		(property "Reference" "NT2"
+		(property "Reference" "NT1"
 			(at 38.1 129.54 0)
 			(effects
 				(font
@@ -8382,7 +7759,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "NT2")
+					(reference "NT1")
 					(unit 1)
 				)
 			)
@@ -8398,7 +7775,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "414ce271-b143-45b2-bf55-ce3dddff771a")
-		(property "Reference" "R4"
+		(property "Reference" "R38"
 			(at 116.84 45.72 90)
 			(effects
 				(font
@@ -8512,7 +7889,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R4")
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -8529,7 +7906,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "43fdb2c6-323d-474c-aad9-385cd6a748a8")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR0118"
 			(at 114.3 100.33 0)
 			(effects
 				(font
@@ -8579,7 +7956,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR052")
+					(reference "#PWR0118")
 					(unit 1)
 				)
 			)
@@ -8595,7 +7972,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4480babd-fac9-4ce9-98c4-2b838a763a44")
-		(property "Reference" "#PWR0122"
+		(property "Reference" "#PWR0116"
 			(at 205.74 72.39 0)
 			(effects
 				(font
@@ -8645,7 +8022,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0122")
+					(reference "#PWR0116")
 					(unit 1)
 				)
 			)
@@ -8661,7 +8038,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b70bd37-6d51-4056-a606-c34ad81a1fca")
-		(property "Reference" "#PWR0120"
+		(property "Reference" "#PWR0132"
 			(at 55.88 201.93 0)
 			(effects
 				(font
@@ -8711,7 +8088,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0120")
+					(reference "#PWR0132")
 					(unit 1)
 				)
 			)
@@ -8727,7 +8104,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4e84da12-5c01-4502-b415-dd2939b8c362")
-		(property "Reference" "NT4"
+		(property "Reference" "NT3"
 			(at 38.1 149.86 0)
 			(effects
 				(font
@@ -8825,84 +8202,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "NT4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Bridged")
-		(at 31.75 172.72 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4f8799fe-b722-40fd-af6d-cf4136dd3481")
-		(property "Reference" "JP3"
-			(at 31.75 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DVI_UNUSED0"
-			(at 31.75 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
-			(at 31.75 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 31.75 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
-			(at 31.75 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 31.75 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "22f99198-2837-4f29-a043-67bee3125170")
-		)
-		(pin "1"
-			(uuid "787e9873-92cd-4cbc-9648-35cab1918e66")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "JP3")
+					(reference "NT3")
 					(unit 1)
 				)
 			)
@@ -8986,7 +8286,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "57f16e30-1173-49f4-84f7-de55ff92b20f")
-		(property "Reference" "R2"
+		(property "Reference" "R40"
 			(at 220.98 67.3099 0)
 			(effects
 				(font
@@ -9103,7 +8403,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R2")
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -9120,7 +8420,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6146091f-c2f0-4d8d-8519-823f13e2bbc0")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR0127"
 			(at 180.34 146.05 0)
 			(effects
 				(font
@@ -9170,7 +8470,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR055")
+					(reference "#PWR0127")
 					(unit 1)
 				)
 			)
@@ -9307,7 +8607,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "63d9a3e6-400e-4f9f-92fb-56b185728362")
-		(property "Reference" "C65"
+		(property "Reference" "C49"
 			(at 157.48 102.8762 0)
 			(effects
 				(font
@@ -9379,7 +8679,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 160.02 104.14 0)
 			(effects
 				(font
@@ -9415,7 +8715,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C65")
+					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -9431,7 +8731,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6ee021f8-0531-43f6-9cc9-ddc49d4314eb")
-		(property "Reference" "C72"
+		(property "Reference" "C56"
 			(at 147.32 148.0438 0)
 			(effects
 				(font
@@ -9539,129 +8839,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C72")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 41.91 185.42 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6f77fbe8-cacf-49e0-8205-66adb8f0a559")
-		(property "Reference" "R54"
-			(at 41.91 180.34 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0R"
-			(at 41.91 182.88 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "RC0402FR-070RL"
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Temperature Coefficient" ""
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "V_{DC}" ""
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C17168"
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 41.91 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "db810f2f-29fa-41c3-a1ca-ec0f8e58417a")
-		)
-		(pin "1"
-			(uuid "c23ce75e-d7af-4091-98eb-e162005491a4")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R54")
+					(reference "C56")
 					(unit 1)
 				)
 			)
@@ -9677,7 +8855,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "807a947b-6105-4b0b-b87f-31511b94c214")
-		(property "Reference" "J3"
+		(property "Reference" "J8"
 			(at 260.35 64.7699 0)
 			(effects
 				(font
@@ -9695,7 +8873,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_HDMI:HDMI_A_Amphenol_10029449-x01xLF_Horizontal"
+		(property "Footprint" "Connector_Video:HDMI_A_Molex_208658-1001_Horizontal"
 			(at 249.555 66.04 0)
 			(effects
 				(font
@@ -9704,7 +8882,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.amphenol-cs.com/media/wysiwyg/files/drawing/10029449.pdf"
+		(property "Datasheet" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/208/208658/2086581001_sd.pdf?inline"
 			(at 249.555 66.04 0)
 			(effects
 				(font
@@ -9722,7 +8900,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Amphenol ICC (FCI)"
+		(property "Manufacturer" "G-Switch"
 			(at 248.92 66.04 0)
 			(effects
 				(font
@@ -9731,7 +8909,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "10029449-001RLF"
+		(property "MPN" "GT-HD001A-FNNG0"
 			(at 248.92 66.04 0)
 			(effects
 				(font
@@ -9740,7 +8918,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C428493"
+		(property "LCSC Part #" "C22750565"
 			(at 248.92 66.04 0)
 			(effects
 				(font
@@ -9749,7 +8927,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Rotation Offset" ""
+		(property "JLCPCB Rotation Offset" "90"
 			(at 248.92 66.04 0)
 			(effects
 				(font
@@ -9758,7 +8936,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Position Offset" "0,2"
+		(property "JLCPCB Position Offset" ""
 			(at 248.92 66.04 0)
 			(effects
 				(font
@@ -9830,7 +9008,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "J3")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -9845,7 +9023,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "837e67d5-d87b-4b36-875a-feddc91fbd58")
-		(property "Reference" "U14"
+		(property "Reference" "U13"
 			(at 74.93 152.4 0)
 			(effects
 				(font
@@ -10142,7 +9320,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "U14")
+					(reference "U13")
 					(unit 1)
 				)
 			)
@@ -10158,7 +9336,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "85794747-df25-411d-ad35-06b1498de29a")
-		(property "Reference" "C75"
+		(property "Reference" "C46"
 			(at 231.14 26.6762 0)
 			(effects
 				(font
@@ -10266,7 +9444,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C75")
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -10282,7 +9460,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "89af7191-cd2d-4feb-8d94-2671d1cc013b")
-		(property "Reference" "C76"
+		(property "Reference" "C47"
 			(at 241.3 26.6762 0)
 			(effects
 				(font
@@ -10390,7 +9568,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C76")
+					(reference "C47")
 					(unit 1)
 				)
 			)
@@ -10527,7 +9705,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "902931a7-9616-4cec-800a-7cc3caf8072c")
-		(property "Reference" "#PWR0145"
+		(property "Reference" "#PWR0130"
 			(at 149.86 161.29 0)
 			(effects
 				(font
@@ -10577,7 +9755,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0145")
+					(reference "#PWR0130")
 					(unit 1)
 				)
 			)
@@ -10593,7 +9771,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "91fde51c-90c5-45c1-b87c-4d6e9e77a7c0")
-		(property "Reference" "C64"
+		(property "Reference" "C48"
 			(at 147.32 102.3238 0)
 			(effects
 				(font
@@ -10701,7 +9879,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C64")
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -10718,7 +9896,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "941d13be-4657-43ef-b1a3-5482d1685757")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR0119"
 			(at 180.34 100.33 0)
 			(effects
 				(font
@@ -10768,7 +9946,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR056")
+					(reference "#PWR0119")
 					(unit 1)
 				)
 			)
@@ -10785,7 +9963,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9664d94d-09a6-48f2-b802-e7f941da2ef9")
-		(property "Reference" "#PWR091"
+		(property "Reference" "#PWR0110"
 			(at 81.28 29.21 0)
 			(effects
 				(font
@@ -10835,7 +10013,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR091")
+					(reference "#PWR0110")
 					(unit 1)
 				)
 			)
@@ -10851,7 +10029,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9daef20c-24f9-4312-b048-3bae71bb39d6")
-		(property "Reference" "C69"
+		(property "Reference" "C53"
 			(at 157.48 125.7362 0)
 			(effects
 				(font
@@ -10923,7 +10101,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 160.02 127 0)
 			(effects
 				(font
@@ -10959,7 +10137,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C69")
+					(reference "C53")
 					(unit 1)
 				)
 			)
@@ -10975,7 +10153,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a58ee21c-11f0-45fd-a22f-9d7d6fd05006")
-		(property "Reference" "#PWR0146"
+		(property "Reference" "#PWR0112"
 			(at 228.6 39.37 0)
 			(effects
 				(font
@@ -11025,7 +10203,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0146")
+					(reference "#PWR0112")
 					(unit 1)
 				)
 			)
@@ -11041,7 +10219,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a7f1b008-569b-401b-9aad-9756d5d69a91")
-		(property "Reference" "#PWR0123"
+		(property "Reference" "#PWR0117"
 			(at 205.74 90.17 0)
 			(effects
 				(font
@@ -11091,7 +10269,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0123")
+					(reference "#PWR0117")
 					(unit 1)
 				)
 			)
@@ -11107,7 +10285,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b483b16b-d655-49fe-ab0c-24ef029901e7")
-		(property "Reference" "#PWR047"
+		(property "Reference" "#PWR0113"
 			(at 38.1 44.45 0)
 			(effects
 				(font
@@ -11157,7 +10335,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR047")
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
@@ -11173,7 +10351,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6dda4a2-60b3-4e5c-bffa-a8e8ca38d5f9")
-		(property "Reference" "NT3"
+		(property "Reference" "NT2"
 			(at 38.1 142.24 0)
 			(effects
 				(font
@@ -11271,7 +10449,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "NT3")
+					(reference "NT2")
 					(unit 1)
 				)
 			)
@@ -11287,7 +10465,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b842f6b8-6cde-4e7f-84f0-0d9058d85180")
-		(property "Reference" "R56"
+		(property "Reference" "R46"
 			(at 59.69 189.23 0)
 			(effects
 				(font
@@ -11404,7 +10582,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R56")
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -11412,17 +10590,17 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 50.8 167.64 0)
+		(at 53.34 167.64 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb0ddceb-b5bc-49d3-bb4f-6c685f7c83c1")
-		(property "Reference" "R51"
-			(at 49.53 166.3699 0)
+		(property "Reference" "R43"
+			(at 52.07 166.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11431,7 +10609,7 @@
 			)
 		)
 		(property "Value" "2K"
-			(at 49.53 168.9099 0)
+			(at 52.07 168.9099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11440,7 +10618,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11449,7 +10627,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11458,7 +10636,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11467,7 +10645,7 @@
 			)
 		)
 		(property "MPN" "RC0402FR-072KL"
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11476,7 +10654,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11485,7 +10663,7 @@
 			)
 		)
 		(property "Temperature Coefficient" ""
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11494,7 +10672,7 @@
 			)
 		)
 		(property "V_{DC}" ""
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11503,7 +10681,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11512,7 +10690,7 @@
 			)
 		)
 		(property "LCSC Part #" "C4109"
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11521,7 +10699,7 @@
 			)
 		)
 		(property "JLCPCB Rotation Offset" ""
-			(at 50.8 167.64 0)
+			(at 53.34 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11538,74 +10716,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R51")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "+3V3_1")
-		(lib_id "power:+3V3")
-		(at 22.86 167.64 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bce98c6c-e1c4-41aa-820a-e1abee772fc9")
-		(property "Reference" "#PWR0119"
-			(at 22.86 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3_FPGA_DVI"
-			(at 22.86 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 22.86 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 22.86 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 22.86 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e1fb2f29-c4d4-4212-a961-d9346449433a")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0119")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -11621,7 +10732,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bd945292-7fcd-4f7c-b0c2-dad11ec687e8")
-		(property "Reference" "C66"
+		(property "Reference" "C50"
 			(at 167.64 102.8762 0)
 			(effects
 				(font
@@ -11693,7 +10804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 170.18 104.14 0)
 			(effects
 				(font
@@ -11729,7 +10840,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C66")
+					(reference "C50")
 					(unit 1)
 				)
 			)
@@ -11745,7 +10856,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bf1e5142-d91a-4d7c-b89c-7c7b9ecd6993")
-		(property "Reference" "#FLG08"
+		(property "Reference" "#FLG05"
 			(at 139.7 123.825 0)
 			(effects
 				(font
@@ -11797,7 +10908,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#FLG08")
+					(reference "#FLG05")
 					(unit 1)
 				)
 			)
@@ -11813,7 +10924,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c0995a33-83a5-428f-a1d9-c6763e7684cd")
-		(property "Reference" "#FLG09"
+		(property "Reference" "#FLG06"
 			(at 139.7 146.685 0)
 			(effects
 				(font
@@ -11865,7 +10976,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#FLG09")
+					(reference "#FLG06")
 					(unit 1)
 				)
 			)
@@ -11882,7 +10993,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1ac77d1-b03e-4c1b-821a-394ba00826db")
-		(property "Reference" "#PWR088"
+		(property "Reference" "#PWR0124"
 			(at 180.34 123.19 0)
 			(effects
 				(font
@@ -11932,7 +11043,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR088")
+					(reference "#PWR0124")
 					(unit 1)
 				)
 			)
@@ -11949,7 +11060,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1cbac86-6aa4-460f-a78d-449609a74136")
-		(property "Reference" "#PWR092"
+		(property "Reference" "#PWR0114"
 			(at 130.81 44.45 0)
 			(effects
 				(font
@@ -11999,7 +11110,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR092")
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)
@@ -12015,7 +11126,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3a39e9c-5a31-4866-b62f-6e44a9935dde")
-		(property "Reference" "#PWR046"
+		(property "Reference" "#PWR0115"
 			(at 213.36 67.31 0)
 			(effects
 				(font
@@ -12065,7 +11176,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR046")
+					(reference "#PWR0115")
 					(unit 1)
 				)
 			)
@@ -12081,7 +11192,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c7408a62-22b4-41a7-906a-541bc8289580")
-		(property "Reference" "C74"
+		(property "Reference" "C58"
 			(at 177.8 148.5962 0)
 			(effects
 				(font
@@ -12153,7 +11264,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 180.34 149.86 0)
 			(effects
 				(font
@@ -12189,84 +11300,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C74")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 31.75 185.42 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c925bee2-e6ba-4f4c-a1cc-723f03b49c3a")
-		(property "Reference" "JP4"
-			(at 31.75 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DVI_UNUSED1"
-			(at 31.75 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 31.75 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 31.75 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 31.75 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Rotation Offset" ""
-			(at 31.75 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c28b212d-e9c9-4a8f-92ee-afecbc989033")
-		)
-		(pin "1"
-			(uuid "07202417-eef4-4366-b2e6-30ffb8605c08")
-		)
-		(instances
-			(project "xoseram"
-				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "JP4")
+					(reference "C58")
 					(unit 1)
 				)
 			)
@@ -12282,7 +11316,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9980695-5158-403f-9930-674a01015e60")
-		(property "Reference" "#PWR0144"
+		(property "Reference" "#PWR0125"
 			(at 149.86 138.43 0)
 			(effects
 				(font
@@ -12332,7 +11366,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0144")
+					(reference "#PWR0125")
 					(unit 1)
 				)
 			)
@@ -12348,7 +11382,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cb3e30c6-cfcb-4b82-a4cb-7d0c0f94a735")
-		(property "Reference" "C73"
+		(property "Reference" "C57"
 			(at 167.64 148.5962 0)
 			(effects
 				(font
@@ -12420,7 +11454,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 170.18 149.86 0)
 			(effects
 				(font
@@ -12456,7 +11490,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C73")
+					(reference "C57")
 					(unit 1)
 				)
 			)
@@ -12472,7 +11506,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cdd602c4-b8f3-4cbb-bb98-156a98ae835a")
-		(property "Reference" "C67"
+		(property "Reference" "C51"
 			(at 177.8 102.8762 0)
 			(effects
 				(font
@@ -12544,7 +11578,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 180.34 104.14 0)
 			(effects
 				(font
@@ -12580,7 +11614,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C67")
+					(reference "C51")
 					(unit 1)
 				)
 			)
@@ -12589,7 +11623,7 @@
 	(symbol
 		(lib_name "+3V3_1")
 		(lib_id "power:+3V3")
-		(at 53.34 162.56 0)
+		(at 55.88 162.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12597,8 +11631,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d20fa453-3796-4b51-9ba9-3a8180f6eed7")
-		(property "Reference" "#PWR0121"
-			(at 53.34 166.37 0)
+		(property "Reference" "#PWR0131"
+			(at 55.88 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12607,7 +11641,7 @@
 			)
 		)
 		(property "Value" "+3V3_FPGA_DVI"
-			(at 53.34 157.48 0)
+			(at 55.88 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12615,7 +11649,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 162.56 0)
+			(at 55.88 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12624,7 +11658,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 162.56 0)
+			(at 55.88 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12633,7 +11667,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 53.34 162.56 0)
+			(at 55.88 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12647,7 +11681,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0121")
+					(reference "#PWR0131")
 					(unit 1)
 				)
 			)
@@ -12664,7 +11698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d35478f4-cdee-4f5e-ad99-4f13954f73ea")
-		(property "Reference" "#PWR0118"
+		(property "Reference" "#PWR0126"
 			(at 21.59 140.97 0)
 			(effects
 				(font
@@ -12714,7 +11748,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR0118")
+					(reference "#PWR0126")
 					(unit 1)
 				)
 			)
@@ -12730,7 +11764,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d5de7c46-1dc0-46c8-b26b-4d2219281f88")
-		(property "Reference" "C71"
+		(property "Reference" "C55"
 			(at 177.8 125.7362 0)
 			(effects
 				(font
@@ -12802,7 +11836,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "CC0402KRX7R7BB103"
+		(property "Manufacturer" "YAGEO"
 			(at 180.34 127 0)
 			(effects
 				(font
@@ -12838,7 +11872,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C71")
+					(reference "C55")
 					(unit 1)
 				)
 			)
@@ -12854,7 +11888,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d836f19c-0d91-4a94-8292-5d2a12caaea3")
-		(property "Reference" "C68"
+		(property "Reference" "C52"
 			(at 147.32 125.1838 0)
 			(effects
 				(font
@@ -12962,7 +11996,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "C68")
+					(reference "C52")
 					(unit 1)
 				)
 			)
@@ -12978,7 +12012,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d9174dda-4f12-4ffc-aa78-d8c6e53d8170")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR0121"
 			(at 256.54 102.87 0)
 			(effects
 				(font
@@ -13028,7 +12062,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR045")
+					(reference "#PWR0121")
 					(unit 1)
 				)
 			)
@@ -13044,7 +12078,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "db93dccf-e8bc-411e-90ca-df5230e1f29c")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR0108"
 			(at 228.6 26.67 0)
 			(effects
 				(font
@@ -13094,7 +12128,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR044")
+					(reference "#PWR0108")
 					(unit 1)
 				)
 			)
@@ -13110,7 +12144,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e29aa395-6ef5-42c1-84dd-903b157f52cb")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR0129"
 			(at 78.74 161.29 0)
 			(effects
 				(font
@@ -13160,7 +12194,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR054")
+					(reference "#PWR0129")
 					(unit 1)
 				)
 			)
@@ -13176,7 +12210,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ee52c215-bb47-4781-b789-e0fd4b61bc94")
-		(property "Reference" "R3"
+		(property "Reference" "R39"
 			(at 210.82 67.3099 0)
 			(effects
 				(font
@@ -13293,7 +12327,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "R3")
+					(reference "R39")
 					(unit 1)
 				)
 			)
@@ -13310,7 +12344,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f2acd6ba-1081-47b7-a1ab-660e9c37e9d9")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR0123"
 			(at 31.75 121.92 0)
 			(effects
 				(font
@@ -13360,7 +12394,7 @@
 		(instances
 			(project "xoseram"
 				(path "/4865d2b9-db7b-4c14-9dee-4afc1211bdfd/18e5dbf2-208a-49e4-9ac0-e1a616a0a134/bff3560e-6f2f-4700-b404-5d762812f55c"
-					(reference "#PWR049")
+					(reference "#PWR0123")
 					(unit 1)
 				)
 			)

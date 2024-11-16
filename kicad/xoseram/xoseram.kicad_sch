@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "XoseRAM")
-		(date "2024-05-09")
-		(rev "A")
+		(date "2024-08-20")
+		(rev "B")
 		(company "Thomas Jager")
 		(comment 1 "Licensed under CERN OHL v.1.2")
 	)

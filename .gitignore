@@ -12,10 +12,13 @@ kicad/**/production/**
 *.kicad_pcb-bak
 *.kicad_sch-bak
 *-backups
-*.kicad_prl
-*.sch-bak
+*-cache*
+*-bak
+*-bak*
 *~
+~*
 _autosave-*
+\#auto_saved_files\#
 *.tmp
 *-save.pro
 *-save.kicad_pcb
@@ -31,3 +34,6 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+# Local project settings
+*.kicad_prl
